@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { getAmapConfig } from "../map/amapLoader";
 import type { Place, PlannerMode } from "../types/place";
 import type { RoutePlan } from "../types/route";
@@ -24,13 +24,16 @@ type ChangshuMapProps = {
 export function ChangshuMap(props: ChangshuMapProps) {
   const amapConfig = useMemo(() => getAmapConfig(), []);
   const [amapFailed, setAmapFailed] = useState(false);
+  const handleAmapError = useCallback(() => {
+    setAmapFailed(true);
+  }, []);
 
   if (amapConfig && !amapFailed) {
     return (
       <AmapChangshuMap
         {...props}
         amapConfig={amapConfig}
-        onError={() => setAmapFailed(true)}
+        onError={handleAmapError}
       />
     );
   }

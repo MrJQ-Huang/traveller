@@ -49,6 +49,7 @@ export function AmapChangshuMap({
   const routeLayerRef = useRef<any[]>([]);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
+  const deferredDestroyTimerRef = useRef<number | null>(null);
   const [mapReady, setMapReady] = useState(false);
 
   const selectedPlace = useMemo(
@@ -67,6 +68,11 @@ export function AmapChangshuMap({
     let disposed = false;
 
     async function initMap() {
+      if (deferredDestroyTimerRef.current) {
+        window.clearTimeout(deferredDestroyTimerRef.current);
+        deferredDestroyTimerRef.current = null;
+      }
+
       if (!mapNodeRef.current || mapRef.current) {
         return;
       }
@@ -104,7 +110,20 @@ export function AmapChangshuMap({
     return () => {
       disposed = true;
       if (mapRef.current) {
-        mapRef.current.destroy();
+        const map = mapRef.current;
+
+        if (import.meta.hot) {
+          deferredDestroyTimerRef.current = window.setTimeout(() => {
+            if (mapRef.current === map) {
+              map.destroy();
+              mapRef.current = null;
+            }
+            deferredDestroyTimerRef.current = null;
+          }, 1200);
+          return;
+        }
+
+        map.destroy();
         mapRef.current = null;
       }
     };
