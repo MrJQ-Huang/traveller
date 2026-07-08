@@ -108,7 +108,7 @@ export function AmapChangshuMap({
         mapRef.current = null;
       }
     };
-  }, [amapConfig, onError, visiblePlaces]);
+  }, [amapConfig, onError]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -160,7 +160,7 @@ export function AmapChangshuMap({
         strokeColor: routePlan.status === "planned" ? "#167a62" : "#1a8068",
         strokeWeight: 6,
         strokeOpacity: routePlan.status === "preview" ? 0.62 : 0.86,
-        strokeStyle: routePlan.status === "preview" ? "dashed" : "solid",
+        strokeStyle: routePlan.status === "preview" || routePlan.status === "planning" ? "dashed" : "solid",
         lineJoin: "round",
         lineCap: "round",
       });
@@ -214,8 +214,14 @@ export function AmapChangshuMap({
     }
 
     const bounds = new AMap.Bounds(
-      [Math.min(...nextPlaces.map((place) => place.position.lng)), Math.min(...nextPlaces.map((place) => place.position.lat))],
-      [Math.max(...nextPlaces.map((place) => place.position.lng)), Math.max(...nextPlaces.map((place) => place.position.lat))],
+      [
+        Math.min(...nextPlaces.map((place) => place.position.lng)),
+        Math.min(...nextPlaces.map((place) => place.position.lat)),
+      ],
+      [
+        Math.max(...nextPlaces.map((place) => place.position.lng)),
+        Math.max(...nextPlaces.map((place) => place.position.lat)),
+      ],
     );
 
     map.setBounds(bounds, false, [96, 36, 58, 36]);

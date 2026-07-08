@@ -1,12 +1,14 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ClipboardList, PanelRightClose, PanelRightOpen } from "lucide-react";
 import { ChangshuMap } from "./components/ChangshuMap";
 import { ItineraryPanel } from "./components/ItineraryPanel";
 import { TopBar } from "./components/TopBar";
 import { places } from "./data/places";
 import { routePresets } from "./data/routes";
+import { getAmapConfig } from "./map/amapLoader";
+import { planAmapRoutePlan } from "./map/amapRouteService";
 import type { PlaceType, PlannerMode } from "./types/place";
-import type { TransportMode } from "./types/route";
+import type { RoutePlan, TransportMode } from "./types/route";
 import { buildPreviewRoutePlan } from "./utils/itineraryRoute";
 import { buildRandomRoute, estimateTotalMinutes, formatEstimatedTime, getRoutePreset } from "./utils/routePlanner";
 
@@ -24,6 +26,12 @@ export default function App() {
   const [drawMode, setDrawMode] = useState(false);
   const [isItineraryOpen, setIsItineraryOpen] = useState(false);
   const [transportMode, setTransportMode] = useState<TransportMode>("walking");
+
+  const previewRoutePlan = useMemo(
+    () => buildPreviewRoutePlan(itineraryIds, places, transportMode),
+    [itineraryIds, transportMode],
+  );
+  const [routePlan, setRoutePlan] = useState<RoutePlan>(previewRoutePlan);
 
   const visiblePlaces = useMemo(
     () => places.filter((place) => activeTypes.includes(place.type)),
@@ -43,10 +51,49 @@ export default function App() {
     [itineraryIds],
   );
 
-  const routePlan = useMemo(
-    () => buildPreviewRoutePlan(itineraryIds, places, transportMode),
-    [itineraryIds, transportMode],
-  );
+  useEffect(() => {
+    let cancelled = false;
+    const amapConfig = getAmapConfig();
+
+    if (previewRoutePlan.status === "idle") {
+      setRoutePlan(previewRoutePlan);
+      return;
+    }
+
+    if (!amapConfig) {
+      setRoutePlan(previewRoutePlan);
+      return;
+    }
+
+    setRoutePlan({
+      ...previewRoutePlan,
+      status: "planning",
+      message: "正在调用高德道路规划，预览线会在真实道路返回后自动替换。",
+    });
+
+    const timer = window.setTimeout(() => {
+      planAmapRoutePlan(itineraryIds, places, transportMode, amapConfig)
+        .then((plannedRoute) => {
+          if (!cancelled) {
+            setRoutePlan(plannedRoute);
+          }
+        })
+        .catch(() => {
+          if (!cancelled) {
+            setRoutePlan({
+              ...previewRoutePlan,
+              status: "fallback",
+              message: "真实道路规划暂不可用，已保留路径点预览线。",
+            });
+          }
+        });
+    }, 280);
+
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [itineraryIds, previewRoutePlan, transportMode]);
 
   function toggleType(type: PlaceType) {
     setActiveTypes((current) => {
