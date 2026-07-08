@@ -101,8 +101,46 @@ button:disabled {
   z-index: 1;
 }
 
+.leaflet-container {
+  background:
+    linear-gradient(90deg, rgba(22, 122, 98, 0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(22, 122, 98, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 30% 28%, rgba(46, 139, 87, 0.16), transparent 26%),
+    radial-gradient(circle at 68% 70%, rgba(143, 199, 216, 0.18), transparent 28%),
+    #eaf2eb;
+  background-size:
+    44px 44px,
+    44px 44px,
+    auto,
+    auto,
+    auto;
+}
+
 .leaflet-control-container {
   font-family: inherit;
+}
+
+.area-label-host {
+  background: transparent;
+  border: 0;
+}
+
+.area-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  height: 26px;
+  padding: 0 9px;
+  color: rgba(15, 95, 76, 0.72);
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(122, 167, 138, 0.22);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(24, 35, 31, 0.08);
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
 }
 
 .topbar {

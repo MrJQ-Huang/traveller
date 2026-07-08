@@ -1,5 +1,5 @@
 import L from "leaflet";
-import { Layers, PencilLine, RotateCcw, X } from "lucide-react";
+import { Layers, LocateFixed, PencilLine, RotateCcw, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Place, PlannerMode } from "../types/place";
 import { placeTypeShortLabels } from "../types/place";
@@ -20,7 +20,108 @@ type ChangshuMapProps = {
   onToggleDrawMode: () => void;
 };
 
-const changshuCenter: L.LatLngExpression = [31.64, 120.75];
+const changshuCenter: L.LatLngExpression = [31.62, 120.755];
+const changshuViewBounds = L.latLngBounds([31.47, 120.61], [31.73, 120.91]);
+
+function getPlacesBounds(places: Place[]) {
+  if (places.length === 0) {
+    return changshuViewBounds;
+  }
+
+  return L.latLngBounds(places.map((place) => [place.position.lat, place.position.lng]));
+}
+
+function addLightweightBaseMap(map: L.Map) {
+  const renderer = L.svg({ padding: 0.7 }).addTo(map);
+
+  L.rectangle(changshuViewBounds, {
+    renderer,
+    color: "#7aa78a",
+    weight: 2,
+    fillColor: "#edf6ee",
+    fillOpacity: 0.74,
+    dashArray: "8 8",
+    interactive: false,
+  }).addTo(map);
+
+  L.polygon(
+    [
+      [31.71, 120.62],
+      [31.7, 120.74],
+      [31.68, 120.89],
+      [31.65, 120.9],
+      [31.61, 120.84],
+      [31.54, 120.86],
+      [31.48, 120.79],
+      [31.5, 120.68],
+      [31.56, 120.62],
+    ],
+    {
+      renderer,
+      color: "#9fc2a9",
+      weight: 1.5,
+      fillColor: "#f5faf4",
+      fillOpacity: 0.72,
+      interactive: false,
+    },
+  ).addTo(map);
+
+  L.polyline(
+    [
+      [31.71, 120.63],
+      [31.66, 120.7],
+      [31.61, 120.75],
+      [31.57, 120.82],
+      [31.52, 120.88],
+    ],
+    {
+      renderer,
+      color: "#8fc7d8",
+      weight: 8,
+      opacity: 0.42,
+      lineCap: "round",
+      interactive: false,
+    },
+  ).addTo(map);
+
+  L.polyline(
+    [
+      [31.49, 120.65],
+      [31.54, 120.72],
+      [31.58, 120.77],
+      [31.63, 120.83],
+      [31.68, 120.88],
+    ],
+    {
+      renderer,
+      color: "#d6c48c",
+      weight: 5,
+      opacity: 0.5,
+      dashArray: "10 10",
+      lineCap: "round",
+      interactive: false,
+    },
+  ).addTo(map);
+
+  const labels = [
+    { name: "虞山片区", lat: 31.66, lng: 120.72 },
+    { name: "老城片区", lat: 31.64, lng: 120.76 },
+    { name: "尚湖片区", lat: 31.6, lng: 120.67 },
+    { name: "沙家浜片区", lat: 31.53, lng: 120.84 },
+  ];
+
+  labels.forEach((label) => {
+    L.marker([label.lat, label.lng], {
+      icon: L.divIcon({
+        className: "area-label-host",
+        html: `<span class="area-label">${label.name}</span>`,
+        iconSize: [92, 26],
+        iconAnchor: [46, 13],
+      }),
+      interactive: false,
+    }).addTo(map);
+  });
+}
 
 export function ChangshuMap({
   places,
@@ -42,7 +143,7 @@ export function ChangshuMap({
   const routeLineRef = useRef<L.Polyline | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
-  const [tileReady, setTileReady] = useState(false);
+  const [mapReady, setMapReady] = useState(false);
 
   const selectedPlace = useMemo(
     () => places.find((place) => place.id === selectedPlaceId) ?? null,
@@ -63,25 +164,34 @@ export function ChangshuMap({
 
     const map = L.map(mapNodeRef.current, {
       center: changshuCenter,
-      zoom: 12,
+      zoom: 11,
       minZoom: 10,
-      maxZoom: 16,
+      maxZoom: 15,
+      zoomSnap: 0.25,
+      zoomDelta: 0.5,
       zoomControl: false,
       attributionControl: false,
+      preferCanvas: true,
+      maxBounds: changshuViewBounds.pad(0.48),
+      maxBoundsViscosity: 0.55,
     });
 
     L.control.zoom({ position: "bottomleft" }).addTo(map);
-    L.control.attribution({ position: "bottomright", prefix: false }).addTo(map);
-
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: "&copy; OpenStreetMap contributors",
-    })
-      .on("load", () => setTileReady(true))
-      .addTo(map);
+    addLightweightBaseMap(map);
 
     markerLayerRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
+
+    window.requestAnimationFrame(() => {
+      map.invalidateSize();
+      map.fitBounds(getPlacesBounds(places).pad(0.22), {
+        animate: false,
+        paddingTopLeft: [34, 96],
+        paddingBottomRight: [34, 56],
+        maxZoom: 12,
+      });
+      setMapReady(true);
+    });
 
     return () => {
       map.remove();
@@ -89,7 +199,24 @@ export function ChangshuMap({
       markerLayerRef.current = null;
       routeLineRef.current = null;
     };
-  }, []);
+  }, [places]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+
+    if (!map || !mapReady) {
+      return;
+    }
+
+    const bounds = getPlacesBounds(visiblePlaces).pad(0.24);
+    map.fitBounds(bounds, {
+      animate: true,
+      duration: 0.28,
+      paddingTopLeft: [34, 108],
+      paddingBottomRight: [34, 58],
+      maxZoom: 12,
+    });
+  }, [mapReady, visiblePlaces]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -198,6 +325,7 @@ export function ChangshuMap({
       canvasElement.style.height = `${rect.height}px`;
       const context = canvasElement.getContext("2d");
       context?.setTransform(ratio, 0, 0, ratio, 0, 0);
+      mapRef.current?.invalidateSize();
     }
 
     resizeCanvas();
@@ -206,6 +334,21 @@ export function ChangshuMap({
 
     return () => observer.disconnect();
   }, []);
+
+  function resetView() {
+    const map = mapRef.current;
+    if (!map) {
+      return;
+    }
+
+    map.fitBounds(getPlacesBounds(visiblePlaces).pad(0.24), {
+      animate: true,
+      duration: 0.28,
+      paddingTopLeft: [34, 108],
+      paddingBottomRight: [34, 58],
+      maxZoom: 12,
+    });
+  }
 
   function clearSketch() {
     const canvas = canvasRef.current;
@@ -276,10 +419,14 @@ export function ChangshuMap({
         />
 
         <div className="map-action-stack">
-          <span className={`tile-badge ${tileReady ? "is-ready" : ""}`}>
+          <span className={`tile-badge ${mapReady ? "is-ready" : ""}`}>
             <Layers size={15} />
-            {tileReady ? "地图已载入" : "地图载入中"}
+            {mapReady ? "轻量地图已就绪" : "地图初始化中"}
           </span>
+          <button className="map-tool-button" type="button" onClick={resetView}>
+            <LocateFixed size={17} />
+            全览
+          </button>
           <button
             className={`map-tool-button ${drawMode ? "is-active" : ""}`}
             type="button"
