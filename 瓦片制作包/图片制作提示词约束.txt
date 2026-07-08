@@ -1,0 +1,165 @@
+【任务目标】
+
+对输入的地图瓦片进行视觉风格化处理，但必须严格保持地图作为真实地理信息载体的准确性。输出结果应当在视觉风格上发生变化，但在地图结构、坐标对应、道路网络、水系、建筑、边界、文字、POI 和瓦片边缘衔接关系上保持与原始输入完全一致。
+
+The task is to visually stylize the input map tile while strictly preserving its function as an accurate geographic map. The output may change in visual style, color, texture, and artistic rendering, but the map geometry, coordinate correspondence, road network, waterways, buildings, boundaries, labels, POIs, and tile-edge continuity must remain identical to the source.
+
+
+【地图保真硬约束】
+
+严格保持原始地图瓦片的地理结构、道路网络、水系、建筑轮廓、绿地范围、行政边界、POI 标注和所有文字位置完全不变。
+
+不得移动、旋转、缩放、拉伸、弯曲、扭曲、重绘、简化、增删、遮挡、替换或重排任何地图要素。
+
+不得移动、改变或重新解释任何道路、街巷、桥梁、立交、匝道、路口、环岛、人行路径、河流、湖泊、水渠、池塘、绿地、公园、山体、景区边界、建筑轮廓、街区边界、行政边界线、兴趣点图标、道路编号、方向符号、地图符号、地图文字、道路名称、地名、POI 名称、数字和标注。
+
+不得新增任何虚构道路、虚构街巷、虚构建筑、虚构河流、虚构湖泊、虚构桥梁、虚构景点、虚构 POI、虚构地名、虚构道路名、虚构文字、虚构标注或虚构地图符号。
+
+不得删除任何原始存在的道路、街巷、桥梁、路口、河流、水系、绿地、建筑、边界、POI 图标、道路编号、文字、地名、道路名和标注。
+
+不得改变地图比例尺、地图方向、地图投影关系、透视关系、经纬度对应关系、瓦片裁切范围、瓦片边界、瓦片尺寸和像素对齐关系。
+
+不得改变道路等级关系。主干道、次干道、支路、小路、人行路径之间的粗细层级、连通关系和位置关系必须保持与原图一致。
+
+不得改变水系形状。河流、湖泊、水渠、水面边界的位置、形状、宽度、走向和连接关系必须保持与原图一致。
+
+不得改变建筑和街区结构。建筑轮廓、街区边界、园区边界、景区轮廓和地块关系必须保持原图位置和形态。
+
+不得改变绿地、公园、山体、景区等区域范围。所有面状区域的边界必须保持原图几何关系。
+
+不得改变任何文字内容。道路名称、地名、POI 名称、数字、编号、方向符号和标注必须保持原文，不得生成乱码，不得重写，不得替换为其他文字，不得改变语义。
+
+不得改变任何文字位置。所有文字的相对位置、朝向、大小层级和与地图要素的对应关系必须保持原图一致。
+
+不得改变 POI 图标和标注位置。所有兴趣点图标、景点图标、服务设施图标、交通图标、地图符号必须保留在原始坐标位置，不得漂移或重排。
+
+不得改变瓦片四条边缘上的任何要素延续关系。所有跨越瓦片边界的道路、水系、边界线、建筑轮廓、绿地边界、文字和符号必须与相邻瓦片无缝衔接。
+
+禁止在瓦片边缘产生色差、纹理断裂、道路断裂、水系断裂、边界错位、线条错位、图案错位或可见接缝。
+
+仅允许改变颜色、材质、笔触、纹理、线条质感、背景质感、整体视觉风格、轻微装饰性肌理和非结构性的视觉表现。
+
+所有地图信息本体必须保持不变。地图必须仍然能够作为真实地理参考使用。
+
+
+【Map Fidelity Hard Constraints】
+
+Strictly preserve the original map tile geometry, geographic structure, road network, waterways, building footprints, green areas, administrative boundaries, POI icons, labels, and all text positions.
+
+Do not move, rotate, scale, stretch, warp, bend, distort, redraw, simplify, add, remove, hide, replace, reinterpret, or rearrange any map elements.
+
+Do not move, alter, or reinterpret any roads, streets, alleys, bridges, overpasses, ramps, intersections, roundabouts, pedestrian paths, rivers, canals, lakes, ponds, water bodies, green areas, parks, mountains, scenic area boundaries, building footprints, block boundaries, administrative boundary lines, POI icons, road numbers, direction symbols, map symbols, map text, road names, place names, POI names, numbers, or labels.
+
+Do not invent any roads, streets, buildings, rivers, lakes, bridges, scenic spots, POIs, place names, road names, labels, text, or map symbols.
+
+Do not remove any existing roads, streets, bridges, intersections, waterways, green areas, buildings, boundaries, POI icons, road numbers, labels, place names, road names, or map text.
+
+Do not change the map scale, map orientation, map projection relationship, perspective, coordinate correspondence, latitude-longitude alignment, tile crop, tile boundary, tile size, or pixel alignment.
+
+Do not change road hierarchy. The thickness, hierarchy, connectivity, and relative positions of major roads, secondary roads, local streets, minor roads, and pedestrian paths must remain identical to the source.
+
+Do not change waterway geometry. The position, shape, width, direction, and connectivity of rivers, canals, lakes, ponds, and waterbody boundaries must remain identical to the source.
+
+Do not change buildings and block structures. Building footprints, block boundaries, park boundaries, scenic area boundaries, and land parcel relationships must preserve their original geometry and positions.
+
+Do not change the boundaries of green areas, parks, mountains, scenic areas, or any land-use regions. All area boundaries must preserve their original geometry.
+
+Do not change any text content. Road names, place names, POI names, numbers, route numbers, direction symbols, and labels must remain exactly as in the source. Do not generate garbled text. Do not rewrite text. Do not replace text with different words. Do not change meaning.
+
+Do not change any text positions. All labels must preserve their relative positions, orientation, size hierarchy, and correspondence with the map features.
+
+Do not change POI icon or label positions. All POI icons, scenic spot icons, service icons, traffic icons, and map symbols must remain at their original coordinate positions. Do not shift, scatter, or rearrange them.
+
+Do not change any feature continuity across the four tile edges. Roads, waterways, boundary lines, building outlines, green area boundaries, text, and symbols crossing tile boundaries must connect seamlessly with neighboring tiles.
+
+Do not create color jumps, texture breaks, road discontinuities, waterway discontinuities, boundary mismatches, line mismatches, pattern mismatches, or visible seams at tile edges.
+
+Only colors, materials, brush strokes, texture, line texture, background texture, overall visual style, subtle decorative surface texture, and non-structural visual appearance may be changed.
+
+All geographic and semantic map information must remain unchanged. The result must still function as an accurate geographic reference map.
+
+
+【必须保持不变的要素清单】
+
+以下内容必须逐像素或近似逐像素保持结构位置不变：
+
+1. 所有道路中心线和道路边界。
+2. 所有主干道、次干道、支路、小路和人行路径。
+3. 所有道路交叉口、环岛、桥梁、立交和匝道。
+4. 所有河流、水渠、湖泊、池塘和水面边界。
+5. 所有建筑轮廓、街区边界、地块边界和园区边界。
+6. 所有绿地、公园、山体、景区、广场和面状区域边界。
+7. 所有行政边界线和区域边界线。
+8. 所有地图文字、道路名、地名、POI 名称、数字、编号和符号。
+9. 所有 POI 图标、服务设施图标、交通图标和地图符号。
+10. 瓦片四条边上的所有道路、水系、边界、文字和符号的延续关系。
+11. 原始瓦片的尺寸、裁切范围、方向、比例尺、投影关系和坐标对应关系。
+
+
+【Elements That Must Remain Unchanged】
+
+The following elements must preserve their structural position exactly or near-pixel-exact:
+
+1. All road centerlines and road boundaries.
+2. All major roads, secondary roads, local streets, minor roads, and pedestrian paths.
+3. All intersections, roundabouts, bridges, overpasses, and ramps.
+4. All rivers, canals, lakes, ponds, and waterbody boundaries.
+5. All building footprints, block boundaries, parcel boundaries, and compound boundaries.
+6. All green areas, parks, mountains, scenic areas, plazas, and land-use region boundaries.
+7. All administrative boundaries and regional boundary lines.
+8. All map labels, road names, place names, POI names, numbers, route numbers, and symbols.
+9. All POI icons, service facility icons, traffic icons, and map symbols.
+10. Every feature crossing the four tile edges, including roads, waterways, boundaries, labels, and symbols.
+11. The original tile size, crop, orientation, scale, projection relationship, and coordinate correspondence.
+
+
+【瓦片连续性约束】
+
+该图像是地图瓦片系统的一部分，必须能够与上下左右相邻瓦片无缝拼接。
+
+所有跨越瓦片边界的道路、水系、建筑边界、绿地边界、行政边界、线条、文字和符号必须在边缘处保持连续。
+
+瓦片边缘禁止产生明显接缝、错位、断裂、色差、风格突变、纹理突变或线条中断。
+
+Tile edge continuity is mandatory. This image is part of a map tile system and must connect seamlessly with adjacent tiles on all four sides.
+
+All roads, waterways, building boundaries, green area boundaries, administrative boundaries, lines, labels, and symbols crossing tile edges must remain continuous at the edges.
+
+No visible seams, offsets, breaks, color jumps, style jumps, texture discontinuities, or line interruptions are allowed at tile boundaries.
+
+
+【允许变化的内容】
+
+允许进行以下非结构性视觉变化：
+
+1. 色彩风格调整。
+2. 背景材质变化。
+3. 线条质感变化。
+4. 轻微笔触化处理。
+5. 轻微纸张、纹理、墨迹、水彩或其他表面质感。
+6. 整体视觉气质调整。
+7. 不影响地图结构的轻量装饰性处理。
+
+Allowed non-structural visual changes:
+
+1. Color style adjustments.
+2. Background material changes.
+3. Line texture changes.
+4. Subtle brush-stroke rendering.
+5. Subtle paper texture, ink texture, watercolor texture, or other surface texture.
+6. Overall visual mood adjustment.
+7. Lightweight decorative treatment that does not affect map structure.
+
+
+【风格提示词】
+
+在这里写入你的风格提示词：
+
+<<< 在此处填写你的风格提示词 / Insert your style prompt here >>>
+
+
+【负面提示词 / Negative Prompt】
+
+错位道路, 变形道路, 新增道路, 删除道路, 道路断裂, 道路漂移, 道路弯曲, 道路重绘, 道路简化, 道路错连, 路口错位, 桥梁错位, 匝道错位, 环岛变形, 河流错位, 水系变形, 湖泊变形, 水面边界错位, 建筑漂移, 建筑变形, 建筑轮廓错误, 街区变形, 地块错位, 绿地边界错位, 公园边界变形, 景区边界变形, 行政边界错位, 地标漂移, POI 错位, 图标错位, 标注错位, 文字错位, 文字乱码, 文字重写, 文字替换, 新增文字, 删除文字, 地名错误, 道路名错误, POI 名称错误, 数字错误, 编号错误, 虚构地名, 虚构建筑, 虚构景点, 虚构道路, 虚构河流, 虚构湖泊, 虚构桥梁, 虚构 POI, 虚构地图符号, 地图比例错误, 透视变化, 旋转地图, 拉伸地图, 缩放地图内容, 裁切变化, 瓦片边界变化, 坐标错位, 边界不对齐, 瓦片接缝, 瓦片边缘断裂, 纹理接缝, 颜色突变, 道路不连续, 水系不连续, 边界线不连续, 标签不连续, 语义错误, 地图幻觉, 地理幻觉, 模糊文字, 不可读文字, 错误符号
+
+misaligned roads, warped roads, shifted roads, added roads, removed roads, broken roads, drifting roads, bent roads, redrawn roads, simplified roads, wrong road connections, misplaced intersections, misplaced bridges, misplaced ramps, distorted roundabouts, shifted rivers, distorted waterways, distorted lakes, shifted water boundaries, shifted buildings, warped buildings, wrong building footprints, distorted blocks, shifted parcels, shifted green area boundaries, distorted park boundaries, distorted scenic area boundaries, shifted administrative boundaries, shifted landmarks, misplaced POI icons, shifted icons, shifted labels, misplaced text, garbled text, rewritten text, replaced text, extra text, missing text, wrong place names, wrong road names, wrong POI names, wrong numbers, wrong route numbers, fake place names, fake buildings, fake scenic spots, fake roads, fake rivers, fake lakes, fake bridges, fake POIs, fake map symbols, wrong map scale, changed perspective, rotated map, stretched map, scaled map content, changed crop, changed tile boundary, coordinate mismatch, boundary mismatch, tile seam, broken tile edges, texture seams, color jumps, discontinuous roads, discontinuous waterways, discontinuous boundaries, discontinuous labels, semantic errors, map hallucination, geographic hallucination, blurry text, unreadable text, wrong symbols

@@ -1,44 +1,16 @@
 # 常熟 Demo AI 瓦片制作包
 
-这个目录只保留真正用于 Demo AI 地图皮肤制作的内容。
+这个目录用于制作少量 Demo 瓦片，不是全量常熟地图瓦片。
 
-## 当前内容
+## 范围
 
-- `amap-source-tiles/`: 已授权导出的高德源瓦片，作为 AI 风格化处理输入。
-- `amap-source-tiles-manifest.json`: 源瓦片导出记录。
-- `manifest.json`: 前端后续加载 AI 瓦片时使用的标准清单。
-- `tiles.csv`: 给批处理、表格检查或人工核对使用的瓦片清单。
-
-已删除早期测试用的假瓦片模板：
-
-- `source-templates/`
-- `template-png/`
-
-## 瓦片范围
-
-- 区域 1: 虞山-老城-尚湖核心区
-- 区域 2: 古里古镇
+- 虞山-老城-尚湖核心区
+- 古里古镇
 - zoom: 12, 13, 14
+- tile size: 512x512
 - tile count: 75
-- source tile size: 256x256
 
-## 处理输入
-
-请使用以下目录中的真实源瓦片进行风格化处理：
-
-```text
-瓦片制作包/changshu-demo/amap-source-tiles/{z}/{x}/{y}.png
-```
-
-示例：
-
-```text
-瓦片制作包/changshu-demo/amap-source-tiles/14/13687/6672.png
-```
-
-## 处理输出
-
-处理完成后，请保持完全相同的 `{z}/{x}/{y}.png` 结构，放回项目最终加载目录：
+## 你需要产出的文件路径
 
 ```text
 public/map-tiles/changshu-demo/{z}/{x}/{y}.png
@@ -47,22 +19,29 @@ public/map-tiles/changshu-demo/{z}/{x}/{y}.png
 示例：
 
 ```text
-public/map-tiles/changshu-demo/14/13687/6672.png
+public/map-tiles/changshu-demo/12/3420/1667.png
 ```
+
+## 文件说明
+
+- `manifest.json`: 前端接入和瓦片清单使用。
+- `tiles.csv`: 给制图流程、人手检查或表格工具使用。
+- `source-templates/`: 每张瓦片的命名模板图。模板不是地图底图，只用于确认 z/x/y、经纬度范围和目标文件名。
+- `template-png/`: PNG 命名模板，方便直接在图像处理流程中核对路径；最终成品仍需放到 `public/map-tiles/changshu-demo/`。
 
 ## 制作要求
 
-1. 文件路径必须严格保持 `{z}/{x}/{y}.png`。
-2. 第一轮建议保持 `256x256 PNG`，这样接入高德自定义瓦片层最稳。
-3. 相邻瓦片需要无缝衔接。
-4. 不要逐张孤立风格化，建议按区域或 metatile 统一处理后再切回瓦片。
-5. 没有制作的瓦片会自动露出高德原始底图。
+1. 每张最终瓦片输出为 PNG。
+2. 文件名必须严格保持为 `{z}/{x}/{y}.png`。
+3. 不要改变瓦片尺寸，建议输出 512x512。
+4. 相邻瓦片需要无缝衔接。
+5. Demo 阶段只制作 manifest 内列出的瓦片。
+6. 没有制作的瓦片会自动露出高德原始底图。
 
-## 给前端接入用
+## 建议流程
 
-前端接入时只需要读取：
-
-```text
-manifest.json
-public/map-tiles/changshu-demo/{z}/{x}/{y}.png
-```
+1. 按 `tiles.csv` 获取每张瓦片对应的真实地理范围。
+2. 使用合法来源的底图或自绘矢量底图生成对应区域图像。
+3. 按区域或 metatile 进行统一 AI 风格化，避免逐张处理导致接缝。
+4. 切回标准瓦片。
+5. 按 `targetPath` 放回项目。
