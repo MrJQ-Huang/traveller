@@ -90,6 +90,7 @@ button:disabled {
 }
 
 .leaflet-map,
+.amap-map,
 .sketch-layer {
   position: absolute;
   inset: 0;
@@ -97,7 +98,8 @@ button:disabled {
   height: 100%;
 }
 
-.leaflet-map {
+.leaflet-map,
+.amap-map {
   z-index: 1;
 }
 
@@ -769,6 +771,40 @@ button:disabled {
   border: 1px solid #e5ece7;
   border-radius: 8px;
   font-size: 13px;
+}
+
+.route-plan-summary {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(223, 243, 236, 0.44);
+}
+
+.route-plan-summary strong,
+.route-plan-summary span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  color: var(--accent-strong);
+  font-size: 13px;
+}
+
+.route-plan-summary span {
+  justify-content: center;
+  color: #40504a;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(22, 122, 98, 0.12);
+  border-radius: 8px;
+}
+
+.route-plan-summary p {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 .empty-plan {

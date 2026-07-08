@@ -1,5 +1,7 @@
 import { Map, PanelRightClose, Shuffle, Trash2 } from "lucide-react";
 import type { Place } from "../types/place";
+import type { RoutePlan } from "../types/route";
+import { formatDistance, formatDuration } from "../utils/itineraryRoute";
 import { PlaceCard } from "./PlaceCard";
 
 type ItineraryPanelProps = {
@@ -8,6 +10,7 @@ type ItineraryPanelProps = {
   routeName: string | null;
   routeDescription: string | null;
   estimatedTime: string;
+  routePlan: RoutePlan;
   onDropPlace: (placeId: string) => void;
   onDropBefore: (placeId: string, targetId: string) => void;
   onRemove: (placeId: string) => void;
@@ -23,6 +26,7 @@ export function ItineraryPanel({
   routeName,
   routeDescription,
   estimatedTime,
+  routePlan,
   onDropPlace,
   onDropBefore,
   onRemove,
@@ -78,6 +82,15 @@ export function ItineraryPanel({
           {estimatedTime}
         </span>
       </div>
+
+      {routePlan.status !== "idle" && (
+        <div className="route-plan-summary">
+          <strong>路径点预览</strong>
+          <span>{formatDistance(routePlan.totalDistanceMeters)}</span>
+          <span>{formatDuration(routePlan.totalDurationSeconds)}</span>
+          <p>{routePlan.message}</p>
+        </div>
+      )}
 
       {!hasPlaces && (
         <div className="empty-plan">

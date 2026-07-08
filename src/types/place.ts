@@ -22,6 +22,14 @@ export type RestaurantProfile = {
   queueTip: string;
 };
 
+export type PlaceRouteMeta = {
+  canRoute: boolean;
+  recommendedStayMinutes: number;
+  entranceLnglat?: [number, number];
+  exitLnglat?: [number, number];
+  routeWeight?: number;
+};
+
 export type Place = {
   id: string;
   type: PlaceType;
@@ -45,6 +53,7 @@ export type Place = {
   notice?: string;
   foodProfile?: FoodProfile;
   restaurantProfile?: RestaurantProfile;
+  routeMeta?: PlaceRouteMeta;
   dataStatus: DataStatus;
 };
 

@@ -6,6 +6,8 @@ import { TopBar } from "./components/TopBar";
 import { places } from "./data/places";
 import { routePresets } from "./data/routes";
 import type { PlaceType, PlannerMode } from "./types/place";
+import type { TransportMode } from "./types/route";
+import { buildPreviewRoutePlan } from "./utils/itineraryRoute";
 import { buildRandomRoute, estimateTotalMinutes, formatEstimatedTime, getRoutePreset } from "./utils/routePlanner";
 
 const allPlaceTypes: PlaceType[] = ["scenic", "heritage", "food", "restaurant"];
@@ -21,6 +23,7 @@ export default function App() {
   const [generatedRouteDescription, setGeneratedRouteDescription] = useState<string | null>(null);
   const [drawMode, setDrawMode] = useState(false);
   const [isItineraryOpen, setIsItineraryOpen] = useState(false);
+  const [transportMode, setTransportMode] = useState<TransportMode>("walking");
 
   const visiblePlaces = useMemo(
     () => places.filter((place) => activeTypes.includes(place.type)),
@@ -38,6 +41,11 @@ export default function App() {
   const estimatedTime = useMemo(
     () => formatEstimatedTime(estimateTotalMinutes(itineraryIds)),
     [itineraryIds],
+  );
+
+  const routePlan = useMemo(
+    () => buildPreviewRoutePlan(itineraryIds, places, transportMode),
+    [itineraryIds, transportMode],
   );
 
   function toggleType(type: PlaceType) {
@@ -144,6 +152,7 @@ export default function App() {
           places={places}
           visiblePlaces={visiblePlaces}
           itineraryIds={itineraryIds}
+          routePlan={routePlan}
           selectedPlaceId={selectedPlaceId}
           expandedPlaceId={expandedPlaceId}
           mode={mode}
@@ -161,6 +170,7 @@ export default function App() {
           routePresetId={routePresetId}
           itemCount={itineraryIds.length}
           estimatedTime={estimatedTime}
+          transportMode={transportMode}
           isItineraryOpen={isItineraryOpen}
           onModeChange={changeMode}
           onToggleType={toggleType}
@@ -168,6 +178,7 @@ export default function App() {
           onGenerateRoute={generatePresetRoute}
           onRandomRoute={generateRandomRoute}
           onClear={clearRoute}
+          onTransportModeChange={setTransportMode}
           onToggleItinerary={() => setIsItineraryOpen((current) => !current)}
         />
 
@@ -199,6 +210,7 @@ export default function App() {
             routeName={generatedRouteName}
             routeDescription={generatedRouteDescription}
             estimatedTime={estimatedTime}
+            routePlan={routePlan}
             onDropPlace={addPlace}
             onDropBefore={dropBefore}
             onRemove={removePlace}
