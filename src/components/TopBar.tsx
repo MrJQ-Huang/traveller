@@ -1,11 +1,12 @@
 import {
+  ClipboardList,
   Compass,
   Dice5,
   Eraser,
-  MapPinned,
+  PanelRightClose,
+  PanelRightOpen,
   Route,
   Sparkles,
-  Utensils,
 } from "lucide-react";
 import { routePresets } from "../data/routes";
 import type { PlaceType, PlannerMode } from "../types/place";
@@ -17,12 +18,14 @@ type TopBarProps = {
   routePresetId: string;
   itemCount: number;
   estimatedTime: string;
+  isItineraryOpen: boolean;
   onModeChange: (mode: PlannerMode) => void;
   onToggleType: (type: PlaceType) => void;
   onSelectRoutePreset: (id: string) => void;
   onGenerateRoute: () => void;
   onRandomRoute: () => void;
   onClear: () => void;
+  onToggleItinerary: () => void;
 };
 
 const typeIcons: Record<PlaceType, string> = {
@@ -40,26 +43,23 @@ export function TopBar({
   routePresetId,
   itemCount,
   estimatedTime,
+  isItineraryOpen,
   onModeChange,
   onToggleType,
   onSelectRoutePreset,
   onGenerateRoute,
   onRandomRoute,
   onClear,
+  onToggleItinerary,
 }: TopBarProps) {
   return (
-    <header className="topbar">
-      <div className="brand-block">
-        <div className="brand-icon" aria-hidden="true">
-          <MapPinned size={22} />
-        </div>
-        <div>
-          <h1>常熟地图规划</h1>
-          <p>Demo 数据 · 开放时间与价格待核验</p>
-        </div>
+    <header className="topbar" aria-label="地图规划工具">
+      <div className="brand-pill">
+        <strong>常熟地图</strong>
+        <span>前端交互 Demo</span>
       </div>
 
-      <div className="toolbar-section filter-section" aria-label="类型筛选">
+      <div className="toolbar-section filter-section" aria-label="四类点位筛选">
         {filterOrder.map((type) => (
           <button
             key={type}
@@ -92,7 +92,7 @@ export function TopBar({
         </button>
       </div>
 
-      <div className="toolbar-section route-actions" aria-label="路线生成">
+      <div className="toolbar-section route-actions" aria-label="P 人路线生成">
         <select
           value={routePresetId}
           onChange={(event) => onSelectRoutePreset(event.target.value)}
@@ -114,11 +114,17 @@ export function TopBar({
         </button>
       </div>
 
-      <div className="trip-stat">
-        <Utensils size={17} />
+      <button
+        className="trip-stat-button"
+        type="button"
+        onClick={onToggleItinerary}
+        aria-label={isItineraryOpen ? "收起行程规划" : "展开行程规划"}
+      >
+        <ClipboardList size={17} />
         <span>{itemCount} 站</span>
         <strong>{estimatedTime}</strong>
-      </div>
+        {isItineraryOpen ? <PanelRightClose size={17} /> : <PanelRightOpen size={17} />}
+      </button>
 
       <button className="ghost-icon-button" type="button" onClick={onClear} aria-label="清空行程">
         <Eraser size={18} />

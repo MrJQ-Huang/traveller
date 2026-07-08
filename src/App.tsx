@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { ClipboardList, PanelRightClose, PanelRightOpen } from "lucide-react";
 import { ChangshuMap } from "./components/ChangshuMap";
 import { ItineraryPanel } from "./components/ItineraryPanel";
 import { TopBar } from "./components/TopBar";
@@ -19,6 +20,7 @@ export default function App() {
   const [generatedRouteName, setGeneratedRouteName] = useState<string | null>(null);
   const [generatedRouteDescription, setGeneratedRouteDescription] = useState<string | null>(null);
   const [drawMode, setDrawMode] = useState(false);
+  const [isItineraryOpen, setIsItineraryOpen] = useState(false);
 
   const visiblePlaces = useMemo(
     () => places.filter((place) => activeTypes.includes(place.type)),
@@ -54,6 +56,7 @@ export default function App() {
     }
 
     setItineraryIds((current) => (current.includes(placeId) ? current : [...current, placeId]));
+    setIsItineraryOpen(true);
     if (mode === "j") {
       setGeneratedRouteName(null);
       setGeneratedRouteDescription(null);
@@ -113,6 +116,7 @@ export default function App() {
     setGeneratedRouteName(preset.name);
     setGeneratedRouteDescription(preset.description);
     setExpandedPlaceId(null);
+    setIsItineraryOpen(true);
   }
 
   function generateRandomRoute() {
@@ -123,6 +127,7 @@ export default function App() {
     setGeneratedRouteName(route.name);
     setGeneratedRouteDescription(route.description);
     setExpandedPlaceId(null);
+    setIsItineraryOpen(true);
   }
 
   function changeMode(nextMode: PlannerMode) {
@@ -134,20 +139,6 @@ export default function App() {
 
   return (
     <div className="app">
-      <TopBar
-        mode={mode}
-        activeTypes={activeTypes}
-        routePresetId={routePresetId}
-        itemCount={itineraryIds.length}
-        estimatedTime={estimatedTime}
-        onModeChange={changeMode}
-        onToggleType={toggleType}
-        onSelectRoutePreset={setRoutePresetId}
-        onGenerateRoute={generatePresetRoute}
-        onRandomRoute={generateRandomRoute}
-        onClear={clearRoute}
-      />
-
       <main className="workspace">
         <ChangshuMap
           places={places}
@@ -164,19 +155,66 @@ export default function App() {
           onToggleDrawMode={() => setDrawMode((current) => !current)}
         />
 
-        <ItineraryPanel
-          places={itineraryPlaces}
-          expandedPlaceId={expandedPlaceId}
-          routeName={generatedRouteName}
-          routeDescription={generatedRouteDescription}
+        <TopBar
+          mode={mode}
+          activeTypes={activeTypes}
+          routePresetId={routePresetId}
+          itemCount={itineraryIds.length}
           estimatedTime={estimatedTime}
-          onDropPlace={addPlace}
-          onDropBefore={dropBefore}
-          onRemove={removePlace}
+          isItineraryOpen={isItineraryOpen}
+          onModeChange={changeMode}
+          onToggleType={toggleType}
+          onSelectRoutePreset={setRoutePresetId}
+          onGenerateRoute={generatePresetRoute}
+          onRandomRoute={generateRandomRoute}
           onClear={clearRoute}
-          onToggleExpand={toggleExpand}
-          onDragStart={handleDragStart}
+          onToggleItinerary={() => setIsItineraryOpen((current) => !current)}
         />
+
+        <button
+          className={`itinerary-fab ${isItineraryOpen ? "is-open" : ""}`}
+          type="button"
+          onClick={() => setIsItineraryOpen((current) => !current)}
+          onDragOver={(event) => event.preventDefault()}
+          onDrop={(event) => {
+            event.preventDefault();
+            const placeId =
+              event.dataTransfer.getData("text/place-id") ||
+              event.dataTransfer.getData("text/plain");
+            if (placeId) {
+              addPlace(placeId);
+            }
+          }}
+          aria-label={isItineraryOpen ? "收起行程规划" : "展开行程规划"}
+        >
+          {isItineraryOpen ? <PanelRightClose size={20} /> : <PanelRightOpen size={20} />}
+          <span>行程</span>
+          <strong>{itineraryIds.length}</strong>
+        </button>
+
+        <div className={`itinerary-drawer ${isItineraryOpen ? "is-open" : ""}`}>
+          <ItineraryPanel
+            places={itineraryPlaces}
+            expandedPlaceId={expandedPlaceId}
+            routeName={generatedRouteName}
+            routeDescription={generatedRouteDescription}
+            estimatedTime={estimatedTime}
+            onDropPlace={addPlace}
+            onDropBefore={dropBefore}
+            onRemove={removePlace}
+            onClear={clearRoute}
+            onToggleExpand={toggleExpand}
+            onDragStart={handleDragStart}
+            onClose={() => setIsItineraryOpen(false)}
+          />
+        </div>
+
+        {!isItineraryOpen && itineraryIds.length > 0 && (
+          <div className="route-toast">
+            <ClipboardList size={17} />
+            已选 {itineraryIds.length} 站，点击右侧「行程」继续规划
+          </div>
+        )}
       </main>
     </div>
   );

@@ -262,17 +262,6 @@ export function ChangshuMap({
 
   return (
     <section className="map-shell">
-      <div className="map-status-strip">
-        <div>
-          <span className="eyebrow">Changshu Map</span>
-          <h2>常熟市地图</h2>
-        </div>
-        <span className={`tile-badge ${tileReady ? "is-ready" : ""}`}>
-          <Layers size={15} />
-          {tileReady ? "地图已载入" : "地图载入中"}
-        </span>
-      </div>
-
       <div className="map-frame">
         <div ref={mapNodeRef} className="leaflet-map" />
 
@@ -287,6 +276,10 @@ export function ChangshuMap({
         />
 
         <div className="map-action-stack">
+          <span className={`tile-badge ${tileReady ? "is-ready" : ""}`}>
+            <Layers size={15} />
+            {tileReady ? "地图已载入" : "地图载入中"}
+          </span>
           <button
             className={`map-tool-button ${drawMode ? "is-active" : ""}`}
             type="button"

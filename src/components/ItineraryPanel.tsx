@@ -1,4 +1,4 @@
-import { Map, Shuffle, Trash2 } from "lucide-react";
+import { Map, PanelRightClose, Shuffle, Trash2 } from "lucide-react";
 import type { Place } from "../types/place";
 import { PlaceCard } from "./PlaceCard";
 
@@ -14,6 +14,7 @@ type ItineraryPanelProps = {
   onClear: () => void;
   onToggleExpand: (placeId: string) => void;
   onDragStart: (placeId: string, event: React.DragEvent<HTMLElement>) => void;
+  onClose: () => void;
 };
 
 export function ItineraryPanel({
@@ -28,6 +29,7 @@ export function ItineraryPanel({
   onClear,
   onToggleExpand,
   onDragStart,
+  onClose,
 }: ItineraryPanelProps) {
   const hasPlaces = places.length > 0;
 
@@ -52,13 +54,18 @@ export function ItineraryPanel({
     <aside className="itinerary-panel" onDragOver={(event) => event.preventDefault()} onDrop={handleDrop}>
       <div className="panel-header">
         <div>
-          <span className="eyebrow">我的行程</span>
+          <span className="eyebrow">行程规划</span>
           <h2>{routeName ?? "手动规划路线"}</h2>
-          <p>{routeDescription ?? "已选地点会按顺序显示在这里。"}</p>
+          <p>{routeDescription ?? "把地图卡片拖到这里，或点击卡片里的加入按钮。"}</p>
         </div>
-        <button className="ghost-icon-button" type="button" onClick={onClear} aria-label="清空行程">
-          <Trash2 size={18} />
-        </button>
+        <div className="panel-header-actions">
+          <button className="ghost-icon-button" type="button" onClick={onClear} aria-label="清空行程">
+            <Trash2 size={18} />
+          </button>
+          <button className="ghost-icon-button" type="button" onClick={onClose} aria-label="收起行程规划">
+            <PanelRightClose size={18} />
+          </button>
+        </div>
       </div>
 
       <div className="panel-stats">
@@ -74,8 +81,8 @@ export function ItineraryPanel({
 
       {!hasPlaces && (
         <div className="empty-plan">
-          <strong>尚未选择地点</strong>
-          <span>J 人手动排，P 人一键排。</span>
+          <strong>先在地图上选点</strong>
+          <span>点击点位看卡片，拖进来就是路线。</span>
         </div>
       )}
 
