@@ -98,7 +98,7 @@ export default function App() {
   function toggleType(type: PlaceType) {
     setActiveTypes((current) => {
       if (current.includes(type)) {
-        return current.length === 1 ? current : current.filter((item) => item !== type);
+        return current.filter((item) => item !== type);
       }
 
       return [...current, type];
@@ -261,6 +261,7 @@ export default function App() {
             onDropPlace={addPlace}
             onDropBefore={dropBefore}
             onRemove={removePlace}
+            onFocusPlace={setSelectedPlaceId}
             onClear={clearRoute}
             onToggleExpand={toggleExpand}
             onDragStart={handleDragStart}

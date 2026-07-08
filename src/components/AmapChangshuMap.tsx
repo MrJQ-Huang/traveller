@@ -1,5 +1,6 @@
 import { Layers, LocateFixed, PencilLine, RotateCcw, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { mapSkinOverlays } from "../data/mapSkins";
 import { getAmapStyle, loadAmap, type AmapConfig } from "../map/amapLoader";
 import type { Place, PlannerMode } from "../types/place";
 import type { RoutePlan } from "../types/route";
@@ -47,9 +48,12 @@ export function AmapChangshuMap({
   const mapRef = useRef<any>(null);
   const markerLayerRef = useRef<any[]>([]);
   const routeLayerRef = useRef<any[]>([]);
+  const boundaryLayerRef = useRef<any[]>([]);
+  const skinLayerRef = useRef<any[]>([]);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
   const deferredDestroyTimerRef = useRef<number | null>(null);
+  const hasInitialFitRef = useRef(false);
   const [mapReady, setMapReady] = useState(false);
 
   const selectedPlace = useMemo(
@@ -63,6 +67,10 @@ export function AmapChangshuMap({
       return record;
     }, {});
   }, [itineraryIds]);
+
+  const visiblePlaceIds = useMemo(() => {
+    return new Set(visiblePlaces.map((place) => place.id));
+  }, [visiblePlaces]);
 
   useEffect(() => {
     let disposed = false;
@@ -98,6 +106,7 @@ export function AmapChangshuMap({
 
         window.requestAnimationFrame(() => {
           fitVisiblePlaces(visiblePlaces);
+          hasInitialFitRef.current = true;
           setMapReady(true);
         });
       } catch {
@@ -147,6 +156,7 @@ export function AmapChangshuMap({
         position: [place.position.lng, place.position.lat],
         anchor: "center",
         title: place.name,
+        zIndex: order || isSelected ? 150 : 120,
         content: `
           <button class="map-marker type-${place.type} ${isSelected ? "is-selected" : ""} ${
             order ? "is-planned" : ""
@@ -161,6 +171,108 @@ export function AmapChangshuMap({
       markerLayerRef.current.push(marker);
     });
   }, [itineraryOrder, onSelectPlace, selectedPlaceId, visiblePlaces]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    const AMap = window.AMap;
+
+    if (!map || !AMap || !mapReady) {
+      return;
+    }
+
+    let disposed = false;
+
+    boundaryLayerRef.current.forEach((layer) => layer.setMap(null));
+    boundaryLayerRef.current = [];
+
+    const districtSearch = new AMap.DistrictSearch({
+      level: "district",
+      subdistrict: 0,
+      extensions: "all",
+    });
+
+    districtSearch.search("常熟市", (status: string, result: any) => {
+      if (disposed || status !== "complete") {
+        return;
+      }
+
+      const boundaries = result?.districtList?.[0]?.boundaries;
+      if (!Array.isArray(boundaries)) {
+        return;
+      }
+
+      boundaryLayerRef.current = boundaries.map((boundary: any) => {
+        const polygon = new AMap.Polygon({
+          path: boundary,
+          strokeColor: "#0f5f4c",
+          strokeOpacity: 0.72,
+          strokeWeight: 2,
+          strokeStyle: "dashed",
+          fillColor: "#dff3ec",
+          fillOpacity: 0.08,
+          bubble: true,
+          zIndex: 20,
+        });
+        polygon.setMap(map);
+        return polygon;
+      });
+    });
+
+    return () => {
+      disposed = true;
+      boundaryLayerRef.current.forEach((layer) => layer.setMap(null));
+      boundaryLayerRef.current = [];
+    };
+  }, [mapReady]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    const AMap = window.AMap;
+
+    if (!map || !AMap || !mapReady) {
+      return;
+    }
+
+    skinLayerRef.current.forEach((marker) => marker.setMap(null));
+    skinLayerRef.current = mapSkinOverlays
+      .filter((skin) => !skin.linkedPlaceId || visiblePlaceIds.has(skin.linkedPlaceId))
+      .map((skin) => {
+      const linkedPlace = skin.linkedPlaceId
+        ? places.find((place) => place.id === skin.linkedPlaceId)
+        : null;
+      const skinCenter =
+        skin.lockToPlace && linkedPlace
+          ? [linkedPlace.position.lng, linkedPlace.position.lat]
+          : skin.center;
+      const marker = new AMap.Marker({
+        position: skinCenter,
+        anchor: "bottom-center",
+        zIndex: 70,
+        content: `
+          <button class="regional-skin" type="button" style="width:${skin.width}px">
+            <img src="${skin.imageUrl}" alt="${skin.name}" />
+            <span>
+              <strong>${skin.name}</strong>
+              <em>${skin.subtitle}</em>
+            </span>
+          </button>
+        `,
+      });
+
+      const linkedPlaceId = skin.linkedPlaceId;
+      if (linkedPlaceId) {
+        marker.on("click", () => onSelectPlace(linkedPlaceId));
+      }
+
+      marker.setMap(map);
+      return marker;
+    });
+
+    return () => {
+      skinLayerRef.current.forEach((marker) => marker.setMap(null));
+      skinLayerRef.current = [];
+    };
+  }, [mapReady, onSelectPlace, places, visiblePlaceIds]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -190,10 +302,23 @@ export function AmapChangshuMap({
   }, [routePlan]);
 
   useEffect(() => {
-    if (mapReady) {
+    if (mapReady && !hasInitialFitRef.current) {
       fitVisiblePlaces(visiblePlaces);
+      hasInitialFitRef.current = true;
     }
   }, [mapReady, visiblePlaces]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !selectedPlace) {
+      return;
+    }
+
+    map.setZoomAndCenter(Math.max(map.getZoom(), 13), [
+      selectedPlace.position.lng,
+      selectedPlace.position.lat,
+    ]);
+  }, [selectedPlace]);
 
   useEffect(() => {
     const canvas = canvasRef.current;

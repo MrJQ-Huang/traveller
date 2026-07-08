@@ -14,6 +14,7 @@ type ItineraryPanelProps = {
   onDropPlace: (placeId: string) => void;
   onDropBefore: (placeId: string, targetId: string) => void;
   onRemove: (placeId: string) => void;
+  onFocusPlace: (placeId: string) => void;
   onClear: () => void;
   onToggleExpand: (placeId: string) => void;
   onDragStart: (placeId: string, event: React.DragEvent<HTMLElement>) => void;
@@ -30,6 +31,7 @@ export function ItineraryPanel({
   onDropPlace,
   onDropBefore,
   onRemove,
+  onFocusPlace,
   onClear,
   onToggleExpand,
   onDragStart,
@@ -114,6 +116,7 @@ export function ItineraryPanel({
               expanded={expandedPlaceId === place.id}
               inItinerary
               onRemove={onRemove}
+              onFocus={onFocusPlace}
               onToggleExpand={onToggleExpand}
               onDragStart={onDragStart}
             />

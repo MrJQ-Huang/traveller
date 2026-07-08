@@ -55,6 +55,7 @@ export function loadAmap(config: AmapConfig): Promise<any> {
       "AMap.Walking",
       "AMap.Driving",
       "AMap.Riding",
+      "AMap.DistrictSearch",
     ].join(",");
 
     script.src = `https://webapi.amap.com/maps?v=2.0&key=${encodeURIComponent(

@@ -1,0 +1,1527 @@
+{
+  "styleId": "changshu-demo",
+  "tileSize": 256,
+  "minZoom": 12,
+  "maxZoom": 14,
+  "outputTarget": "public/map-tiles/changshu-demo/{z}/{x}/{y}.png",
+  "areas": [
+    {
+      "id": "core-yushan-oldcity-shanghu",
+      "name": "虞山-老城-尚湖核心区",
+      "west": 120.66,
+      "east": 120.79,
+      "south": 31.59,
+      "north": 31.69
+    },
+    {
+      "id": "guli-ancient-town",
+      "name": "古里古镇",
+      "west": 120.86,
+      "east": 120.91,
+      "south": 31.625,
+      "north": 31.665
+    }
+  ],
+  "tiles": [
+    {
+      "z": 12,
+      "x": 3420,
+      "y": 1667,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.5859375,
+        "east": 120.673828125,
+        "north": 31.728167146023935,
+        "south": 31.653381399663985
+      },
+      "key": "12/3420/1667",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/12/3420/1667.png"
+    },
+    {
+      "z": 12,
+      "x": 3420,
+      "y": 1668,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.5859375,
+        "east": 120.673828125,
+        "north": 31.653381399663985,
+        "south": 31.578535426473373
+      },
+      "key": "12/3420/1668",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/12/3420/1668.png"
+    },
+    {
+      "z": 12,
+      "x": 3421,
+      "y": 1667,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.76171875,
+        "north": 31.728167146023935,
+        "south": 31.653381399663985
+      },
+      "key": "12/3421/1667",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/12/3421/1667.png"
+    },
+    {
+      "z": 12,
+      "x": 3421,
+      "y": 1668,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.76171875,
+        "north": 31.653381399663985,
+        "south": 31.578535426473373
+      },
+      "key": "12/3421/1668",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/12/3421/1668.png"
+    },
+    {
+      "z": 12,
+      "x": 3422,
+      "y": 1667,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.849609375,
+        "north": 31.728167146023935,
+        "south": 31.653381399663985
+      },
+      "key": "12/3422/1667",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/12/3422/1667.png"
+    },
+    {
+      "z": 12,
+      "x": 3422,
+      "y": 1668,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.849609375,
+        "north": 31.653381399663985,
+        "south": 31.578535426473373
+      },
+      "key": "12/3422/1668",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/12/3422/1668.png"
+    },
+    {
+      "z": 12,
+      "x": 3423,
+      "y": 1667,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.849609375,
+        "east": 120.9375,
+        "north": 31.728167146023935,
+        "south": 31.653381399663985
+      },
+      "key": "12/3423/1667",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/12/3423/1667.png"
+    },
+    {
+      "z": 12,
+      "x": 3423,
+      "y": 1668,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.849609375,
+        "east": 120.9375,
+        "north": 31.653381399663985,
+        "south": 31.578535426473373
+      },
+      "key": "12/3423/1668",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/12/3423/1668.png"
+    },
+    {
+      "z": 13,
+      "x": 6841,
+      "y": 3335,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.6298828125,
+        "east": 120.673828125,
+        "north": 31.690781806136815,
+        "south": 31.653381399663985
+      },
+      "key": "13/6841/3335",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6841/3335.png"
+    },
+    {
+      "z": 13,
+      "x": 6841,
+      "y": 3336,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.6298828125,
+        "east": 120.673828125,
+        "north": 31.653381399663985,
+        "south": 31.615965936476076
+      },
+      "key": "13/6841/3336",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6841/3336.png"
+    },
+    {
+      "z": 13,
+      "x": 6841,
+      "y": 3337,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.6298828125,
+        "east": 120.673828125,
+        "north": 31.615965936476076,
+        "south": 31.578535426473373
+      },
+      "key": "13/6841/3337",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6841/3337.png"
+    },
+    {
+      "z": 13,
+      "x": 6842,
+      "y": 3335,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.7177734375,
+        "north": 31.690781806136815,
+        "south": 31.653381399663985
+      },
+      "key": "13/6842/3335",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6842/3335.png"
+    },
+    {
+      "z": 13,
+      "x": 6842,
+      "y": 3336,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.7177734375,
+        "north": 31.653381399663985,
+        "south": 31.615965936476076
+      },
+      "key": "13/6842/3336",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6842/3336.png"
+    },
+    {
+      "z": 13,
+      "x": 6842,
+      "y": 3337,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.7177734375,
+        "north": 31.615965936476076,
+        "south": 31.578535426473373
+      },
+      "key": "13/6842/3337",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6842/3337.png"
+    },
+    {
+      "z": 13,
+      "x": 6843,
+      "y": 3335,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.7177734375,
+        "east": 120.76171875,
+        "north": 31.690781806136815,
+        "south": 31.653381399663985
+      },
+      "key": "13/6843/3335",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6843/3335.png"
+    },
+    {
+      "z": 13,
+      "x": 6843,
+      "y": 3336,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.7177734375,
+        "east": 120.76171875,
+        "north": 31.653381399663985,
+        "south": 31.615965936476076
+      },
+      "key": "13/6843/3336",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6843/3336.png"
+    },
+    {
+      "z": 13,
+      "x": 6843,
+      "y": 3337,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.7177734375,
+        "east": 120.76171875,
+        "north": 31.615965936476076,
+        "south": 31.578535426473373
+      },
+      "key": "13/6843/3337",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6843/3337.png"
+    },
+    {
+      "z": 13,
+      "x": 6844,
+      "y": 3335,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.8056640625,
+        "north": 31.690781806136815,
+        "south": 31.653381399663985
+      },
+      "key": "13/6844/3335",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6844/3335.png"
+    },
+    {
+      "z": 13,
+      "x": 6844,
+      "y": 3336,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.8056640625,
+        "north": 31.653381399663985,
+        "south": 31.615965936476076
+      },
+      "key": "13/6844/3336",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6844/3336.png"
+    },
+    {
+      "z": 13,
+      "x": 6844,
+      "y": 3337,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.8056640625,
+        "north": 31.615965936476076,
+        "south": 31.578535426473373
+      },
+      "key": "13/6844/3337",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/13/6844/3337.png"
+    },
+    {
+      "z": 13,
+      "x": 6846,
+      "y": 3335,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.849609375,
+        "east": 120.8935546875,
+        "north": 31.690781806136815,
+        "south": 31.653381399663985
+      },
+      "key": "13/6846/3335",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/13/6846/3335.png"
+    },
+    {
+      "z": 13,
+      "x": 6846,
+      "y": 3336,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.849609375,
+        "east": 120.8935546875,
+        "north": 31.653381399663985,
+        "south": 31.615965936476076
+      },
+      "key": "13/6846/3336",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/13/6846/3336.png"
+    },
+    {
+      "z": 13,
+      "x": 6847,
+      "y": 3335,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.8935546875,
+        "east": 120.9375,
+        "north": 31.690781806136815,
+        "south": 31.653381399663985
+      },
+      "key": "13/6847/3335",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/13/6847/3335.png"
+    },
+    {
+      "z": 13,
+      "x": 6847,
+      "y": 3336,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.8935546875,
+        "east": 120.9375,
+        "north": 31.653381399663985,
+        "south": 31.615965936476076
+      },
+      "key": "13/6847/3336",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/13/6847/3336.png"
+    },
+    {
+      "z": 14,
+      "x": 13683,
+      "y": 6670,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.65185546875,
+        "east": 120.673828125,
+        "north": 31.690781806136815,
+        "south": 31.672083485607388
+      },
+      "key": "14/13683/6670",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13683/6670.png"
+    },
+    {
+      "z": 14,
+      "x": 13683,
+      "y": 6671,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.65185546875,
+        "east": 120.673828125,
+        "north": 31.672083485607388,
+        "south": 31.653381399663985
+      },
+      "key": "14/13683/6671",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13683/6671.png"
+    },
+    {
+      "z": 14,
+      "x": 13683,
+      "y": 6672,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.65185546875,
+        "east": 120.673828125,
+        "north": 31.653381399663985,
+        "south": 31.634675549541345
+      },
+      "key": "14/13683/6672",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13683/6672.png"
+    },
+    {
+      "z": 14,
+      "x": 13683,
+      "y": 6673,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.65185546875,
+        "east": 120.673828125,
+        "north": 31.634675549541345,
+        "south": 31.615965936476076
+      },
+      "key": "14/13683/6673",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13683/6673.png"
+    },
+    {
+      "z": 14,
+      "x": 13683,
+      "y": 6674,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.65185546875,
+        "east": 120.673828125,
+        "north": 31.615965936476076,
+        "south": 31.597252561706647
+      },
+      "key": "14/13683/6674",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13683/6674.png"
+    },
+    {
+      "z": 14,
+      "x": 13683,
+      "y": 6675,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.65185546875,
+        "east": 120.673828125,
+        "north": 31.597252561706647,
+        "south": 31.578535426473373
+      },
+      "key": "14/13683/6675",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13683/6675.png"
+    },
+    {
+      "z": 14,
+      "x": 13684,
+      "y": 6670,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.69580078125,
+        "north": 31.690781806136815,
+        "south": 31.672083485607388
+      },
+      "key": "14/13684/6670",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13684/6670.png"
+    },
+    {
+      "z": 14,
+      "x": 13684,
+      "y": 6671,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.69580078125,
+        "north": 31.672083485607388,
+        "south": 31.653381399663985
+      },
+      "key": "14/13684/6671",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13684/6671.png"
+    },
+    {
+      "z": 14,
+      "x": 13684,
+      "y": 6672,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.69580078125,
+        "north": 31.653381399663985,
+        "south": 31.634675549541345
+      },
+      "key": "14/13684/6672",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13684/6672.png"
+    },
+    {
+      "z": 14,
+      "x": 13684,
+      "y": 6673,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.69580078125,
+        "north": 31.634675549541345,
+        "south": 31.615965936476076
+      },
+      "key": "14/13684/6673",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13684/6673.png"
+    },
+    {
+      "z": 14,
+      "x": 13684,
+      "y": 6674,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.69580078125,
+        "north": 31.615965936476076,
+        "south": 31.597252561706647
+      },
+      "key": "14/13684/6674",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13684/6674.png"
+    },
+    {
+      "z": 14,
+      "x": 13684,
+      "y": 6675,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.673828125,
+        "east": 120.69580078125,
+        "north": 31.597252561706647,
+        "south": 31.578535426473373
+      },
+      "key": "14/13684/6675",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13684/6675.png"
+    },
+    {
+      "z": 14,
+      "x": 13685,
+      "y": 6670,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.69580078125,
+        "east": 120.7177734375,
+        "north": 31.690781806136815,
+        "south": 31.672083485607388
+      },
+      "key": "14/13685/6670",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13685/6670.png"
+    },
+    {
+      "z": 14,
+      "x": 13685,
+      "y": 6671,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.69580078125,
+        "east": 120.7177734375,
+        "north": 31.672083485607388,
+        "south": 31.653381399663985
+      },
+      "key": "14/13685/6671",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13685/6671.png"
+    },
+    {
+      "z": 14,
+      "x": 13685,
+      "y": 6672,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.69580078125,
+        "east": 120.7177734375,
+        "north": 31.653381399663985,
+        "south": 31.634675549541345
+      },
+      "key": "14/13685/6672",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13685/6672.png"
+    },
+    {
+      "z": 14,
+      "x": 13685,
+      "y": 6673,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.69580078125,
+        "east": 120.7177734375,
+        "north": 31.634675549541345,
+        "south": 31.615965936476076
+      },
+      "key": "14/13685/6673",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13685/6673.png"
+    },
+    {
+      "z": 14,
+      "x": 13685,
+      "y": 6674,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.69580078125,
+        "east": 120.7177734375,
+        "north": 31.615965936476076,
+        "south": 31.597252561706647
+      },
+      "key": "14/13685/6674",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13685/6674.png"
+    },
+    {
+      "z": 14,
+      "x": 13685,
+      "y": 6675,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.69580078125,
+        "east": 120.7177734375,
+        "north": 31.597252561706647,
+        "south": 31.578535426473373
+      },
+      "key": "14/13685/6675",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13685/6675.png"
+    },
+    {
+      "z": 14,
+      "x": 13686,
+      "y": 6670,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.7177734375,
+        "east": 120.73974609375,
+        "north": 31.690781806136815,
+        "south": 31.672083485607388
+      },
+      "key": "14/13686/6670",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13686/6670.png"
+    },
+    {
+      "z": 14,
+      "x": 13686,
+      "y": 6671,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.7177734375,
+        "east": 120.73974609375,
+        "north": 31.672083485607388,
+        "south": 31.653381399663985
+      },
+      "key": "14/13686/6671",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13686/6671.png"
+    },
+    {
+      "z": 14,
+      "x": 13686,
+      "y": 6672,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.7177734375,
+        "east": 120.73974609375,
+        "north": 31.653381399663985,
+        "south": 31.634675549541345
+      },
+      "key": "14/13686/6672",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13686/6672.png"
+    },
+    {
+      "z": 14,
+      "x": 13686,
+      "y": 6673,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.7177734375,
+        "east": 120.73974609375,
+        "north": 31.634675549541345,
+        "south": 31.615965936476076
+      },
+      "key": "14/13686/6673",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13686/6673.png"
+    },
+    {
+      "z": 14,
+      "x": 13686,
+      "y": 6674,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.7177734375,
+        "east": 120.73974609375,
+        "north": 31.615965936476076,
+        "south": 31.597252561706647
+      },
+      "key": "14/13686/6674",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13686/6674.png"
+    },
+    {
+      "z": 14,
+      "x": 13686,
+      "y": 6675,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.7177734375,
+        "east": 120.73974609375,
+        "north": 31.597252561706647,
+        "south": 31.578535426473373
+      },
+      "key": "14/13686/6675",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13686/6675.png"
+    },
+    {
+      "z": 14,
+      "x": 13687,
+      "y": 6670,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.73974609375,
+        "east": 120.76171875,
+        "north": 31.690781806136815,
+        "south": 31.672083485607388
+      },
+      "key": "14/13687/6670",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13687/6670.png"
+    },
+    {
+      "z": 14,
+      "x": 13687,
+      "y": 6671,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.73974609375,
+        "east": 120.76171875,
+        "north": 31.672083485607388,
+        "south": 31.653381399663985
+      },
+      "key": "14/13687/6671",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13687/6671.png"
+    },
+    {
+      "z": 14,
+      "x": 13687,
+      "y": 6672,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.73974609375,
+        "east": 120.76171875,
+        "north": 31.653381399663985,
+        "south": 31.634675549541345
+      },
+      "key": "14/13687/6672",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13687/6672.png"
+    },
+    {
+      "z": 14,
+      "x": 13687,
+      "y": 6673,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.73974609375,
+        "east": 120.76171875,
+        "north": 31.634675549541345,
+        "south": 31.615965936476076
+      },
+      "key": "14/13687/6673",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13687/6673.png"
+    },
+    {
+      "z": 14,
+      "x": 13687,
+      "y": 6674,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.73974609375,
+        "east": 120.76171875,
+        "north": 31.615965936476076,
+        "south": 31.597252561706647
+      },
+      "key": "14/13687/6674",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13687/6674.png"
+    },
+    {
+      "z": 14,
+      "x": 13687,
+      "y": 6675,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.73974609375,
+        "east": 120.76171875,
+        "north": 31.597252561706647,
+        "south": 31.578535426473373
+      },
+      "key": "14/13687/6675",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13687/6675.png"
+    },
+    {
+      "z": 14,
+      "x": 13688,
+      "y": 6670,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.78369140625,
+        "north": 31.690781806136815,
+        "south": 31.672083485607388
+      },
+      "key": "14/13688/6670",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13688/6670.png"
+    },
+    {
+      "z": 14,
+      "x": 13688,
+      "y": 6671,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.78369140625,
+        "north": 31.672083485607388,
+        "south": 31.653381399663985
+      },
+      "key": "14/13688/6671",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13688/6671.png"
+    },
+    {
+      "z": 14,
+      "x": 13688,
+      "y": 6672,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.78369140625,
+        "north": 31.653381399663985,
+        "south": 31.634675549541345
+      },
+      "key": "14/13688/6672",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13688/6672.png"
+    },
+    {
+      "z": 14,
+      "x": 13688,
+      "y": 6673,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.78369140625,
+        "north": 31.634675549541345,
+        "south": 31.615965936476076
+      },
+      "key": "14/13688/6673",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13688/6673.png"
+    },
+    {
+      "z": 14,
+      "x": 13688,
+      "y": 6674,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.78369140625,
+        "north": 31.615965936476076,
+        "south": 31.597252561706647
+      },
+      "key": "14/13688/6674",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13688/6674.png"
+    },
+    {
+      "z": 14,
+      "x": 13688,
+      "y": 6675,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.76171875,
+        "east": 120.78369140625,
+        "north": 31.597252561706647,
+        "south": 31.578535426473373
+      },
+      "key": "14/13688/6675",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13688/6675.png"
+    },
+    {
+      "z": 14,
+      "x": 13689,
+      "y": 6670,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.78369140625,
+        "east": 120.8056640625,
+        "north": 31.690781806136815,
+        "south": 31.672083485607388
+      },
+      "key": "14/13689/6670",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13689/6670.png"
+    },
+    {
+      "z": 14,
+      "x": 13689,
+      "y": 6671,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.78369140625,
+        "east": 120.8056640625,
+        "north": 31.672083485607388,
+        "south": 31.653381399663985
+      },
+      "key": "14/13689/6671",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13689/6671.png"
+    },
+    {
+      "z": 14,
+      "x": 13689,
+      "y": 6672,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.78369140625,
+        "east": 120.8056640625,
+        "north": 31.653381399663985,
+        "south": 31.634675549541345
+      },
+      "key": "14/13689/6672",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13689/6672.png"
+    },
+    {
+      "z": 14,
+      "x": 13689,
+      "y": 6673,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.78369140625,
+        "east": 120.8056640625,
+        "north": 31.634675549541345,
+        "south": 31.615965936476076
+      },
+      "key": "14/13689/6673",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13689/6673.png"
+    },
+    {
+      "z": 14,
+      "x": 13689,
+      "y": 6674,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.78369140625,
+        "east": 120.8056640625,
+        "north": 31.615965936476076,
+        "south": 31.597252561706647
+      },
+      "key": "14/13689/6674",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13689/6674.png"
+    },
+    {
+      "z": 14,
+      "x": 13689,
+      "y": 6675,
+      "areaIds": [
+        "core-yushan-oldcity-shanghu"
+      ],
+      "areaNames": [
+        "虞山-老城-尚湖核心区"
+      ],
+      "bounds": {
+        "west": 120.78369140625,
+        "east": 120.8056640625,
+        "north": 31.597252561706647,
+        "south": 31.578535426473373
+      },
+      "key": "14/13689/6675",
+      "areaName": "虞山-老城-尚湖核心区",
+      "targetPath": "public/map-tiles/changshu-demo/14/13689/6675.png"
+    },
+    {
+      "z": 14,
+      "x": 13692,
+      "y": 6671,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.849609375,
+        "east": 120.87158203125,
+        "north": 31.672083485607388,
+        "south": 31.653381399663985
+      },
+      "key": "14/13692/6671",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/14/13692/6671.png"
+    },
+    {
+      "z": 14,
+      "x": 13692,
+      "y": 6672,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.849609375,
+        "east": 120.87158203125,
+        "north": 31.653381399663985,
+        "south": 31.634675549541345
+      },
+      "key": "14/13692/6672",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/14/13692/6672.png"
+    },
+    {
+      "z": 14,
+      "x": 13692,
+      "y": 6673,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.849609375,
+        "east": 120.87158203125,
+        "north": 31.634675549541345,
+        "south": 31.615965936476076
+      },
+      "key": "14/13692/6673",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/14/13692/6673.png"
+    },
+    {
+      "z": 14,
+      "x": 13693,
+      "y": 6671,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.87158203125,
+        "east": 120.8935546875,
+        "north": 31.672083485607388,
+        "south": 31.653381399663985
+      },
+      "key": "14/13693/6671",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/14/13693/6671.png"
+    },
+    {
+      "z": 14,
+      "x": 13693,
+      "y": 6672,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.87158203125,
+        "east": 120.8935546875,
+        "north": 31.653381399663985,
+        "south": 31.634675549541345
+      },
+      "key": "14/13693/6672",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/14/13693/6672.png"
+    },
+    {
+      "z": 14,
+      "x": 13693,
+      "y": 6673,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.87158203125,
+        "east": 120.8935546875,
+        "north": 31.634675549541345,
+        "south": 31.615965936476076
+      },
+      "key": "14/13693/6673",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/14/13693/6673.png"
+    },
+    {
+      "z": 14,
+      "x": 13694,
+      "y": 6671,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.8935546875,
+        "east": 120.91552734375,
+        "north": 31.672083485607388,
+        "south": 31.653381399663985
+      },
+      "key": "14/13694/6671",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/14/13694/6671.png"
+    },
+    {
+      "z": 14,
+      "x": 13694,
+      "y": 6672,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.8935546875,
+        "east": 120.91552734375,
+        "north": 31.653381399663985,
+        "south": 31.634675549541345
+      },
+      "key": "14/13694/6672",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/14/13694/6672.png"
+    },
+    {
+      "z": 14,
+      "x": 13694,
+      "y": 6673,
+      "areaIds": [
+        "guli-ancient-town"
+      ],
+      "areaNames": [
+        "古里古镇"
+      ],
+      "bounds": {
+        "west": 120.8935546875,
+        "east": 120.91552734375,
+        "north": 31.634675549541345,
+        "south": 31.615965936476076
+      },
+      "key": "14/13694/6673",
+      "areaName": "古里古镇",
+      "targetPath": "public/map-tiles/changshu-demo/14/13694/6673.png"
+    }
+  ]
+}

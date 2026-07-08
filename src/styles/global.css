@@ -386,6 +386,68 @@ button:disabled {
     0 12px 26px rgba(19, 31, 27, 0.28);
 }
 
+.regional-skin {
+  display: grid;
+  gap: 5px;
+  padding: 0;
+  color: var(--accent-strong);
+  background: transparent;
+  filter: drop-shadow(0 12px 24px rgba(15, 31, 27, 0.22));
+  transform: translateZ(0);
+  transition:
+    filter 160ms ease,
+    transform 160ms ease;
+}
+
+.regional-skin:hover {
+  filter: drop-shadow(0 16px 30px rgba(15, 31, 27, 0.3));
+  transform: translateY(-2px);
+}
+
+.regional-skin img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.88);
+  border-radius: 8px;
+  opacity: 0.86;
+}
+
+.regional-skin span {
+  display: grid;
+  gap: 1px;
+  justify-items: center;
+  width: max-content;
+  max-width: 100%;
+  margin: -14px auto 0;
+  padding: 5px 8px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(220, 228, 223, 0.86);
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(24, 35, 31, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.regional-skin strong,
+.regional-skin em {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.regional-skin strong {
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.regional-skin em {
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+}
+
 .map-action-stack {
   position: absolute;
   left: 18px;

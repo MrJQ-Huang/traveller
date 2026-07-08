@@ -1,0 +1,535 @@
+{
+  "source": "Authorized AMap web tile export",
+  "style": "8",
+  "tileSize": 256,
+  "count": 75,
+  "totalBytes": 996006,
+  "outputRoot": "瓦片制作包/changshu-demo/amap-source-tiles",
+  "results": [
+    {
+      "key": "12/3420/1667",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=3420&y=1667&z=12",
+      "path": "amap-source-tiles/12/3420/1667.png",
+      "bytes": 13293,
+      "contentType": "image/png"
+    },
+    {
+      "key": "12/3420/1668",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=3420&y=1668&z=12",
+      "path": "amap-source-tiles/12/3420/1668.png",
+      "bytes": 13803,
+      "contentType": "image/png"
+    },
+    {
+      "key": "12/3421/1667",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=3421&y=1667&z=12",
+      "path": "amap-source-tiles/12/3421/1667.png",
+      "bytes": 16827,
+      "contentType": "image/png"
+    },
+    {
+      "key": "12/3421/1668",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=3421&y=1668&z=12",
+      "path": "amap-source-tiles/12/3421/1668.png",
+      "bytes": 17162,
+      "contentType": "image/png"
+    },
+    {
+      "key": "12/3422/1667",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=3422&y=1667&z=12",
+      "path": "amap-source-tiles/12/3422/1667.png",
+      "bytes": 18115,
+      "contentType": "image/png"
+    },
+    {
+      "key": "12/3422/1668",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=3422&y=1668&z=12",
+      "path": "amap-source-tiles/12/3422/1668.png",
+      "bytes": 18873,
+      "contentType": "image/png"
+    },
+    {
+      "key": "12/3423/1667",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=3423&y=1667&z=12",
+      "path": "amap-source-tiles/12/3423/1667.png",
+      "bytes": 17174,
+      "contentType": "image/png"
+    },
+    {
+      "key": "12/3423/1668",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=3423&y=1668&z=12",
+      "path": "amap-source-tiles/12/3423/1668.png",
+      "bytes": 17490,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6841/3335",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6841&y=3335&z=13",
+      "path": "amap-source-tiles/13/6841/3335.png",
+      "bytes": 10242,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6841/3336",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6841&y=3336&z=13",
+      "path": "amap-source-tiles/13/6841/3336.png",
+      "bytes": 10200,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6841/3337",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6841&y=3337&z=13",
+      "path": "amap-source-tiles/13/6841/3337.png",
+      "bytes": 11423,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6842/3335",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6842&y=3335&z=13",
+      "path": "amap-source-tiles/13/6842/3335.png",
+      "bytes": 11307,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6842/3336",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6842&y=3336&z=13",
+      "path": "amap-source-tiles/13/6842/3336.png",
+      "bytes": 15638,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6842/3337",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6842&y=3337&z=13",
+      "path": "amap-source-tiles/13/6842/3337.png",
+      "bytes": 11044,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6843/3335",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6843&y=3335&z=13",
+      "path": "amap-source-tiles/13/6843/3335.png",
+      "bytes": 14273,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6843/3336",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6843&y=3336&z=13",
+      "path": "amap-source-tiles/13/6843/3336.png",
+      "bytes": 16874,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6843/3337",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6843&y=3337&z=13",
+      "path": "amap-source-tiles/13/6843/3337.png",
+      "bytes": 11266,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6844/3335",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6844&y=3335&z=13",
+      "path": "amap-source-tiles/13/6844/3335.png",
+      "bytes": 17575,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6844/3336",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6844&y=3336&z=13",
+      "path": "amap-source-tiles/13/6844/3336.png",
+      "bytes": 19453,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6844/3337",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6844&y=3337&z=13",
+      "path": "amap-source-tiles/13/6844/3337.png",
+      "bytes": 16571,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6846/3335",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6846&y=3335&z=13",
+      "path": "amap-source-tiles/13/6846/3335.png",
+      "bytes": 10788,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6846/3336",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6846&y=3336&z=13",
+      "path": "amap-source-tiles/13/6846/3336.png",
+      "bytes": 10579,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6847/3335",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6847&y=3335&z=13",
+      "path": "amap-source-tiles/13/6847/3335.png",
+      "bytes": 11818,
+      "contentType": "image/png"
+    },
+    {
+      "key": "13/6847/3336",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=6847&y=3336&z=13",
+      "path": "amap-source-tiles/13/6847/3336.png",
+      "bytes": 17169,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13683/6670",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13683&y=6670&z=14",
+      "path": "amap-source-tiles/14/13683/6670.png",
+      "bytes": 9139,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13683/6671",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13683&y=6671&z=14",
+      "path": "amap-source-tiles/14/13683/6671.png",
+      "bytes": 12100,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13683/6672",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13683&y=6672&z=14",
+      "path": "amap-source-tiles/14/13683/6672.png",
+      "bytes": 10545,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13683/6673",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13683&y=6673&z=14",
+      "path": "amap-source-tiles/14/13683/6673.png",
+      "bytes": 5652,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13683/6674",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13683&y=6674&z=14",
+      "path": "amap-source-tiles/14/13683/6674.png",
+      "bytes": 8358,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13683/6675",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13683&y=6675&z=14",
+      "path": "amap-source-tiles/14/13683/6675.png",
+      "bytes": 6711,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13684/6670",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13684&y=6670&z=14",
+      "path": "amap-source-tiles/14/13684/6670.png",
+      "bytes": 11556,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13684/6671",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13684&y=6671&z=14",
+      "path": "amap-source-tiles/14/13684/6671.png",
+      "bytes": 10816,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13684/6672",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13684&y=6672&z=14",
+      "path": "amap-source-tiles/14/13684/6672.png",
+      "bytes": 13656,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13684/6673",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13684&y=6673&z=14",
+      "path": "amap-source-tiles/14/13684/6673.png",
+      "bytes": 13953,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13684/6674",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13684&y=6674&z=14",
+      "path": "amap-source-tiles/14/13684/6674.png",
+      "bytes": 12656,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13684/6675",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13684&y=6675&z=14",
+      "path": "amap-source-tiles/14/13684/6675.png",
+      "bytes": 9040,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13685/6670",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13685&y=6670&z=14",
+      "path": "amap-source-tiles/14/13685/6670.png",
+      "bytes": 11717,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13685/6671",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13685&y=6671&z=14",
+      "path": "amap-source-tiles/14/13685/6671.png",
+      "bytes": 8542,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13685/6672",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13685&y=6672&z=14",
+      "path": "amap-source-tiles/14/13685/6672.png",
+      "bytes": 9159,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13685/6673",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13685&y=6673&z=14",
+      "path": "amap-source-tiles/14/13685/6673.png",
+      "bytes": 13775,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13685/6674",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13685&y=6674&z=14",
+      "path": "amap-source-tiles/14/13685/6674.png",
+      "bytes": 13168,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13685/6675",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13685&y=6675&z=14",
+      "path": "amap-source-tiles/14/13685/6675.png",
+      "bytes": 9374,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13686/6670",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13686&y=6670&z=14",
+      "path": "amap-source-tiles/14/13686/6670.png",
+      "bytes": 15191,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13686/6671",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13686&y=6671&z=14",
+      "path": "amap-source-tiles/14/13686/6671.png",
+      "bytes": 11775,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13686/6672",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13686&y=6672&z=14",
+      "path": "amap-source-tiles/14/13686/6672.png",
+      "bytes": 14836,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13686/6673",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13686&y=6673&z=14",
+      "path": "amap-source-tiles/14/13686/6673.png",
+      "bytes": 18743,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13686/6674",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13686&y=6674&z=14",
+      "path": "amap-source-tiles/14/13686/6674.png",
+      "bytes": 17086,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13686/6675",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13686&y=6675&z=14",
+      "path": "amap-source-tiles/14/13686/6675.png",
+      "bytes": 11684,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13687/6670",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13687&y=6670&z=14",
+      "path": "amap-source-tiles/14/13687/6670.png",
+      "bytes": 13858,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13687/6671",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13687&y=6671&z=14",
+      "path": "amap-source-tiles/14/13687/6671.png",
+      "bytes": 12702,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13687/6672",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13687&y=6672&z=14",
+      "path": "amap-source-tiles/14/13687/6672.png",
+      "bytes": 18079,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13687/6673",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13687&y=6673&z=14",
+      "path": "amap-source-tiles/14/13687/6673.png",
+      "bytes": 16392,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13687/6674",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13687&y=6674&z=14",
+      "path": "amap-source-tiles/14/13687/6674.png",
+      "bytes": 7370,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13687/6675",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13687&y=6675&z=14",
+      "path": "amap-source-tiles/14/13687/6675.png",
+      "bytes": 3245,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13688/6670",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13688&y=6670&z=14",
+      "path": "amap-source-tiles/14/13688/6670.png",
+      "bytes": 18887,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13688/6671",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13688&y=6671&z=14",
+      "path": "amap-source-tiles/14/13688/6671.png",
+      "bytes": 17695,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13688/6672",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13688&y=6672&z=14",
+      "path": "amap-source-tiles/14/13688/6672.png",
+      "bytes": 17469,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13688/6673",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13688&y=6673&z=14",
+      "path": "amap-source-tiles/14/13688/6673.png",
+      "bytes": 17982,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13688/6674",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13688&y=6674&z=14",
+      "path": "amap-source-tiles/14/13688/6674.png",
+      "bytes": 16490,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13688/6675",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13688&y=6675&z=14",
+      "path": "amap-source-tiles/14/13688/6675.png",
+      "bytes": 17175,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13689/6670",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13689&y=6670&z=14",
+      "path": "amap-source-tiles/14/13689/6670.png",
+      "bytes": 15398,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13689/6671",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13689&y=6671&z=14",
+      "path": "amap-source-tiles/14/13689/6671.png",
+      "bytes": 14441,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13689/6672",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13689&y=6672&z=14",
+      "path": "amap-source-tiles/14/13689/6672.png",
+      "bytes": 17007,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13689/6673",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13689&y=6673&z=14",
+      "path": "amap-source-tiles/14/13689/6673.png",
+      "bytes": 17004,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13689/6674",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13689&y=6674&z=14",
+      "path": "amap-source-tiles/14/13689/6674.png",
+      "bytes": 11113,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13689/6675",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13689&y=6675&z=14",
+      "path": "amap-source-tiles/14/13689/6675.png",
+      "bytes": 14415,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13692/6671",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13692&y=6671&z=14",
+      "path": "amap-source-tiles/14/13692/6671.png",
+      "bytes": 10239,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13692/6672",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13692&y=6672&z=14",
+      "path": "amap-source-tiles/14/13692/6672.png",
+      "bytes": 9701,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13692/6673",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13692&y=6673&z=14",
+      "path": "amap-source-tiles/14/13692/6673.png",
+      "bytes": 12293,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13693/6671",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13693&y=6671&z=14",
+      "path": "amap-source-tiles/14/13693/6671.png",
+      "bytes": 11979,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13693/6672",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13693&y=6672&z=14",
+      "path": "amap-source-tiles/14/13693/6672.png",
+      "bytes": 7796,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13693/6673",
+      "url": "https://webrd04.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13693&y=6673&z=14",
+      "path": "amap-source-tiles/14/13693/6673.png",
+      "bytes": 9994,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13694/6671",
+      "url": "https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13694&y=6671&z=14",
+      "path": "amap-source-tiles/14/13694/6671.png",
+      "bytes": 12848,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13694/6672",
+      "url": "https://webrd02.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13694&y=6672&z=14",
+      "path": "amap-source-tiles/14/13694/6672.png",
+      "bytes": 11349,
+      "contentType": "image/png"
+    },
+    {
+      "key": "14/13694/6673",
+      "url": "https://webrd03.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x=13694&y=6673&z=14",
+      "path": "amap-source-tiles/14/13694/6673.png",
+      "bytes": 14896,
+      "contentType": "image/png"
+    }
+  ]
+}

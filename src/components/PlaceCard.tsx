@@ -21,6 +21,7 @@ type PlaceCardProps = {
   draggable?: boolean;
   onAdd?: (placeId: string) => void;
   onRemove?: (placeId: string) => void;
+  onFocus?: (placeId: string) => void;
   onToggleExpand?: (placeId: string) => void;
   onDragStart?: (placeId: string, event: React.DragEvent<HTMLElement>) => void;
 };
@@ -34,6 +35,7 @@ export function PlaceCard({
   draggable = true,
   onAdd,
   onRemove,
+  onFocus,
   onToggleExpand,
   onDragStart,
 }: PlaceCardProps) {
@@ -49,6 +51,7 @@ export function PlaceCard({
       }`}
       draggable={draggable}
       onDragStart={(event) => onDragStart?.(place.id, event)}
+      onClick={() => onFocus?.(place.id)}
       onDoubleClick={() => onToggleExpand?.(place.id)}
     >
       <div className="card-topline">
