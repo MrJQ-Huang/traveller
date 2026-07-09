@@ -1,0 +1,204 @@
+{
+  "preset": "handdrawn",
+  "mode": "chunked",
+  "sourceRoot": "amap-source-tiles",
+  "outputRoot": "stylized-tiles\\handdrawn",
+  "tileSize": 256,
+  "chunkTiles": 16,
+  "haloTiles": 1,
+  "minFreeGb": 5.0,
+  "sourceTileCount": 65415,
+  "savedTileCount": 65314,
+  "skippedExistingCount": 101,
+  "processedChunkCount": 266,
+  "startedAt": "2026-07-09 03:15:23",
+  "freeGbAtStart": 41.812,
+  "zooms": {
+    "1": {
+      "tileCount": 1,
+      "minX": 1,
+      "maxX": 1,
+      "minY": 0,
+      "maxY": 0,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "2": {
+      "tileCount": 1,
+      "minX": 3,
+      "maxX": 3,
+      "minY": 1,
+      "maxY": 1,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "3": {
+      "tileCount": 1,
+      "minX": 6,
+      "maxX": 6,
+      "minY": 3,
+      "maxY": 3,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "4": {
+      "tileCount": 1,
+      "minX": 13,
+      "maxX": 13,
+      "minY": 6,
+      "maxY": 6,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "5": {
+      "tileCount": 1,
+      "minX": 26,
+      "maxX": 26,
+      "minY": 13,
+      "maxY": 13,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "6": {
+      "tileCount": 1,
+      "minX": 53,
+      "maxX": 53,
+      "minY": 26,
+      "maxY": 26,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "7": {
+      "tileCount": 1,
+      "minX": 106,
+      "maxX": 106,
+      "minY": 52,
+      "maxY": 52,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "8": {
+      "tileCount": 1,
+      "minX": 213,
+      "maxX": 213,
+      "minY": 104,
+      "maxY": 104,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "9": {
+      "tileCount": 1,
+      "minX": 427,
+      "maxX": 427,
+      "minY": 208,
+      "maxY": 208,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "10": {
+      "tileCount": 2,
+      "minX": 855,
+      "maxX": 855,
+      "minY": 416,
+      "maxY": 417,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "11": {
+      "tileCount": 6,
+      "minX": 1710,
+      "maxX": 1711,
+      "minY": 833,
+      "maxY": 835,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "12": {
+      "tileCount": 20,
+      "minX": 3420,
+      "maxX": 3423,
+      "minY": 1666,
+      "maxY": 1670,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "13": {
+      "tileCount": 64,
+      "minX": 6840,
+      "maxX": 6847,
+      "minY": 3333,
+      "maxY": 3340,
+      "savedTileCount": 0,
+      "skippedExistingCount": 0,
+      "chunkCount": 0
+    },
+    "14": {
+      "tileCount": 210,
+      "minX": 13681,
+      "maxX": 13694,
+      "minY": 6667,
+      "maxY": 6681,
+      "savedTileCount": 210,
+      "skippedExistingCount": 0,
+      "chunkCount": 1
+    },
+    "15": {
+      "tileCount": 812,
+      "minX": 27362,
+      "maxX": 27389,
+      "minY": 13335,
+      "maxY": 13363,
+      "savedTileCount": 812,
+      "skippedExistingCount": 0,
+      "chunkCount": 4
+    },
+    "16": {
+      "tileCount": 3135,
+      "minX": 54724,
+      "maxX": 54778,
+      "minY": 26671,
+      "maxY": 26727,
+      "savedTileCount": 3135,
+      "skippedExistingCount": 0,
+      "chunkCount": 16
+    },
+    "17": {
+      "tileCount": 12320,
+      "minX": 109448,
+      "maxX": 109557,
+      "minY": 53343,
+      "maxY": 53454,
+      "savedTileCount": 12320,
+      "skippedExistingCount": 0,
+      "chunkCount": 49
+    },
+    "18": {
+      "tileCount": 48837,
+      "minX": 218897,
+      "maxX": 219115,
+      "minY": 106686,
+      "maxY": 106908,
+      "savedTileCount": 48837,
+      "skippedExistingCount": 0,
+      "chunkCount": 196
+    }
+  },
+  "stopped": null,
+  "freeGbLatest": 37.383,
+  "elapsedSeconds": 5768.1,
+  "finishedAt": "2026-07-09 04:51:30",
+  "freeGbAtEnd": 37.383,
+  "outputTileCount": 65415
+}

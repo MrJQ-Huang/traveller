@@ -1,5 +1,5 @@
 import L from "leaflet";
-import { Layers, LocateFixed, PencilLine, RotateCcw, X } from "lucide-react";
+import { Layers, LocateFixed, PencilLine, RotateCcw, SlidersHorizontal, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Place, PlannerMode } from "../types/place";
 import type { RoutePlan } from "../types/route";
@@ -145,6 +145,8 @@ export function FallbackChangshuMap({
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
   const [mapReady, setMapReady] = useState(false);
+  const [isMapToolsOpen, setIsMapToolsOpen] = useState(false);
+  const [selectedCardPosition, setSelectedCardPosition] = useState<{ x: number; y: number } | null>(null);
 
   const selectedPlace = useMemo(
     () => places.find((place) => place.id === selectedPlaceId) ?? null,
@@ -257,9 +259,16 @@ export function FallbackChangshuMap({
       });
 
       marker.on("click", () => onSelectPlace(place.id));
+      marker.on("dblclick", (event) => {
+        L.DomEvent.stop(event);
+        onSelectPlace(place.id);
+        if (expandedPlaceId !== place.id) {
+          onToggleExpand(place.id);
+        }
+      });
       marker.addTo(layer);
     });
-  }, [itineraryOrder, onSelectPlace, selectedPlaceId, visiblePlaces]);
+  }, [expandedPlaceId, itineraryOrder, onSelectPlace, onToggleExpand, selectedPlaceId, visiblePlaces]);
 
   useEffect(() => {
     const layer = routeLayerRef.current;
@@ -300,6 +309,32 @@ export function FallbackChangshuMap({
     map.scrollWheelZoom.enable();
     map.doubleClickZoom.enable();
   }, [drawMode]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !selectedPlace) {
+      setSelectedCardPosition(null);
+      return;
+    }
+    const activeMap = map;
+    const activePlace = selectedPlace;
+
+    function updateCardPosition() {
+      const point = activeMap.latLngToContainerPoint([activePlace.position.lat, activePlace.position.lng]);
+      setSelectedCardPosition({ x: point.x, y: point.y });
+    }
+
+    updateCardPosition();
+    activeMap.on("move", updateCardPosition);
+    activeMap.on("zoom", updateCardPosition);
+    activeMap.on("resize", updateCardPosition);
+
+    return () => {
+      activeMap.off("move", updateCardPosition);
+      activeMap.off("zoom", updateCardPosition);
+      activeMap.off("resize", updateCardPosition);
+    };
+  }, [selectedPlace]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -401,7 +436,18 @@ export function FallbackChangshuMap({
 
   return (
     <section className="map-shell">
-      <div className="map-frame">
+      <div
+        className="map-frame"
+        onPointerDown={(event) => {
+          if (
+            selectedPlace &&
+            expandedPlaceId === selectedPlace.id &&
+            !(event.target as HTMLElement).closest(".map-card-popover")
+          ) {
+            onToggleExpand(selectedPlace.id);
+          }
+        }}
+      >
         <div ref={mapNodeRef} className="leaflet-map" />
 
         <canvas
@@ -414,7 +460,7 @@ export function FallbackChangshuMap({
           onPointerLeave={stopDrawing}
         />
 
-        <div className="map-action-stack">
+        <div className={`map-action-stack ${isMapToolsOpen ? "is-open" : ""}`}>
           <span className={`tile-badge ${mapReady ? "is-ready" : ""}`}>
             <Layers size={15} />
             {mapReady ? "轻量地图已就绪" : "地图初始化中"}
@@ -436,10 +482,34 @@ export function FallbackChangshuMap({
             <RotateCcw size={17} />
             清除
           </button>
+          <button
+            className={`map-tools-toggle ${isMapToolsOpen ? "is-active" : ""}`}
+            type="button"
+            onClick={() => setIsMapToolsOpen((current) => !current)}
+            aria-expanded={isMapToolsOpen}
+            aria-label={isMapToolsOpen ? "收起地图工具" : "展开地图工具"}
+          >
+            <SlidersHorizontal size={17} />
+            地图工具
+          </button>
         </div>
 
-        {selectedPlace && (
-          <div className={`map-card-popover ${expandedPlaceId === selectedPlace.id ? "is-expanded" : ""}`}>
+        {selectedPlace && selectedCardPosition && (
+          <div
+            className={`map-card-popover ${expandedPlaceId === selectedPlace.id ? "is-expanded" : ""}`}
+            style={
+              expandedPlaceId === selectedPlace.id
+                ? {
+                    left: "50%",
+                    top: "50%",
+                  }
+                : {
+                    left: selectedCardPosition.x,
+                    top: selectedCardPosition.y,
+                  }
+            }
+            onPointerDown={(event) => event.stopPropagation()}
+          >
             <button
               type="button"
               className="close-popover"

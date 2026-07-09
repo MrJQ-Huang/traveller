@@ -1,5 +1,6 @@
-import { Layers, LocateFixed, PencilLine, RotateCcw, X } from "lucide-react";
+import { Layers, LocateFixed, PencilLine, RotateCcw, SlidersHorizontal, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { hasFullCityHanddrawnTile } from "../data/fullCityHanddrawnTileRanges";
 import { mapSkinOverlays } from "../data/mapSkins";
 import { getAmapStyle, loadAmap, type AmapConfig } from "../map/amapLoader";
 import type { Place, PlannerMode } from "../types/place";
@@ -26,6 +27,8 @@ type AmapChangshuMapProps = {
 };
 
 const changshuCenter: [number, number] = [120.755, 31.62];
+const transparentTile =
+  "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
 
 export function AmapChangshuMap({
   amapConfig,
@@ -50,11 +53,14 @@ export function AmapChangshuMap({
   const routeLayerRef = useRef<any[]>([]);
   const boundaryLayerRef = useRef<any[]>([]);
   const skinLayerRef = useRef<any[]>([]);
+  const stylizedTileLayerRef = useRef<any>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
   const deferredDestroyTimerRef = useRef<number | null>(null);
   const hasInitialFitRef = useRef(false);
   const [mapReady, setMapReady] = useState(false);
+  const [isMapToolsOpen, setIsMapToolsOpen] = useState(false);
+  const [selectedCardPosition, setSelectedCardPosition] = useState<{ x: number; y: number } | null>(null);
 
   const selectedPlace = useMemo(
     () => places.find((place) => place.id === selectedPlaceId) ?? null,
@@ -94,7 +100,7 @@ export function AmapChangshuMap({
         const map = new AMap.Map(mapNodeRef.current, {
           viewMode: "2D",
           zoom: 11,
-          zooms: [10, 16],
+          zooms: [10, 18],
           center: changshuCenter,
           mapStyle: getAmapStyle(),
           features: ["bg", "road", "building", "point"],
@@ -167,10 +173,16 @@ export function AmapChangshuMap({
       });
 
       marker.on("click", () => onSelectPlace(place.id));
+      marker.on("dblclick", () => {
+        onSelectPlace(place.id);
+        if (expandedPlaceId !== place.id) {
+          onToggleExpand(place.id);
+        }
+      });
       marker.setMap(map);
       markerLayerRef.current.push(marker);
     });
-  }, [itineraryOrder, onSelectPlace, selectedPlaceId, visiblePlaces]);
+  }, [expandedPlaceId, itineraryOrder, onSelectPlace, onToggleExpand, selectedPlaceId, visiblePlaces]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -278,6 +290,36 @@ export function AmapChangshuMap({
     const map = mapRef.current;
     const AMap = window.AMap;
 
+    if (!map || !AMap || !mapReady || stylizedTileLayerRef.current) {
+      return;
+    }
+
+    const tileLayer = new AMap.TileLayer({
+      zIndex: 64,
+      opacity: 0.98,
+      zooms: [10, 18],
+      getTileUrl(x: number, y: number, z: number) {
+        if (!hasFullCityHanddrawnTile(z, x, y)) {
+          return transparentTile;
+        }
+
+        return `/map-tiles/changshu-full-city-all-zooms/handdrawn/${z}/${x}/${y}.png`;
+      },
+    });
+
+    tileLayer.setMap(map);
+    stylizedTileLayerRef.current = tileLayer;
+
+    return () => {
+      tileLayer.setMap(null);
+      stylizedTileLayerRef.current = null;
+    };
+  }, [mapReady]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    const AMap = window.AMap;
+
     if (!map || !AMap) {
       return;
     }
@@ -294,6 +336,7 @@ export function AmapChangshuMap({
         strokeStyle: routePlan.status === "preview" || routePlan.status === "planning" ? "dashed" : "solid",
         lineJoin: "round",
         lineCap: "round",
+        zIndex: 88,
       });
 
       line.setMap(map);
@@ -318,6 +361,33 @@ export function AmapChangshuMap({
       selectedPlace.position.lng,
       selectedPlace.position.lat,
     ]);
+  }, [selectedPlace]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !selectedPlace) {
+      setSelectedCardPosition(null);
+      return;
+    }
+    const activePlace = selectedPlace;
+
+    function updateCardPosition() {
+      const pixel = map.lngLatToContainer([activePlace.position.lng, activePlace.position.lat]);
+      const x = typeof pixel.getX === "function" ? pixel.getX() : pixel.x;
+      const y = typeof pixel.getY === "function" ? pixel.getY() : pixel.y;
+      setSelectedCardPosition({ x, y });
+    }
+
+    updateCardPosition();
+    map.on("mapmove", updateCardPosition);
+    map.on("zoomchange", updateCardPosition);
+    map.on("resize", updateCardPosition);
+
+    return () => {
+      map.off("mapmove", updateCardPosition);
+      map.off("zoomchange", updateCardPosition);
+      map.off("resize", updateCardPosition);
+    };
   }, [selectedPlace]);
 
   useEffect(() => {
@@ -426,7 +496,18 @@ export function AmapChangshuMap({
 
   return (
     <section className="map-shell">
-      <div className="map-frame">
+      <div
+        className="map-frame"
+        onPointerDown={(event) => {
+          if (
+            selectedPlace &&
+            expandedPlaceId === selectedPlace.id &&
+            !(event.target as HTMLElement).closest(".map-card-popover")
+          ) {
+            onToggleExpand(selectedPlace.id);
+          }
+        }}
+      >
         <div ref={mapNodeRef} className="amap-map" />
 
         <canvas
@@ -439,7 +520,7 @@ export function AmapChangshuMap({
           onPointerLeave={stopDrawing}
         />
 
-        <div className="map-action-stack">
+        <div className={`map-action-stack ${isMapToolsOpen ? "is-open" : ""}`}>
           <span className={`tile-badge ${mapReady ? "is-ready" : ""}`}>
             <Layers size={15} />
             {mapReady ? "真实地图皮肤已启用" : "真实地图加载中"}
@@ -461,10 +542,34 @@ export function AmapChangshuMap({
             <RotateCcw size={17} />
             清除
           </button>
+          <button
+            className={`map-tools-toggle ${isMapToolsOpen ? "is-active" : ""}`}
+            type="button"
+            onClick={() => setIsMapToolsOpen((current) => !current)}
+            aria-expanded={isMapToolsOpen}
+            aria-label={isMapToolsOpen ? "收起地图工具" : "展开地图工具"}
+          >
+            <SlidersHorizontal size={17} />
+            地图工具
+          </button>
         </div>
 
-        {selectedPlace && (
-          <div className={`map-card-popover ${expandedPlaceId === selectedPlace.id ? "is-expanded" : ""}`}>
+        {selectedPlace && selectedCardPosition && (
+          <div
+            className={`map-card-popover ${expandedPlaceId === selectedPlace.id ? "is-expanded" : ""}`}
+            style={
+              expandedPlaceId === selectedPlace.id
+                ? {
+                    left: "50%",
+                    top: "50%",
+                  }
+                : {
+                    left: selectedCardPosition.x,
+                    top: selectedCardPosition.y,
+                  }
+            }
+            onPointerDown={(event) => event.stopPropagation()}
+          >
             <button
               type="button"
               className="close-popover"

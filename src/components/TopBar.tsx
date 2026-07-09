@@ -7,13 +7,9 @@ import {
   PanelRightOpen,
   Route,
   Sparkles,
-  Bike,
-  Car,
-  Footprints,
 } from "lucide-react";
 import { routePresets } from "../data/routes";
 import type { PlaceType, PlannerMode } from "../types/place";
-import type { TransportMode } from "../types/route";
 import { placeTypeLabels } from "../types/place";
 
 type TopBarProps = {
@@ -22,7 +18,6 @@ type TopBarProps = {
   routePresetId: string;
   itemCount: number;
   estimatedTime: string;
-  transportMode: TransportMode;
   isItineraryOpen: boolean;
   onModeChange: (mode: PlannerMode) => void;
   onToggleType: (type: PlaceType) => void;
@@ -30,7 +25,6 @@ type TopBarProps = {
   onGenerateRoute: () => void;
   onRandomRoute: () => void;
   onClear: () => void;
-  onTransportModeChange: (mode: TransportMode) => void;
   onToggleItinerary: () => void;
 };
 
@@ -49,7 +43,6 @@ export function TopBar({
   routePresetId,
   itemCount,
   estimatedTime,
-  transportMode,
   isItineraryOpen,
   onModeChange,
   onToggleType,
@@ -57,16 +50,10 @@ export function TopBar({
   onGenerateRoute,
   onRandomRoute,
   onClear,
-  onTransportModeChange,
   onToggleItinerary,
 }: TopBarProps) {
   return (
     <header className="topbar" aria-label="地图规划工具">
-      <div className="brand-pill">
-        <strong>常熟地图</strong>
-        <span>前端交互 Demo</span>
-      </div>
-
       <div className="toolbar-section filter-section" aria-label="四类点位筛选">
         {filterOrder.map((type) => (
           <button
@@ -87,16 +74,14 @@ export function TopBar({
           type="button"
           onClick={() => onModeChange("j")}
         >
-          <Compass size={17} />
-          J 人
+          <Compass size={17} />J 人
         </button>
         <button
           className={`mode-button ${mode === "p" ? "is-active" : ""}`}
           type="button"
           onClick={() => onModeChange("p")}
         >
-          <Sparkles size={17} />
-          P 人
+          <Sparkles size={17} />P 人
         </button>
       </div>
 
@@ -119,33 +104,6 @@ export function TopBar({
         <button className="icon-text-button" type="button" onClick={onRandomRoute}>
           <Dice5 size={17} />
           随机
-        </button>
-      </div>
-
-      <div className="toolbar-section transport-section" aria-label="交通方式">
-        <button
-          className={`mode-button ${transportMode === "walking" ? "is-active" : ""}`}
-          type="button"
-          onClick={() => onTransportModeChange("walking")}
-        >
-          <Footprints size={17} />
-          步行
-        </button>
-        <button
-          className={`mode-button ${transportMode === "riding" ? "is-active" : ""}`}
-          type="button"
-          onClick={() => onTransportModeChange("riding")}
-        >
-          <Bike size={17} />
-          骑行
-        </button>
-        <button
-          className={`mode-button ${transportMode === "driving" ? "is-active" : ""}`}
-          type="button"
-          onClick={() => onTransportModeChange("driving")}
-        >
-          <Car size={17} />
-          驾车
         </button>
       </div>
 

@@ -217,7 +217,6 @@ export default function App() {
           routePresetId={routePresetId}
           itemCount={itineraryIds.length}
           estimatedTime={estimatedTime}
-          transportMode={transportMode}
           isItineraryOpen={isItineraryOpen}
           onModeChange={changeMode}
           onToggleType={toggleType}
@@ -225,7 +224,6 @@ export default function App() {
           onGenerateRoute={generatePresetRoute}
           onRandomRoute={generateRandomRoute}
           onClear={clearRoute}
-          onTransportModeChange={setTransportMode}
           onToggleItinerary={() => setIsItineraryOpen((current) => !current)}
         />
 
@@ -258,12 +256,14 @@ export default function App() {
             routeDescription={generatedRouteDescription}
             estimatedTime={estimatedTime}
             routePlan={routePlan}
+            transportMode={transportMode}
             onDropPlace={addPlace}
             onDropBefore={dropBefore}
             onRemove={removePlace}
             onFocusPlace={setSelectedPlaceId}
             onClear={clearRoute}
             onToggleExpand={toggleExpand}
+            onTransportModeChange={setTransportMode}
             onDragStart={handleDragStart}
             onClose={() => setIsItineraryOpen(false)}
           />

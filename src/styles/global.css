@@ -165,28 +165,6 @@ button:disabled {
   backdrop-filter: blur(16px);
 }
 
-.brand-pill {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-  min-height: 36px;
-  padding: 0 12px;
-  color: var(--text);
-  background: #f7faf8;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  white-space: nowrap;
-}
-
-.brand-pill strong {
-  font-size: 15px;
-}
-
-.brand-pill span {
-  color: var(--muted);
-  font-size: 12px;
-}
-
 .toolbar-section,
 .card-topline,
 .card-title-group,
@@ -213,6 +191,7 @@ button:disabled {
 .primary-button,
 .icon-text-button,
 .map-tool-button,
+.map-tools-toggle,
 .small-icon-button,
 .trip-stat-button {
   display: inline-flex;
@@ -243,6 +222,7 @@ button:disabled {
 .mode-button:hover,
 .icon-text-button:hover,
 .map-tool-button:hover,
+.map-tools-toggle:hover,
 .small-icon-button:hover,
 .trip-stat-button:hover {
   border-color: rgba(22, 122, 98, 0.35);
@@ -251,7 +231,8 @@ button:disabled {
 
 .chip.is-active,
 .mode-button.is-active,
-.map-tool-button.is-active {
+.map-tool-button.is-active,
+.map-tools-toggle.is-active {
   color: var(--accent-strong);
   background: var(--accent-soft);
   border-color: rgba(22, 122, 98, 0.34);
@@ -450,19 +431,34 @@ button:disabled {
 
 .map-action-stack {
   position: absolute;
-  left: 18px;
+  left: 50%;
   bottom: 18px;
   z-index: 660;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  max-width: calc(100vw - 36px);
+  transform: translateX(-50%);
 }
 
-.map-tool-button {
+.map-action-stack:not(.is-open) .tile-badge,
+.map-action-stack:not(.is-open) .map-tool-button {
+  display: none;
+}
+
+.map-tool-button,
+.map-tools-toggle {
   min-width: 78px;
   min-height: 38px;
   padding: 0 11px;
   box-shadow: var(--tight-shadow);
+}
+
+.map-tools-toggle {
+  color: var(--accent-strong);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
 }
 
 .tile-badge {
@@ -488,17 +484,37 @@ button:disabled {
 
 .map-card-popover {
   position: absolute;
-  left: 18px;
-  bottom: 72px;
   z-index: 700;
   width: min(360px, calc(100% - 36px));
+  transform: translate(-50%, calc(-100% - 24px));
+  transform-origin: 50% 100%;
   transition:
     width 180ms ease,
-    max-height 180ms ease;
+    max-height 180ms ease,
+    transform 180ms ease;
 }
 
 .map-card-popover.is-expanded {
   width: min(560px, calc(100% - 36px));
+  transform: translate(-50%, -50%);
+}
+
+.map-card-popover::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transform: translateX(-50%) rotate(45deg);
+  box-shadow: 7px 7px 12px rgba(24, 35, 31, 0.06);
+}
+
+.map-card-popover.is-expanded::after {
+  display: none;
 }
 
 .close-popover {
@@ -712,6 +728,302 @@ button:disabled {
   color: var(--restaurant);
 }
 
+.place-card.planner-place-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: start;
+  gap: 10px;
+  max-height: 260px;
+  padding: 10px 12px 10px 10px;
+  border: 1px solid rgba(220, 228, 223, 0.96);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 28px rgba(24, 35, 31, 0.14);
+  cursor: grab;
+  overflow: hidden;
+  transition:
+    max-height 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+  backdrop-filter: blur(18px);
+}
+
+.place-card.planner-place-card:active {
+  cursor: grabbing;
+}
+
+.place-card.planner-place-card.is-compact {
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 9px;
+  max-height: 214px;
+  box-shadow: 0 8px 20px rgba(24, 35, 31, 0.1);
+}
+
+.place-card.planner-place-card.is-expanded {
+  grid-template-columns: 132px minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  max-height: min(70vh, 540px);
+  box-shadow: 0 18px 48px rgba(24, 35, 31, 0.18);
+  transform: translateY(-2px);
+}
+
+.place-card.planner-place-card .planner-card-image {
+  position: relative;
+  width: 116px;
+  height: 104px;
+  min-height: 104px;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(20, 38, 34, 0.02), rgba(20, 38, 34, 0.42)),
+    var(--card-image, linear-gradient(135deg, #f3d2a5, #e9844d 48%, #8e5a38)) center/cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.place-card.planner-place-card.type-food .planner-card-image {
+  background:
+    radial-gradient(circle at 28% 30%, rgba(255, 255, 255, 0.5), transparent 22%),
+    linear-gradient(135deg, #ffe0a8, #d97732 48%, #7b4a2e);
+}
+
+.place-card.planner-place-card.type-restaurant .planner-card-image {
+  background:
+    radial-gradient(circle at 70% 24%, rgba(255, 255, 255, 0.5), transparent 20%),
+    linear-gradient(135deg, #ffd0bd, #c94d45 50%, #70313c);
+}
+
+.place-card.planner-place-card.is-compact .planner-card-image {
+  width: 84px;
+  height: 84px;
+  min-height: 84px;
+}
+
+.place-card.planner-place-card.is-expanded .planner-card-image {
+  width: 132px;
+  height: 104px;
+  min-height: 104px;
+}
+
+.place-card.planner-place-card .route-index {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  color: white;
+  background: rgba(20, 38, 34, 0.72);
+  box-shadow: 0 4px 12px rgba(20, 38, 34, 0.22);
+}
+
+.planner-card-body {
+  min-width: 0;
+}
+
+.planner-type-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 23px;
+  margin-bottom: 6px;
+  padding: 0 8px;
+  color: var(--accent-strong);
+  background: rgba(22, 122, 98, 0.1);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.planner-type-label.type-scenic {
+  color: var(--scenic);
+  background: rgba(46, 139, 87, 0.11);
+}
+
+.planner-type-label.type-heritage {
+  color: var(--heritage);
+  background: rgba(47, 111, 178, 0.11);
+}
+
+.planner-type-label.type-food {
+  color: var(--food);
+  background: rgba(198, 106, 29, 0.12);
+}
+
+.planner-type-label.type-restaurant {
+  color: var(--restaurant);
+  background: rgba(192, 63, 63, 0.11);
+}
+
+.planner-card-body h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 1.18;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.itinerary-panel .planner-card-body h3 {
+  font-size: 16px;
+}
+
+.planner-card-body p {
+  display: -webkit-box;
+  margin: 0;
+  color: #42504b;
+  font-size: 13px;
+  line-height: 1.48;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.place-card.planner-place-card.is-expanded .planner-card-body > p {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+.planner-card-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.planner-card-facts span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 24px;
+  max-width: 100%;
+  padding: 0 7px;
+  color: #50625b;
+  background: rgba(24, 52, 47, 0.07);
+  border: 1px solid rgba(220, 228, 223, 0.76);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.planner-mini-extra {
+  display: grid;
+  gap: 3px;
+  margin-top: 8px;
+  padding: 8px 9px;
+  background: rgba(22, 122, 98, 0.08);
+  border-radius: 8px;
+}
+
+.planner-mini-extra b {
+  color: var(--accent-strong);
+  font-size: 13px;
+  line-height: 1.32;
+  overflow-wrap: anywhere;
+}
+
+.planner-mini-extra span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.planner-inline-detail {
+  grid-column: 1 / -1;
+  min-height: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.planner-detail-scroll {
+  display: grid;
+  gap: 11px;
+  max-height: min(38vh, 300px);
+  padding-right: 8px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.planner-detail-image {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(20, 38, 34, 0.02), rgba(20, 38, 34, 0.34)),
+    var(--card-image, linear-gradient(135deg, #e9efe8, #95bba5 48%, #50685d)) center/cover no-repeat;
+}
+
+.place-card.planner-place-card.type-food .planner-detail-image {
+  background:
+    radial-gradient(circle at 28% 30%, rgba(255, 255, 255, 0.5), transparent 22%),
+    linear-gradient(135deg, #ffe0a8, #d97732 48%, #7b4a2e);
+}
+
+.place-card.planner-place-card.type-restaurant .planner-detail-image {
+  background:
+    radial-gradient(circle at 70% 24%, rgba(255, 255, 255, 0.5), transparent 20%),
+    linear-gradient(135deg, #ffd0bd, #c94d45 50%, #70313c);
+}
+
+.planner-inline-detail h4 {
+  margin: 0 0 5px;
+  color: var(--accent-strong);
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.planner-inline-detail p {
+  margin: 0;
+  color: #33423d;
+  font-size: 13px;
+  line-height: 1.62;
+  overflow-wrap: anywhere;
+}
+
+.planner-card-actions {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 7px;
+  padding-top: 2px;
+}
+
+.planner-drag-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.planner-card-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 30px;
+  padding: 0 9px;
+  color: white;
+  background: var(--accent-strong);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.planner-card-actions .planner-detail-button {
+  color: var(--accent-strong);
+  background: rgba(22, 122, 98, 0.1);
+}
+
+.planner-card-actions .planner-card-action-button.danger {
+  color: var(--restaurant);
+  background: rgba(192, 63, 63, 0.1);
+}
+
 .itinerary-fab {
   position: absolute;
   top: 18px;
@@ -835,6 +1147,59 @@ button:disabled {
   font-size: 13px;
 }
 
+.panel-transport {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0 16px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.panel-transport .mode-button {
+  min-width: 0;
+  min-height: 34px;
+  padding: 0 8px;
+  font-size: 13px;
+}
+
+.panel-view-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0 16px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.view-switch-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 34px;
+  color: #40504a;
+  background: #f6f8f6;
+  border: 1px solid #e5ece7;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.view-switch-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(22, 122, 98, 0.32);
+}
+
+.view-switch-button.is-active {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border-color: rgba(22, 122, 98, 0.34);
+}
+
 .route-plan-summary {
   display: grid;
   grid-template-columns: auto 1fr 1fr;
@@ -909,6 +1274,126 @@ button:disabled {
   border-color: rgba(22, 122, 98, 0.32);
 }
 
+.itinerary-deck {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: min(420px, calc(100vh - 410px));
+  margin: 14px 16px 18px;
+  padding: 12px 0 28px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  isolation: isolate;
+}
+
+.itinerary-deck-card {
+  --deck-step: 54px;
+  position: absolute;
+  top: calc(var(--card-index) * var(--deck-step));
+  left: 0;
+  right: 18px;
+  display: grid;
+  grid-template-columns: 42px 52px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  min-height: 76px;
+  padding: 11px 13px;
+  color: var(--text);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.74)),
+    linear-gradient(135deg, rgba(22, 122, 98, 0.1), rgba(198, 106, 29, 0.08));
+  border: 1px solid rgba(220, 228, 223, 0.94);
+  border-left: 6px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(24, 35, 31, 0.13);
+  cursor: grab;
+  user-select: none;
+  transform:
+    translateX(calc((var(--card-index) % 2) * 7px))
+    rotate(calc((var(--card-index) - 2) * 0.35deg));
+  transform-origin: 18% 50%;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.itinerary-deck-card::after {
+  content: "";
+  position: absolute;
+  inset: 8px 10px auto auto;
+  width: 34px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(24, 35, 31, 0.08);
+}
+
+.itinerary-deck-card:hover,
+.itinerary-deck-card:focus-within {
+  border-color: rgba(22, 122, 98, 0.38);
+  box-shadow: 0 18px 36px rgba(24, 35, 31, 0.2);
+  transform: translateX(-14px) translateY(-3px) rotate(0deg);
+}
+
+.itinerary-deck-card:active {
+  cursor: grabbing;
+}
+
+.itinerary-deck-card.type-scenic {
+  border-left-color: var(--scenic);
+}
+
+.itinerary-deck-card.type-heritage {
+  border-left-color: var(--heritage);
+}
+
+.itinerary-deck-card.type-food {
+  border-left-color: var(--food);
+}
+
+.itinerary-deck-card.type-restaurant {
+  border-left-color: var(--restaurant);
+}
+
+.deck-card-index {
+  display: inline-grid;
+  place-items: center;
+  min-width: 36px;
+  min-height: 36px;
+  color: white;
+  background: rgba(20, 38, 34, 0.72);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.deck-card-type {
+  display: inline-grid;
+  place-items: center;
+  min-height: 28px;
+  padding: 0 8px;
+  color: white;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.itinerary-deck-card strong {
+  min-width: 0;
+  font-size: 15px;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itinerary-deck::after {
+  content: "";
+  display: block;
+  height: calc(max(var(--deck-count), 1) * 54px + 62px);
+}
+
 .route-toast {
   position: absolute;
   right: 18px;
@@ -964,11 +1449,6 @@ button:disabled {
     overflow-y: auto;
   }
 
-  .brand-pill {
-    width: 100%;
-    justify-content: space-between;
-  }
-
   .toolbar-section,
   .route-actions {
     flex-wrap: wrap;
@@ -983,18 +1463,18 @@ button:disabled {
   }
 
   .map-action-stack {
-    left: 10px;
+    left: 50%;
     bottom: 10px;
     flex-wrap: wrap;
-    max-width: calc(100vw - 84px);
+    max-width: calc(100vw - 20px);
   }
 
-  .map-card-popover,
+  .map-card-popover {
+    width: min(340px, calc(100vw - 20px));
+  }
+
   .map-card-popover.is-expanded {
-    left: 10px;
-    right: 10px;
-    bottom: 72px;
-    width: auto;
+    width: min(520px, calc(100vw - 20px));
   }
 
   .itinerary-fab {

@@ -16,5 +16,25 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+__pycache__/
+*.py[cod]
+
 .DS_Store
 Thumbs.db
+
+# Local tile runtime files; cloud uses compressed tile package instead.
+public/map-tiles/
+tile-packages/*.zip
+
+# Large local tile production intermediates.
+**/changshu-full-city-all-zooms/amap-source-tiles/
+**/changshu-full-city-all-zooms/stylized-tiles/
+**/changshu-full-city/
+
+# Large local tile production intermediates
+瓦片制作包/changshu-full-city-all-zooms/amap-source-tiles/
+瓦片制作包/changshu-full-city-all-zooms/stylized-tiles/
+瓦片制作包/changshu-full-city/
+
+# Local reference exports
+zgx开发内容/

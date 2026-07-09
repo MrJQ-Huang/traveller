@@ -1,0 +1,40 @@
+{
+  "source": "Authorized AMap web tile export",
+  "scope": "Changshu full map viewport used by the current demo boundary",
+  "style": "8",
+  "tileSize": 256,
+  "bounds": {
+    "west": 120.61,
+    "east": 120.91,
+    "south": 31.47,
+    "north": 31.73
+  },
+  "zooms": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "count": 65415,
+  "downloaded": 65415,
+  "skipped": 0,
+  "failures": [],
+  "totalBytes": 254692290,
+  "outputRoot": "瓦片制作包/changshu-full-city-all-zooms/amap-source-tiles",
+  "startedAt": "2026-07-08T19:04:59.170Z",
+  "finishedAt": "2026-07-08T19:07:59.573Z"
+}
