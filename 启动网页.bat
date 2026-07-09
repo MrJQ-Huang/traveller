@@ -4,6 +4,7 @@ setlocal
 cd /d "%~dp0"
 
 set "APP_URL=http://127.0.0.1:5173/"
+set "AGENT_URL=http://127.0.0.1:8787/health"
 
 echo.
 echo ================================
@@ -40,6 +41,24 @@ if not exist "node_modules" (
     pause
     exit /b 1
   )
+)
+
+if not exist "logs" mkdir logs
+
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "try { Invoke-WebRequest -Uri '%AGENT_URL%' -UseBasicParsing -TimeoutSec 1 | Out-Null; exit 0 } catch { exit 1 }" >nul 2>nul
+if errorlevel 1 (
+  echo [AGENT] Xiaochang adapter is not running. Starting it in background...
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Start-Process -FilePath 'cmd.exe' -ArgumentList '/c npm run agent:llm ^> logs\xiaochang-agent.log 2^>^&1' -WorkingDirectory '%CD%' -WindowStyle Hidden" >nul 2>nul
+  timeout /t 2 /nobreak >nul
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "try { Invoke-WebRequest -Uri '%AGENT_URL%' -UseBasicParsing -TimeoutSec 2 | Out-Null; exit 0 } catch { exit 1 }" >nul 2>nul
+  if errorlevel 1 (
+    echo [AGENT] Adapter did not respond. The page will still open and Xiaochang will fall back to the local rule brain.
+    echo [AGENT] Check logs\xiaochang-agent.log if needed.
+  ) else (
+    echo [AGENT] Xiaochang adapter is ready.
+  )
+) else (
+  echo [AGENT] Existing Xiaochang adapter found.
 )
 
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "try { Invoke-WebRequest -Uri '%APP_URL%' -UseBasicParsing -TimeoutSec 1 | Out-Null; exit 0 } catch { exit 1 }" >nul 2>nul

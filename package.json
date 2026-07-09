@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
+    "agent:llm": "node scripts/xiaochang-llm-server.mjs",
+    "dev:llm": "vite --host 0.0.0.0 --host 127.0.0.1 --port 5173",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0"
   },

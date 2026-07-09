@@ -20,7 +20,7 @@ type ItineraryPanelProps = {
   expandedPlaceId: string | null;
   routeName: string | null;
   routeDescription: string | null;
-  estimatedTime: string;
+  fallbackTime: string;
   routePlan: RoutePlan;
   transportMode: TransportMode;
   onDropPlace: (placeId: string) => void;
@@ -46,7 +46,7 @@ export function ItineraryPanel({
   expandedPlaceId,
   routeName,
   routeDescription,
-  estimatedTime,
+  fallbackTime,
   routePlan,
   transportMode,
   onDropPlace,
@@ -61,6 +61,9 @@ export function ItineraryPanel({
 }: ItineraryPanelProps) {
   const hasPlaces = places.length > 0;
   const [viewMode, setViewMode] = useState<"list" | "deck">("list");
+  const hasRouteMetric = routePlan.segments.length > 0;
+  const panelDistance = hasRouteMetric ? formatDistance(routePlan.totalDistanceMeters) : `${places.length} 站`;
+  const panelDuration = hasRouteMetric ? formatDuration(routePlan.totalDurationSeconds) : fallbackTime;
 
   function handleDrop(event: React.DragEvent<HTMLElement>) {
     event.preventDefault();
@@ -100,11 +103,11 @@ export function ItineraryPanel({
       <div className="panel-stats">
         <span>
           <Map size={16} />
-          {places.length} 站
+          {panelDistance}
         </span>
         <span>
           <Shuffle size={16} />
-          {estimatedTime}
+          {panelDuration}
         </span>
       </div>
 

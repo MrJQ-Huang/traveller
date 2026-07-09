@@ -17,7 +17,8 @@ type TopBarProps = {
   activeTypes: PlaceType[];
   routePresetId: string;
   itemCount: number;
-  estimatedTime: string;
+  routeDistance: string | null;
+  routeDuration: string;
   isItineraryOpen: boolean;
   onModeChange: (mode: PlannerMode) => void;
   onToggleType: (type: PlaceType) => void;
@@ -42,7 +43,8 @@ export function TopBar({
   activeTypes,
   routePresetId,
   itemCount,
-  estimatedTime,
+  routeDistance,
+  routeDuration,
   isItineraryOpen,
   onModeChange,
   onToggleType,
@@ -115,7 +117,8 @@ export function TopBar({
       >
         <ClipboardList size={17} />
         <span>{itemCount} 站</span>
-        <strong>{estimatedTime}</strong>
+        {routeDistance && <span className="trip-stat-distance">{routeDistance}</span>}
+        <strong>{routeDuration}</strong>
         {isItineraryOpen ? <PanelRightClose size={17} /> : <PanelRightOpen size={17} />}
       </button>
 
