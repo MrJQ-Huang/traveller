@@ -1,4 +1,4 @@
-import type { RoutePreset } from "../types/place";
+﻿import type { RoutePreset } from "../types/place";
 
 export const routePresets: RoutePreset[] = [
   {
@@ -16,7 +16,7 @@ export const routePresets: RoutePreset[] = [
   {
     id: "food-walk",
     name: "美食探索线",
-    description: "先认识美食，再进入店铺品尝。",
+    description: "先认识美食，再进入美食品尝。",
     placeIds: ["xunyou-noodles", "noodle-house", "jiaohua-chicken", "old-kitchen", "guihua-chestnut"],
   },
   {
@@ -28,7 +28,7 @@ export const routePresets: RoutePreset[] = [
   {
     id: "full-day-mix",
     name: "一日综合线",
-    description: "景点、非遗与美食店铺混合。",
+    description: "景点、非遗与美食美食混合。",
     placeIds: ["fangta", "xunyou-noodles", "lace-workshop", "shanghu", "old-kitchen"],
   },
 ];

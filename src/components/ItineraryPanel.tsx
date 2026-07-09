@@ -1,4 +1,4 @@
-import { useRef, useState, type CSSProperties } from "react";
+import { useState, type CSSProperties } from "react";
 import {
   Bike,
   CalendarDays,
@@ -55,13 +55,12 @@ const typeLabels: Record<Place["type"], string> = {
   scenic: "景点",
   heritage: "非遗",
   food: "美食",
-  restaurant: "店铺",
+  restaurant: "美食",
   parking: "停车",
   restroom: "厕所",
-  service: "服务",
-  activity: "活动",
   lodging: "住宿",
-  emergency: "救援",
+  hospital: "医院",
+  police: "公安",
 };
 
 export function ItineraryPanel({
@@ -94,9 +93,6 @@ export function ItineraryPanel({
 }: ItineraryPanelProps) {
   const hasPlaces = places.length > 0;
   const [viewMode, setViewMode] = useState<"list" | "deck">("list");
-  const dragStartXRef = useRef<Record<string, number>>({});
-  const pointerStartXRef = useRef<Record<string, number>>({});
-  const deleteDragThreshold = 96;
 
   function handleDrop(event: React.DragEvent<HTMLElement>) {
     event.preventDefault();
@@ -139,34 +135,7 @@ export function ItineraryPanel({
   }
 
   function handleItineraryDragStart(placeId: string, event: React.DragEvent<HTMLElement>) {
-    dragStartXRef.current[placeId] = event.clientX;
     onDragStart(placeId, event);
-  }
-
-  function handleItineraryDragEnd(placeId: string, event: React.DragEvent<HTMLElement>) {
-    const startX = dragStartXRef.current[placeId];
-    delete dragStartXRef.current[placeId];
-
-    if (typeof startX === "number" && event.clientX > 0 && startX - event.clientX > deleteDragThreshold) {
-      onRemove(placeId);
-    }
-  }
-
-  function handlePointerDown(placeId: string, event: React.PointerEvent<HTMLElement>) {
-    if ((event.target as HTMLElement).closest("button")) {
-      return;
-    }
-
-    pointerStartXRef.current[placeId] = event.clientX;
-  }
-
-  function handlePointerUp(placeId: string, event: React.PointerEvent<HTMLElement>) {
-    const startX = pointerStartXRef.current[placeId];
-    delete pointerStartXRef.current[placeId];
-
-    if (typeof startX === "number" && startX - event.clientX > deleteDragThreshold) {
-      onRemove(placeId);
-    }
   }
 
   function deletePlace(placeId: string, event: React.MouseEvent<HTMLButtonElement>) {
@@ -365,12 +334,9 @@ export function ItineraryPanel({
               onClick={() => onFocusPlace(place.id)}
               onDoubleClick={() => onToggleExpand(place.id)}
               onDragStart={(event) => handleItineraryDragStart(place.id, event)}
-              onDragEnd={(event) => handleItineraryDragEnd(place.id, event)}
-              onPointerDown={(event) => handlePointerDown(place.id, event)}
-              onPointerUp={(event) => handlePointerUp(place.id, event)}
               onDragOver={(event) => event.preventDefault()}
               onDrop={(event) => handleDropBefore(event, place.id)}
-              title="点击定位，双击展开详情，可拖拽调整顺序，向左拖动删除"
+              title="点击定位，双击展开详情，可拖拽调整顺序"
             >
               <button
                 className="itinerary-item-delete"
@@ -392,10 +358,7 @@ export function ItineraryPanel({
             <div
               className="itinerary-drop-row"
               key={place.id}
-              onPointerDown={(event) => handlePointerDown(place.id, event)}
-              onPointerUp={(event) => handlePointerUp(place.id, event)}
               onDragOver={(event) => event.preventDefault()}
-              onDragEnd={(event) => handleItineraryDragEnd(place.id, event)}
               onDrop={(event) => handleDropBefore(event, place.id)}
             >
               <button

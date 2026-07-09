@@ -33,7 +33,7 @@ export function distanceMeters(a: Place, b: Place) {
 }
 
 export function estimateVisitMinutes(place: Place) {
-  return place.routeMeta?.recommendedStayMinutes ?? (place.type === "restaurant" ? 70 : place.type === "food" ? 30 : 90);
+  return place.routeMeta?.recommendedStayMinutes ?? (place.type === "food" ? 60 : 90);
 }
 
 function estimateTrafficMinutes(distance: number, mode: TransportMode) {
@@ -55,7 +55,7 @@ function nearestNeighborOrder(places: Place[], preferFoodEnding: boolean) {
 
   const candidates = [...places];
   const foodStops = preferFoodEnding
-    ? candidates.filter((place) => place.type === "restaurant" || place.type === "food")
+    ? candidates.filter((place) => place.type === "food")
     : [];
   const endStop = foodStops[foodStops.length - 1] ?? null;
   const pool = endStop ? candidates.filter((place) => place.id !== endStop.id) : candidates;
@@ -118,7 +118,7 @@ function fitTimeBudget(ordered: Place[], options: OptimizeOptions) {
 
     const removable = next
       .map((place, index) => ({ place, index }))
-      .filter(({ place, index }) => index > 0 && !(options.preferFoodEnding && index === next.length - 1 && (place.type === "food" || place.type === "restaurant")));
+      .filter(({ place, index }) => index > 0 && !(options.preferFoodEnding && index === next.length - 1 && place.type === "food"));
 
     const target =
       removable.sort((a, b) => estimateVisitMinutes(b.place) - estimateVisitMinutes(a.place))[0] ??
@@ -193,7 +193,7 @@ export function buildLocalOptimizedRoute(
     explanation: {
       highlights: [
         ordered.some((place) => place.type === "scenic") ? "包含核心景点，适合先建立常熟城市印象。" : "点位数量较轻，适合短时间体验。",
-        ordered.some((place) => place.type === "food" || place.type === "restaurant") ? "路线里保留了餐饮节点，行程不会只逛不吃。" : "当前更偏观光，后续可以继续加餐饮点。",
+        ordered.some((place) => place.type === "food") ? "路线里保留了餐饮节点，行程不会只逛不吃。" : "当前更偏观光，后续可以继续加餐饮点。",
       ],
       tradeoffs: [
         options.timeBudget ? `已按「${options.timeBudget.label}」尽量压缩停留点。` : "暂未设置明确出行时长，所以保留了较完整的体验。",
@@ -279,7 +279,6 @@ export function buildRouteSuggestionsByIntent(
 
   const foodPlaces = [...base];
   pickByType(places, "food", 1).forEach((place) => addUnique(foodPlaces, place));
-  pickByType(places, "restaurant", 1).forEach((place) => addUnique(foodPlaces, place));
   const food = buildLocalOptimizedRoute(foodPlaces, {
     transportMode,
     pace: "normal",

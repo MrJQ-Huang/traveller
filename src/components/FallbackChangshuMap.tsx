@@ -20,6 +20,10 @@ type FallbackChangshuMapProps = {
   itineraryIds: string[];
   routePlan: RoutePlan;
   selectedPlaceId: string | null;
+  focusPlaceRequest: {
+    placeId: string;
+    nonce: number;
+  } | null;
   expandedPlaceId: string | null;
   mode: PlannerMode;
   drawMode: boolean;
@@ -152,6 +156,7 @@ export function FallbackChangshuMap({
   itineraryIds,
   routePlan,
   selectedPlaceId,
+  focusPlaceRequest,
   expandedPlaceId,
   mode,
   drawMode,
@@ -173,6 +178,7 @@ export function FallbackChangshuMap({
   const [isMapToolsOpen, setIsMapToolsOpen] = useState(false);
   const [mapZoom, setMapZoom] = useState(11);
   const [selectedCardPosition, setSelectedCardPosition] = useState<{ x: number; y: number } | null>(null);
+  const hasActiveRoutePlan = itineraryIds.length > 0;
 
   const selectedPlace = useMemo(
     () => places.find((place) => place.id === selectedPlaceId) ?? null,
@@ -279,10 +285,10 @@ export function FallbackChangshuMap({
     tieredVisiblePlaces.forEach((place) => {
       const isSelected = place.id === selectedPlaceId;
       const order = itineraryOrder[place.id];
-      const tierClass = place.tierLevel ? `tier-${place.tierLevel.toLowerCase()}` : "tier-local";
+      const isMuted = hasActiveRoutePlan && !order && !isSelected;
       const markerHtml = `
-        <button class="map-marker type-${place.type} ${tierClass} ${isSelected ? "is-selected" : ""} ${
-          order ? "is-planned" : ""
+        <button class="map-marker type-${place.type} ${isSelected ? "is-selected" : ""} ${order ? "is-planned" : ""} ${
+          isMuted ? "is-muted" : ""
         }" type="button">
           <span>${order ?? placeTypeShortLabels[place.type]}</span>
         </button>
@@ -314,7 +320,7 @@ export function FallbackChangshuMap({
       });
       marker.addTo(layer);
     });
-  }, [expandedPlaceId, itineraryOrder, onSelectPlace, onToggleExpand, selectedPlaceId, tieredVisiblePlaces]);
+  }, [expandedPlaceId, hasActiveRoutePlan, itineraryOrder, onSelectPlace, onToggleExpand, selectedPlaceId, tieredVisiblePlaces]);
 
   useEffect(() => {
     const layer = routeLayerRef.current;
@@ -328,9 +334,19 @@ export function FallbackChangshuMap({
       L.polyline(
         segment.path.map(([lng, lat]) => [lat, lng]),
         {
-          color: routePlan.status === "planned" ? "#167a62" : "#1a8068",
-          weight: 5,
-          opacity: routePlan.status === "preview" ? 0.62 : 0.84,
+          color: "#ffffff",
+          weight: routePlan.status === "planned" ? 11 : 10,
+          opacity: routePlan.status === "preview" ? 0.8 : 0.92,
+          lineCap: "round",
+        },
+      ).addTo(layer);
+
+      L.polyline(
+        segment.path.map(([lng, lat]) => [lat, lng]),
+        {
+          color: routePlan.status === "planned" ? "#0c6f5a" : "#137d66",
+          weight: routePlan.status === "planned" ? 7 : 6,
+          opacity: routePlan.status === "preview" ? 0.78 : 0.96,
           dashArray: routePlan.status === "preview" ? "8 8" : undefined,
           lineCap: "round",
         },
@@ -382,6 +398,22 @@ export function FallbackChangshuMap({
       duration: 0.35,
     });
   }, [focusUserLocationRequest, mapReady, userLocation]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    const targetPlace = focusPlaceRequest
+      ? places.find((place) => place.id === focusPlaceRequest.placeId)
+      : null;
+
+    if (!map || !targetPlace) {
+      return;
+    }
+
+    map.flyTo([targetPlace.position.lat, targetPlace.position.lng], Math.max(map.getZoom(), 14), {
+      animate: true,
+      duration: 0.3,
+    });
+  }, [focusPlaceRequest, places]);
 
   useEffect(() => {
     const map = mapRef.current;

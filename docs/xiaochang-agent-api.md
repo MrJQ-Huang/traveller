@@ -40,7 +40,14 @@ VITE_CCSWITCH_BASE_URL=http://127.0.0.1:8787
 VITE_CCSWITCH_AGENT_PATH=/agent/chat
 ```
 
-适配桥 `.env` 配置。模型本身由 CCswitch 管理，小常只指向 CCswitch 的 OpenAI-compatible 地址：
+适配桥配置。不要把本机绝对路径写进项目；不同开发电脑可以用环境变量、`.env.local` 或自己的 Claude/CC 配置目录。代理启动时会按以下顺序自动发现：
+
+1. 当前进程环境变量、项目 `.env`、项目 `.env.local`
+2. 项目 `.claude/settings.local.json`、项目 `.claude/settings.json`
+3. `CLAUDE_CONFIG_DIR`
+4. 当前系统用户的 `~/.claude/settings.local.json`、`~/.claude/settings.json`
+
+如果需要显式指定 CCswitch/OpenAI-compatible 地址，可以在本机 `.env.local` 或 `.env` 中写：
 
 ```env
 XIAOCHANG_AGENT_HOST=127.0.0.1
@@ -61,6 +68,7 @@ GET http://127.0.0.1:8787/health
 
 - CCswitch 的模型选择、供应商 key、换脑逻辑由 CCswitch 自己管理。
 - 小常适配桥只请求 CCswitch 的 OpenAI-compatible `/chat/completions`。
+- 本机密钥、端口、Claude/CC 配置目录不要提交；`.env.local` 和 `.claude/` 已被 `.gitignore` 忽略。
 - 如果 CCswitch 不需要 API key，可以留空 `CCSWITCH_API_KEY`。
 - 如果临时不用 CCswitch，也可以继续用 `LLM_API_BASE_URL / LLM_API_KEY / LLM_MODEL` 直连 OpenAI-compatible 服务。
 - LLM 必须返回严格 JSON；代理会做基础清洗和 placeId 校验。

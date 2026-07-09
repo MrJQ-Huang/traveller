@@ -25,7 +25,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山街道",
     "categoryLabel": "景点",
     "subtypeLabel": "5A",
-    "tierLevel": "L4",
     "score": "4.7",
     "phone": "0512-52308899",
     "position": {
@@ -36,14 +35,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "7:30-17:00，冬季约8:10-16:10，以景区公告为准",
     "price": "70元起，淡旺季和联票以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "3 小时",
     "history": "尚湖风景区以湖荡湿地、牡丹花会、水上森林和山水文化景观为核心，适合半日游、亲子游和休闲观景。",
     "detail": "开放/服务时间：7:30-17:00，冬季约8:10-16:10，以景区公告为准\n价格/费用：70元起，淡旺季和联票以景区公告为准\n建议停留：3 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 180,
-      "routeWeight": 100
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -60,8 +59,7 @@ export const databasePlaces: Place[] = [
       "亲子",
       "京剧",
       "景点",
-      "5A",
-      "L4"
+      "5A"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/581e1085eeb6267ab5e746d5662483b6",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -70,7 +68,6 @@ export const databasePlaces: Place[] = [
     "address": "沙家浜镇芦苇荡路188号",
     "categoryLabel": "景点",
     "subtypeLabel": "5A",
-    "tierLevel": "L4",
     "score": "4.6",
     "phone": "0512-52500000",
     "position": {
@@ -81,14 +78,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-17:00，淡季约8:30-16:30，以景区公告为准",
     "price": "80-100元，船票/竹筏等二次消费以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "5 小时",
     "history": "沙家浜风景区融合红色文化、芦苇湿地、影视体验和水上游览，是常熟南部最具代表性的综合型景区。",
     "detail": "开放/服务时间：8:00-17:00，淡季约8:30-16:30，以景区公告为准\n价格/费用：80-100元，船票/竹筏等二次消费以景区公告为准\n建议停留：5 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 300,
-      "routeWeight": 100
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -105,8 +102,7 @@ export const databasePlaces: Place[] = [
       "国家4A",
       "免费",
       "景点",
-      "4A",
-      "L4"
+      "4A"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/22dcba66099753b8327c2964d996d20e",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -115,7 +111,6 @@ export const databasePlaces: Place[] = [
     "address": "环城东路28号",
     "categoryLabel": "景点",
     "subtypeLabel": "4A",
-    "tierLevel": "L4",
     "score": "4.7",
     "phone": "0512-52700212",
     "position": {
@@ -126,14 +121,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-16:30，以园区公告为准",
     "price": "免费，特殊展陈以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1.5 小时",
     "history": "方塔园以宋代方塔、古井、碑刻和江南园林空间为特色，是常熟古城文化地标之一。",
     "detail": "开放/服务时间：8:00-16:30，以园区公告为准\n价格/费用：免费，特殊展陈以现场公告为准\n建议停留：1.5 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 100
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -149,8 +144,7 @@ export const databasePlaces: Place[] = [
       "国保",
       "小众",
       "摄影",
-      "景点",
-      "L4"
+      "景点"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/49d9a2a9008fc3970000002427582367?type=pic",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -159,7 +153,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇虞山锦江饭店旁",
     "categoryLabel": "景点",
     "subtypeLabel": "国保",
-    "tierLevel": "L4",
     "score": "4.6",
     "phone": "0512-52796229;0512-52796987",
     "position": {
@@ -170,14 +163,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-16:30，以景区公告为准",
     "price": "约10元，以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "45 分钟",
     "history": "燕园以黄石假山和清代私家园林格局见长，空间精巧，适合古典园林观赏和安静游览。",
     "detail": "开放/服务时间：8:00-16:30，以景区公告为准\n价格/费用：约10元，以景区公告为准\n建议停留：45 分钟",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 45,
-      "routeWeight": 100
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -194,8 +187,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "城市山林",
       "景点",
-      "国家级景点",
-      "L4"
+      "国家级景点"
     ],
     "imageUrl": "https://aos-comment.amap.com/B020007AKP/comment/9f76ae662210ce3330affe590ab2fbed_2048_2048_80.jpg",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -204,7 +196,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇北门大街21号",
     "categoryLabel": "景点",
     "subtypeLabel": "国家级景点",
-    "tierLevel": "L4",
     "score": "4.7",
     "phone": "0512-52225000",
     "position": {
@@ -215,14 +206,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-16:00，开放范围以景区公告为准",
     "price": "部分山林区域免费，剑门/城墙等联票以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "3 小时",
     "history": "虞山国家森林公园以山林、古迹、登高视野和城市山水格局为核心，是常熟山水游线的主轴。",
     "detail": "开放/服务时间：8:00-16:00，开放范围以景区公告为准\n价格/费用：部分山林区域免费，剑门/城墙等联票以景区公告为准\n建议停留：3 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 180,
-      "routeWeight": 100
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -239,8 +230,7 @@ export const databasePlaces: Place[] = [
       "历史",
       "短停留",
       "景点",
-      "风景名胜",
-      "L4"
+      "风景名胜"
     ],
     "imageUrl": "https://aos-comment.amap.com/B020007LFJ/comment/AD3EEE8D_D235_40BD_8DA9_AA04E989EA01_L0_001_2016_1512_1727152167771_95425789.jpg",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -249,7 +239,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇北门大街21号虞山国家森林公园",
     "categoryLabel": "景点",
     "subtypeLabel": "风景名胜",
-    "tierLevel": "L4",
     "score": "4.3",
     "phone": "0512-52225000",
     "position": {
@@ -260,14 +249,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "全天开放区域为主，具体以现场公告为准",
     "price": "免费或含在虞山景区游线中，以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "35 分钟",
     "history": "言子墓纪念常熟先贤言偃，适合作为虞山文化线中的历史节点，与城墙、兴福寺等点位组合游览。",
     "detail": "开放/服务时间：全天开放区域为主，具体以现场公告为准\n价格/费用：免费或含在虞山景区游线中，以现场公告为准\n建议停留：35 分钟",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 35,
-      "routeWeight": 100
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -283,8 +272,7 @@ export const databasePlaces: Place[] = [
       "休闲",
       "古迹",
       "亲子",
-      "景点",
-      "L4"
+      "景点"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/dc55cf5e2f69b8670240c2f27ab7d36c",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -293,7 +281,6 @@ export const databasePlaces: Place[] = [
     "address": "梅李镇梅东路1号",
     "categoryLabel": "景点",
     "subtypeLabel": "公园",
-    "tierLevel": "L4",
     "score": "4.6",
     "position": {
       "x": 65.59,
@@ -303,14 +290,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-16:00，以园区公告为准",
     "price": "免费或低价票制，以园区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1.5 小时",
     "history": "聚沙园兼具园林游憩和历史文化展示，适合家庭散步、短途休闲和文化路线补充。",
     "detail": "开放/服务时间：8:00-16:00，以园区公告为准\n价格/费用：免费或低价票制，以园区公告为准\n建议停留：1.5 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 100
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -327,8 +314,7 @@ export const databasePlaces: Place[] = [
       "亲水",
       "夜景",
       "景点",
-      "风景名胜",
-      "L4"
+      "风景名胜"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/df4a84eda2b7b5f47bc525c5c34f907f",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -337,7 +323,6 @@ export const databasePlaces: Place[] = [
     "address": "锡太路昆承湖附近",
     "categoryLabel": "景点",
     "subtypeLabel": "风景名胜",
-    "tierLevel": "L4",
     "score": "4.6",
     "position": {
       "x": 42.85,
@@ -347,14 +332,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:30-16:30，开放区域以现场公告为准",
     "price": "开放式湖区为主，部分项目以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "2 小时",
     "history": "昆承湖景区以湖滨开放空间、慢行休闲和城市水岸景观为主，适合骑行、散步和轻度游览。",
     "detail": "开放/服务时间：8:30-16:30，开放区域以现场公告为准\n价格/费用：开放式湖区为主，部分项目以现场公告为准\n建议停留：2 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 120,
-      "routeWeight": 100
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -371,8 +356,7 @@ export const databasePlaces: Place[] = [
       "亲子",
       "慢行",
       "景点",
-      "风景名胜",
-      "L4"
+      "风景名胜"
     ],
     "imageUrl": "http://aos-cdn-image.amap.com/sns/ugccomment/39cae331-914d-42aa-be90-19098bd2c38b.jpg",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -381,7 +365,6 @@ export const databasePlaces: Place[] = [
     "address": "尚湖镇苏虞张公路",
     "categoryLabel": "景点",
     "subtypeLabel": "风景名胜",
-    "tierLevel": "L4",
     "score": "4.5",
     "position": {
       "x": 17.16,
@@ -391,14 +374,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "6:00-21:00，以园区公告为准",
     "price": "免费或低价票制，以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1.5 小时",
     "history": "南湖湿地公园以生态湿地、亲水步道和自然观赏为特色，适合轻松游览和亲子自然教育。",
     "detail": "开放/服务时间：6:00-21:00，以园区公告为准\n价格/费用：免费或低价票制，以现场公告为准\n建议停留：1.5 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 100
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -415,8 +398,7 @@ export const databasePlaces: Place[] = [
       "农旅",
       "研学",
       "景点",
-      "旅游景点",
-      "L4"
+      "旅游景点"
     ],
     "imageUrl": "https://aos-comment.amap.com/B020016EQG/comment/content_media_external_file_100003721_1767174631022_52020496.jpg",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -425,7 +407,6 @@ export const databasePlaces: Place[] = [
     "address": "任阳镇蒋巷",
     "categoryLabel": "景点",
     "subtypeLabel": "旅游景点",
-    "tierLevel": "L4",
     "score": "4.4",
     "phone": "18915584705",
     "position": {
@@ -436,14 +417,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "9:00-17:00，以景区公告为准",
     "price": "门票及体验项目以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "2 小时",
     "history": "蒋巷生态园以乡村生态、农旅体验和团队研学为主要特色，适合家庭和团队半日游。",
     "detail": "开放/服务时间：9:00-17:00，以景区公告为准\n价格/费用：门票及体验项目以景区公告为准\n建议停留：2 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 120,
-      "routeWeight": 100
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -460,8 +441,7 @@ export const databasePlaces: Place[] = [
       "国家5A",
       "文化",
       "景点",
-      "5A",
-      "L3"
+      "5A"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/b678205a8aa1cf8152811c9dc1f7b793",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -470,7 +450,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市虞山镇虞山北路",
     "categoryLabel": "景点",
     "subtypeLabel": "5A",
-    "tierLevel": "L3",
     "score": "4.5",
     "phone": "0512-52779320",
     "position": {
@@ -481,14 +460,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-16:00，以景区公告为准",
     "price": "约30元，联票政策以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "2 小时",
     "history": "虞山剑门景区位于虞山山脊线，适合登山观景，可与城墙、宝岩等点位组成虞山半日游。",
     "detail": "开放/服务时间：8:00-16:00，以景区公告为准\n价格/费用：约30元，联票政策以景区公告为准\n建议停留：2 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 120,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -505,8 +484,7 @@ export const databasePlaces: Place[] = [
       "国家5A",
       "虞山",
       "景点",
-      "5A",
-      "L3"
+      "5A"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -515,7 +493,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市宝岩生态观光园",
     "categoryLabel": "景点",
     "subtypeLabel": "5A",
-    "tierLevel": "L3",
     "score": "4.4",
     "phone": "0512-52783289",
     "position": {
@@ -526,14 +503,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-16:00，以景区公告为准",
     "price": "约30元，联票政策以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1.5 小时",
     "history": "虞山宝岩生态观光园位于虞山南麓，以林果、生态步道和季节性景观为特色。",
     "detail": "开放/服务时间：8:00-16:00，以景区公告为准\n价格/费用：约30元，联票政策以景区公告为准\n建议停留：1.5 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -550,8 +527,7 @@ export const databasePlaces: Place[] = [
       "国家5A",
       "古城",
       "景点",
-      "5A",
-      "L3"
+      "5A"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -560,7 +536,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市虞山中路",
     "categoryLabel": "景点",
     "subtypeLabel": "5A",
-    "tierLevel": "L3",
     "score": "4.3",
     "phone": "0512-52785930",
     "position": {
@@ -571,14 +546,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-16:00，以景区公告为准",
     "price": "约30元，联票政策以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1 小时",
     "history": "虞山城墙保留常熟古城山城关系，是登高看城、体验古城历史和夜游动线的重要节点。",
     "detail": "开放/服务时间：8:00-16:00，以景区公告为准\n价格/费用：约30元，联票政策以景区公告为准\n建议停留：1 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -594,8 +569,7 @@ export const databasePlaces: Place[] = [
       "蕈油面",
       "文化",
       "禅意",
-      "景点",
-      "L3"
+      "景点"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -604,7 +578,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市虞山北路兴福寺",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙",
-    "tierLevel": "L3",
     "score": "4.6",
     "phone": "0512-52290183",
     "position": {
@@ -615,14 +588,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "全天开放区域为主，以寺院公告为准",
     "price": "免费，寺内项目以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1 小时",
     "history": "兴福寺位于虞山北麓，以古寺、山林和常熟本地早茶体验闻名，适合与虞山游线组合。",
     "detail": "开放/服务时间：全天开放区域为主，以寺院公告为准\n价格/费用：免费，寺内项目以现场公告为准\n建议停留：1 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -638,8 +611,7 @@ export const databasePlaces: Place[] = [
       "国保",
       "文化",
       "古城",
-      "景点",
-      "L3"
+      "景点"
     ],
     "imageUrl": "https://aos-comment.amap.com/B02000IZCC/comment/file_media_Photo_10057_IMG_1762396885_9880_IMG_20251106_103945_jpg_ss__1762820373022_82634286.jpg",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -648,7 +620,6 @@ export const databasePlaces: Place[] = [
     "address": "书院街翁家巷门2号",
     "categoryLabel": "景点",
     "subtypeLabel": "国保",
-    "tierLevel": "L3",
     "score": "4.3",
     "phone": "0512-52786639",
     "position": {
@@ -659,14 +630,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-16:30，周一闭馆，以场馆公告为准",
     "price": "免费或预约制，以场馆公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1 小时",
     "history": "翁同龢纪念馆展示翁氏家族和近代文化史内容，是常熟古城文化游的重要室内点。",
     "detail": "开放/服务时间：8:00-16:30，周一闭馆，以场馆公告为准\n价格/费用：免费或预约制，以场馆公告为准\n建议停留：1 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -682,8 +653,7 @@ export const databasePlaces: Place[] = [
       "省保",
       "文化",
       "古城",
-      "景点",
-      "L3"
+      "景点"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -692,7 +662,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市翁府前",
     "categoryLabel": "景点",
     "subtypeLabel": "省保",
-    "tierLevel": "L3",
     "score": "4.3",
     "phone": "0512-52781288",
     "position": {
@@ -703,14 +672,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-16:30，以景区公告为准",
     "price": "约30元，以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1 小时",
     "history": "曾赵园由曾园、赵园相邻组成，体现江南私家园林格局，适合古城慢游和园林主题路线。",
     "detail": "开放/服务时间：8:00-16:30，以景区公告为准\n价格/费用：约30元，以景区公告为准\n建议停留：1 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -726,8 +695,7 @@ export const databasePlaces: Place[] = [
       "城市历史",
       "室内",
       "亲子",
-      "景点",
-      "L3"
+      "景点"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -736,7 +704,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市北门大街1号",
     "categoryLabel": "景点",
     "subtypeLabel": "博物馆",
-    "tierLevel": "L3",
     "score": "4.4",
     "phone": "0512-52713164",
     "position": {
@@ -747,14 +714,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "9:00-16:30，周一闭馆，以场馆公告为准",
     "price": "免费，通常需预约，以场馆公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1.5 小时",
     "history": "常熟博物馆集中展示地方历史、文物和城市文化，是雨天、亲子和文化路线的稳定节点。",
     "detail": "开放/服务时间：9:00-16:30，周一闭馆，以场馆公告为准\n价格/费用：免费，通常需预约，以场馆公告为准\n建议停留：1.5 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -771,8 +738,7 @@ export const databasePlaces: Place[] = [
       "免费",
       "本地生活",
       "景点",
-      "街区",
-      "L3"
+      "街区"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -781,7 +747,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市南门",
     "categoryLabel": "景点",
     "subtypeLabel": "街区",
-    "tierLevel": "L3",
     "score": "4.3",
     "position": {
       "x": 40,
@@ -791,14 +756,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "全天开放，餐饮商铺以各店营业时间为准",
     "price": "免费",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1.5 小时",
     "history": "南门坛上老街保留常熟老城街巷和市井生活气息，适合小吃、散步和夜间轻游。",
     "detail": "开放/服务时间：全天开放，餐饮商铺以各店营业时间为准\n价格/费用：免费\n建议停留：1.5 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -815,8 +780,7 @@ export const databasePlaces: Place[] = [
       "摄影",
       "休闲",
       "景点",
-      "旅游景点",
-      "L3"
+      "旅游景点"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/40ac5fe7e149617e28401d2a00ee3d4b",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -825,7 +789,6 @@ export const databasePlaces: Place[] = [
     "address": "古里镇红豆山庄1号",
     "categoryLabel": "景点",
     "subtypeLabel": "旅游景点",
-    "tierLevel": "L3",
     "score": "4.6",
     "phone": "0512-52568888",
     "position": {
@@ -836,14 +799,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:30-17:00，以景区公告为准",
     "price": "以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "2 小时",
     "history": "古里红豆山庄以红豆文化、乡村休闲和季节性花木景观为特色，是东部片区代表性休闲景点。",
     "detail": "开放/服务时间：8:30-17:00，以景区公告为准\n价格/费用：以景区公告为准\n建议停留：2 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 120,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -860,8 +823,7 @@ export const databasePlaces: Place[] = [
       "清静",
       "文化",
       "景点",
-      "寺庙道观",
-      "L3"
+      "寺庙道观"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/1161ad2ab1d4b9ee3fcf1077470444c1",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -870,7 +832,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇三峰街38号",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L3",
     "score": "4.4",
     "phone": "18962254889",
     "position": {
@@ -881,14 +842,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:30-16:30，以寺院公告为准",
     "price": "免费或香花券以寺院公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1 小时",
     "history": "三峰清凉禅寺位于虞山片区，适合宗教文化、清静游览和虞山慢行线路补充。",
     "detail": "开放/服务时间：8:30-16:30，以寺院公告为准\n价格/费用：免费或香花券以寺院公告为准\n建议停留：1 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -905,8 +866,7 @@ export const databasePlaces: Place[] = [
       "室内",
       "研学",
       "景点",
-      "风景名胜",
-      "L3"
+      "风景名胜"
     ],
     "imageUrl": "https://aos-comment.amap.com/default_poi/comment/content_media_external_file_100002089_1749944225092_03603521.jpg",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -915,7 +875,6 @@ export const databasePlaces: Place[] = [
     "address": "辛峰巷与通江路交叉口西北20米",
     "categoryLabel": "景点",
     "subtypeLabel": "风景名胜",
-    "tierLevel": "L3",
     "score": "4.4",
     "phone": "0512-52788363",
     "position": {
@@ -926,14 +885,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "周二至周日8:00-16:30，节假日以公告为准",
     "price": "免费，参观预约以场馆公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1 小时",
     "history": "中共常熟党史馆以地方党史和红色文化展示为主，适合研学、团队和室内文化路线。",
     "detail": "开放/服务时间：周二至周日8:00-16:30，节假日以公告为准\n价格/费用：免费，参观预约以场馆公告为准\n建议停留：1 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -949,8 +908,7 @@ export const databasePlaces: Place[] = [
       "文化",
       "纪念馆",
       "古里",
-      "景点",
-      "L3"
+      "景点"
     ],
     "imageUrl": "http://aos-cdn-image.amap.com/sns/ugccomment/366df34a-96e5-4e48-acb0-7d09d375f388.JPG",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -959,7 +917,6 @@ export const databasePlaces: Place[] = [
     "address": "铜剑北街",
     "categoryLabel": "景点",
     "subtypeLabel": "纪念馆",
-    "tierLevel": "L3",
     "score": "4.3",
     "phone": "0512-52526332;0512-52936707",
     "position": {
@@ -970,14 +927,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "8:00-16:00，以场馆公告为准",
     "price": "以场馆公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1 小时",
     "history": "铁琴铜剑楼是常熟重要藏书文化遗存，适合与古里文化、书香主题路线组合。",
     "detail": "开放/服务时间：8:00-16:00，以场馆公告为准\n价格/费用：以场馆公告为准\n建议停留：1 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -994,8 +951,7 @@ export const databasePlaces: Place[] = [
       "亲子",
       "摄影",
       "景点",
-      "其它农林牧渔基地",
-      "L3"
+      "其它农林牧渔基地"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/1f7c24cc9674d0decf821cffae7de689",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1004,7 +960,6 @@ export const databasePlaces: Place[] = [
     "address": "梅李镇圩港村福缘禅寺旁",
     "categoryLabel": "景点",
     "subtypeLabel": "其它农林牧渔基地",
-    "tierLevel": "L3",
     "score": "4.2",
     "phone": "0512-52380089;0512-52669878",
     "position": {
@@ -1015,14 +970,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "7:30-16:30，以景区公告为准",
     "price": "以景区公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "1.5 小时",
     "history": "江南红豆园以红豆树与乡村休闲景观为核心，适合轻度游览、摄影和亲子路线。",
     "detail": "开放/服务时间：7:30-16:30，以景区公告为准\n价格/费用：以景区公告为准\n建议停留：1.5 小时",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1039,8 +994,7 @@ export const databasePlaces: Place[] = [
       "历史",
       "研学",
       "景点",
-      "旅游景点",
-      "L3"
+      "旅游景点"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/f60a1e1be85d17b7b5ba8d7dc208ec7d",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1049,7 +1003,6 @@ export const databasePlaces: Place[] = [
     "address": "罗墩桥路与良渚路交叉口东北40米",
     "categoryLabel": "景点",
     "subtypeLabel": "旅游景点",
-    "tierLevel": "L3",
     "score": "4.0",
     "position": {
       "x": 19.9,
@@ -1059,14 +1012,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "全天开放区域为主，以现场公告为准",
     "price": "免费或以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "45 分钟",
     "history": "罗墩良渚文化遗址体现常熟早期文明线索，适合历史文化和研学型路线。",
     "detail": "开放/服务时间：全天开放区域为主，以现场公告为准\n价格/费用：免费或以现场公告为准\n建议停留：45 分钟",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 45,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1083,8 +1036,7 @@ export const databasePlaces: Place[] = [
       "短停留",
       "古城",
       "景点",
-      "寺庙道观",
-      "L3"
+      "寺庙道观"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/df7b28044161ef1aad2683a3939f2535",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1093,7 +1045,6 @@ export const databasePlaces: Place[] = [
     "address": "隆力奇工业园",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L3",
     "score": "4.2",
     "position": {
       "x": 23.2,
@@ -1103,14 +1054,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "7:30-16:30，以现场公告为准",
     "price": "免费或以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "45 分钟",
     "history": "真武观为常熟传统宗教文化点位，适合古城文化路线中的短停留。",
     "detail": "开放/服务时间：7:30-16:30，以现场公告为准\n价格/费用：免费或以现场公告为准\n建议停留：45 分钟",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 45,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1127,8 +1078,7 @@ export const databasePlaces: Place[] = [
       "短停留",
       "明清",
       "景点",
-      "旅游景点",
-      "L3"
+      "旅游景点"
     ],
     "imageUrl": "https://aos-comment.amap.com/B02000K00U/comment/39ec2300ec9036682790a3224c24d144_2048_2048_80.jpg",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1137,7 +1087,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山锦峰拂水岩下花园浜,钱牧斋墓西边",
     "categoryLabel": "景点",
     "subtypeLabel": "旅游景点",
-    "tierLevel": "L3",
     "score": "4.0",
     "position": {
       "x": 29.8,
@@ -1147,14 +1096,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "全天开放区域为主，以现场公告为准",
     "price": "免费或以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "35 分钟",
     "history": "柳如是墓关联明清文化人物柳如是，适合作为常熟历史人物主题路线的补充点。",
     "detail": "开放/服务时间：全天开放区域为主，以现场公告为准\n价格/费用：免费或以现场公告为准\n建议停留：35 分钟",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 35,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1171,8 +1120,7 @@ export const databasePlaces: Place[] = [
       "历史",
       "短停留",
       "景点",
-      "纪念馆",
-      "L3"
+      "纪念馆"
     ],
     "imageUrl": "https://aos-comment.amap.com/B0FFI687WC/comment/177262053425_1772620537214_25068488.jpg",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1181,7 +1129,6 @@ export const databasePlaces: Place[] = [
     "address": "东言子巷17号",
     "categoryLabel": "景点",
     "subtypeLabel": "纪念馆",
-    "tierLevel": "L3",
     "score": "4.0",
     "position": {
       "x": 38.93,
@@ -1191,14 +1138,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "以现场公告为准",
     "price": "免费或以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "45 分钟",
     "history": "言子旧宅以言子文化和常熟先贤记忆为主题，适合古城文化线和研学路线。",
     "detail": "开放/服务时间：以现场公告为准\n价格/费用：免费或以现场公告为准\n建议停留：45 分钟",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 45,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1214,8 +1161,7 @@ export const databasePlaces: Place[] = [
       "文化",
       "室内",
       "短停留",
-      "景点",
-      "L3"
+      "景点"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/ab7c2e56df2e2a050000000704598312",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1224,7 +1170,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇虞山中路虞山风景区南门",
     "categoryLabel": "景点",
     "subtypeLabel": "纪念馆",
-    "tierLevel": "L3",
     "score": "3.5",
     "position": {
       "x": 37.73,
@@ -1234,14 +1179,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "以场馆公告为准",
     "price": "免费或以场馆公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "45 分钟",
     "history": "王石谷纪念馆展示常熟画派相关文化内容，适合作为艺术与古城文化游节点。",
     "detail": "开放/服务时间：以场馆公告为准\n价格/费用：免费或以场馆公告为准\n建议停留：45 分钟",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 45,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1258,8 +1203,7 @@ export const databasePlaces: Place[] = [
       "短停留",
       "明清",
       "景点",
-      "旅游景点",
-      "L3"
+      "旅游景点"
     ],
     "imageUrl": "https://aos-comment.amap.com/B02000K0RL/comment/b8622dfeed4fff0f8a39d8675ec26229_2048_2048_80.jpg",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1268,7 +1212,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路",
     "categoryLabel": "景点",
     "subtypeLabel": "旅游景点",
-    "tierLevel": "L3",
     "score": "3.8",
     "position": {
       "x": 29.92,
@@ -1278,14 +1221,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "全天开放区域为主，以现场公告为准",
     "price": "免费或以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "35 分钟",
     "history": "钱谦益墓关联明清文人钱谦益，可与柳如是墓等点位组成历史人物主题路线。",
     "detail": "开放/服务时间：全天开放区域为主，以现场公告为准\n价格/费用：免费或以现场公告为准\n建议停留：35 分钟",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 35,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1302,8 +1245,7 @@ export const databasePlaces: Place[] = [
       "古城",
       "短停留",
       "景点",
-      "寺庙道观",
-      "L3"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1312,7 +1254,6 @@ export const databasePlaces: Place[] = [
     "address": "小三台与西门大街交叉口东北140米",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L3",
     "score": "3.6",
     "position": {
       "x": 37.74,
@@ -1322,14 +1263,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "以现场公告为准",
     "price": "免费或以现场公告为准",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "45 分钟",
     "history": "常熟府城隍庙体现地方民俗和古城信仰空间，适合古城步行路线补充。",
     "detail": "开放/服务时间：以现场公告为准\n价格/费用：免费或以现场公告为准\n建议停留：45 分钟",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 45,
-      "routeWeight": 60
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1341,8 +1282,7 @@ export const databasePlaces: Place[] = [
     "summary": "可作为宗教文化和乡镇游线补充点。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1351,7 +1291,6 @@ export const databasePlaces: Place[] = [
     "address": "古里镇红豆山庄1号古里红豆山庄(东南角)",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "4.0",
     "phone": "0512-52568888",
     "position": {
@@ -1365,7 +1304,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1377,8 +1316,7 @@ export const databasePlaces: Place[] = [
     "summary": "可作为宗教文化短停留点。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1387,7 +1325,6 @@ export const databasePlaces: Place[] = [
     "address": "支塘镇何北村盛家巷60号",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "4.0",
     "phone": "0512-52548806",
     "position": {
@@ -1401,7 +1338,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1413,8 +1350,7 @@ export const databasePlaces: Place[] = [
     "summary": "有基础开放时间，适合乡镇文化补充。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1423,7 +1359,6 @@ export const databasePlaces: Place[] = [
     "address": "江苏常熟服装城管理委员会商海路",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "3.9",
     "position": {
       "x": 40.11,
@@ -1438,7 +1373,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1450,8 +1385,7 @@ export const databasePlaces: Place[] = [
     "summary": "适合滨江片区休闲和慢行。",
     "tags": [
       "景点",
-      "旅游景点",
-      "L2"
+      "旅游景点"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1460,7 +1394,6 @@ export const databasePlaces: Place[] = [
     "address": "新溪路186-12正西方向120米",
     "categoryLabel": "景点",
     "subtypeLabel": "旅游景点",
-    "tierLevel": "L2",
     "score": "3.9",
     "position": {
       "x": 75.4,
@@ -1475,7 +1408,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1487,8 +1420,7 @@ export const databasePlaces: Place[] = [
     "summary": "适合作为古城公共空间和集合点。",
     "tags": [
       "景点",
-      "城市广场",
-      "L2"
+      "城市广场"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1497,7 +1429,6 @@ export const databasePlaces: Place[] = [
     "address": "苗弄10-2号",
     "categoryLabel": "景点",
     "subtypeLabel": "城市广场",
-    "tierLevel": "L2",
     "score": "4.2",
     "position": {
       "x": 37.94,
@@ -1512,7 +1443,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1524,8 +1455,7 @@ export const databasePlaces: Place[] = [
     "summary": "基础 POI，可用于搜索和附近推荐。",
     "tags": [
       "景点",
-      "生活服务场所",
-      "L2"
+      "生活服务场所"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1534,7 +1464,6 @@ export const databasePlaces: Place[] = [
     "address": "合泰村北庄路",
     "categoryLabel": "景点",
     "subtypeLabel": "生活服务场所",
-    "tierLevel": "L2",
     "score": "4.1",
     "position": {
       "x": 33.32,
@@ -1547,7 +1476,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1559,8 +1488,7 @@ export const databasePlaces: Place[] = [
     "summary": "宗教文化点，可作为候选补充。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1569,7 +1497,6 @@ export const databasePlaces: Place[] = [
     "address": "草庵禅院",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "3.9",
     "phone": "0512-52692057",
     "position": {
@@ -1583,7 +1510,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1595,8 +1522,7 @@ export const databasePlaces: Place[] = [
     "summary": "古城景观补充点。",
     "tags": [
       "景点",
-      "风景名胜",
-      "L2"
+      "风景名胜"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1605,7 +1531,6 @@ export const databasePlaces: Place[] = [
     "address": "西门大街阜成门旁",
     "categoryLabel": "景点",
     "subtypeLabel": "风景名胜",
-    "tierLevel": "L2",
     "score": "4.1",
     "position": {
       "x": 36.89,
@@ -1620,7 +1545,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1632,8 +1557,7 @@ export const databasePlaces: Place[] = [
     "summary": "公共休闲空间，适合轻量展示。",
     "tags": [
       "景点",
-      "公园",
-      "L2"
+      "公园"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1642,7 +1566,6 @@ export const databasePlaces: Place[] = [
     "address": "青墩塘路8号",
     "categoryLabel": "景点",
     "subtypeLabel": "公园",
-    "tierLevel": "L2",
     "score": "3.9",
     "position": {
       "x": 41.72,
@@ -1657,7 +1580,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1669,8 +1592,7 @@ export const databasePlaces: Place[] = [
     "summary": "乡镇宗教文化点。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1679,7 +1601,6 @@ export const databasePlaces: Place[] = [
     "address": "浒浦街道寺后路",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "3.9",
     "position": {
       "x": 71.56,
@@ -1692,7 +1613,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1704,8 +1625,7 @@ export const databasePlaces: Place[] = [
     "summary": "主题公园，可用于附近休闲推荐。",
     "tags": [
       "景点",
-      "公园",
-      "L2"
+      "公园"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1714,7 +1634,6 @@ export const databasePlaces: Place[] = [
     "address": "海虞北路与昭文路交叉口东140米",
     "categoryLabel": "景点",
     "subtypeLabel": "公园",
-    "tierLevel": "L2",
     "score": "3.9",
     "position": {
       "x": 41.49,
@@ -1729,7 +1648,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1741,8 +1660,7 @@ export const databasePlaces: Place[] = [
     "summary": "社区休闲公园，适合附近推荐。",
     "tags": [
       "景点",
-      "公园",
-      "L2"
+      "公园"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1751,7 +1669,6 @@ export const databasePlaces: Place[] = [
     "address": "人民路(梅李医院往东500米)",
     "categoryLabel": "景点",
     "subtypeLabel": "公园",
-    "tierLevel": "L2",
     "score": "3.9",
     "position": {
       "x": 65.67,
@@ -1766,7 +1683,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1778,8 +1695,7 @@ export const databasePlaces: Place[] = [
     "summary": "城区休闲点，可作为搜索候选。",
     "tags": [
       "景点",
-      "公园",
-      "L2"
+      "公园"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1788,7 +1704,6 @@ export const databasePlaces: Place[] = [
     "address": "湘江东路与海虞北路交叉口东南340米",
     "categoryLabel": "景点",
     "subtypeLabel": "公园",
-    "tierLevel": "L2",
     "score": "3.7",
     "position": {
       "x": 41.61,
@@ -1803,7 +1718,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1815,8 +1730,7 @@ export const databasePlaces: Place[] = [
     "summary": "宗教文化点，可作为路线补充。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1825,7 +1739,6 @@ export const databasePlaces: Place[] = [
     "address": "褒亲禅寺(长桥中心路北)",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "4.0",
     "phone": "0512-52552740",
     "position": {
@@ -1841,7 +1754,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1853,8 +1766,7 @@ export const databasePlaces: Place[] = [
     "summary": "公共休闲空间。",
     "tags": [
       "景点",
-      "公园",
-      "L2"
+      "公园"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1863,7 +1775,6 @@ export const databasePlaces: Place[] = [
     "address": "古里镇小康村",
     "categoryLabel": "景点",
     "subtypeLabel": "公园",
-    "tierLevel": "L2",
     "score": "4.1",
     "position": {
       "x": 54.9,
@@ -1878,7 +1789,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1890,8 +1801,7 @@ export const databasePlaces: Place[] = [
     "summary": "滨江/碧溪片区休闲点。",
     "tags": [
       "景点",
-      "公园",
-      "L2"
+      "公园"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1899,7 +1809,6 @@ export const databasePlaces: Place[] = [
     "poiId": "230",
     "categoryLabel": "景点",
     "subtypeLabel": "公园",
-    "tierLevel": "L2",
     "score": "4.1",
     "position": {
       "x": 77.17,
@@ -1914,7 +1823,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1926,8 +1835,7 @@ export const databasePlaces: Place[] = [
     "summary": "文化休闲点，可作为轻量候选。",
     "tags": [
       "景点",
-      "公园",
-      "L2"
+      "公园"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1936,7 +1844,6 @@ export const databasePlaces: Place[] = [
     "address": "石梅路3号",
     "categoryLabel": "景点",
     "subtypeLabel": "公园",
-    "tierLevel": "L2",
     "score": "3.9",
     "position": {
       "x": 37.65,
@@ -1951,7 +1858,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -1963,8 +1870,7 @@ export const databasePlaces: Place[] = [
     "summary": "宗教文化点。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -1973,7 +1879,6 @@ export const databasePlaces: Place[] = [
     "address": "支塘镇杨家村88号",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "3.9",
     "position": {
       "x": 77.46,
@@ -1988,7 +1893,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2000,8 +1905,7 @@ export const databasePlaces: Place[] = [
     "summary": "有基础开放时间，适合文化候选。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2010,7 +1914,6 @@ export const databasePlaces: Place[] = [
     "address": "中泾村3-12殷家6号",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "4.2",
     "position": {
       "x": 31.46,
@@ -2025,7 +1928,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2037,8 +1940,7 @@ export const databasePlaces: Place[] = [
     "summary": "花卉观赏类候选点。",
     "tags": [
       "景点",
-      "植物园",
-      "L2"
+      "植物园"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2047,7 +1949,6 @@ export const databasePlaces: Place[] = [
     "address": "204国道与陈塘东路交叉口东200米",
     "categoryLabel": "景点",
     "subtypeLabel": "植物园",
-    "tierLevel": "L2",
     "score": "4.0",
     "phone": "13612438313",
     "position": {
@@ -2063,7 +1964,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2075,8 +1976,7 @@ export const databasePlaces: Place[] = [
     "summary": "宗教文化候选点。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2085,7 +1985,6 @@ export const databasePlaces: Place[] = [
     "address": "塘南西路与华林路交叉口北100米",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "4.0",
     "position": {
       "x": 80.29,
@@ -2100,7 +1999,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2112,8 +2011,7 @@ export const databasePlaces: Place[] = [
     "summary": "开放式休闲公园。",
     "tags": [
       "景点",
-      "公园",
-      "L2"
+      "公园"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2122,7 +2020,6 @@ export const databasePlaces: Place[] = [
     "address": "黎明东路与黎明苑路交叉口南300米",
     "categoryLabel": "景点",
     "subtypeLabel": "公园",
-    "tierLevel": "L2",
     "score": "3.8",
     "position": {
       "x": 28.8,
@@ -2137,7 +2034,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2149,8 +2046,7 @@ export const databasePlaces: Place[] = [
     "summary": "古城历史建筑候选。",
     "tags": [
       "景点",
-      "旅游景点",
-      "L2"
+      "旅游景点"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2159,7 +2055,6 @@ export const databasePlaces: Place[] = [
     "address": "花溪路",
     "categoryLabel": "景点",
     "subtypeLabel": "旅游景点",
-    "tierLevel": "L2",
     "score": "3.9",
     "position": {
       "x": 42.54,
@@ -2172,7 +2067,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2184,8 +2079,7 @@ export const databasePlaces: Place[] = [
     "summary": "古城片区轻量游览点。",
     "tags": [
       "景点",
-      "旅游景点",
-      "L2"
+      "旅游景点"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2194,7 +2088,6 @@ export const databasePlaces: Place[] = [
     "address": "石梅路19号",
     "categoryLabel": "景点",
     "subtypeLabel": "旅游景点",
-    "tierLevel": "L2",
     "score": "3.6",
     "position": {
       "x": 37.88,
@@ -2209,7 +2102,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2221,8 +2114,7 @@ export const databasePlaces: Place[] = [
     "summary": "历史人物主题候选点。",
     "tags": [
       "景点",
-      "旅游景点",
-      "L2"
+      "旅游景点"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2231,7 +2123,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路158号黄公望纪念馆(东北角)",
     "categoryLabel": "景点",
     "subtypeLabel": "旅游景点",
-    "tierLevel": "L2",
     "score": "3.7",
     "position": {
       "x": 27.01,
@@ -2246,7 +2137,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2258,8 +2149,7 @@ export const databasePlaces: Place[] = [
     "summary": "古里片区宗教文化点。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2268,7 +2158,6 @@ export const databasePlaces: Place[] = [
     "address": "204国道西150米",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "3.7",
     "position": {
       "x": 59.02,
@@ -2281,7 +2170,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2293,8 +2182,7 @@ export const databasePlaces: Place[] = [
     "summary": "宗教文化候选点。",
     "tags": [
       "景点",
-      "寺庙道观",
-      "L2"
+      "寺庙道观"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2303,7 +2191,6 @@ export const databasePlaces: Place[] = [
     "address": "弘福路与东新路交叉口南140米",
     "categoryLabel": "景点",
     "subtypeLabel": "寺庙道观",
-    "tierLevel": "L2",
     "score": "3.9",
     "position": {
       "x": 11.19,
@@ -2316,7 +2203,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2328,8 +2215,7 @@ export const databasePlaces: Place[] = [
     "summary": "近现代历史主题候选点。",
     "tags": [
       "景点",
-      "旅游景点",
-      "L2"
+      "旅游景点"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2337,7 +2223,6 @@ export const databasePlaces: Place[] = [
     "poiId": "289",
     "categoryLabel": "景点",
     "subtypeLabel": "旅游景点",
-    "tierLevel": "L2",
     "score": "4.4",
     "position": {
       "x": 82.51,
@@ -2350,7 +2235,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2362,8 +2247,7 @@ export const databasePlaces: Place[] = [
     "summary": "名人文化候选点。",
     "tags": [
       "景点",
-      "纪念馆",
-      "L2"
+      "纪念馆"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2372,7 +2256,6 @@ export const databasePlaces: Place[] = [
     "address": "西南隅翁府前7号曾园·赵园内",
     "categoryLabel": "景点",
     "subtypeLabel": "纪念馆",
-    "tierLevel": "L2",
     "score": "2.9",
     "phone": "0512-52225139",
     "position": {
@@ -2386,7 +2269,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
@@ -2398,8 +2281,7 @@ export const databasePlaces: Place[] = [
     "summary": "文化纪念馆候选点。",
     "tags": [
       "景点",
-      "纪念馆",
-      "L2"
+      "纪念馆"
     ],
     "imageUrl": "/assets/generated-placeholders/scenic.png",
     "fallbackImageUrl": "/assets/generated-placeholders/scenic.png",
@@ -2408,7 +2290,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路111号",
     "categoryLabel": "景点",
     "subtypeLabel": "纪念馆",
-    "tierLevel": "L2",
     "score": "4.0",
     "phone": "0512-52861681",
     "position": {
@@ -2422,13 +2303,13 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 90,
-      "routeWeight": 25
+      "routeWeight": 35
     },
     "dataStatus": "verified"
   },
   {
-    "id": "db-restaurant-404",
-    "type": "restaurant",
+    "id": "db-food-404",
+    "type": "food",
     "name": "望虞台茶文化餐厅",
     "subtitle": "餐饮相关 · 虞山尚湖旅游度假区常熟尚湖风景区串月桥堍1号",
     "summary": "望虞台茶文化餐厅属于餐饮相关，适合作为游览路线中的用餐/休息节点。",
@@ -2439,17 +2320,15 @@ export const databasePlaces: Place[] = [
       "尚湖",
       "景区",
       "风景",
-      "美食",
-      "L4"
+      "美食"
     ],
     "imageUrl": "https://aos-comment.amap.com/B02000JW0W/comment/content_media_external_file_6439_1760477697391_33369816.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "404",
     "address": "虞山尚湖旅游度假区常熟尚湖风景区串月桥堍1号",
     "categoryLabel": "美食",
     "subtypeLabel": "餐饮相关",
-    "tierLevel": "L4",
     "score": "4.5",
     "phone": "0512-52273999",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -2468,7 +2347,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 178.33
+      "routeWeight": 235
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -2493,8 +2372,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-476",
-    "type": "restaurant",
+    "id": "db-food-476",
+    "type": "food",
     "name": "红泥食府(海虞北路店)",
     "subtitle": "综合酒楼 · 虞山镇海虞北路9号",
     "summary": "红泥食府(海虞北路店)属于综合酒楼，适合作为游览路线中的用餐/休息节点。",
@@ -2505,17 +2384,15 @@ export const databasePlaces: Place[] = [
       "剁椒鱼头",
       "家常菜",
       "虞山",
-      "美食",
-      "L4"
+      "美食"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/d04ac7d566bd2e0d58f254b1ac32509f",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "476",
     "address": "虞山镇海虞北路9号",
     "categoryLabel": "美食",
     "subtypeLabel": "综合酒楼",
-    "tierLevel": "L4",
     "score": "4.5",
     "phone": "0512-52571713",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -2534,7 +2411,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 171.94
+      "routeWeight": 215.83
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -2559,8 +2436,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-445",
-    "type": "restaurant",
+    "id": "db-food-445",
+    "type": "food",
     "name": "碧云轩(常熟店)",
     "subtitle": "茶艺馆 · 虞山镇碧云路10号碧云轩",
     "summary": "碧云轩(常熟店)属于茶艺馆，适合作为游览路线中的用餐/休息节点。",
@@ -2571,17 +2448,15 @@ export const databasePlaces: Place[] = [
       "避风塘阿拉斯加帝王蟹",
       "爽口脆笋",
       "芙蓉蛋白凤尾虾",
-      "美食",
-      "L4"
+      "美食"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/50c9fd618d58a00b0000002324030662?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "445",
     "address": "虞山镇碧云路10号碧云轩",
     "categoryLabel": "美食",
     "subtypeLabel": "茶艺馆",
-    "tierLevel": "L4",
     "score": "4.6",
     "phone": "0512-52899777",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -2600,7 +2475,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 171.28
+      "routeWeight": 213.85
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -2625,8 +2500,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-474",
-    "type": "restaurant",
+    "id": "db-food-474",
+    "type": "food",
     "name": "一带一炉总店",
     "subtitle": "火锅店 · 虞山北路虞景文华广场28幢",
     "summary": "一带一炉总店属于火锅店，适合作为游览路线中的用餐/休息节点。",
@@ -2637,17 +2512,15 @@ export const databasePlaces: Place[] = [
       "八爪鱼",
       "大鲍鱼",
       "虞山",
-      "美食",
-      "L4"
+      "美食"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/d31bc1464b2726e3098f88d4fa406955",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "474",
     "address": "虞山北路虞景文华广场28幢",
     "categoryLabel": "美食",
     "subtypeLabel": "火锅店",
-    "tierLevel": "L4",
     "score": "4.5",
     "phone": "13771401341",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -2666,7 +2539,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 170.85
+      "routeWeight": 212.56
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -2691,8 +2564,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-479",
-    "type": "restaurant",
+    "id": "db-food-479",
+    "type": "food",
     "name": "湖畔居花园餐厅(昆承湖)",
     "subtitle": "中餐厅 · 昆承湖东路",
     "summary": "湖畔居花园餐厅(昆承湖)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -2703,17 +2576,15 @@ export const databasePlaces: Place[] = [
       "松鼠鳜鱼",
       "松鼠桂鱼",
       "蕈油面",
-      "美食",
-      "L4"
+      "美食"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/76d5651becdcb63ea4b43d7a7bb00d32",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "479",
     "address": "昆承湖东路",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L4",
     "score": "4.5",
     "phone": "0512-82363777;13915650781",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -2732,7 +2603,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 169.91
+      "routeWeight": 209.74
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -2757,8 +2628,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-403",
-    "type": "restaurant",
+    "id": "db-food-403",
+    "type": "food",
     "name": "文轩铺子早点(富莲路店)",
     "subtitle": "快餐厅 · 虞山镇富莲路尤墩里43号",
     "summary": "文轩铺子早点(富莲路店)属于快餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -2766,17 +2637,15 @@ export const databasePlaces: Place[] = [
       "快餐厅",
       "小吃快餐",
       "虞山",
-      "美食",
-      "L4"
+      "美食"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/8d498fa063dd8a009e1e6a801e35fee4",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "403",
     "address": "虞山镇富莲路尤墩里43号",
     "categoryLabel": "美食",
     "subtypeLabel": "快餐厅",
-    "tierLevel": "L4",
     "score": "4.3",
     "phone": "18013774962;18962402962",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -2795,7 +2664,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 169.07
+      "routeWeight": 207.2
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -2816,8 +2685,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-525",
-    "type": "restaurant",
+    "id": "db-food-525",
+    "type": "food",
     "name": "麦伴伴爆炒浇头面(梅李店)",
     "subtitle": "餐饮相关 · 观景园东南门西南70米",
     "summary": "麦伴伴爆炒浇头面(梅李店)属于餐饮相关，适合作为游览路线中的用餐/休息节点。",
@@ -2826,17 +2695,15 @@ export const databasePlaces: Place[] = [
       "面馆",
       "浇头面",
       "南门",
-      "美食",
-      "L4"
+      "美食"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/3b6b843d2d70776c4ec704c3f35c19a8",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "525",
     "address": "观景园东南门西南70米",
     "categoryLabel": "美食",
     "subtypeLabel": "餐饮相关",
-    "tierLevel": "L4",
     "score": "4.5",
     "phone": "18015699927",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -2855,7 +2722,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 168.22
+      "routeWeight": 204.66
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -2878,8 +2745,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-549",
-    "type": "restaurant",
+    "id": "db-food-549",
+    "type": "food",
     "name": "m+甜品店(常熟老街店)",
     "subtitle": "甜品店 · 常熟老街-南区北门东220米",
     "summary": "m+甜品店(常熟老街店)属于甜品店，适合作为游览路线中的用餐/休息节点。",
@@ -2889,17 +2756,15 @@ export const databasePlaces: Place[] = [
       "抹茶蛋糕",
       "雪媚娘",
       "老街",
-      "美食",
-      "L4"
+      "美食"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/2ed5d8ea55c437c7844bea627e2ce0d8",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "549",
     "address": "常熟老街-南区北门东220米",
     "categoryLabel": "美食",
     "subtypeLabel": "甜品店",
-    "tierLevel": "L4",
     "score": "4.1",
     "phone": "13962314691",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -2918,7 +2783,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 167.94
+      "routeWeight": 203.83
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -2943,8 +2808,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-583",
-    "type": "restaurant",
+    "id": "db-food-583",
+    "type": "food",
     "name": "奥灶面馆",
     "subtitle": "中餐厅 · 沙家浜沙南路184号",
     "summary": "奥灶面馆属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -2955,17 +2820,15 @@ export const databasePlaces: Place[] = [
       "焖肉面",
       "鸭肉",
       "大排",
-      "美食",
-      "L4"
+      "美食"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/90e1a0879097bebba98fa01f20220dee",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "583",
     "address": "沙家浜沙南路184号",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L4",
     "score": "4.3",
     "phone": "0512-88855559;18962490750",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -2984,7 +2847,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 167.32
+      "routeWeight": 201.97
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3009,8 +2872,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-422",
-    "type": "restaurant",
+    "id": "db-food-422",
+    "type": "food",
     "name": "嵩山面馆(沙家浜分店)",
     "subtitle": "中餐厅 · 沙家浜镇沙家浜阳澄南路72号",
     "summary": "嵩山面馆(沙家浜分店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -3018,17 +2881,15 @@ export const databasePlaces: Place[] = [
       "中餐厅",
       "面馆",
       "沙家浜",
-      "美食",
-      "L4"
+      "美食"
     ],
     "imageUrl": "https://aos-comment.amap.com/B0FFGH9JVR/comment/869e15bd46ad04bdb7f965ff4ed71323_2048_2048_80.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "422",
     "address": "沙家浜镇沙家浜阳澄南路72号",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L4",
     "score": "4.3",
     "phone": "13776236889",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -3047,7 +2908,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 166.88
+      "routeWeight": 200.65
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3068,8 +2929,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-148",
-    "type": "restaurant",
+    "id": "db-food-148",
+    "type": "food",
     "name": "兴福寺面馆",
     "subtitle": "寺庙素面 · 常熟市兴福寺门口",
     "summary": "兴福寺面馆属于寺庙素面，适合作为游览路线中的用餐/休息节点。",
@@ -3079,17 +2940,15 @@ export const databasePlaces: Place[] = [
       "早面",
       "游客地标",
       "美食",
-      "寺庙素面",
-      "L3"
+      "寺庙素面"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "148",
     "address": "常熟市兴福寺门口",
     "categoryLabel": "美食",
     "subtypeLabel": "寺庙素面",
-    "tierLevel": "L3",
     "score": "4.2",
     "dynamicText": "avg_crowd=0.301; peak_crowd=0.81",
     "selectionScore": 246.738,
@@ -3107,7 +2966,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 142.25
+      "routeWeight": 246.74
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3132,8 +2991,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-150",
-    "type": "restaurant",
+    "id": "db-food-150",
+    "type": "food",
     "name": "拾光亲子餐厅",
     "subtitle": "亲子 · 常熟市方塔街区",
     "summary": "拾光亲子餐厅属于亲子，适合作为游览路线中的用餐/休息节点。",
@@ -3142,17 +3001,15 @@ export const databasePlaces: Place[] = [
       "西点",
       "下午茶",
       "无添加",
-      "美食",
-      "L3"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "150",
     "address": "常熟市方塔街区",
     "categoryLabel": "美食",
     "subtypeLabel": "亲子",
-    "tierLevel": "L3",
     "score": "4.4",
     "dynamicText": "avg_crowd=0.148; peak_crowd=0.495",
     "selectionScore": 243.503,
@@ -3170,7 +3027,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 141.17
+      "routeWeight": 243.5
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3193,8 +3050,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-151",
-    "type": "restaurant",
+    "id": "db-food-151",
+    "type": "food",
     "name": "虞见唐宅",
     "subtitle": "茶馆 · 常熟市南门坛上",
     "summary": "虞见唐宅属于茶馆，适合作为游览路线中的用餐/休息节点。",
@@ -3203,17 +3060,15 @@ export const databasePlaces: Place[] = [
       "禅茶",
       "文艺",
       "古宅",
-      "美食",
-      "L3"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "151",
     "address": "常熟市南门坛上",
     "categoryLabel": "美食",
     "subtypeLabel": "茶馆",
-    "tierLevel": "L3",
     "score": "4.5",
     "dynamicText": "avg_crowd=0.157; peak_crowd=0.45",
     "selectionScore": 242.541,
@@ -3231,7 +3086,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 140.85
+      "routeWeight": 242.54
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3254,8 +3109,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-149",
-    "type": "restaurant",
+    "id": "db-food-149",
+    "type": "food",
     "name": "方桥馄饨店",
     "subtitle": "小吃 · 常熟市方塔街附近",
     "summary": "方桥馄饨店属于小吃，适合作为游览路线中的用餐/休息节点。",
@@ -3264,17 +3119,15 @@ export const databasePlaces: Place[] = [
       "拖炉饼",
       "小吃",
       "本地",
-      "美食",
-      "L3"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "149",
     "address": "常熟市方塔街附近",
     "categoryLabel": "美食",
     "subtypeLabel": "小吃",
-    "tierLevel": "L3",
     "score": "4.3",
     "dynamicText": "avg_crowd=0.172; peak_crowd=0.45",
     "selectionScore": 238.303,
@@ -3292,7 +3145,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 139.43
+      "routeWeight": 238.3
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3315,8 +3168,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-147",
-    "type": "restaurant",
+    "id": "db-food-147",
+    "type": "food",
     "name": "王四老面馆",
     "subtitle": "面馆 · 常熟市兴福寺附近王四酒家旁",
     "summary": "王四老面馆属于面馆，适合作为游览路线中的用餐/休息节点。",
@@ -3325,17 +3178,15 @@ export const databasePlaces: Place[] = [
       "蕈油面",
       "本地",
       "美食",
-      "面馆",
-      "L3"
+      "面馆"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "147",
     "address": "常熟市兴福寺附近王四酒家旁",
     "categoryLabel": "美食",
     "subtypeLabel": "面馆",
-    "tierLevel": "L3",
     "score": "4.3",
     "dynamicText": "avg_crowd=0.223; peak_crowd=0.585",
     "selectionScore": 237.982,
@@ -3353,7 +3204,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 139.33
+      "routeWeight": 237.98
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3376,8 +3227,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-146",
-    "type": "restaurant",
+    "id": "db-food-146",
+    "type": "food",
     "name": "王四酒家",
     "subtitle": "老字号 · 常熟市兴福寺附近",
     "summary": "王四酒家属于老字号，适合作为游览路线中的用餐/休息节点。",
@@ -3386,17 +3237,15 @@ export const databasePlaces: Place[] = [
       "桂花酒",
       "老字号",
       "百年",
-      "美食",
-      "L3"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "146",
     "address": "常熟市兴福寺附近",
     "categoryLabel": "美食",
     "subtypeLabel": "老字号",
-    "tierLevel": "L3",
     "score": "4.4",
     "dynamicText": "avg_crowd=0.273; peak_crowd=0.72",
     "selectionScore": 237.177,
@@ -3414,7 +3263,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 139.06
+      "routeWeight": 237.18
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3437,8 +3286,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-154",
-    "type": "restaurant",
+    "id": "db-food-154",
+    "type": "food",
     "name": "天天鲜面馆",
     "subtitle": "面馆 · 常熟市古城区",
     "summary": "天天鲜面馆属于面馆，适合作为游览路线中的用餐/休息节点。",
@@ -3447,17 +3296,15 @@ export const databasePlaces: Place[] = [
       "早茶",
       "当地",
       "美食",
-      "面馆",
-      "L3"
+      "面馆"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "154",
     "address": "常熟市古城区",
     "categoryLabel": "美食",
     "subtypeLabel": "面馆",
-    "tierLevel": "L3",
     "score": "4.3",
     "dynamicText": "avg_crowd=0.172; peak_crowd=0.45",
     "selectionScore": 235.491,
@@ -3475,7 +3322,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 138.5
+      "routeWeight": 235.49
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3498,8 +3345,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-153",
-    "type": "restaurant",
+    "id": "db-food-153",
+    "type": "food",
     "name": "南门坛弄血糯米奶茶",
     "subtitle": "网红小吃 · 常熟市南门坛上",
     "summary": "南门坛弄血糯米奶茶属于网红小吃，适合作为游览路线中的用餐/休息节点。",
@@ -3509,17 +3356,15 @@ export const databasePlaces: Place[] = [
       "网红",
       "小吃",
       "美食",
-      "网红小吃",
-      "L3"
+      "网红小吃"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "153",
     "address": "常熟市南门坛上",
     "categoryLabel": "美食",
     "subtypeLabel": "网红小吃",
-    "tierLevel": "L3",
     "score": "4.2",
     "dynamicText": "avg_crowd=0.185; peak_crowd=0.54",
     "selectionScore": 234.937,
@@ -3537,7 +3382,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 138.31
+      "routeWeight": 234.94
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3562,8 +3407,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-152",
-    "type": "restaurant",
+    "id": "db-food-152",
+    "type": "food",
     "name": "沙家浜爊鸡(横泾老街)",
     "subtitle": "本地特色 · 常熟市沙家浜横泾老街",
     "summary": "沙家浜爊鸡(横泾老街)属于本地特色，适合作为游览路线中的用餐/休息节点。",
@@ -3573,17 +3418,15 @@ export const databasePlaces: Place[] = [
       "红色",
       "老街",
       "美食",
-      "本地特色",
-      "L3"
+      "本地特色"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "152",
     "address": "常熟市沙家浜横泾老街",
     "categoryLabel": "美食",
     "subtypeLabel": "本地特色",
-    "tierLevel": "L3",
     "score": "4.3",
     "dynamicText": "avg_crowd=0.191; peak_crowd=0.585",
     "selectionScore": 233.166,
@@ -3601,7 +3444,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 137.72
+      "routeWeight": 233.17
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3626,8 +3469,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-145",
-    "type": "restaurant",
+    "id": "db-food-145",
+    "type": "food",
     "name": "含晖面馆(经贸大厦店)",
     "subtitle": "面馆 · 常熟市经贸大厦附近",
     "summary": "含晖面馆(经贸大厦店)属于面馆，适合作为游览路线中的用餐/休息节点。",
@@ -3637,17 +3480,15 @@ export const databasePlaces: Place[] = [
       "当地口碑",
       "炒浇面",
       "美食",
-      "面馆",
-      "L3"
+      "面馆"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "145",
     "address": "常熟市经贸大厦附近",
     "categoryLabel": "美食",
     "subtypeLabel": "面馆",
-    "tierLevel": "L3",
     "score": "4.5",
     "dynamicText": "avg_crowd=0.195; peak_crowd=0.495",
     "selectionScore": 231.932,
@@ -3665,7 +3506,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 137.31
+      "routeWeight": 231.93
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3690,25 +3531,23 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-473",
-    "type": "restaurant",
+    "id": "db-food-473",
+    "type": "food",
     "name": "清源茶社",
     "subtitle": "餐饮相关 · 中山北路与北三环路交叉口南360米",
     "summary": "清源茶社属于餐饮相关，适合作为游览路线中的用餐/休息节点。",
     "tags": [
       "餐饮相关",
       "茶座",
-      "美食",
-      "L3"
+      "美食"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/f740ec8ee8cf1d16b05d947004ab7aa8",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "473",
     "address": "中山北路与北三环路交叉口南360米",
     "categoryLabel": "美食",
     "subtypeLabel": "餐饮相关",
-    "tierLevel": "L3",
     "score": "4.7",
     "phone": "13815287218",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -3727,7 +3566,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 126.8
+      "routeWeight": 200.39
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3746,8 +3585,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-411",
-    "type": "restaurant",
+    "id": "db-food-411",
+    "type": "food",
     "name": "赵先森8090主题餐厅(锁澜路店)",
     "subtitle": "中餐厅 · 虞山街道江苏省常熟市锁澜北路17号",
     "summary": "赵先森8090主题餐厅(锁澜路店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -3758,17 +3597,15 @@ export const databasePlaces: Place[] = [
       "鹅翅",
       "鹅爪",
       "鸭血豆腐",
-      "美食",
-      "L3"
+      "美食"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/9013163c56fe34970000002672338948?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "411",
     "address": "虞山街道江苏省常熟市锁澜北路17号",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L3",
     "score": "4.5",
     "phone": "13222286777",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -3787,7 +3624,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 126.31
+      "routeWeight": 198.93
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3812,8 +3649,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-472",
-    "type": "restaurant",
+    "id": "db-food-472",
+    "type": "food",
     "name": "郭记阿能鹅汤火锅(方塔园店)",
     "subtitle": "火锅店 · 塔后街5-23号",
     "summary": "郭记阿能鹅汤火锅(方塔园店)属于火锅店，适合作为游览路线中的用餐/休息节点。",
@@ -3824,17 +3661,15 @@ export const databasePlaces: Place[] = [
       "椒盐鸭头",
       "酸菜炒大肠",
       "魔鬼牛蛙",
-      "美食",
-      "L3"
+      "美食"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/74c50f094088e711ab43494bcbbe22ca",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "472",
     "address": "塔后街5-23号",
     "categoryLabel": "美食",
     "subtypeLabel": "火锅店",
-    "tierLevel": "L3",
     "score": "4.5",
     "phone": "17895010507;18452723143",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -3853,7 +3688,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 125.57
+      "routeWeight": 196.7
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3878,25 +3713,23 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-483",
-    "type": "restaurant",
+    "id": "db-food-483",
+    "type": "food",
     "name": "联珠茶苑",
     "subtitle": "茶艺馆 · 中山中路姜家湾21号",
     "summary": "联珠茶苑属于茶艺馆，适合作为游览路线中的用餐/休息节点。",
     "tags": [
       "茶艺馆",
       "茶座",
-      "美食",
-      "L3"
+      "美食"
     ],
     "imageUrl": "https://aos-comment.amap.com/B0FFG2EQWG/comment/2F6721C3_278B_46B8_940F_3A1D77835481_L0_001_877_137_1759533392317_69720649.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "483",
     "address": "中山中路姜家湾21号",
     "categoryLabel": "美食",
     "subtypeLabel": "茶艺馆",
-    "tierLevel": "L3",
     "score": "4.5",
     "phone": "0512-52850758;13913652031",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -3915,7 +3748,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 125.55
+      "routeWeight": 196.65
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -3934,8 +3767,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-541",
-    "type": "restaurant",
+    "id": "db-food-541",
+    "type": "food",
     "name": "望湖面馆",
     "subtitle": "中餐厅 · 虞山镇和莫路博文小学对面望湖家园10幢-7",
     "summary": "望湖面馆属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -3946,17 +3779,15 @@ export const databasePlaces: Place[] = [
       "蕈肉面",
       "焖肉",
       "大肉面",
-      "美食",
-      "L3"
+      "美食"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/d59b5447837296c59364a8cdd0891bbc",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "541",
     "address": "虞山镇和莫路博文小学对面望湖家园10幢-7",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L3",
     "score": "3.8",
     "phone": "13382528476;13962367148",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -3975,7 +3806,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 124.28
+      "routeWeight": 192.84
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4000,8 +3831,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-401",
-    "type": "restaurant",
+    "id": "db-food-401",
+    "type": "food",
     "name": "何记饭店(聚沙路店)",
     "subtitle": "中餐厅 · 梅李镇聚沙路1号15幢",
     "summary": "何记饭店(聚沙路店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -4010,17 +3841,15 @@ export const databasePlaces: Place[] = [
       "江浙菜",
       "酸菜鱼",
       "聚沙",
-      "美食",
-      "L3"
+      "美食"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/df4b09b52e2fb17260f2e38febecef45",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "401",
     "address": "梅李镇聚沙路1号15幢",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L3",
     "score": "4.1",
     "phone": "13962364094",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4039,7 +3868,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 124.18
+      "routeWeight": 192.54
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4062,8 +3891,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-517",
-    "type": "restaurant",
+    "id": "db-food-517",
+    "type": "food",
     "name": "古茗(常熟新桥中宏店)",
     "subtitle": "休闲餐饮场所 · 洋蕾路与元通路交叉口南120米",
     "summary": "古茗(常熟新桥中宏店)属于休闲餐饮场所，适合作为游览路线中的用餐/休息节点。",
@@ -4073,17 +3902,15 @@ export const databasePlaces: Place[] = [
       "茶饮",
       "现磨咖啡",
       "奶咖",
-      "美食",
-      "L3"
+      "美食"
     ],
     "imageUrl": "https://img.alicdn.com/imgextra/i2/O1CN013xzjdi1RsXLRp0pfX_!!6000000002167-2-tps-3333-3333.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "517",
     "address": "洋蕾路与元通路交叉口南120米",
     "categoryLabel": "美食",
     "subtypeLabel": "休闲餐饮场所",
-    "tierLevel": "L3",
     "score": "4.4",
     "phone": "18021262854",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4102,7 +3929,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 123.98
+      "routeWeight": 191.93
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4127,8 +3954,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-460",
-    "type": "restaurant",
+    "id": "db-food-460",
+    "type": "food",
     "name": "徐裕泰百年老店(总店)",
     "subtitle": "糕饼店 · 古里镇铁琴北街1-12号",
     "summary": "徐裕泰百年老店(总店)属于糕饼店，适合作为游览路线中的用餐/休息节点。",
@@ -4139,17 +3966,15 @@ export const databasePlaces: Place[] = [
       "点心",
       "米粉",
       "芋泥",
-      "美食",
-      "L3"
+      "美食"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/f6c36f40796a31eba1b6f4bbe7a70c09",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "460",
     "address": "古里镇铁琴北街1-12号",
     "categoryLabel": "美食",
     "subtypeLabel": "糕饼店",
-    "tierLevel": "L3",
     "score": "4.4",
     "phone": "0512-52522610;18915637610",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4168,7 +3993,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 123.21
+      "routeWeight": 189.64
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4193,8 +4018,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-417",
-    "type": "restaurant",
+    "id": "db-food-417",
+    "type": "food",
     "name": "沁园饭店(海虞店)",
     "subtitle": "中餐厅 · 人民路38-1号",
     "summary": "沁园饭店(海虞店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -4205,17 +4030,15 @@ export const databasePlaces: Place[] = [
       "特色海鲜",
       "金针菇",
       "酸菜鱼",
-      "美食",
-      "L3"
+      "美食"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/6c2a96d9b7d95b14c2f0ca84a758ef35",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "417",
     "address": "人民路38-1号",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L3",
     "score": "4.5",
     "phone": "0512-52561288",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4234,7 +4057,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 122.97
+      "routeWeight": 188.9
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4259,8 +4082,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-436",
-    "type": "restaurant",
+    "id": "db-food-436",
+    "type": "food",
     "name": "新城酒楼(和美家园店)",
     "subtitle": "中餐厅 · 尚湖镇永安路56号和美家园",
     "summary": "新城酒楼(和美家园店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -4269,17 +4092,15 @@ export const databasePlaces: Place[] = [
       "川菜",
       "老鹅",
       "尚湖",
-      "美食",
-      "L3"
+      "美食"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/cc642e19e8bbe08dbefb82622a2f1211",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "436",
     "address": "尚湖镇永安路56号和美家园",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L3",
     "score": "4.2",
     "phone": "13862353221",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4298,7 +4119,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 119.83
+      "routeWeight": 179.48
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4321,8 +4142,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-415",
-    "type": "restaurant",
+    "id": "db-food-415",
+    "type": "food",
     "name": "旺达饭店(环城路店)",
     "subtitle": "宾馆酒店 · 环城北路华丰大厦12栋(新公园对面)",
     "summary": "旺达饭店(环城路店)属于宾馆酒店，适合作为游览路线中的用餐/休息节点。",
@@ -4333,17 +4154,15 @@ export const databasePlaces: Place[] = [
       "神仙干焖鸡",
       "养生鲈鱼",
       "田园双脆",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "415",
     "address": "环城北路华丰大厦12栋(新公园对面)",
     "categoryLabel": "美食",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "0512-52187777",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4362,7 +4181,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 71.19
+      "routeWeight": 138.56
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4387,8 +4206,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-412",
-    "type": "restaurant",
+    "id": "db-food-412",
+    "type": "food",
     "name": "陆记臭豆腐",
     "subtitle": "中餐厅 · 虞山镇山塘径岸72号",
     "summary": "陆记臭豆腐属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -4397,17 +4216,15 @@ export const databasePlaces: Place[] = [
       "小吃快餐",
       "臭豆腐",
       "虞山",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "412",
     "address": "虞山镇山塘径岸72号",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "13306233113",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4426,7 +4243,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 71.13
+      "routeWeight": 138.38
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4449,8 +4266,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-480",
-    "type": "restaurant",
+    "id": "db-food-480",
+    "type": "food",
     "name": "春暖花开(虞山南路店)",
     "subtitle": "中餐厅 · 虞山南路山前街80号(南山花园二区对面)",
     "summary": "春暖花开(虞山南路店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -4461,17 +4278,15 @@ export const databasePlaces: Place[] = [
       "米汤番茄鱼",
       "番茄鱼泡饭",
       "杏鲍菇松板肉",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "480",
     "address": "虞山南路山前街80号(南山花园二区对面)",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "18662573727",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4490,7 +4305,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 71.06
+      "routeWeight": 138.18
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4515,8 +4330,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-481",
-    "type": "restaurant",
+    "id": "db-food-481",
+    "type": "food",
     "name": "水云涧茶坊",
     "subtitle": "茶艺馆 · 虞山林场寺路街140号",
     "summary": "水云涧茶坊属于茶艺馆，适合作为游览路线中的用餐/休息节点。",
@@ -4524,17 +4339,15 @@ export const databasePlaces: Place[] = [
       "茶艺馆",
       "茶座",
       "虞山",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "481",
     "address": "虞山林场寺路街140号",
     "categoryLabel": "美食",
     "subtypeLabel": "茶艺馆",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "13915622882;13962305601",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4553,7 +4366,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 70.96
+      "routeWeight": 137.87
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4574,8 +4387,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-428",
-    "type": "restaurant",
+    "id": "db-food-428",
+    "type": "food",
     "name": "兴福望岳楼老面馆(正宗第一馆)",
     "subtitle": "特色/地方风味餐厅 · 兴福寺路街146号",
     "summary": "兴福望岳楼老面馆(正宗第一馆)属于特色/地方风味餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -4589,14 +4402,13 @@ export const databasePlaces: Place[] = [
       "碗面",
       "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "428",
     "address": "兴福寺路街146号",
     "categoryLabel": "美食",
     "subtypeLabel": "特色/地方风味餐厅",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "0512-52853950;13801579265",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4615,7 +4427,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 70.95
+      "routeWeight": 137.85
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4640,8 +4452,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-416",
-    "type": "restaurant",
+    "id": "db-food-416",
+    "type": "food",
     "name": "望山螺蛳馆",
     "subtitle": "中餐厅 · 虞山镇含辉阁8号",
     "summary": "望山螺蛳馆属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -4652,17 +4464,15 @@ export const databasePlaces: Place[] = [
       "水饺",
       "黄鳝蒸螺丝",
       "黄瓜木耳炒蛋",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "416",
     "address": "虞山镇含辉阁8号",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "13470701512",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4681,7 +4491,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 70.8
+      "routeWeight": 137.41
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4706,8 +4516,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-435",
-    "type": "restaurant",
+    "id": "db-food-435",
+    "type": "food",
     "name": "盛旗黑糖剉冰",
     "subtitle": "冷饮店 · 虞山镇县后街2号",
     "summary": "盛旗黑糖剉冰属于冷饮店，适合作为游览路线中的用餐/休息节点。",
@@ -4718,17 +4528,15 @@ export const databasePlaces: Place[] = [
       "招牌粉粿",
       "抹茶豆腐",
       "黑糖沙冰",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "435",
     "address": "虞山镇县后街2号",
     "categoryLabel": "美食",
     "subtypeLabel": "冷饮店",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "13812968808",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4747,7 +4555,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 70.78
+      "routeWeight": 137.34
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4772,8 +4580,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-582",
-    "type": "restaurant",
+    "id": "db-food-582",
+    "type": "food",
     "name": "常熟蒸菜研发中心(李闸路店)",
     "subtitle": "科研机构 · 虞山镇李闸路197号(立新小学旁)",
     "summary": "常熟蒸菜研发中心(李闸路店)属于科研机构，适合作为游览路线中的用餐/休息节点。",
@@ -4784,17 +4592,15 @@ export const databasePlaces: Place[] = [
       "大闸蟹",
       "蕈油面",
       "覃油面",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "582",
     "address": "虞山镇李闸路197号(立新小学旁)",
     "categoryLabel": "美食",
     "subtypeLabel": "科研机构",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "0512-52109777",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4813,7 +4619,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 70.75
+      "routeWeight": 137.26
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4838,8 +4644,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-471",
-    "type": "restaurant",
+    "id": "db-food-471",
+    "type": "food",
     "name": "老树餐厅",
     "subtitle": "餐饮相关 · 虞山镇黄河路255号大润发超市南小楼",
     "summary": "老树餐厅属于餐饮相关，适合作为游览路线中的用餐/休息节点。",
@@ -4849,17 +4655,15 @@ export const databasePlaces: Place[] = [
       "臭豆腐",
       "小龙虾",
       "虞山",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "471",
     "address": "虞山镇黄河路255号大润发超市南小楼",
     "categoryLabel": "美食",
     "subtypeLabel": "餐饮相关",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "0512-52976667;17895010486;18013273776",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4878,7 +4682,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 70.64
+      "routeWeight": 136.93
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4903,8 +4707,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-502",
-    "type": "restaurant",
+    "id": "db-food-502",
+    "type": "food",
     "name": "一缕炊烟主题餐厅(虞山北路店)",
     "subtitle": "中餐厅 · 梅园宾馆虞山北路店东北门旁",
     "summary": "一缕炊烟主题餐厅(虞山北路店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -4915,17 +4719,15 @@ export const databasePlaces: Place[] = [
       "玉米筒骨老汤",
       "干烤虾",
       "炊烟鱼头",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "502",
     "address": "梅园宾馆虞山北路店东北门旁",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L2",
     "score": "4.3",
     "phone": "0512-52171917",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -4944,7 +4746,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 70.29
+      "routeWeight": 135.88
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -4969,8 +4771,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-495",
-    "type": "restaurant",
+    "id": "db-food-495",
+    "type": "food",
     "name": "鹏程饭店(衡山路)",
     "subtitle": "综合酒楼 · 衡山路76号",
     "summary": "鹏程饭店(衡山路)属于综合酒楼，适合作为游览路线中的用餐/休息节点。",
@@ -4981,17 +4783,15 @@ export const databasePlaces: Place[] = [
       "粉丝煲",
       "瓷饭糕",
       "松子鳜鱼",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "495",
     "address": "衡山路76号",
     "categoryLabel": "美食",
     "subtypeLabel": "综合酒楼",
-    "tierLevel": "L2",
     "score": "4.6",
     "phone": "0512-52792837",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5010,7 +4810,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 69.56
+      "routeWeight": 133.67
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5035,8 +4835,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-459",
-    "type": "restaurant",
+    "id": "db-food-459",
+    "type": "food",
     "name": "武藏日本料理(华府世家店)",
     "subtitle": "日本料理 · 海虞北路5号华府世家A104号",
     "summary": "武藏日本料理(华府世家店)属于日本料理，适合作为游览路线中的用餐/休息节点。",
@@ -5047,17 +4847,15 @@ export const databasePlaces: Place[] = [
       "铁板牛舌",
       "鳗鱼",
       "炖蛋",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "459",
     "address": "海虞北路5号华府世家A104号",
     "categoryLabel": "美食",
     "subtypeLabel": "日本料理",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "0512-52658865;13338713076",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5076,7 +4874,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 69.3
+      "routeWeight": 132.91
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5101,8 +4899,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-408",
-    "type": "restaurant",
+    "id": "db-food-408",
+    "type": "food",
     "name": "孟记龙虾(湘江东路店)",
     "subtitle": "海鲜酒楼 · 虞山镇湘江路302号",
     "summary": "孟记龙虾(湘江东路店)属于海鲜酒楼，适合作为游览路线中的用餐/休息节点。",
@@ -5113,17 +4911,15 @@ export const databasePlaces: Place[] = [
       "冷面",
       "香辣肉丝",
       "斑鱼",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "408",
     "address": "虞山镇湘江路302号",
     "categoryLabel": "美食",
     "subtypeLabel": "海鲜酒楼",
-    "tierLevel": "L2",
     "score": "4.0",
     "phone": "13962311860",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5142,7 +4938,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 69.22
+      "routeWeight": 132.67
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5167,8 +4963,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-397",
-    "type": "restaurant",
+    "id": "db-food-397",
+    "type": "food",
     "name": "欧典咖啡(世茂店)",
     "subtitle": "茶艺馆 · 闽江东路世茂创富世纪9幢2楼",
     "summary": "欧典咖啡(世茂店)属于茶艺馆，适合作为游览路线中的用餐/休息节点。",
@@ -5178,17 +4974,15 @@ export const databasePlaces: Place[] = [
       "小鸡炖蘑菇",
       "彩虹芝士",
       "腊味煲仔",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "397",
     "address": "闽江东路世茂创富世纪9幢2楼",
     "categoryLabel": "美食",
     "subtypeLabel": "茶艺馆",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "0512-52802998;18915657776",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5207,7 +5001,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 69.09
+      "routeWeight": 132.27
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5232,8 +5026,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-414",
-    "type": "restaurant",
+    "id": "db-food-414",
+    "type": "food",
     "name": "鸟良日本料理",
     "subtitle": "日本料理 · 世茂创富世纪广场10-104室",
     "summary": "鸟良日本料理属于日本料理，适合作为游览路线中的用餐/休息节点。",
@@ -5244,17 +5038,15 @@ export const databasePlaces: Place[] = [
       "豚骨拉面",
       "烤大明虾",
       "三文鱼",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "414",
     "address": "世茂创富世纪广场10-104室",
     "categoryLabel": "美食",
     "subtypeLabel": "日本料理",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "17751131102",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5273,7 +5065,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 69.09
+      "routeWeight": 132.27
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5298,25 +5090,23 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-402",
-    "type": "restaurant",
+    "id": "db-food-402",
+    "type": "food",
     "name": "兄弟糖藕(总马桥一店)",
     "subtitle": "餐饮相关 · 义庄弄20号(丰乐集贸市场内)",
     "summary": "兄弟糖藕(总马桥一店)属于餐饮相关，适合作为游览路线中的用餐/休息节点。",
     "tags": [
       "餐饮相关",
       "小吃快餐",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "402",
     "address": "义庄弄20号(丰乐集贸市场内)",
     "categoryLabel": "美食",
     "subtypeLabel": "餐饮相关",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "13092622927;17751513214",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5335,7 +5125,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 69.07
+      "routeWeight": 132.21
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5354,8 +5144,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-418",
-    "type": "restaurant",
+    "id": "db-food-418",
+    "type": "food",
     "name": "荷花饭店(青墩塘路店)",
     "subtitle": "中餐厅 · 青墩塘路68号",
     "summary": "荷花饭店(青墩塘路店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -5366,17 +5156,15 @@ export const databasePlaces: Place[] = [
       "三鲜汤",
       "三鲜锅仔",
       "丝瓜毛豆",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "418",
     "address": "青墩塘路68号",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "18962312518",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5395,7 +5183,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 69.06
+      "routeWeight": 132.17
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5420,25 +5208,23 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-540",
-    "type": "restaurant",
+    "id": "db-food-540",
+    "type": "food",
     "name": "家购来台湾小吃店",
     "subtitle": "中餐厅 · 琴枫苑华山路79-14",
     "summary": "家购来台湾小吃店属于中餐厅，适合作为游览路线中的用餐/休息节点。",
     "tags": [
       "中餐厅",
       "台湾小吃",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "540",
     "address": "琴枫苑华山路79-14",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "15151771912",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5457,7 +5243,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 69.02
+      "routeWeight": 132.05
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5476,25 +5262,23 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-407",
-    "type": "restaurant",
+    "id": "db-food-407",
+    "type": "food",
     "name": "蓝青岛茶苑",
     "subtitle": "茶艺馆 · 寺路街与中山中路交叉口西100米",
     "summary": "蓝青岛茶苑属于茶艺馆，适合作为游览路线中的用餐/休息节点。",
     "tags": [
       "茶艺馆",
       "茶座",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "407",
     "address": "寺路街与中山中路交叉口西100米",
     "categoryLabel": "美食",
     "subtypeLabel": "茶艺馆",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "13814966328",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5513,7 +5297,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 68.96
+      "routeWeight": 131.88
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5532,8 +5316,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-564",
-    "type": "restaurant",
+    "id": "db-food-564",
+    "type": "food",
     "name": "朴大叔拌饭(常熟时尚莱迪店)",
     "subtitle": "餐饮相关 · 方塔东街11幢朴大叔拌饭",
     "summary": "朴大叔拌饭(常熟时尚莱迪店)属于餐饮相关，适合作为游览路线中的用餐/休息节点。",
@@ -5544,17 +5328,15 @@ export const databasePlaces: Place[] = [
       "石板香辣鱿鱼",
       "肥牛泡菜锅",
       "拌饭",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "564",
     "address": "方塔东街11幢朴大叔拌饭",
     "categoryLabel": "美食",
     "subtypeLabel": "餐饮相关",
-    "tierLevel": "L2",
     "score": "3.9",
     "phone": "17630753121",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5573,7 +5355,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 68.8
+      "routeWeight": 131.39
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5598,25 +5380,23 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-456",
-    "type": "restaurant",
+    "id": "db-food-456",
+    "type": "food",
     "name": "高茗生态茶园",
     "subtitle": "茶艺馆 · 中山南路山麓小憩茶餐厅旁",
     "summary": "高茗生态茶园属于茶艺馆，适合作为游览路线中的用餐/休息节点。",
     "tags": [
       "茶艺馆",
       "茶座",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "456",
     "address": "中山南路山麓小憩茶餐厅旁",
     "categoryLabel": "美食",
     "subtypeLabel": "茶艺馆",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "13151626818",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5635,7 +5415,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 68.59
+      "routeWeight": 130.77
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5654,25 +5434,23 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-576",
-    "type": "restaurant",
+    "id": "db-food-576",
+    "type": "food",
     "name": "箐竹茶苑",
     "subtitle": "茶艺馆 · 诗路街53号",
     "summary": "箐竹茶苑属于茶艺馆，适合作为游览路线中的用餐/休息节点。",
     "tags": [
       "茶艺馆",
       "茶座",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "576",
     "address": "诗路街53号",
     "categoryLabel": "美食",
     "subtypeLabel": "茶艺馆",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "0512-52854311",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5691,7 +5469,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 68.56
+      "routeWeight": 130.67
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5710,8 +5488,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-555",
-    "type": "restaurant",
+    "id": "db-food-555",
+    "type": "food",
     "name": "晨跑的杯子(苏州常熟店)",
     "subtitle": "餐饮相关 · 琴川街道湘江东路119号",
     "summary": "晨跑的杯子(苏州常熟店)属于餐饮相关，适合作为游览路线中的用餐/休息节点。",
@@ -5719,17 +5497,15 @@ export const databasePlaces: Place[] = [
       "餐饮相关",
       "奶茶",
       "茶饮",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "555",
     "address": "琴川街道湘江东路119号",
     "categoryLabel": "美食",
     "subtypeLabel": "餐饮相关",
-    "tierLevel": "L2",
     "score": "4.3",
     "phone": "15303263327",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5748,7 +5524,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 68.44
+      "routeWeight": 130.31
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5769,8 +5545,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-561",
-    "type": "restaurant",
+    "id": "db-food-561",
+    "type": "food",
     "name": "N多寿司(常熟天虹购物中心店)",
     "subtitle": "日本料理 · 虞山街道海虞北路33号天虹购物中心(苏州常熟海虞店)",
     "summary": "N多寿司(常熟天虹购物中心店)属于日本料理，适合作为游览路线中的用餐/休息节点。",
@@ -5779,17 +5555,15 @@ export const databasePlaces: Place[] = [
       "小吃快餐",
       "单人餐",
       "虞山",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "561",
     "address": "虞山街道海虞北路33号天虹购物中心(苏州常熟海虞店)",
     "categoryLabel": "美食",
     "subtypeLabel": "日本料理",
-    "tierLevel": "L2",
     "score": "3.8",
     "phone": "13962340176",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5808,7 +5582,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 68.29
+      "routeWeight": 129.88
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5831,8 +5605,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-452",
-    "type": "restaurant",
+    "id": "db-food-452",
+    "type": "food",
     "name": "食力π(商城中路店)",
     "subtitle": "中餐厅 · 商城中路147号",
     "summary": "食力π(商城中路店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -5843,17 +5617,15 @@ export const databasePlaces: Place[] = [
       "鸡汁农家笋干",
       "香辣牛排骨饭",
       "香辣牛排骨",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "452",
     "address": "商城中路147号",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L2",
     "score": "4.3",
     "phone": "18915666616",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5872,7 +5644,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 68.09
+      "routeWeight": 129.28
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5897,8 +5669,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-496",
-    "type": "restaurant",
+    "id": "db-food-496",
+    "type": "food",
     "name": "小铅皮鹅汤馆",
     "subtitle": "中餐厅 · 辛庄大道638号",
     "summary": "小铅皮鹅汤馆属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -5909,17 +5681,15 @@ export const databasePlaces: Place[] = [
       "鹅血汤",
       "地三鲜",
       "空心菜",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "496",
     "address": "辛庄大道638号",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L2",
     "score": "4.6",
     "phone": "0512-52483225",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -5938,7 +5708,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 67.99
+      "routeWeight": 128.98
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -5963,8 +5733,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-579",
-    "type": "restaurant",
+    "id": "db-food-579",
+    "type": "food",
     "name": "啡时光(膨膨冰梅李店)",
     "subtitle": "咖啡厅 · 梅西路26号(梅西路与胜法路交界口、欧乐福超市旁)",
     "summary": "啡时光(膨膨冰梅李店)属于咖啡厅，适合作为游览路线中的用餐/休息节点。",
@@ -5973,17 +5743,15 @@ export const databasePlaces: Place[] = [
       "咖啡",
       "意面",
       "薯条",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "579",
     "address": "梅西路26号(梅西路与胜法路交界口、欧乐福超市旁)",
     "categoryLabel": "美食",
     "subtypeLabel": "咖啡厅",
-    "tierLevel": "L2",
     "score": "4.5",
     "phone": "0512-52662378",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -6002,7 +5770,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 67.89
+      "routeWeight": 128.68
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -6025,8 +5793,8 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-515",
-    "type": "restaurant",
+    "id": "db-food-515",
+    "type": "food",
     "name": "梧桐姥姥(常熟凤凰城店)",
     "subtitle": "中餐厅 · 闽江东路与青城山路交叉口东60米",
     "summary": "梧桐姥姥(常熟凤凰城店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
@@ -6034,17 +5802,15 @@ export const databasePlaces: Place[] = [
       "中餐厅",
       "奶茶",
       "茶饮",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "515",
     "address": "闽江东路与青城山路交叉口东60米",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L2",
     "score": "4.2",
     "phone": "17761931711",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -6063,7 +5829,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 67.87
+      "routeWeight": 128.62
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -6084,25 +5850,23 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-509",
-    "type": "restaurant",
+    "id": "db-food-509",
+    "type": "food",
     "name": "米村拌饭(常熟星光天地店)",
     "subtitle": "中餐厅 · 闽江东路9号常客隆星光天地1层14A号",
     "summary": "米村拌饭(常熟星光天地店)属于中餐厅，适合作为游览路线中的用餐/休息节点。",
     "tags": [
       "中餐厅",
       "小吃快餐",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "509",
     "address": "闽江东路9号常客隆星光天地1层14A号",
     "categoryLabel": "美食",
     "subtypeLabel": "中餐厅",
-    "tierLevel": "L2",
     "score": "4.2",
     "phone": "17701565993",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -6121,7 +5885,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 67.83
+      "routeWeight": 128.49
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -6140,25 +5904,23 @@ export const databasePlaces: Place[] = [
     }
   },
   {
-    "id": "db-restaurant-569",
-    "type": "restaurant",
+    "id": "db-food-569",
+    "type": "food",
     "name": "潮粤客茶点(佳和广场店)",
     "subtitle": "茶餐厅 · 佳和广场",
     "summary": "潮粤客茶点(佳和广场店)属于茶餐厅，适合作为游览路线中的用餐/休息节点。",
     "tags": [
       "茶餐厅",
       "茶点",
-      "美食",
-      "L2"
+      "美食"
     ],
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "source": "database",
     "poiId": "569",
     "address": "佳和广场",
     "categoryLabel": "美食",
     "subtypeLabel": "茶餐厅",
-    "tierLevel": "L2",
     "score": "4.2",
     "phone": "18550021157",
     "dynamicText": "avg_crowd=0.151; peak_crowd=0.405",
@@ -6177,7 +5939,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 60,
-      "routeWeight": 67.82
+      "routeWeight": 128.45
     },
     "dataStatus": "verified",
     "restaurantProfile": {
@@ -6207,8 +5969,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "景区",
       "风景",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/2939b50482dec9f3ba1e952002c35bce",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6217,7 +5978,6 @@ export const databasePlaces: Place[] = [
     "address": "虞景文华商业广场32、35、36、37、50幢",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.3",
     "phone": "18626239366",
     "dynamicText": "min_price=224; avg_price=552.7; max_rooms=25",
@@ -6229,14 +5989,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.652686
     },
     "price": "224元起，平均约552.7元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "栖悦酒店(常熟虞山风景区店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：224元起，平均约552.7元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 131.4
+      "routeWeight": 214.19
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6264,8 +6024,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "方塔",
       "景区",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/9b04674cb877b4302c2d8d5146ff559b",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6274,7 +6033,6 @@ export const databasePlaces: Place[] = [
     "address": "书院街120-1号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.2",
     "phone": "0512-52036888;15365336001",
     "dynamicText": "min_price=231; avg_price=521.3; max_rooms=25",
@@ -6286,14 +6044,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.644999
     },
     "price": "231元起，平均约521.3元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "花祺酒店(常熟虞山景区方塔东街步行街店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：231元起，平均约521.3元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 130.63
+      "routeWeight": 211.89
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6320,8 +6078,7 @@ export const databasePlaces: Place[] = [
       "舒适型",
       "虞山",
       "方塔",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/493ae92facccc370415dac29f798ea9a",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6330,7 +6087,6 @@ export const databasePlaces: Place[] = [
     "address": "书院街19号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.7",
     "phone": "0512-52110609",
     "dynamicText": "min_price=218; avg_price=597.4; max_rooms=24",
@@ -6342,14 +6098,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.642644
     },
     "price": "218元起，平均约597.4元，余房峰值24间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "所选酒店(常熟方塔街虞山店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：218元起，平均约597.4元，余房峰值24间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 130.27
+      "routeWeight": 210.81
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6377,8 +6133,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "景区",
       "风景",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/8b907f459563be5d858e9bf7180598f4",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6387,7 +6142,6 @@ export const databasePlaces: Place[] = [
     "address": "北门大街20号",
     "categoryLabel": "酒店",
     "subtypeLabel": "购物相关场所",
-    "tierLevel": "L3",
     "score": "4.5",
     "phone": "0512-52706888",
     "dynamicText": "min_price=208; avg_price=627.2; max_rooms=25",
@@ -6399,14 +6153,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.653051
     },
     "price": "208元起，平均约627.2元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "常熟四季美家酒店(虞山风景区店)属于购物相关场所，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：208元起，平均约627.2元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 130.19
+      "routeWeight": 210.56
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6434,8 +6188,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "尚湖",
       "南门",
-      "酒店",
-      "L4"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/374b463c217727b99ac9f3967345e2c7",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6444,7 +6197,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山尚湖旅游度假区春晖路29号尚文苑(从西南门进入)",
     "categoryLabel": "酒店",
     "subtypeLabel": "住宿服务相关",
-    "tierLevel": "L4",
     "score": "4.5",
     "phone": "0512-52001000",
     "dynamicText": "min_price=202; avg_price=585.0; max_rooms=23",
@@ -6456,14 +6208,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.631981
     },
     "price": "202元起，平均约585.0元，余房峰值23间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "常熟宝地尚湖园属于住宿服务相关，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：202元起，平均约585.0元，余房峰值23间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 168.98
+      "routeWeight": 206.95
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6490,8 +6242,7 @@ export const databasePlaces: Place[] = [
       "经济型",
       "沙家浜",
       "昆承湖",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/ae15b1be95b04b5ab6a1a2c3e4484d45",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6500,7 +6251,6 @@ export const databasePlaces: Place[] = [
     "address": "沙家浜镇昆承湖东路66号(上海总工会度假村对面)",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.6",
     "phone": "0512-52951555;13951105158",
     "dynamicText": "min_price=208; avg_price=611.7; max_rooms=23",
@@ -6519,7 +6269,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 93.54
+      "routeWeight": 205.63
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6545,8 +6295,7 @@ export const databasePlaces: Place[] = [
       "住宿服务相关",
       "快捷酒店",
       "方塔",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/007acf1bd4ff78328c31b0a677322bb4",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6555,7 +6304,6 @@ export const databasePlaces: Place[] = [
     "address": "东胜街49号",
     "categoryLabel": "酒店",
     "subtypeLabel": "住宿服务相关",
-    "tierLevel": "L2",
     "score": "4.8",
     "phone": "13818885748;15800790273",
     "dynamicText": "min_price=209; avg_price=633.7; max_rooms=25",
@@ -6574,7 +6322,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 93.1
+      "routeWeight": 204.31
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6600,8 +6348,7 @@ export const databasePlaces: Place[] = [
       "经济型连锁酒店",
       "快捷酒店",
       "高铁",
-      "酒店",
-      "L4"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/3f4a91daefc96b68620f44bd5dab9471",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6610,7 +6357,6 @@ export const databasePlaces: Place[] = [
     "address": "海虞北路98-101号",
     "categoryLabel": "酒店",
     "subtypeLabel": "经济型连锁酒店",
-    "tierLevel": "L4",
     "score": "4.8",
     "phone": "0512-52011777;18006238777",
     "dynamicText": "min_price=221; avg_price=600.3; max_rooms=22",
@@ -6622,14 +6368,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.685567
     },
     "price": "221元起，平均约600.3元，余房峰值22间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "格林豪泰酒店(常熟高铁站常汇广场店)属于经济型连锁酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：221元起，平均约600.3元，余房峰值22间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 167.45
+      "routeWeight": 202.36
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6655,8 +6401,7 @@ export const databasePlaces: Place[] = [
       "旅馆招待所",
       "民宿",
       "尚湖",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/4c7033aea8dd9c2483f68559e9a9b19a",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6665,7 +6410,6 @@ export const databasePlaces: Place[] = [
     "address": "尚湖镇颜巷村粮北35号",
     "categoryLabel": "酒店",
     "subtypeLabel": "旅馆招待所",
-    "tierLevel": "L2",
     "score": "4.8",
     "phone": "19906237887",
     "dynamicText": "min_price=240; avg_price=608.3; max_rooms=24",
@@ -6684,7 +6428,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 91.34
+      "routeWeight": 199.02
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6710,8 +6454,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "商务酒店",
       "客运",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/7e130ae75659252505da4a08072183ed",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6720,7 +6463,6 @@ export const databasePlaces: Place[] = [
     "address": "白茆客运站南80米",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.6",
     "phone": "0512-52538998",
     "dynamicText": "min_price=233; avg_price=617.5; max_rooms=25",
@@ -6739,7 +6481,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 88.9
+      "routeWeight": 191.7
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6767,8 +6509,7 @@ export const databasePlaces: Place[] = [
       "情侣",
       "五星",
       "酒店",
-      "轻奢",
-      "L4"
+      "轻奢"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6777,7 +6518,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市尚湖大道",
     "categoryLabel": "酒店",
     "subtypeLabel": "轻奢",
-    "tierLevel": "L4",
     "score": "4.6",
     "phone": "0512-52338888",
     "dynamicText": "min_price=235; avg_price=606.2; max_rooms=25",
@@ -6790,14 +6530,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24h",
     "price": "235元起，平均约606.2元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "常熟日航酒店属于轻奢，适合作为住宿落点和夜间路线收束点。",
     "detail": "开放/服务时间：24h\n价格/费用：235元起，平均约606.2元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 182.77
+      "routeWeight": 248.32
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6824,8 +6564,7 @@ export const databasePlaces: Place[] = [
       "民宿",
       "文艺",
       "禅茶",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6834,7 +6573,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市南门坛上",
     "categoryLabel": "酒店",
     "subtypeLabel": "民宿",
-    "tierLevel": "L2",
     "score": "4.5",
     "dynamicText": "min_price=210; avg_price=578.0; max_rooms=23",
     "selectionScore": 239.533,
@@ -6853,7 +6591,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 104.84
+      "routeWeight": 239.53
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6880,8 +6618,7 @@ export const databasePlaces: Place[] = [
       "民宿",
       "夜游",
       "亲子",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6890,7 +6627,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市沙家浜横泾老街",
     "categoryLabel": "酒店",
     "subtypeLabel": "民宿",
-    "tierLevel": "L2",
     "score": "4.4",
     "dynamicText": "min_price=238; avg_price=548.9; max_rooms=23",
     "selectionScore": 239.357,
@@ -6909,7 +6645,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 104.79
+      "routeWeight": 239.36
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6935,8 +6671,7 @@ export const databasePlaces: Place[] = [
       "商务",
       "近方塔",
       "四星",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6945,7 +6680,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市方塔街区",
     "categoryLabel": "酒店",
     "subtypeLabel": "商务",
-    "tierLevel": "L3",
     "score": "4.4",
     "dynamicText": "min_price=243; avg_price=578.6; max_rooms=22",
     "selectionScore": 237.549,
@@ -6957,14 +6691,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24h",
     "price": "243元起，平均约578.6元，余房峰值22间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "常熟和颐酒店属于商务，适合作为住宿落点和夜间路线收束点。",
     "detail": "开放/服务时间：24h\n价格/费用：243元起，平均约578.6元，余房峰值22间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 139.18
+      "routeWeight": 237.55
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -6989,8 +6723,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "宾馆酒店",
       "舒适型",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -6999,7 +6732,6 @@ export const databasePlaces: Place[] = [
     "address": "服装城商城东路1号中盈国际广场4-109",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.8",
     "phone": "0512-52066866;15062496586;+861056320612,51458053",
     "dynamicText": "min_price=215; avg_price=605.4; max_rooms=25",
@@ -7018,7 +6750,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 88.74
+      "routeWeight": 191.23
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7043,8 +6775,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "住宿服务相关",
       "民宿",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7053,7 +6784,6 @@ export const databasePlaces: Place[] = [
     "address": "福泰路(同济科技广场菁英公寓)",
     "categoryLabel": "酒店",
     "subtypeLabel": "住宿服务相关",
-    "tierLevel": "L2",
     "score": "4.7",
     "phone": "010-56320606,5028857",
     "dynamicText": "min_price=212; avg_price=688.0; max_rooms=24",
@@ -7072,7 +6802,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 87.34
+      "routeWeight": 187.03
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7097,8 +6827,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "宾馆酒店",
       "快捷酒店",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7107,7 +6836,6 @@ export const databasePlaces: Place[] = [
     "address": "高新技术开发区黄浦江路62号虞悦广场12幢301",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.7",
     "phone": "0512-83386660",
     "dynamicText": "min_price=201; avg_price=579.0; max_rooms=24",
@@ -7126,7 +6854,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 86.33
+      "routeWeight": 184
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7152,8 +6880,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "沙家浜",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7162,7 +6889,6 @@ export const databasePlaces: Place[] = [
     "address": "沙家浜镇沙霞西路59号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.5",
     "dynamicText": "min_price=222; avg_price=597.7; max_rooms=25",
     "selectionScore": 183.254,
@@ -7180,7 +6906,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 86.08
+      "routeWeight": 183.25
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7206,8 +6932,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "虞山",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7216,7 +6941,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇富春江东路213-2号(近三环东路)",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "3.9",
     "phone": "0512-52665333;17701578995",
     "dynamicText": "min_price=203; avg_price=596.1; max_rooms=24",
@@ -7235,7 +6959,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 86.05
+      "routeWeight": 183.16
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7263,8 +6987,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "方塔",
       "景区",
-      "酒店",
-      "L4"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/7e47956618cca1b3214f1ef59db955c5",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7273,7 +6996,6 @@ export const databasePlaces: Place[] = [
     "address": "环城东路5号",
     "categoryLabel": "酒店",
     "subtypeLabel": "经济型连锁酒店",
-    "tierLevel": "L4",
     "score": "4.2",
     "phone": "0512-51918998",
     "dynamicText": "min_price=252; avg_price=675.8; max_rooms=25",
@@ -7285,14 +7007,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.647512
     },
     "price": "252元起，平均约675.8元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "格林豪泰(常熟虞山景区方塔园步行街店)属于经济型连锁酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：252元起，平均约675.8元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 143.04
+      "routeWeight": 129.13
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7319,8 +7041,7 @@ export const databasePlaces: Place[] = [
       "汤锅",
       "提拉米苏",
       "虞山",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7329,7 +7050,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路4号(市一中斜对面)",
     "categoryLabel": "酒店",
     "subtypeLabel": "住宿服务相关",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "0512-52136137;18013699107",
     "dynamicText": "min_price=209; avg_price=546.8; max_rooms=25",
@@ -7349,7 +7069,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 67.37
+      "routeWeight": 127.11
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7375,8 +7095,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "中餐",
       "虞澄大闸蟹",
-      "酒店",
-      "L4"
+      "酒店"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/de3f0a540f04f156ffa049badf58169b",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7385,7 +7104,6 @@ export const databasePlaces: Place[] = [
     "address": "新世纪大道81号1楼2楼3楼阳澄湖大闸蟹羊肉火锅",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L4",
     "score": "4.4",
     "phone": "0512-51515777;18962598809",
     "dynamicText": "min_price=287; avg_price=600.3; max_rooms=25",
@@ -7398,14 +7116,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "10:30-13:30 16:00-21:00",
     "price": "287元起，平均约600.3元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "常熟世纪虞澄大酒店属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "开放/服务时间：10:30-13:30 16:00-21:00\n价格/费用：287元起，平均约600.3元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 142.29
+      "routeWeight": 126.88
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7433,8 +7151,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "景区",
       "风景",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/622e2c901d9c6ec6b8cc27267b82d9b6",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7443,7 +7160,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路1号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.0",
     "phone": "0512-52955999",
     "dynamicText": "min_price=219; avg_price=538.6; max_rooms=25",
@@ -7455,14 +7171,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.645717
     },
     "price": "219元起，平均约538.6元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "常熟虞山风景区美怡豪致酒店属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：219元起，平均约538.6元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 102.09
+      "routeWeight": 126.27
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7488,8 +7204,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "方塔",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/aa0a983e020bfc83c79d3eacffc0f98a",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7498,7 +7213,6 @@ export const databasePlaces: Place[] = [
     "address": "阜湖路8号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.7",
     "phone": "0512-52799777;13773027902",
     "dynamicText": "min_price=232; avg_price=607.6; max_rooms=25",
@@ -7510,14 +7224,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.639317
     },
     "price": "232元起，平均约607.6元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "常熟龙泉酒店(方塔街店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：232元起，平均约607.6元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 100.94
+      "routeWeight": 122.83
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7546,8 +7260,7 @@ export const databasePlaces: Place[] = [
       "虾仁",
       "特色菜",
       "烤鸭",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/06978f8d16f3cc1ae65cb386f1d6a86e",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7556,7 +7269,6 @@ export const databasePlaces: Place[] = [
     "address": "珠江东路99号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.5",
     "phone": "0512-51577777;0512-52872777;18006231566",
     "dynamicText": "min_price=245; avg_price=616.9; max_rooms=25",
@@ -7569,14 +7281,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "08:00-12:00 14:00-22:00",
     "price": "245元起，平均约616.9元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "凯泰大酒店属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "开放/服务时间：08:00-12:00 14:00-22:00\n价格/费用：245元起，平均约616.9元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 100.79
+      "routeWeight": 122.38
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7602,8 +7314,7 @@ export const databasePlaces: Place[] = [
       "旅馆招待所",
       "经济型",
       "虞山",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7612,7 +7323,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇银环路99号-49",
     "categoryLabel": "酒店",
     "subtypeLabel": "旅馆招待所",
-    "tierLevel": "L2",
     "score": "4.8",
     "phone": "0512-52208890;18915406540",
     "dynamicText": "min_price=243; avg_price=609.2; max_rooms=24",
@@ -7631,7 +7341,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 65.76
+      "routeWeight": 122.29
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7657,8 +7367,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "舒适型",
       "虞山",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/e0a5f2122bcbb2205b9ac5ef7502304f",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7667,7 +7376,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇富仓路16号中宏万家大型综合体广场B区4层",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.7",
     "phone": "0512-51917111;19951917111",
     "dynamicText": "min_price=290; avg_price=617.8; max_rooms=24",
@@ -7679,14 +7387,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.625468
     },
     "price": "290元起，平均约617.8元，余房峰值24间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "壹号精品酒店(常熟琴湖店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：290元起，平均约617.8元，余房峰值24间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 100.66
+      "routeWeight": 121.99
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7712,8 +7420,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "虞山",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/c5ef395c5f3a9b399471631871ae0048",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7722,7 +7429,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇李闸路205号B区",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.6",
     "phone": "0512-52000013",
     "dynamicText": "min_price=242; avg_price=593.5; max_rooms=25",
@@ -7734,14 +7440,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.66768
     },
     "price": "242元起，平均约593.5元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "花居酒店(常熟虞山店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：242元起，平均约593.5元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 100.54
+      "routeWeight": 121.62
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7767,8 +7473,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "快捷酒店",
       "方塔",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/06b0342491c5cf2d516851d10b357f49",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7777,7 +7482,6 @@ export const databasePlaces: Place[] = [
     "address": "红旗北路12号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.6",
     "phone": "0512-52991197",
     "dynamicText": "min_price=231; avg_price=578.3; max_rooms=25",
@@ -7789,14 +7493,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.639196
     },
     "price": "231元起，平均约578.3元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "逅居酒店(常熟方塔园方塔东街步行街店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：231元起，平均约578.3元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 100.53
+      "routeWeight": 121.59
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7822,8 +7526,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "快捷酒店",
       "客运",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/b42cef8ceeda627acf3be41ed2e207e8",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7832,7 +7535,6 @@ export const databasePlaces: Place[] = [
     "address": "招商北路53-5号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.6",
     "phone": "0512-51665666;18915623768",
     "dynamicText": "min_price=300; avg_price=603.3; max_rooms=24",
@@ -7844,14 +7546,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.629306
     },
     "price": "300元起，平均约603.3元，余房峰值24间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "创e家酒店(常熟汽车客运南站招商城店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：300元起，平均约603.3元，余房峰值24间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 100.39
+      "routeWeight": 121.18
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7877,8 +7579,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "奶茶",
       "茶饮",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7887,7 +7588,6 @@ export const databasePlaces: Place[] = [
     "address": "琴川街道琴湖路58号1065C商铺",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "18120087737",
     "dynamicText": "min_price=212; avg_price=612.6; max_rooms=24",
@@ -7907,7 +7607,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 65.37
+      "routeWeight": 121.12
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7933,8 +7633,7 @@ export const databasePlaces: Place[] = [
       "经济型连锁酒店",
       "经济型",
       "客运",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/dc425ff80d00bc9a5449e40cc51fd44a",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7943,7 +7642,6 @@ export const databasePlaces: Place[] = [
     "address": "招商西路1号",
     "categoryLabel": "酒店",
     "subtypeLabel": "经济型连锁酒店",
-    "tierLevel": "L3",
     "score": "4.6",
     "phone": "0512-52078888",
     "dynamicText": "min_price=201; avg_price=577.8; max_rooms=25",
@@ -7955,14 +7653,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.627717
     },
     "price": "201元起，平均约577.8元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "华舒·逸酒店(天虹服装城客运南站店)属于经济型连锁酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：201元起，平均约577.8元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 100.37
+      "routeWeight": 121.11
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -7987,8 +7685,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "宾馆酒店",
       "住宿服务",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -7997,7 +7694,6 @@ export const databasePlaces: Place[] = [
     "address": "环城北路2华丰大厦F1层",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "5.0",
     "phone": "0512-52187777",
     "dynamicText": "min_price=226; avg_price=616.8; max_rooms=24",
@@ -8016,7 +7712,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 65.19
+      "routeWeight": 120.56
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8042,8 +7738,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "客运",
-      "酒店",
-      "L4"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/c096644b87ed61f1be3363ac5d8aec31",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8052,7 +7747,6 @@ export const databasePlaces: Place[] = [
     "address": "花园浜路108号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L4",
     "score": "4.5",
     "phone": "0512-52811555",
     "dynamicText": "min_price=224; avg_price=591.0; max_rooms=25",
@@ -8064,14 +7758,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.635388
     },
     "price": "224元起，平均约591.0元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "常熟花园酒店(常熟汽车客运南站店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：224元起，平均约591.0元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 140.08
+      "routeWeight": 120.24
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8096,8 +7790,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "三星级宾馆",
       "经济型",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8106,7 +7799,6 @@ export const databasePlaces: Place[] = [
     "address": "琴湖路15号",
     "categoryLabel": "酒店",
     "subtypeLabel": "三星级宾馆",
-    "tierLevel": "L2",
     "score": "5.0",
     "phone": "0512-52181158",
     "dynamicText": "min_price=336; avg_price=646.3; max_rooms=23",
@@ -8125,7 +7817,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 65.02
+      "routeWeight": 120.06
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8151,8 +7843,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "方塔",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/462c43a4251bb3be023e2fc1bfe20ebe",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8161,7 +7852,6 @@ export const databasePlaces: Place[] = [
     "address": "方塔东街10号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.4",
     "phone": "0512-51919188;0512-51919188,0",
     "dynamicText": "min_price=237; avg_price=677.5; max_rooms=22",
@@ -8173,14 +7863,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.643411
     },
     "price": "237元起，平均约677.5元，余房峰值22间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "尚宜酒店(常熟方塔步行街店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：237元起，平均约677.5元，余房峰值22间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 99.8
+      "routeWeight": 119.4
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8207,8 +7897,7 @@ export const databasePlaces: Place[] = [
       "快捷酒店",
       "虞山",
       "方塔",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/e3638ece02f0b41fee6ee3d6dc13c57b",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8217,7 +7906,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山街道书院街122号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "3.9",
     "phone": "0512-80636888;18251708838",
     "dynamicText": "min_price=222; avg_price=626.5; max_rooms=25",
@@ -8229,14 +7917,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.645671
     },
     "price": "222元起，平均约626.5元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "如家派柏·云酒店(常熟虞山方塔街店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：222元起，平均约626.5元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 99.77
+      "routeWeight": 119.31
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8263,8 +7951,7 @@ export const databasePlaces: Place[] = [
       "经济型",
       "虞山",
       "客运",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8273,7 +7960,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇招商西路152号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "3.9",
     "phone": "0512-52801836;13032527168",
     "dynamicText": "min_price=347; avg_price=624.2; max_rooms=25",
@@ -8292,7 +7978,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 64.56
+      "routeWeight": 118.67
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8318,8 +8004,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "虞山",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8328,7 +8013,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇招商南路120号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "0512-52231277;0512-52231777",
     "dynamicText": "min_price=228; avg_price=557.5; max_rooms=25",
@@ -8347,7 +8031,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 64.52
+      "routeWeight": 118.55
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8374,8 +8058,7 @@ export const databasePlaces: Place[] = [
       "旅馆",
       "虞山",
       "方塔",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8384,7 +8067,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇方塔街55号新华书店对面",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "3.8",
     "phone": "0512-52771655;0512-52772355",
     "dynamicText": "min_price=206; avg_price=611.7; max_rooms=25",
@@ -8403,7 +8085,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 64.38
+      "routeWeight": 118.15
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8428,8 +8110,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "四星级宾馆",
       "商务酒店",
-      "酒店",
-      "L4"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/f2f5ce5c88c36d966cd6b09bcf7314c5",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8438,7 +8119,6 @@ export const databasePlaces: Place[] = [
     "address": "海虞南路26-1号",
     "categoryLabel": "酒店",
     "subtypeLabel": "四星级宾馆",
-    "tierLevel": "L4",
     "score": "4.8",
     "phone": "0512-52515151",
     "dynamicText": "min_price=223; avg_price=548.8; max_rooms=24",
@@ -8450,14 +8130,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.640775
     },
     "price": "223元起，平均约548.8元，余房峰值24间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "果庭酒店属于四星级宾馆，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：223元起，平均约548.8元，余房峰值24间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 139.36
+      "routeWeight": 118.07
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8483,8 +8163,7 @@ export const databasePlaces: Place[] = [
       "三星级宾馆",
       "三星级酒店",
       "虞山",
-      "酒店",
-      "L4"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/9d35cb14b94bf96612c5fa867fe20cc8",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8493,7 +8172,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山北路137号",
     "categoryLabel": "酒店",
     "subtypeLabel": "三星级宾馆",
-    "tierLevel": "L4",
     "score": "4.3",
     "phone": "0512-52858900",
     "dynamicText": "min_price=205; avg_price=535.2; max_rooms=25",
@@ -8505,14 +8183,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.662363
     },
     "price": "205元起，平均约535.2元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "常熟梅园宾馆属于三星级宾馆，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：205元起，平均约535.2元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 139.29
+      "routeWeight": 117.87
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8538,8 +8216,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "虞山",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8548,7 +8225,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇新颜路50号2层",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.3",
     "phone": "0512-52722111",
     "dynamicText": "min_price=259; avg_price=543.9; max_rooms=25",
@@ -8567,7 +8243,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 64.27
+      "routeWeight": 117.82
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8592,8 +8268,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "住宿服务相关",
       "电竞酒店",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8602,7 +8277,6 @@ export const databasePlaces: Place[] = [
     "address": "闽江东路11号世茂商务中心广场A幢304",
     "categoryLabel": "酒店",
     "subtypeLabel": "住宿服务相关",
-    "tierLevel": "L2",
     "score": "4.8",
     "phone": "18051520030",
     "dynamicText": "min_price=225; avg_price=573.6; max_rooms=25",
@@ -8621,7 +8295,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 64.24
+      "routeWeight": 117.73
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8647,8 +8321,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "梦乐城",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8657,7 +8330,6 @@ export const databasePlaces: Place[] = [
     "address": "银环路99幢37号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "0512-52033111;17751429396",
     "dynamicText": "min_price=229; avg_price=601.2; max_rooms=25",
@@ -8676,7 +8348,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 64.16
+      "routeWeight": 117.47
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8702,8 +8374,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "客运",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8712,7 +8383,6 @@ export const databasePlaces: Place[] = [
     "address": "海虞镇府前路1号周行商业广场1幢",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.4",
     "phone": "0512-52888108",
     "dynamicText": "min_price=203; avg_price=558.0; max_rooms=25",
@@ -8731,7 +8401,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 63.97
+      "routeWeight": 116.9
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8756,8 +8426,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "充电站",
       "商务酒店",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/9dc3a8e5535fa781be6fc73e50d5f17c",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8766,7 +8435,6 @@ export const databasePlaces: Place[] = [
     "address": "琴湖路290-8号",
     "categoryLabel": "酒店",
     "subtypeLabel": "充电站",
-    "tierLevel": "L3",
     "score": "4.7",
     "phone": "0512-52738919;18118159709",
     "dynamicText": "min_price=296; avg_price=644.2; max_rooms=24",
@@ -8778,14 +8446,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.647497
     },
     "price": "296元起，平均约644.2元，余房峰值24间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "格林豪泰智选酒店(常熟大润发印象城店)属于充电站，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：296元起，平均约644.2元，余房峰值24间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 98.94
+      "routeWeight": 116.82
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8810,8 +8478,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "宾馆酒店",
       "商务酒店",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8820,7 +8487,6 @@ export const databasePlaces: Place[] = [
     "address": "花园浜路108号(原花园大酒店)",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.7",
     "phone": "0512-52711116",
     "dynamicText": "min_price=205; avg_price=581.4; max_rooms=25",
@@ -8839,7 +8505,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 63.88
+      "routeWeight": 116.64
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8864,8 +8530,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "宾馆酒店",
       "经济型",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8874,7 +8539,6 @@ export const databasePlaces: Place[] = [
     "address": "梅北路87号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "5.0",
     "phone": "0512-52660111",
     "dynamicText": "min_price=220; avg_price=595.6; max_rooms=25",
@@ -8893,7 +8557,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 63.87
+      "routeWeight": 116.61
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8919,8 +8583,7 @@ export const databasePlaces: Place[] = [
       "经济型连锁酒店",
       "经济型",
       "虞山",
-      "酒店",
-      "L4"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/bd65c1a0c469b8266b37cc4cdd5dbefa",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8929,7 +8592,6 @@ export const databasePlaces: Place[] = [
     "address": "长江路606号",
     "categoryLabel": "酒店",
     "subtypeLabel": "经济型连锁酒店",
-    "tierLevel": "L4",
     "score": "4.2",
     "phone": "0512-52107777",
     "dynamicText": "min_price=233; avg_price=617.5; max_rooms=25",
@@ -8941,14 +8603,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.668186
     },
     "price": "233元起，平均约617.5元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "锦江之星酒店(常熟虞山店)属于经济型连锁酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：233元起，平均约617.5元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 138.85
+      "routeWeight": 116.55
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -8973,8 +8635,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "经济型连锁酒店",
       "经济型",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/9dc3a8e5535fa781be6fc73e50d5f17c",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -8983,7 +8644,6 @@ export const databasePlaces: Place[] = [
     "address": "珠海路23隆盈广场(台山路与珠海路交汇处西南100米)",
     "categoryLabel": "酒店",
     "subtypeLabel": "经济型连锁酒店",
-    "tierLevel": "L3",
     "score": "4.7",
     "phone": "0512-51918999;15365350998;4006998998",
     "dynamicText": "min_price=208; avg_price=616.6; max_rooms=25",
@@ -8995,14 +8655,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.689468
     },
     "price": "208元起，平均约616.6元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "格林豪泰智选酒店(常熟万达广场店)属于经济型连锁酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：208元起，平均约616.6元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 98.61
+      "routeWeight": 115.84
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9027,8 +8687,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "宾馆酒店",
       "舒适型",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/dd0161a761a0865a49892e824e0ef8a4",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -9037,7 +8696,6 @@ export const databasePlaces: Place[] = [
     "address": "枫林路10-103",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.6",
     "phone": "0512-52887566",
     "dynamicText": "min_price=266; avg_price=547.9; max_rooms=25",
@@ -9049,14 +8707,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.657286
     },
     "price": "266元起，平均约547.9元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "花祺酒店(常熟世茂店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：266元起，平均约547.9元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 98.61
+      "routeWeight": 115.83
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9082,8 +8740,7 @@ export const databasePlaces: Place[] = [
       "宾馆酒店",
       "经济型",
       "方塔",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -9092,7 +8749,6 @@ export const databasePlaces: Place[] = [
     "address": "方塔东街6号楼三楼",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.1",
     "phone": "18913670286",
     "dynamicText": "min_price=212; avg_price=540.9; max_rooms=25",
@@ -9111,7 +8767,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 63.6
+      "routeWeight": 115.81
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9136,8 +8792,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "宾馆酒店",
       "住宿服务",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -9146,7 +8801,6 @@ export const databasePlaces: Place[] = [
     "address": "银丰路金狮薇尼诗东区66幢104",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.8",
     "phone": "0512-83386661",
     "dynamicText": "min_price=201; avg_price=572.9; max_rooms=25",
@@ -9165,7 +8819,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 63.59
+      "routeWeight": 115.78
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9190,8 +8844,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "宾馆酒店",
       "经济型",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -9200,7 +8853,6 @@ export const databasePlaces: Place[] = [
     "address": "环城北路2号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L2",
     "score": "4.6",
     "phone": "0512-52162222",
     "dynamicText": "min_price=308; avg_price=633.0; max_rooms=25",
@@ -9219,7 +8871,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 63.59
+      "routeWeight": 115.77
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9244,8 +8896,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "夜总会",
       "电竞酒店",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -9254,7 +8905,6 @@ export const databasePlaces: Place[] = [
     "address": "李闸路136号",
     "categoryLabel": "酒店",
     "subtypeLabel": "夜总会",
-    "tierLevel": "L2",
     "score": "4.6",
     "phone": "0512-81581333",
     "dynamicText": "min_price=206; avg_price=602.0; max_rooms=24",
@@ -9273,7 +8923,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 63.57
+      "routeWeight": 115.71
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9299,8 +8949,7 @@ export const databasePlaces: Place[] = [
       "经济型连锁酒店",
       "商务酒店",
       "虞山",
-      "酒店",
-      "L2"
+      "酒店"
     ],
     "imageUrl": "/assets/generated-placeholders/lodging.png",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -9309,7 +8958,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇常熟海虞南路49号",
     "categoryLabel": "酒店",
     "subtypeLabel": "经济型连锁酒店",
-    "tierLevel": "L2",
     "score": "4.1",
     "phone": "0512-52100777;0512-52105850;4006399399",
     "dynamicText": "min_price=224; avg_price=538.9; max_rooms=25",
@@ -9328,7 +8976,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 63.56
+      "routeWeight": 115.68
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9353,8 +9001,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "五星级宾馆",
       "豪华型",
-      "酒店",
-      "L4"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/29107026b1620a2d097975b13c126abe",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -9363,7 +9010,6 @@ export const databasePlaces: Place[] = [
     "address": "开元大道6号",
     "categoryLabel": "酒店",
     "subtypeLabel": "五星级宾馆",
-    "tierLevel": "L4",
     "score": "4.6",
     "phone": "0512-52729999",
     "dynamicText": "min_price=276; avg_price=663.3; max_rooms=23",
@@ -9375,14 +9021,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.656151
     },
     "price": "276元起，平均约663.3元，余房峰值23间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "常熟中江广场皇冠假日酒店属于五星级宾馆，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：276元起，平均约663.3元，余房峰值23间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 138.47
+      "routeWeight": 115.4
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9407,8 +9053,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "经济型连锁酒店",
       "经济型",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/7e47956618cca1b3214f1ef59db955c5",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -9417,7 +9062,6 @@ export const databasePlaces: Place[] = [
     "address": "富春江路79号东南食品城A1幢1-6层",
     "categoryLabel": "酒店",
     "subtypeLabel": "经济型连锁酒店",
-    "tierLevel": "L3",
     "score": "4.7",
     "phone": "0512-88801777",
     "dynamicText": "min_price=221; avg_price=593.8; max_rooms=25",
@@ -9429,14 +9073,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.627767
     },
     "price": "221元起，平均约593.8元，余房峰值25间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "格林豪泰(常熟富春江路国际汽配城店)属于经济型连锁酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：221元起，平均约593.8元，余房峰值25间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 98.46
+      "routeWeight": 115.37
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9461,8 +9105,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "宾馆酒店",
       "经济型",
-      "酒店",
-      "L3"
+      "酒店"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/d0d178c9abb5a96d721855ebc86fbdf5",
     "fallbackImageUrl": "/assets/generated-placeholders/lodging.png",
@@ -9471,7 +9114,6 @@ export const databasePlaces: Place[] = [
     "address": "招商西路22号",
     "categoryLabel": "酒店",
     "subtypeLabel": "宾馆酒店",
-    "tierLevel": "L3",
     "score": "4.6",
     "phone": "0512-52230333;0512-52233188",
     "dynamicText": "min_price=210; avg_price=552.5; max_rooms=23",
@@ -9483,14 +9125,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.627151
     },
     "price": "210元起，平均约552.5元，余房峰值23间",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "过夜",
     "history": "艺选酒店(常熟汽车南站天虹服装城店)属于宾馆酒店，适合作为住宿落点和夜间路线收束点。",
     "detail": "价格/费用：210元起，平均约552.5元，余房峰值23间",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 0,
-      "routeWeight": 98.36
+      "routeWeight": 115.09
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9508,7 +9150,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1035",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第一人民医院(书院街院区)",
     "subtitle": "综合医院 · 虞山镇书院街1号",
     "summary": "常熟市第一人民医院(书院街院区)属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -9517,8 +9159,7 @@ export const databasePlaces: Place[] = [
       "二甲医院",
       "虞山",
       "第一人民医院",
-      "医院",
-      "L4"
+      "医院"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/86763c4f5065d17a0000003072208135?type=pic",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -9527,7 +9168,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇书院街1号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L4",
     "phone": "0512-52223921;0512-52773259",
     "selectionScore": 180.295,
     "position": {
@@ -9537,14 +9177,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.639875
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第一人民医院(书院街院区)属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 160.1
+      "routeWeight": 180.3
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9561,7 +9201,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1038",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院台山路院区",
     "subtitle": "三级甲等医院 · 台山路18号",
     "summary": "常熟市第二人民医院台山路院区属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -9569,8 +9209,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "综合医院",
       "第二人民医院",
-      "医院",
-      "L4"
+      "医院"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/1ab0699f5b45e08b4fd92df3455ea315",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -9579,7 +9218,6 @@ export const databasePlaces: Place[] = [
     "address": "台山路18号",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L4",
     "phone": "0512-52277790",
     "selectionScore": 171.476,
     "position": {
@@ -9589,14 +9227,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.690953
     },
     "openTime": "07:15-11:00 13:00-16:30",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第二人民医院台山路院区属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：07:15-11:00 13:00-16:30",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 157.16
+      "routeWeight": 171.48
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9613,15 +9251,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1073",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市尚湖中心卫生院",
     "subtitle": "卫生院 · 尚湖镇练塘中街17号",
     "summary": "常熟市尚湖中心卫生院属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
       "尚湖",
-      "医院",
-      "L4"
+      "医院"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/6aced40d4e11211d20d0db5b7890737f",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -9630,7 +9267,6 @@ export const databasePlaces: Place[] = [
     "address": "尚湖镇练塘中街17号",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L4",
     "phone": "0512-52441724",
     "selectionScore": 167.648,
     "position": {
@@ -9640,14 +9276,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.616005
     },
     "openTime": "06:30-21:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市尚湖中心卫生院属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：06:30-21:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 155.88
+      "routeWeight": 167.65
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9664,15 +9300,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1066",
-    "type": "emergency",
+    "type": "hospital",
     "name": "沙家浜中心卫生院",
     "subtitle": "卫生院 · 中环路151号",
     "summary": "沙家浜中心卫生院属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
       "沙家浜",
-      "医院",
-      "L4"
+      "医院"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/11567e1f791a7d67d02725fddd8f303c",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -9681,7 +9316,6 @@ export const databasePlaces: Place[] = [
     "address": "中环路151号",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L4",
     "phone": "0512-52576211",
     "selectionScore": 165.798,
     "position": {
@@ -9691,14 +9325,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.546289
     },
     "openTime": "09:00-21:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "沙家浜中心卫生院属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：09:00-21:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 155.27
+      "routeWeight": 165.8
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9715,15 +9349,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1041",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第一人民医院滨江院区",
     "subtitle": "综合医院 · 永嘉路9号",
     "summary": "常熟市第一人民医院滨江院区属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "第一人民医院",
-      "医院",
-      "L4"
+      "医院"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/f97227cf6d60ddb9a7e554430593a5bb",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -9732,7 +9365,6 @@ export const databasePlaces: Place[] = [
     "address": "永嘉路9号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L4",
     "phone": "0512-52192666",
     "selectionScore": 162.397,
     "position": {
@@ -9742,14 +9374,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.736412
     },
     "openTime": "08:00-21:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第一人民医院滨江院区属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：08:00-21:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 154.13
+      "routeWeight": 162.4
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9766,14 +9398,13 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1043",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市古里人民医院",
     "subtitle": "卫生院 · 古里镇铁琴北街166号",
     "summary": "常熟市古里人民医院属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
-      "医院",
-      "L4"
+      "医院"
     ],
     "imageUrl": "https://store.is.autonavi.com/showpic/4e063d9c89042fc746e7d02b422fe99a",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -9782,7 +9413,6 @@ export const databasePlaces: Place[] = [
     "address": "古里镇铁琴北街166号",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L4",
     "phone": "0512-52521104;0512-52529433",
     "selectionScore": 157.844,
     "position": {
@@ -9792,14 +9422,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.634217
     },
     "openTime": "07:30-11:00 13:00-16:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市古里人民医院属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：07:30-11:00 13:00-16:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 152.61
+      "routeWeight": 157.84
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9816,7 +9446,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1074",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第一人民医院书院街院区门诊部",
     "subtitle": "综合医院 · 虞山镇书院街1号常熟市第一人民医院(书院街院区)",
     "summary": "常熟市第一人民医院书院街院区门诊部属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -9825,8 +9455,7 @@ export const databasePlaces: Place[] = [
       "门诊",
       "虞山",
       "第一人民医院",
-      "医院",
-      "L4"
+      "医院"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/55424bdcd2529016092f2e4ceb4373a9",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -9835,7 +9464,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇书院街1号常熟市第一人民医院(书院街院区)",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L4",
     "phone": "0512-52223920",
     "selectionScore": 94.303,
     "position": {
@@ -9845,14 +9473,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.639432
     },
     "openTime": "08:00-11:30 13:30-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第一人民医院书院街院区门诊部属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：08:00-11:30 13:30-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 131.43
+      "routeWeight": 94.3
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9869,15 +9497,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1040",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第五人民医院",
     "subtitle": "综合医院 · 虞山镇珠江路289号",
     "summary": "常熟市第五人民医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "虞山",
-      "医院",
-      "L4"
+      "医院"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/21ca0509d429f09441bbe15e60648e53",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -9886,7 +9513,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇珠江路289号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L4",
     "phone": "0512-52867102;0512-52867121",
     "selectionScore": 88.46,
     "position": {
@@ -9896,14 +9522,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.66312
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第五人民医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 129.49
+      "routeWeight": 88.46
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9920,7 +9546,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1037",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市中医院(新区医院、妇保院)",
     "subtitle": "三级甲等医院 · 黄河路6号",
     "summary": "常熟市中医院(新区医院、妇保院)属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -9928,8 +9554,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "中医医院",
       "中医院",
-      "医院",
-      "L4"
+      "医院"
     ],
     "imageUrl": "https://aos-comment.amap.com/B020006OWX/comment/content_media_external_images_media_1672_1749775511626_86173928.jpg",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -9938,7 +9563,6 @@ export const databasePlaces: Place[] = [
     "address": "黄河路6号",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L4",
     "phone": "0512-52340532;18913639570",
     "selectionScore": 87.763,
     "position": {
@@ -9948,14 +9572,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.679091
     },
     "openTime": "07:30-16:30",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市中医院(新区医院、妇保院)属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：07:30-16:30",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 129.25
+      "routeWeight": 87.76
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -9972,15 +9596,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1085",
-    "type": "emergency",
+    "type": "hospital",
     "name": "辛庄镇人民医院(张桥院区)",
     "subtitle": "综合医院 · 西环路98号",
     "summary": "辛庄镇人民医院(张桥院区)属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "卫生院",
-      "医院",
-      "L4"
+      "医院"
     ],
     "imageUrl": "http://store.is.autonavi.com/showpic/5b2b2e20350b3777e62333a82f1d65c7",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -9989,7 +9612,6 @@ export const databasePlaces: Place[] = [
     "address": "西环路98号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L4",
     "phone": "0512-52461168",
     "selectionScore": 77.235,
     "position": {
@@ -9999,14 +9621,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.601392
     },
     "openTime": "07:45-09:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "辛庄镇人民医院(张桥院区)属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：07:45-09:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 125.75
+      "routeWeight": 77.24
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10023,7 +9645,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-161",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院",
     "subtitle": "综合医院 · 常熟市海虞南路68号",
     "summary": "常熟市第二人民医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -10031,8 +9653,7 @@ export const databasePlaces: Place[] = [
       "医疗",
       "急救",
       "综合医院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10041,7 +9662,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市海虞南路68号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "phone": "0512-52235825",
     "selectionScore": 192.678,
     "position": {
@@ -10051,14 +9671,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.647766
     },
     "openTime": "24h",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第二人民医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：24h",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 124.23
+      "routeWeight": 192.68
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10075,7 +9695,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-160",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第一人民医院",
     "subtitle": "综合医院 · 常熟市书院街1号",
     "summary": "常熟市第一人民医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -10083,8 +9703,7 @@ export const databasePlaces: Place[] = [
       "医疗",
       "急救",
       "综合医院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10093,7 +9712,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市书院街1号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "phone": "0512-52222584",
     "selectionScore": 191.63,
     "position": {
@@ -10103,14 +9721,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.646287
     },
     "openTime": "24h",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第一人民医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：24h",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 123.88
+      "routeWeight": 191.63
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10127,7 +9745,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-162",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市中医院",
     "subtitle": "中医医院 · 常熟市黄河路6号",
     "summary": "常熟市中医院属于中医医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -10137,8 +9755,7 @@ export const databasePlaces: Place[] = [
       "中医",
       "综合医院",
       "医院",
-      "中医医院",
-      "L3"
+      "中医医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10147,7 +9764,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市黄河路6号",
     "categoryLabel": "医院",
     "subtypeLabel": "中医医院",
-    "tierLevel": "L3",
     "phone": "0512-52881000",
     "selectionScore": 189.763,
     "position": {
@@ -10157,14 +9773,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.679091
     },
     "openTime": "24h",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市中医院属于中医医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：24h",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 123.25
+      "routeWeight": 189.76
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10181,7 +9797,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1050",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市中医院(新区医院)虞山院区",
     "subtitle": "综合医院 · 虞山镇外菱塘路35号",
     "summary": "常熟市中医院(新区医院)虞山院区属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -10190,8 +9806,7 @@ export const databasePlaces: Place[] = [
       "中医医院",
       "虞山",
       "中医院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10200,7 +9815,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇外菱塘路35号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "selectionScore": 172.708,
     "position": {
       "x": 38.78,
@@ -10209,14 +9823,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.653448
     },
     "openTime": "08:00-11:30 13:00-16:30",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市中医院(新区医院)虞山院区属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：08:00-11:30 13:00-16:30",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 117.57
+      "routeWeight": 172.71
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10233,15 +9847,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1054",
-    "type": "emergency",
+    "type": "hospital",
     "name": "第一人民医院辛庄医院",
     "subtitle": "综合医院 · 辛庄镇新阳大道98号",
     "summary": "第一人民医院辛庄医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "第一人民医院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10250,7 +9863,6 @@ export const databasePlaces: Place[] = [
     "address": "辛庄镇新阳大道98号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "selectionScore": 155.647,
     "position": {
       "x": 22.48,
@@ -10259,14 +9871,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.539761
     },
     "openTime": "09:00-21:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "第一人民医院辛庄医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：09:00-21:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 111.88
+      "routeWeight": 155.65
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10283,7 +9895,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1090",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院海虞南路院区住院部",
     "subtitle": "三级甲等医院 · 海虞南路68号常熟第二人民医院内",
     "summary": "常熟市第二人民医院海虞南路院区住院部属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -10292,8 +9904,7 @@ export const databasePlaces: Place[] = [
       "医疗保健服务",
       "综合医院",
       "第二人民医院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10302,7 +9913,6 @@ export const databasePlaces: Place[] = [
     "address": "海虞南路68号常熟第二人民医院内",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L3",
     "phone": "0512-52707119",
     "selectionScore": 80.694,
     "position": {
@@ -10311,13 +9921,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.75861,
       "lat": 31.647767
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第二人民医院海虞南路院区住院部属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.9
+      "routeWeight": 80.69
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10334,7 +9944,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1089",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第一人民医院书院街院区急诊中心",
     "subtitle": "综合医院 · 书院街1号常熟市第一人民医院内",
     "summary": "常熟市第一人民医院书院街院区急诊中心属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -10342,8 +9952,7 @@ export const databasePlaces: Place[] = [
       "综合医院",
       "门诊",
       "第一人民医院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10352,7 +9961,6 @@ export const databasePlaces: Place[] = [
     "address": "书院街1号常熟市第一人民医院内",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "phone": "0512-52223922;0512-52772486",
     "selectionScore": 80.33,
     "position": {
@@ -10361,13 +9969,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.740433,
       "lat": 31.640116
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第一人民医院书院街院区急诊中心属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.78
+      "routeWeight": 80.33
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10384,14 +9992,13 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1047",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市支塘人民医院",
     "subtitle": "综合医院 · 东胜路1号",
     "summary": "常熟市支塘人民医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10400,7 +10007,6 @@ export const databasePlaces: Place[] = [
     "address": "东胜路1号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "phone": "0512-52987600",
     "selectionScore": 75.464,
     "position": {
@@ -10410,14 +10016,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.607799
     },
     "openTime": "07:30-11:30 13:00-16:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市支塘人民医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：07:30-11:30 13:00-16:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 85.15
+      "routeWeight": 75.46
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10434,7 +10040,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1093",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第一人民医院滨江院区门诊",
     "subtitle": "综合医院 · 龙溪南路与金浦路交汇处",
     "summary": "常熟市第一人民医院滨江院区门诊属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -10442,8 +10048,7 @@ export const databasePlaces: Place[] = [
       "综合医院",
       "门诊",
       "第一人民医院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10452,7 +10057,6 @@ export const databasePlaces: Place[] = [
     "address": "龙溪南路与金浦路交汇处",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "selectionScore": 75.388,
     "position": {
       "x": 75.52,
@@ -10461,14 +10065,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.735758
     },
     "openTime": "08:00-11:30 13:00-16:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第一人民医院滨江院区门诊属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：08:00-11:30 13:00-16:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 85.13
+      "routeWeight": 75.39
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10485,15 +10089,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1072",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第五人民医院度假区院区",
     "subtitle": "卫生院 · 寺路街15号",
     "summary": "常熟市第五人民医院度假区院区属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
       "社区医院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10502,7 +10105,6 @@ export const databasePlaces: Place[] = [
     "address": "寺路街15号",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L3",
     "phone": "0512-52953319",
     "selectionScore": 73.977,
     "position": {
@@ -10511,13 +10113,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.72626,
       "lat": 31.667393
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市第五人民医院度假区院区属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 84.66
+      "routeWeight": 73.98
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10534,15 +10136,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1104",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市梅李人民医院-急诊",
     "subtitle": "综合医院 · 梅李人民医院2栋",
     "summary": "常熟市梅李人民医院-急诊属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "门诊",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10551,7 +10152,6 @@ export const databasePlaces: Place[] = [
     "address": "梅李人民医院2栋",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "selectionScore": 71.398,
     "position": {
       "x": 64.46,
@@ -10560,14 +10160,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.714033
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市梅李人民医院-急诊属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 83.8
+      "routeWeight": 71.4
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10584,15 +10184,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1083",
-    "type": "emergency",
+    "type": "hospital",
     "name": "董浜中心卫生院(徐市院区)",
     "subtitle": "诊所 · 徐市街道",
     "summary": "董浜中心卫生院(徐市院区)属于诊所，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "诊所",
       "卫生院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10601,7 +10200,6 @@ export const databasePlaces: Place[] = [
     "address": "徐市街道",
     "categoryLabel": "医院",
     "subtypeLabel": "诊所",
-    "tierLevel": "L3",
     "phone": "0512-52671825;0512-52671907",
     "selectionScore": 68.211,
     "position": {
@@ -10610,13 +10208,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.956623,
       "lat": 31.671184
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "董浜中心卫生院(徐市院区)属于诊所，用于紧急救援、就近医疗和路线安全提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 82.74
+      "routeWeight": 68.21
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10633,15 +10231,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1091",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市支塘人民医院何市院区",
     "subtitle": "卫生院 · 桂村大街60号",
     "summary": "常熟市支塘人民医院何市院区属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
       "社区医院",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10650,7 +10247,6 @@ export const databasePlaces: Place[] = [
     "address": "桂村大街60号",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L3",
     "phone": "0512-52541108",
     "selectionScore": 66.298,
     "position": {
@@ -10659,13 +10255,13 @@ export const databasePlaces: Place[] = [
       "lng": 121.014653,
       "lat": 31.637558
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市支塘人民医院何市院区属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 82.1
+      "routeWeight": 66.3
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10682,7 +10278,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1108",
-    "type": "emergency",
+    "type": "hospital",
     "name": "虞山街道清和坊社区卫生服务站",
     "subtitle": "卫生院 · 东胜街22号",
     "summary": "虞山街道清和坊社区卫生服务站属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
@@ -10690,8 +10286,7 @@ export const databasePlaces: Place[] = [
       "卫生院",
       "社区医院",
       "虞山",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10700,7 +10295,6 @@ export const databasePlaces: Place[] = [
     "address": "东胜街22号",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L3",
     "phone": "18662322237",
     "selectionScore": 60.699,
     "position": {
@@ -10710,14 +10304,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.648022
     },
     "openTime": "08:00-11:00 13:30-16:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山街道清和坊社区卫生服务站属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：08:00-11:00 13:30-16:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 80.23
+      "routeWeight": 60.7
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10734,7 +10328,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1132",
-    "type": "emergency",
+    "type": "hospital",
     "name": "虞山街道君子弄社区卫生服务站",
     "subtitle": "卫生院 · 虞山镇君子弄53号",
     "summary": "虞山街道君子弄社区卫生服务站属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
@@ -10742,8 +10336,7 @@ export const databasePlaces: Place[] = [
       "卫生院",
       "社区医院",
       "虞山",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10752,7 +10345,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇君子弄53号",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L3",
     "phone": "0512-52706690",
     "selectionScore": 60.23,
     "position": {
@@ -10762,14 +10354,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.635873
     },
     "openTime": "08:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山街道君子弄社区卫生服务站属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：08:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 80.08
+      "routeWeight": 60.23
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10786,15 +10378,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1044",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟东明医院",
     "subtitle": "综合医院 · 虞山镇新颜东路2号",
     "summary": "常熟东明医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "虞山",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10803,7 +10394,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇新颜东路2号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "phone": "0512-52921111",
     "selectionScore": 60.21,
     "position": {
@@ -10813,14 +10403,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.644442
     },
     "openTime": "07:30-11:00 13:00-16:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟东明医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：07:30-11:00 13:00-16:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 80.07
+      "routeWeight": 60.21
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10837,15 +10427,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1056",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟民慈医院",
     "subtitle": "综合医院 · 元和路行灶桥尚湖东路入口处",
     "summary": "常熟民慈医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "尚湖",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10854,7 +10443,6 @@ export const databasePlaces: Place[] = [
     "address": "元和路行灶桥尚湖东路入口处",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "phone": "0512-52842019;0512-52846999;4009991709",
     "selectionScore": 59.572,
     "position": {
@@ -10864,14 +10452,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.625971
     },
     "openTime": "周一至周五 07:00-19:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟民慈医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：周一至周五 07:00-19:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 79.86
+      "routeWeight": 59.57
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10888,15 +10476,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1036",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟东南医院",
     "subtitle": "综合医院 · 虞山镇黄山路168号",
     "summary": "常熟东南医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "虞山",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10905,7 +10492,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇黄山路168号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L3",
     "phone": "0512-52968001",
     "selectionScore": 59.075,
     "position": {
@@ -10915,14 +10501,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.631891
     },
     "openTime": "08:00-21:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟东南医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：08:00-21:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 79.69
+      "routeWeight": 59.08
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10939,15 +10525,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1055",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市沙家浜卫生院",
     "subtitle": "卫生院 · 湖滨路81号",
     "summary": "常熟市沙家浜卫生院属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
       "沙家浜",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -10956,7 +10541,6 @@ export const databasePlaces: Place[] = [
     "address": "湖滨路81号",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L3",
     "phone": "0512-52501181;0512-52501186",
     "selectionScore": 57.202,
     "position": {
@@ -10966,14 +10550,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.5591
     },
     "openTime": "07:30-11:00 13:00-16:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市沙家浜卫生院属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：07:30-11:00 13:00-16:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 79.07
+      "routeWeight": 57.2
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -10990,7 +10574,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1109",
-    "type": "emergency",
+    "type": "hospital",
     "name": "尚湖镇吉桥村社区卫生服务站",
     "subtitle": "卫生院 · 吉新路",
     "summary": "尚湖镇吉桥村社区卫生服务站属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
@@ -10998,8 +10582,7 @@ export const databasePlaces: Place[] = [
       "卫生院",
       "社区医院",
       "尚湖",
-      "医院",
-      "L3"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11008,7 +10591,6 @@ export const databasePlaces: Place[] = [
     "address": "吉新路",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L3",
     "phone": "0512-52420339",
     "selectionScore": 56.605,
     "position": {
@@ -11018,14 +10600,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.618837
     },
     "openTime": "07:30-11:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "尚湖镇吉桥村社区卫生服务站属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "detail": "开放/服务时间：07:30-11:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 78.87
+      "routeWeight": 56.61
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11042,7 +10624,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1190",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市中医院口腔医学中心",
     "subtitle": "三级甲等医院 · 黄河路6号常熟市中医院(新区医院、妇保院)",
     "summary": "常熟市中医院口腔医学中心属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11050,8 +10632,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "口腔科",
       "中医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11060,7 +10641,6 @@ export const databasePlaces: Place[] = [
     "address": "黄河路6号常熟市中医院(新区医院、妇保院)",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 153.7,
     "position": {
       "x": 45.35,
@@ -11074,7 +10654,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 76.23
+      "routeWeight": 153.7
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11091,7 +10671,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1217",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院海虞南路院区胸痛中心",
     "subtitle": "三级甲等医院 · 常熟市第二人民医院海虞南路院区西2门旁",
     "summary": "常熟市第二人民医院海虞南路院区胸痛中心属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11099,8 +10679,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "门诊",
       "第二人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11109,7 +10688,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市第二人民医院海虞南路院区西2门旁",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 73.719,
     "position": {
       "x": 41.58,
@@ -11123,7 +10701,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.57
+      "routeWeight": 73.72
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11140,7 +10718,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1230",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院海虞南路院区急救中心",
     "subtitle": "三级甲等医院 · 常熟市第二人民医院海虞南路院区西2门旁",
     "summary": "常熟市第二人民医院海虞南路院区急救中心属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11148,8 +10726,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "急救中心",
       "第二人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11158,7 +10735,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市第二人民医院海虞南路院区西2门旁",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 73.717,
     "position": {
       "x": 41.58,
@@ -11172,7 +10748,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.57
+      "routeWeight": 73.72
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11189,7 +10765,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1098",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院海虞南路院区急诊",
     "subtitle": "三级甲等医院 · 海虞南路68号常熟市第二人民医院内",
     "summary": "常熟市第二人民医院海虞南路院区急诊属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11197,8 +10773,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "门诊",
       "第二人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11207,7 +10782,6 @@ export const databasePlaces: Place[] = [
     "address": "海虞南路68号常熟市第二人民医院内",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 73.71,
     "position": {
       "x": 41.57,
@@ -11221,7 +10795,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.57
+      "routeWeight": 73.71
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11238,7 +10812,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1082",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院海虞南路院区门诊部",
     "subtitle": "三级甲等医院 · 常熟市第二人民医院海虞南路院区",
     "summary": "常熟市第二人民医院海虞南路院区门诊部属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11246,8 +10820,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "门诊",
       "第二人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11256,7 +10829,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市第二人民医院海虞南路院区",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 73.695,
     "position": {
       "x": 41.6,
@@ -11270,7 +10842,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.57
+      "routeWeight": 73.69
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11287,7 +10859,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1146",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院海虞南路院区眼耳鼻咽喉口腔科门诊",
     "subtitle": "三级甲等医院 · 常熟市第二人民医院海虞南路院区",
     "summary": "常熟市第二人民医院海虞南路院区眼耳鼻咽喉口腔科门诊属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11295,8 +10867,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "口腔科",
       "第二人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11305,7 +10876,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市第二人民医院海虞南路院区",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 73.691,
     "position": {
       "x": 41.57,
@@ -11319,7 +10889,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.56
+      "routeWeight": 73.69
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11336,7 +10906,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1110",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院海虞南路院区皮肤科口腔科门诊",
     "subtitle": "三级甲等医院 · 常熟市第二人民医院海虞南路院区",
     "summary": "常熟市第二人民医院海虞南路院区皮肤科口腔科门诊属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11344,8 +10914,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "口腔科",
       "第二人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11354,7 +10923,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市第二人民医院海虞南路院区",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 73.683,
     "position": {
       "x": 41.59,
@@ -11368,7 +10936,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.56
+      "routeWeight": 73.68
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11385,7 +10953,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1210",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院海虞南路院区卒中中心",
     "subtitle": "三级甲等医院 · 常熟市第二人民医院海虞南路院区北2门旁",
     "summary": "常熟市第二人民医院海虞南路院区卒中中心属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11393,8 +10961,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "门诊",
       "第二人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11403,7 +10970,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市第二人民医院海虞南路院区北2门旁",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 73.68,
     "position": {
       "x": 41.98,
@@ -11417,7 +10983,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.56
+      "routeWeight": 73.68
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11434,7 +11000,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1144",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第五人民医院急诊",
     "subtitle": "综合医院 · 虞山镇珠江路289号常熟市第五人民医院内",
     "summary": "常熟市第五人民医院急诊属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11442,8 +11008,7 @@ export const databasePlaces: Place[] = [
       "综合医院",
       "门诊",
       "虞山",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11452,7 +11017,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇珠江路289号常熟市第五人民医院内",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "selectionScore": 73.465,
     "position": {
       "x": 38.18,
@@ -11466,7 +11030,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.49
+      "routeWeight": 73.47
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11483,7 +11047,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1113",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第五人民医院门诊",
     "subtitle": "综合医院 · 虞山镇珠江路289号常熟市第五人民医院内",
     "summary": "常熟市第五人民医院门诊属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11491,8 +11055,7 @@ export const databasePlaces: Place[] = [
       "综合医院",
       "门诊",
       "虞山",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11501,7 +11064,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇珠江路289号常熟市第五人民医院内",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "selectionScore": 73.456,
     "position": {
       "x": 38.12,
@@ -11515,7 +11077,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.49
+      "routeWeight": 73.46
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11532,7 +11094,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1103",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第五人民医院-皮肤医学美容中心",
     "subtitle": "综合医院 · 虞山镇珠江路289号常熟市第五人民医院",
     "summary": "常熟市第五人民医院-皮肤医学美容中心属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11540,8 +11102,7 @@ export const databasePlaces: Place[] = [
       "综合医院",
       "医学美容",
       "虞山",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11550,7 +11111,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇珠江路289号常熟市第五人民医院",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "selectionScore": 73.453,
     "position": {
       "x": 38.12,
@@ -11564,7 +11124,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.48
+      "routeWeight": 73.45
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11581,7 +11141,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1232",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市中医院发热门诊",
     "subtitle": "三级甲等医院 · 黄河路常熟市中医院",
     "summary": "常熟市中医院发热门诊属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11589,8 +11149,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "门诊",
       "中医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11599,7 +11158,6 @@ export const databasePlaces: Place[] = [
     "address": "黄河路常熟市中医院",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 72.793,
     "position": {
       "x": 44.88,
@@ -11613,7 +11171,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.26
+      "routeWeight": 72.79
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11630,7 +11188,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1087",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市中医院急诊",
     "subtitle": "三级甲等医院 · 黄河路6号南京中医药大学常熟附属医院内",
     "summary": "常熟市中医院急诊属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11638,8 +11196,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "中医医院",
       "中医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11648,7 +11205,6 @@ export const databasePlaces: Place[] = [
     "address": "黄河路6号南京中医药大学常熟附属医院内",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 72.727,
     "position": {
       "x": 45.19,
@@ -11662,7 +11218,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.24
+      "routeWeight": 72.73
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11679,7 +11235,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1086",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院台山路院区门诊部",
     "subtitle": "三级甲等医院 · 常熟二院北部院区",
     "summary": "常熟市第二人民医院台山路院区门诊部属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11687,8 +11243,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "门诊",
       "第二人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11697,7 +11252,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟二院北部院区",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 72.502,
     "position": {
       "x": 37.7,
@@ -11711,7 +11265,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.17
+      "routeWeight": 72.5
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11728,7 +11282,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1172",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟东南医院急诊",
     "subtitle": "综合医院 · 虞山镇黄山路168号常熟东南医院",
     "summary": "常熟东南医院急诊属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11736,8 +11290,7 @@ export const databasePlaces: Place[] = [
       "综合医院",
       "门诊",
       "虞山",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11746,7 +11299,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇黄山路168号常熟东南医院",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "selectionScore": 72.077,
     "position": {
       "x": 50.97,
@@ -11760,7 +11312,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.03
+      "routeWeight": 72.08
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11777,7 +11329,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1220",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第一人民医院辛庄医院胸痛中心",
     "subtitle": "综合医院 · 辛庄镇新阳大道98号第一人民医院辛庄医院",
     "summary": "常熟市第一人民医院辛庄医院胸痛中心属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11785,8 +11337,7 @@ export const databasePlaces: Place[] = [
       "综合医院",
       "门诊",
       "第一人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11795,7 +11346,6 @@ export const databasePlaces: Place[] = [
     "address": "辛庄镇新阳大道98号第一人民医院辛庄医院",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "selectionScore": 68.633,
     "position": {
       "x": 22.37,
@@ -11809,7 +11359,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 47.88
+      "routeWeight": 68.63
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11826,7 +11376,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1096",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第一人民医院滨江院区急诊中心",
     "subtitle": "综合医院 · 永嘉路9号常熟市第一人民医院滨江院区",
     "summary": "常熟市第一人民医院滨江院区急诊中心属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -11834,8 +11384,7 @@ export const databasePlaces: Place[] = [
       "综合医院",
       "医疗保健服务",
       "第一人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11844,7 +11393,6 @@ export const databasePlaces: Place[] = [
     "address": "永嘉路9号常熟市第一人民医院滨江院区",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "selectionScore": 67.378,
     "position": {
       "x": 75.53,
@@ -11858,7 +11406,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 47.46
+      "routeWeight": 67.38
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11875,15 +11423,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1185",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟琴湖惠民医院急诊",
     "subtitle": "综合医院 · 常熟琴湖惠民医院西门旁",
     "summary": "常熟琴湖惠民医院急诊属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "门诊",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11892,7 +11439,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟琴湖惠民医院西门旁",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "selectionScore": 67.202,
     "position": {
       "x": 43.71,
@@ -11906,7 +11452,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 47.4
+      "routeWeight": 67.2
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11923,15 +11469,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1134",
-    "type": "emergency",
+    "type": "hospital",
     "name": "古里中心卫生院门诊",
     "subtitle": "卫生院 · 古里镇铁琴北街166号常熟市古里人民医院",
     "summary": "古里中心卫生院门诊属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
       "诊所",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11940,7 +11485,6 @@ export const databasePlaces: Place[] = [
     "address": "古里镇铁琴北街166号常熟市古里人民医院",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L2",
     "selectionScore": 64.837,
     "position": {
       "x": 59.08,
@@ -11954,7 +11498,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 46.61
+      "routeWeight": 64.84
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -11971,14 +11515,13 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1191",
-    "type": "emergency",
+    "type": "hospital",
     "name": "古里中心卫生院急诊",
     "subtitle": "卫生院 · 古里镇铁琴北街166号常熟市古里人民医院",
     "summary": "古里中心卫生院急诊属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -11987,7 +11530,6 @@ export const databasePlaces: Place[] = [
     "address": "古里镇铁琴北街166号常熟市古里人民医院",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L2",
     "selectionScore": 64.826,
     "position": {
       "x": 59.12,
@@ -12001,7 +11543,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 46.61
+      "routeWeight": 64.83
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12018,15 +11560,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1136",
-    "type": "emergency",
+    "type": "hospital",
     "name": "梅李人民医院门诊部",
     "subtitle": "综合医院 · 常熟市梅李人民医院",
     "summary": "梅李人民医院门诊部属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "门诊",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -12035,7 +11576,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市梅李人民医院",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "selectionScore": 63.411,
     "position": {
       "x": 64.44,
@@ -12049,7 +11589,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 46.14
+      "routeWeight": 63.41
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12066,14 +11606,13 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1127",
-    "type": "emergency",
+    "type": "hospital",
     "name": "梅李中心卫生院-住院部",
     "subtitle": "卫生院 · 梅李人民医院3栋",
     "summary": "梅李中心卫生院-住院部属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -12082,7 +11621,6 @@ export const databasePlaces: Place[] = [
     "address": "梅李人民医院3栋",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L2",
     "selectionScore": 63.409,
     "position": {
       "x": 64.36,
@@ -12096,7 +11634,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 46.14
+      "routeWeight": 63.41
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12113,14 +11651,13 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1068",
-    "type": "emergency",
+    "type": "hospital",
     "name": "辛庄中心卫生院",
     "subtitle": "卫生院 · 辛庄镇新阳大道222号",
     "summary": "辛庄中心卫生院属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -12129,7 +11666,6 @@ export const databasePlaces: Place[] = [
     "address": "辛庄镇新阳大道222号",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L2",
     "selectionScore": 62.647,
     "position": {
       "x": 22.49,
@@ -12143,7 +11679,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 45.88
+      "routeWeight": 62.65
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12160,7 +11696,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1176",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市第二人民医院台山路院区急诊",
     "subtitle": "三级甲等医院 · 台山路18号常熟市第二人民医院台山路院区",
     "summary": "常熟市第二人民医院台山路院区急诊属于三级甲等医院，用于紧急救援、就近医疗和路线安全提示。",
@@ -12168,8 +11704,7 @@ export const databasePlaces: Place[] = [
       "三级甲等医院",
       "门诊",
       "第二人民医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -12178,7 +11713,6 @@ export const databasePlaces: Place[] = [
     "address": "台山路18号常熟市第二人民医院台山路院区",
     "categoryLabel": "医院",
     "subtypeLabel": "三级甲等医院",
-    "tierLevel": "L2",
     "selectionScore": 60.484,
     "position": {
       "x": 37.84,
@@ -12192,7 +11726,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 45.16
+      "routeWeight": 60.48
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12209,15 +11743,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1046",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟广仁医院",
     "subtitle": "综合医院 · 衡山路76-18号1幢101-301",
     "summary": "常熟广仁医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
       "中医医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -12226,7 +11759,6 @@ export const databasePlaces: Place[] = [
     "address": "衡山路76-18号1幢101-301",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "phone": "13348017501",
     "selectionScore": 54.455,
     "position": {
@@ -12243,7 +11775,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 43.15
+      "routeWeight": 54.46
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12260,15 +11792,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1114",
-    "type": "emergency",
+    "type": "hospital",
     "name": "琴川街道漕泾社区卫生服务站",
     "subtitle": "卫生院 · 珠江路与泰山南路交叉口西160米",
     "summary": "琴川街道漕泾社区卫生服务站属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
       "社区医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -12277,7 +11808,6 @@ export const databasePlaces: Place[] = [
     "address": "珠江路与泰山南路交叉口西160米",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L2",
     "phone": "0512-52891475",
     "selectionScore": 54.431,
     "position": {
@@ -12294,7 +11824,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 43.14
+      "routeWeight": 54.43
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12311,14 +11841,13 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1048",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟博爱医院",
     "subtitle": "综合医院 · 长江路408号",
     "summary": "常熟博爱医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -12327,7 +11856,6 @@ export const databasePlaces: Place[] = [
     "address": "长江路408号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "phone": "0512-52843999;0512-82359999",
     "selectionScore": 54.283,
     "position": {
@@ -12344,7 +11872,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 43.09
+      "routeWeight": 54.28
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12361,14 +11889,13 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1042",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟琴湖惠民医院",
     "subtitle": "综合医院 · 陶山路18号",
     "summary": "常熟琴湖惠民医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -12377,7 +11904,6 @@ export const databasePlaces: Place[] = [
     "address": "陶山路18号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "phone": "0512-52722219",
     "selectionScore": 54.188,
     "position": {
@@ -12394,7 +11920,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 43.06
+      "routeWeight": 54.19
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12411,14 +11937,13 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1051",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟美迪柯医院",
     "subtitle": "综合医院 · 长江路618号",
     "summary": "常熟美迪柯医院属于综合医院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "综合医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -12427,7 +11952,6 @@ export const databasePlaces: Place[] = [
     "address": "长江路618号",
     "categoryLabel": "医院",
     "subtypeLabel": "综合医院",
-    "tierLevel": "L2",
     "phone": "0512-50918888",
     "selectionScore": 54.118,
     "position": {
@@ -12444,7 +11968,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 43.04
+      "routeWeight": 54.12
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12461,15 +11985,14 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-hospital-1088",
-    "type": "emergency",
+    "type": "hospital",
     "name": "常熟市琴川街道兴隆社区卫生服务中心",
     "subtitle": "卫生院 · 九里大街8号",
     "summary": "常熟市琴川街道兴隆社区卫生服务中心属于卫生院，用于紧急救援、就近医疗和路线安全提示。",
     "tags": [
       "卫生院",
       "社区医院",
-      "医院",
-      "L2"
+      "医院"
     ],
     "imageUrl": "/assets/generated-placeholders/hospital.png",
     "fallbackImageUrl": "/assets/generated-placeholders/hospital.png",
@@ -12478,7 +12001,6 @@ export const databasePlaces: Place[] = [
     "address": "九里大街8号",
     "categoryLabel": "医院",
     "subtypeLabel": "卫生院",
-    "tierLevel": "L2",
     "phone": "0512-52340661;0512-52347928",
     "selectionScore": 53.905,
     "position": {
@@ -12495,7 +12017,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.97
+      "routeWeight": 53.91
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12522,8 +12044,7 @@ export const databasePlaces: Place[] = [
       "尚湖",
       "自驾",
       "停车场",
-      "景区停车场",
-      "L3"
+      "景区停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -12532,7 +12053,6 @@ export const databasePlaces: Place[] = [
     "address": "景湖路1号尚湖风景区内(南侧)",
     "categoryLabel": "停车场",
     "subtypeLabel": "景区停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=188; free_slots=69; updated_at=2026-07-08 14:22:10",
     "selectionScore": 196.626,
     "position": {
@@ -12543,14 +12063,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "同尚湖风景区",
     "price": "总车位188，当前空位69",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "尚湖风景区1号门停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：同尚湖风景区\n价格/费用：总车位188，当前空位69",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 125.54
+      "routeWeight": 196.63
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12578,8 +12098,7 @@ export const databasePlaces: Place[] = [
       "景区停车",
       "自驾",
       "停车场",
-      "景区停车场",
-      "L3"
+      "景区停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -12588,7 +12107,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路石洞景区附近",
     "categoryLabel": "停车场",
     "subtypeLabel": "景区停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=74; free_slots=21; updated_at=2026-07-08 14:22:10",
     "selectionScore": 188.539,
     "position": {
@@ -12599,14 +12117,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "全天",
     "price": "总车位74，当前空位21",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "小云栖寺停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：全天\n价格/费用：总车位74，当前空位21",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 122.85
+      "routeWeight": 188.54
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12634,8 +12152,7 @@ export const databasePlaces: Place[] = [
       "方塔园",
       "道路停车",
       "停车场",
-      "道路停车位",
-      "L3"
+      "道路停车位"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -12644,7 +12161,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市县后街10号旁",
     "categoryLabel": "停车场",
     "subtypeLabel": "道路停车位",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=54; free_slots=41; updated_at=2026-07-08 14:22:10",
     "selectionScore": 181.856,
     "position": {
@@ -12655,14 +12171,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "以现场公示为准",
     "price": "总车位54，当前空位41",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "县后街道路停车位用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：以现场公示为准\n价格/费用：总车位54，当前空位41",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 120.62
+      "routeWeight": 181.86
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12691,8 +12207,7 @@ export const databasePlaces: Place[] = [
       "南门",
       "城墙",
       "景区",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -12701,7 +12216,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山城墙景区",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=136; free_slots=52; updated_at=2026-07-08 14:22:10",
     "selectionScore": 181.301,
     "position": {
@@ -12712,14 +12226,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位136，当前空位52",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山城墙景区南门停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位136，当前空位52",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 120.43
+      "routeWeight": 181.3
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12746,8 +12260,7 @@ export const databasePlaces: Place[] = [
       "公共停车",
       "城区",
       "停车场",
-      "公共停车场",
-      "L3"
+      "公共停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -12756,7 +12269,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市香山北路9号",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=95; free_slots=34; updated_at=2026-07-08 14:22:10",
     "selectionScore": 179.471,
     "position": {
@@ -12767,14 +12279,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "以现场公示为准",
     "price": "总车位95，当前空位34",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市政务服务中心地面停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：以现场公示为准\n价格/费用：总车位95，当前空位34",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 119.82
+      "routeWeight": 179.47
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12803,8 +12315,7 @@ export const databasePlaces: Place[] = [
       "尚湖",
       "景区",
       "风景",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -12813,7 +12324,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山尚湖旅游度假区常熟尚湖风景区串月桥堍1号望虞台茶文化餐厅",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=55; free_slots=40; updated_at=2026-07-08 14:22:10",
     "selectionScore": 178.99,
     "position": {
@@ -12824,14 +12334,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位55，当前空位40",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "望虞台停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位55，当前空位40",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 119.66
+      "routeWeight": 178.99
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12860,8 +12370,7 @@ export const databasePlaces: Place[] = [
       "尚湖",
       "景区",
       "风景",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -12870,7 +12379,6 @@ export const databasePlaces: Place[] = [
     "address": "尚湖镇与虞山镇交界环湖南路尚湖风景区内(南侧)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=105; free_slots=28; updated_at=2026-07-08 14:22:10",
     "selectionScore": 177.8,
     "position": {
@@ -12881,14 +12389,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位105，当前空位28",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "尚湖风景区东南停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位105，当前空位28",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 119.27
+      "routeWeight": 177.8
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12916,8 +12424,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "景区",
       "风景",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -12926,7 +12433,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇虞山南路88号虞山风景区(东南角)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=195; free_slots=68; updated_at=2026-07-08 14:22:10",
     "selectionScore": 171.542,
     "position": {
@@ -12937,14 +12443,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位195，当前空位68",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山风景区地面停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位195，当前空位68",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 117.18
+      "routeWeight": 171.54
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -12971,8 +12477,7 @@ export const databasePlaces: Place[] = [
       "停车场",
       "虞山",
       "曾园",
-      "赵园",
-      "L3"
+      "赵园"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -12981,7 +12486,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇九万圩曾赵园旁",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=76; free_slots=55; updated_at=2026-07-08 14:22:10",
     "selectionScore": 170.261,
     "position": {
@@ -12992,14 +12496,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位76，当前空位55",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "赵园·曾园停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位76，当前空位55",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 116.75
+      "routeWeight": 170.26
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13027,8 +12531,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "景区",
       "风景",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13037,7 +12540,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路宝岩景区-停车场内",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "phone": "0512-52783289",
     "dynamicText": "total_slots=246; free_slots=174; updated_at=2026-07-08 14:22:10",
     "selectionScore": 166.06,
@@ -13048,14 +12550,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.66396
     },
     "price": "总车位246，当前空位174",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山风景区宝岩停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "价格/费用：总车位246，当前空位174",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 115.35
+      "routeWeight": 166.06
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13083,8 +12585,7 @@ export const databasePlaces: Place[] = [
       "尚湖",
       "景区",
       "风景",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13093,7 +12594,6 @@ export const databasePlaces: Place[] = [
     "address": "环湖南路尚湖风景区(南侧)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=141; free_slots=32; updated_at=2026-07-08 14:22:10",
     "selectionScore": 165.739,
     "position": {
@@ -13104,14 +12604,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位141，当前空位32",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "尚湖风景区2号停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位141，当前空位32",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 115.25
+      "routeWeight": 165.74
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13139,8 +12639,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "昆承湖",
       "景区",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13149,7 +12648,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=134; free_slots=38; updated_at=2026-07-08 14:22:10",
     "selectionScore": 164.569,
     "position": {
@@ -13160,14 +12658,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位134，当前空位38",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "昆承湖景区停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位134，当前空位38",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 114.86
+      "routeWeight": 164.57
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13195,8 +12693,7 @@ export const databasePlaces: Place[] = [
       "沙家浜",
       "景区",
       "风景",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13205,7 +12702,6 @@ export const databasePlaces: Place[] = [
     "address": "沙家浜镇芦苇荡路沙家浜风景区(西南角)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=191; free_slots=48; updated_at=2026-07-08 14:22:10",
     "selectionScore": 160.719,
     "position": {
@@ -13216,14 +12712,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位191，当前空位48",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "沙家浜风景区停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位191，当前空位48",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 113.57
+      "routeWeight": 160.72
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13251,8 +12747,7 @@ export const databasePlaces: Place[] = [
       "沙家浜",
       "景区",
       "风景",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13261,7 +12756,6 @@ export const databasePlaces: Place[] = [
     "address": "芦苇荡路沙家浜风景区(西南角)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=223; free_slots=60; updated_at=2026-07-08 14:22:10",
     "selectionScore": 159.706,
     "position": {
@@ -13272,14 +12766,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位223，当前空位60",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "沙家浜风景区B区停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位223，当前空位60",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 113.24
+      "routeWeight": 159.71
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13307,8 +12801,7 @@ export const databasePlaces: Place[] = [
       "沙家浜",
       "景区",
       "风景",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13317,7 +12810,6 @@ export const databasePlaces: Place[] = [
     "address": "沙家浜镇",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=82; free_slots=65; updated_at=2026-07-08 14:22:10",
     "selectionScore": 158.698,
     "position": {
@@ -13328,14 +12820,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位82，当前空位65",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "沙家浜风景区A区停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位82，当前空位65",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 112.9
+      "routeWeight": 158.7
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13363,8 +12855,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "尚湖",
       "景区",
-      "风景",
-      "L3"
+      "风景"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13373,7 +12864,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山街道尚湖风景区",
     "categoryLabel": "停车场",
     "subtypeLabel": "停车场相关",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=220; free_slots=114; updated_at=2026-07-08 14:22:10",
     "selectionScore": 157.059,
     "position": {
@@ -13383,14 +12873,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.649721
     },
     "price": "总车位220，当前空位114",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "尚湖风景区拂水堤停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "价格/费用：总车位220，当前空位114",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 112.35
+      "routeWeight": 157.06
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13418,8 +12908,7 @@ export const databasePlaces: Place[] = [
       "虞山",
       "景区",
       "公园",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13428,7 +12917,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山中路附近虞山国家森林公园剑门景区(东南角)",
     "categoryLabel": "停车场",
     "subtypeLabel": "专用停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=143; free_slots=90; updated_at=2026-07-08 14:22:10",
     "selectionScore": 156.435,
     "position": {
@@ -13439,14 +12927,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位143，当前空位90",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山国家森林公园剑门景区公交车停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位143，当前空位90",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 112.15
+      "routeWeight": 156.44
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13473,8 +12961,7 @@ export const databasePlaces: Place[] = [
       "地下停车场",
       "虞山",
       "公园",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13483,7 +12970,6 @@ export const databasePlaces: Place[] = [
     "address": "北门大街虞山公园(东北角)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=185; free_slots=82; updated_at=2026-07-08 14:22:10",
     "selectionScore": 155.548,
     "position": {
@@ -13494,14 +12980,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "07:30-21:30",
     "price": "总车位185，当前空位82",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山公园地下停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：07:30-21:30\n价格/费用：总车位185，当前空位82",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 111.85
+      "routeWeight": 155.55
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13528,8 +13014,7 @@ export const databasePlaces: Place[] = [
       "地面停车场",
       "虞山",
       "公园",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13538,7 +13023,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇北门大街21号虞山国家森林公园(东南角)",
     "categoryLabel": "停车场",
     "subtypeLabel": "专用停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=190; free_slots=45; updated_at=2026-07-08 14:22:10",
     "selectionScore": 154.354,
     "position": {
@@ -13549,14 +13033,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位190，当前空位45",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山国家森林公园虞山门停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位190，当前空位45",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 111.45
+      "routeWeight": 154.35
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13583,8 +13067,7 @@ export const databasePlaces: Place[] = [
       "停车场",
       "虞山",
       "景区",
-      "公园",
-      "L3"
+      "公园"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13593,7 +13076,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山国家森林公园剑门景区",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=167; free_slots=89; updated_at=2026-07-08 14:22:10",
     "selectionScore": 144.852,
     "position": {
@@ -13603,14 +13085,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.665462
     },
     "price": "总车位167，当前空位89",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山国家森林公园剑门景区停车点用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "价格/费用：总车位167，当前空位89",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 108.28
+      "routeWeight": 144.85
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13637,8 +13119,7 @@ export const databasePlaces: Place[] = [
       "地面停车场",
       "虞山",
       "景区",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13647,7 +13128,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路宝岩生态观光园",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "phone": "0512-52783289",
     "dynamicText": "total_slots=128; free_slots=20; updated_at=2026-07-08 14:22:10",
     "selectionScore": 90.04,
@@ -13659,14 +13139,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位128，当前空位20",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山文化旅游度假区虞山宝岩景区停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位128，当前空位20",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 90.01
+      "routeWeight": 90.04
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13694,8 +13174,7 @@ export const databasePlaces: Place[] = [
       "尚湖",
       "景区",
       "风景",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13704,7 +13183,6 @@ export const databasePlaces: Place[] = [
     "address": "景湖路1号尚湖风景区(西南角)",
     "categoryLabel": "停车场",
     "subtypeLabel": "专用停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=197; free_slots=68; updated_at=2026-07-08 14:22:10",
     "selectionScore": 88.591,
     "position": {
@@ -13715,14 +13193,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位197，当前空位68",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "尚湖风景区1号停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位197，当前空位68",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.53
+      "routeWeight": 88.59
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13748,8 +13226,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "虞山",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13758,7 +13235,6 @@ export const databasePlaces: Place[] = [
     "address": "北门大街8号虞山锦江饭店",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "phone": "0512-52118888",
     "dynamicText": "total_slots=89; free_slots=34; updated_at=2026-07-08 14:22:10",
     "selectionScore": 85.552,
@@ -13770,14 +13246,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位89，当前空位34",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山饭店停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位89，当前空位34",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 88.52
+      "routeWeight": 85.55
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13803,8 +13279,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "虞山",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13813,7 +13288,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇招商北路8号天虹服装城B2层",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "phone": "0512-52231711",
     "dynamicText": "total_slots=237; free_slots=82; updated_at=2026-07-08 14:22:10",
     "selectionScore": 84.963,
@@ -13825,14 +13299,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "09:00-21:00",
     "price": "总车位237，当前空位82",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "天虹服装城地下停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：09:00-21:00\n价格/费用：总车位237，当前空位82",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 88.32
+      "routeWeight": 84.96
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13859,8 +13333,7 @@ export const databasePlaces: Place[] = [
       "地面停车场",
       "虞山",
       "兴福",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13869,7 +13342,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山街道虞山北路寺路街148号兴福禅寺",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=203; free_slots=143; updated_at=2026-07-08 14:22:10",
     "selectionScore": 83.856,
     "position": {
@@ -13880,14 +13352,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位203，当前空位143",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "兴福禅寺地面停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位203，当前空位143",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 87.95
+      "routeWeight": 83.86
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13914,8 +13386,7 @@ export const databasePlaces: Place[] = [
       "地面停车场",
       "虞山",
       "公园",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13924,7 +13395,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路与虞山中路交叉口西20米",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=85; free_slots=61; updated_at=2026-07-08 14:22:10",
     "selectionScore": 82.631,
     "position": {
@@ -13935,14 +13405,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位85，当前空位61",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "森林公园停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位85，当前空位61",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 87.54
+      "routeWeight": 82.63
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -13970,8 +13440,7 @@ export const databasePlaces: Place[] = [
       "尚湖",
       "景区",
       "风景",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -13980,7 +13449,6 @@ export const databasePlaces: Place[] = [
     "address": "景湖路1号尚湖风景区(西南角)",
     "categoryLabel": "停车场",
     "subtypeLabel": "专用停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=94; free_slots=38; updated_at=2026-07-08 14:22:10",
     "selectionScore": 80.591,
     "position": {
@@ -13990,14 +13458,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.634277
     },
     "price": "总车位94，当前空位38",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "尚湖风景区大巴停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "价格/费用：总车位94，当前空位38",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.86
+      "routeWeight": 80.59
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14022,8 +13490,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "公共停车场",
       "停车场",
-      "方塔",
-      "L3"
+      "方塔"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14032,7 +13499,6 @@ export const databasePlaces: Place[] = [
     "address": "环城东路28-1号附近",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=91; free_slots=35; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.657,
     "position": {
@@ -14043,14 +13509,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位91，当前空位35",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "方塔园停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位91，当前空位35",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.22
+      "routeWeight": 78.66
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14076,8 +13542,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "虞山",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14086,7 +13551,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇海虞南路68号",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=104; free_slots=69; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.648,
     "position": {
@@ -14097,14 +13561,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位104，当前空位69",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞城大酒店停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位104，当前空位69",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.22
+      "routeWeight": 78.65
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14130,8 +13594,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "方塔",
-      "停车场",
-      "L3"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14140,7 +13603,6 @@ export const databasePlaces: Place[] = [
     "address": "翁府前7号方塔园",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L3",
     "dynamicText": "total_slots=176; free_slots=94; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.624,
     "position": {
@@ -14151,14 +13613,14 @@ export const databasePlaces: Place[] = [
     },
     "openTime": "24小时营业",
     "price": "总车位176，当前空位94",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "方塔园地下停车场用于自驾停车、景区接驳或周边停车余位展示。",
     "detail": "开放/服务时间：24小时营业\n价格/费用：总车位176，当前空位94",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.21
+      "routeWeight": 78.62
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14184,8 +13646,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "方塔",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14194,7 +13655,6 @@ export const databasePlaces: Place[] = [
     "address": "方塔步行街与海虞南路交叉口西80米",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=215; free_slots=167; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.6,
     "position": {
@@ -14212,7 +13672,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.2
+      "routeWeight": 78.6
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14238,8 +13698,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "方塔",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14248,7 +13707,6 @@ export const databasePlaces: Place[] = [
     "address": "方塔东街125-127号交家电(颜港店)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=76; free_slots=21; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.592,
     "position": {
@@ -14266,7 +13724,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.2
+      "routeWeight": 78.59
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14292,8 +13750,7 @@ export const databasePlaces: Place[] = [
       "生活服务场所",
       "地下停车场",
       "方塔",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14302,7 +13759,6 @@ export const databasePlaces: Place[] = [
     "address": "河东街与方塔街交叉口西北60米",
     "categoryLabel": "停车场",
     "subtypeLabel": "生活服务场所",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=89; free_slots=10; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.587,
     "position": {
@@ -14320,7 +13776,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.2
+      "routeWeight": 78.59
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14346,8 +13802,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14356,7 +13811,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇中欣街星美国际影城",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=139; free_slots=57; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.585,
     "position": {
@@ -14374,7 +13828,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.19
+      "routeWeight": 78.58
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14400,8 +13854,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "方塔",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14410,7 +13863,6 @@ export const databasePlaces: Place[] = [
     "address": "方塔东街5号八佰伴地下停车场",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=182; free_slots=125; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.572,
     "position": {
@@ -14428,7 +13880,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.19
+      "routeWeight": 78.57
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14454,8 +13906,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14464,7 +13915,6 @@ export const databasePlaces: Place[] = [
     "address": "北门大街8号",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=119; free_slots=42; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.546,
     "position": {
@@ -14482,7 +13932,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.18
+      "routeWeight": 78.55
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14508,8 +13958,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14518,7 +13967,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇琴湖路168号大润发F4",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=141; free_slots=20; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.422,
     "position": {
@@ -14536,7 +13984,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.14
+      "routeWeight": 78.42
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14562,8 +14010,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14572,7 +14019,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇琴湖路168号大润发常熟店地下停车场",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=69; free_slots=18; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.397,
     "position": {
@@ -14590,7 +14036,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.13
+      "routeWeight": 78.4
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14616,8 +14062,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14626,7 +14071,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山北路与珠江路交叉口西60米",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=163; free_slots=75; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.342,
     "position": {
@@ -14644,7 +14088,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.11
+      "routeWeight": 78.34
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14670,8 +14114,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14680,7 +14123,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇海虞北路33号天虹购物中心地下停车场",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=194; free_slots=54; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.32,
     "position": {
@@ -14698,7 +14140,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.11
+      "routeWeight": 78.32
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14724,8 +14166,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14734,7 +14175,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路1号小区",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=235; free_slots=85; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.299,
     "position": {
@@ -14752,7 +14192,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.1
+      "routeWeight": 78.3
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14778,8 +14218,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "第一人民医院",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14788,7 +14227,6 @@ export const databasePlaces: Place[] = [
     "address": "书院街1号(常熟市第一人民医院)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=208; free_slots=51; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.283,
     "position": {
@@ -14806,7 +14244,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51.09
+      "routeWeight": 78.28
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14832,8 +14270,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "政务服务中心",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14842,7 +14279,6 @@ export const databasePlaces: Place[] = [
     "address": "凯文路与香山北路交叉口西160米",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=80; free_slots=53; updated_at=2026-07-08 14:22:10",
     "selectionScore": 78.007,
     "position": {
@@ -14860,7 +14296,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 51
+      "routeWeight": 78.01
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14886,8 +14322,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14896,7 +14331,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山林场鹤顶上88号阅山轩假日休闲酒店",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=54; free_slots=25; updated_at=2026-07-08 14:22:10",
     "selectionScore": 77.826,
     "position": {
@@ -14914,7 +14348,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.94
+      "routeWeight": 77.83
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14940,8 +14374,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -14950,7 +14383,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山街道环城南路26号地下停车场",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=50; free_slots=17; updated_at=2026-07-08 14:22:10",
     "selectionScore": 77.772,
     "position": {
@@ -14968,7 +14400,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.92
+      "routeWeight": 77.77
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -14994,8 +14426,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15004,7 +14435,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇勤丰路288号",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=236; free_slots=169; updated_at=2026-07-08 14:22:10",
     "selectionScore": 77.691,
     "position": {
@@ -15022,7 +14452,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.9
+      "routeWeight": 77.69
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15048,8 +14478,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15058,7 +14487,6 @@ export const databasePlaces: Place[] = [
     "address": "珠海路8号万达广场B1",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=180; free_slots=71; updated_at=2026-07-08 14:22:10",
     "selectionScore": 77.68,
     "position": {
@@ -15076,7 +14504,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.89
+      "routeWeight": 77.68
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15102,8 +14530,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15112,7 +14539,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山北路与北三环路交叉口南100米",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=100; free_slots=55; updated_at=2026-07-08 14:22:10",
     "selectionScore": 77.267,
     "position": {
@@ -15130,7 +14556,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.76
+      "routeWeight": 77.27
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15156,8 +14582,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "常熟站",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15166,7 +14591,6 @@ export const databasePlaces: Place[] = [
     "address": "琴川大道100号常熟站",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=170; free_slots=73; updated_at=2026-07-08 14:22:10",
     "selectionScore": 77.114,
     "position": {
@@ -15184,7 +14608,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.7
+      "routeWeight": 77.11
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15210,8 +14634,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15220,7 +14643,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路附近",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=153; free_slots=90; updated_at=2026-07-08 14:22:10",
     "selectionScore": 77.045,
     "position": {
@@ -15238,7 +14660,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.68
+      "routeWeight": 77.05
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15264,8 +14686,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "梦乐城",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15274,7 +14695,6 @@ export const databasePlaces: Place[] = [
     "address": "高新技术开发区东南大道168号永旺梦乐城",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=113; free_slots=23; updated_at=2026-07-08 14:22:10",
     "selectionScore": 76.755,
     "position": {
@@ -15292,7 +14712,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.58
+      "routeWeight": 76.76
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15318,8 +14738,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "尚湖",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15328,7 +14747,6 @@ export const databasePlaces: Place[] = [
     "address": "太公路",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=220; free_slots=99; updated_at=2026-07-08 14:22:10",
     "selectionScore": 76.676,
     "position": {
@@ -15346,7 +14764,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.56
+      "routeWeight": 76.68
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15373,8 +14791,7 @@ export const databasePlaces: Place[] = [
       "地面停车场",
       "虞山",
       "第二人民医院",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15383,7 +14800,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇第二人民医院",
     "categoryLabel": "停车场",
     "subtypeLabel": "专用停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=152; free_slots=68; updated_at=2026-07-08 14:22:10",
     "selectionScore": 76.61,
     "position": {
@@ -15400,7 +14816,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.54
+      "routeWeight": 76.61
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15427,8 +14843,7 @@ export const databasePlaces: Place[] = [
       "地面停车场",
       "虞山",
       "公园",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15437,7 +14852,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇北门大街21号虞山国家森林公园内(西侧)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=119; free_slots=42; updated_at=2026-07-08 14:22:10",
     "selectionScore": 75.059,
     "position": {
@@ -15454,7 +14868,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 50.02
+      "routeWeight": 75.06
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15481,8 +14895,7 @@ export const databasePlaces: Place[] = [
       "地面停车场",
       "尚湖",
       "公园",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15491,7 +14904,6 @@ export const databasePlaces: Place[] = [
     "address": "尚湖镇苏虞张公路南湖湿地公园",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=77; free_slots=25; updated_at=2026-07-08 14:22:10",
     "selectionScore": 72.771,
     "position": {
@@ -15508,7 +14920,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.26
+      "routeWeight": 72.77
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15535,8 +14947,7 @@ export const databasePlaces: Place[] = [
       "地面停车场",
       "尚湖",
       "公园",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15545,7 +14956,6 @@ export const databasePlaces: Place[] = [
     "address": "尚湖镇苏虞张公路南湖湿地公园(东南角)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=125; free_slots=23; updated_at=2026-07-08 14:22:10",
     "selectionScore": 72.558,
     "position": {
@@ -15562,7 +14972,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.19
+      "routeWeight": 72.56
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15587,8 +14997,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "公共停车场",
       "地面停车场",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15597,7 +15006,6 @@ export const databasePlaces: Place[] = [
     "address": "富春江西路常熟琴湖惠民医院",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=106; free_slots=27; updated_at=2026-07-08 14:22:10",
     "selectionScore": 72.183,
     "position": {
@@ -15615,7 +15023,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 49.06
+      "routeWeight": 72.18
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15642,8 +15050,7 @@ export const databasePlaces: Place[] = [
       "地面停车场",
       "昆承湖",
       "景区",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15652,7 +15059,6 @@ export const databasePlaces: Place[] = [
     "address": "昆承湖景区",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=94; free_slots=55; updated_at=2026-07-08 14:22:10",
     "selectionScore": 70.679,
     "position": {
@@ -15670,7 +15076,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.56
+      "routeWeight": 70.68
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15695,8 +15101,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "公共停车场",
       "停车场",
-      "燕园",
-      "L2"
+      "燕园"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15705,7 +15110,6 @@ export const databasePlaces: Place[] = [
     "address": "燕园",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=77; free_slots=57; updated_at=2026-07-08 14:22:10",
     "selectionScore": 70.63,
     "position": {
@@ -15722,7 +15126,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.54
+      "routeWeight": 70.63
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15748,8 +15152,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15758,7 +15161,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇北门大街尚客优快捷酒店",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=224; free_slots=118; updated_at=2026-07-08 14:22:10",
     "selectionScore": 70.507,
     "position": {
@@ -15775,7 +15177,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.5
+      "routeWeight": 70.51
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15801,8 +15203,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地下停车场",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15811,7 +15212,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇海虞北路39号天虹美城广场",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=194; free_slots=53; updated_at=2026-07-08 14:22:10",
     "selectionScore": 70.32,
     "position": {
@@ -15828,7 +15228,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.44
+      "routeWeight": 70.32
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15853,8 +15253,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "停车场入口",
       "虞山",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15863,7 +15262,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇招商北路8号天虹服装城地下停车场",
     "categoryLabel": "停车场",
     "subtypeLabel": "停车场入口",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=62; free_slots=13; updated_at=2026-07-08 14:22:10",
     "selectionScore": 69.97,
     "position": {
@@ -15880,7 +15278,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.32
+      "routeWeight": 69.97
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15906,8 +15304,7 @@ export const databasePlaces: Place[] = [
       "公共停车场",
       "地面停车场",
       "中医院",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15916,7 +15313,6 @@ export const databasePlaces: Place[] = [
     "address": "黄河路6号常熟市中医院(新区医院、妇保院)",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=143; free_slots=29; updated_at=2026-07-08 14:22:10",
     "selectionScore": 69.765,
     "position": {
@@ -15933,7 +15329,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.26
+      "routeWeight": 69.77
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -15959,8 +15355,7 @@ export const databasePlaces: Place[] = [
       "停车场出入口",
       "停车场入口",
       "第二人民医院",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -15969,7 +15364,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市第二人民医院台山路院区停车场",
     "categoryLabel": "停车场",
     "subtypeLabel": "停车场出入口",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=198; free_slots=41; updated_at=2026-07-08 14:22:10",
     "selectionScore": 69.491,
     "position": {
@@ -15986,7 +15380,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.16
+      "routeWeight": 69.49
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16011,8 +15405,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "公共停车场",
       "停车场",
-      "虞山",
-      "L2"
+      "虞山"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -16021,7 +15414,6 @@ export const databasePlaces: Place[] = [
     "address": "珠海路37号",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=164; free_slots=74; updated_at=2026-07-08 14:22:10",
     "selectionScore": 69.256,
     "position": {
@@ -16038,7 +15430,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.09
+      "routeWeight": 69.26
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16063,8 +15455,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "停车场入口",
       "常熟站",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -16073,7 +15464,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟站南广场地下停车场",
     "categoryLabel": "停车场",
     "subtypeLabel": "停车场入口",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=229; free_slots=119; updated_at=2026-07-08 14:22:10",
     "selectionScore": 69.188,
     "position": {
@@ -16090,7 +15480,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.06
+      "routeWeight": 69.19
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16115,8 +15505,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "停车场入口",
       "常熟站",
-      "停车场",
-      "L2"
+      "停车场"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -16125,7 +15514,6 @@ export const databasePlaces: Place[] = [
     "address": "琴川大道100号常熟站南广场地下停车场",
     "categoryLabel": "停车场",
     "subtypeLabel": "停车场入口",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=134; free_slots=14; updated_at=2026-07-08 14:22:10",
     "selectionScore": 69.124,
     "position": {
@@ -16142,7 +15530,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.04
+      "routeWeight": 69.12
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16167,8 +15555,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "公共停车场",
       "停车场",
-      "景区",
-      "L2"
+      "景区"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -16177,7 +15564,6 @@ export const databasePlaces: Place[] = [
     "address": "山湾里龙潭景区",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=233; free_slots=183; updated_at=2026-07-08 14:22:10",
     "selectionScore": 69.1,
     "position": {
@@ -16194,7 +15580,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.03
+      "routeWeight": 69.1
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16219,8 +15605,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "公共停车场",
       "停车场",
-      "常熟站",
-      "L2"
+      "常熟站"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -16229,7 +15614,6 @@ export const databasePlaces: Place[] = [
     "address": "琴川大道100号常熟站",
     "categoryLabel": "停车场",
     "subtypeLabel": "公共停车场",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=58; free_slots=31; updated_at=2026-07-08 14:22:10",
     "selectionScore": 69.047,
     "position": {
@@ -16246,7 +15630,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.02
+      "routeWeight": 69.05
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16271,8 +15655,7 @@ export const databasePlaces: Place[] = [
     "tags": [
       "停车场相关",
       "停车场",
-      "虞山",
-      "L2"
+      "虞山"
     ],
     "imageUrl": "/assets/generated-placeholders/parking.png",
     "fallbackImageUrl": "/assets/generated-placeholders/parking.png",
@@ -16281,7 +15664,6 @@ export const databasePlaces: Place[] = [
     "address": "北三环路5号",
     "categoryLabel": "停车场",
     "subtypeLabel": "停车场相关",
-    "tierLevel": "L2",
     "dynamicText": "total_slots=79; free_slots=10; updated_at=2026-07-08 14:22:10",
     "selectionScore": 68.927,
     "position": {
@@ -16298,7 +15680,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 47.98
+      "routeWeight": 68.93
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16316,7 +15698,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2177",
-    "type": "emergency",
+    "type": "police",
     "name": "兴福派出所",
     "subtitle": "公安警察 · 虞山镇长江路555号",
     "summary": "兴福派出所用于紧急求助、公共安全和游客应急联系。",
@@ -16325,8 +15707,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16335,7 +15716,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇长江路555号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52858110",
     "selectionScore": 191.273,
     "position": {
@@ -16345,14 +15725,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.669654
     },
     "openTime": "09:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "兴福派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：09:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 123.76
+      "routeWeight": 191.27
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16369,7 +15749,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2331",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局虞山尚湖度假区派出所兴福警务室",
     "subtitle": "公安警察 · 寺路街与虞山北路交叉口西180米",
     "summary": "常熟市公安局虞山尚湖度假区派出所兴福警务室用于紧急求助、公共安全和游客应急联系。",
@@ -16378,8 +15758,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16388,7 +15767,6 @@ export const databasePlaces: Place[] = [
     "address": "寺路街与虞山北路交叉口西180米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "selectionScore": 190.981,
     "position": {
       "x": 35.35,
@@ -16397,14 +15775,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.667822
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市公安局虞山尚湖度假区派出所兴福警务室用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 123.66
+      "routeWeight": 190.98
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16421,7 +15799,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2277",
-    "type": "emergency",
+    "type": "police",
     "name": "昆承湖景区警务室",
     "subtitle": "公安警察 · 昆承湖东路与状元堤交叉口南300米",
     "summary": "昆承湖景区警务室用于紧急求助、公共安全和游客应急联系。",
@@ -16430,8 +15808,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16440,7 +15817,6 @@ export const databasePlaces: Place[] = [
     "address": "昆承湖东路与状元堤交叉口南300米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52755138",
     "selectionScore": 180.591,
     "position": {
@@ -16449,13 +15825,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.764076,
       "lat": 31.592674
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "昆承湖景区警务室用于紧急求助、公共安全和游客应急联系。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 120.2
+      "routeWeight": 180.59
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16472,7 +15848,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2175",
-    "type": "emergency",
+    "type": "police",
     "name": "沙家浜派出所",
     "subtitle": "公安警察 · 春来大道2号",
     "summary": "沙家浜派出所用于紧急求助、公共安全和游客应急联系。",
@@ -16481,8 +15857,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16491,7 +15866,6 @@ export const databasePlaces: Place[] = [
     "address": "春来大道2号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52501110;0512-52501168",
     "selectionScore": 175.967,
     "position": {
@@ -16501,14 +15875,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.551976
     },
     "openTime": "09:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "沙家浜派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：09:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 118.66
+      "routeWeight": 175.97
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16525,7 +15899,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2191",
-    "type": "emergency",
+    "type": "police",
     "name": "尚湖派出所",
     "subtitle": "公安警察 · 永平路188号",
     "summary": "尚湖派出所用于紧急求助、公共安全和游客应急联系。",
@@ -16534,8 +15908,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16544,7 +15917,6 @@ export const databasePlaces: Place[] = [
     "address": "永平路188号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52401110",
     "selectionScore": 173.796,
     "position": {
@@ -16554,14 +15926,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.658484
     },
     "openTime": "09:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "尚湖派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：09:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 117.93
+      "routeWeight": 173.8
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16578,7 +15950,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2306",
-    "type": "emergency",
+    "type": "police",
     "name": "东环村警务室",
     "subtitle": "社会治安机构 · 虞山镇开元路东环村5号",
     "summary": "东环村警务室用于紧急求助、公共安全和游客应急联系。",
@@ -16587,8 +15959,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L3"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16597,7 +15968,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇开元路东环村5号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L3",
     "phone": "0512-52347110",
     "selectionScore": 172.594,
     "position": {
@@ -16606,13 +15976,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.794678,
       "lat": 31.659089
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "东环村警务室用于紧急求助、公共安全和游客应急联系。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 117.53
+      "routeWeight": 172.59
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16629,7 +15999,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2364",
-    "type": "emergency",
+    "type": "police",
     "name": "梦兰村警务室",
     "subtitle": "社会治安机构 · 梦兰苑东南门旁",
     "summary": "梦兰村警务室用于紧急求助、公共安全和游客应急联系。",
@@ -16638,8 +16008,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L3"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16648,7 +16017,6 @@ export const databasePlaces: Place[] = [
     "address": "梦兰苑东南门旁",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L3",
     "phone": "0512-52763696",
     "selectionScore": 169.296,
     "position": {
@@ -16657,13 +16025,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.790015,
       "lat": 31.623678
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "梦兰村警务室用于紧急求助、公共安全和游客应急联系。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 116.43
+      "routeWeight": 169.3
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16680,7 +16048,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2254",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局交通警察大队",
     "subtitle": "公安警察 · 虞山镇汽车交易市场福特路1号",
     "summary": "常熟市公安局交通警察大队用于紧急求助、公共安全和游客应急联系。",
@@ -16689,8 +16057,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16699,7 +16066,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇汽车交易市场福特路1号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "selectionScore": 160.354,
     "position": {
       "x": 49.02,
@@ -16708,14 +16074,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.631736
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市公安局交通警察大队用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 113.45
+      "routeWeight": 160.35
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16732,7 +16098,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2241",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局交通警察大队五星中队",
     "subtitle": "交通管理机构 · 长江路259号",
     "summary": "常熟市公安局交通警察大队五星中队用于紧急求助、公共安全和游客应急联系。",
@@ -16741,8 +16107,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "交通管理机构",
-      "L3"
+      "交通管理机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16751,7 +16116,6 @@ export const databasePlaces: Place[] = [
     "address": "长江路259号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "交通管理机构",
-    "tierLevel": "L3",
     "phone": "0512-52810022",
     "selectionScore": 91.377,
     "position": {
@@ -16761,14 +16125,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.669791
     },
     "openTime": "周一至周五 08:30-11:00，13:30-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市公安局交通警察大队五星中队用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：周一至周五 08:30-11:00，13:30-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 90.46
+      "routeWeight": 91.38
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16785,7 +16149,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2174",
-    "type": "emergency",
+    "type": "police",
     "name": "虹桥派出所",
     "subtitle": "公安警察 · 香山北路20号",
     "summary": "虹桥派出所用于紧急求助、公共安全和游客应急联系。",
@@ -16794,8 +16158,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16804,7 +16167,6 @@ export const databasePlaces: Place[] = [
     "address": "香山北路20号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52347110",
     "selectionScore": 90.983,
     "position": {
@@ -16814,14 +16176,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.66937
     },
     "openTime": "周一至周六 09:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虹桥派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：周一至周六 09:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 90.33
+      "routeWeight": 90.98
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16838,7 +16200,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2169",
-    "type": "emergency",
+    "type": "police",
     "name": "琴湖派出所",
     "subtitle": "公安警察 · 金山路68号",
     "summary": "琴湖派出所用于紧急求助、公共安全和游客应急联系。",
@@ -16847,8 +16209,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16857,7 +16218,6 @@ export const databasePlaces: Place[] = [
     "address": "金山路68号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52753110",
     "selectionScore": 90.692,
     "position": {
@@ -16867,14 +16227,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.631927
     },
     "openTime": "周一至周六 09:00-16:30",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "琴湖派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：周一至周六 09:00-16:30",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 90.23
+      "routeWeight": 90.69
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16891,7 +16251,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2171",
-    "type": "emergency",
+    "type": "police",
     "name": "服装城派出所",
     "subtitle": "公安警察 · 商城中路9号",
     "summary": "服装城派出所用于紧急求助、公共安全和游客应急联系。",
@@ -16900,8 +16260,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16910,7 +16269,6 @@ export const databasePlaces: Place[] = [
     "address": "商城中路9号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52742110",
     "selectionScore": 90.646,
     "position": {
@@ -16920,14 +16278,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.6195
     },
     "openTime": "08:00-16:30",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "服装城派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：08:00-16:30",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 90.22
+      "routeWeight": 90.65
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16944,7 +16302,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2246",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局交通警察大队高架中队",
     "subtitle": "交通管理机构 · 达海路与金腾路交叉口西140米",
     "summary": "常熟市公安局交通警察大队高架中队用于紧急求助、公共安全和游客应急联系。",
@@ -16953,8 +16311,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "交通管理机构",
-      "L3"
+      "交通管理机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -16963,7 +16320,6 @@ export const databasePlaces: Place[] = [
     "address": "达海路与金腾路交叉口西140米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "交通管理机构",
-    "tierLevel": "L3",
     "phone": "0512-52731926",
     "selectionScore": 90.413,
     "position": {
@@ -16973,14 +16329,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.677262
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市公安局交通警察大队高架中队用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 90.14
+      "routeWeight": 90.41
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -16997,7 +16353,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2357",
-    "type": "emergency",
+    "type": "police",
     "name": "城东派出所警务室",
     "subtitle": "社会治安机构 · 南门大街与辛家弄交叉口东100米",
     "summary": "城东派出所警务室用于紧急求助、公共安全和游客应急联系。",
@@ -17006,8 +16362,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L3"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17016,7 +16371,6 @@ export const databasePlaces: Place[] = [
     "address": "南门大街与辛家弄交叉口东100米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L3",
     "selectionScore": 90.373,
     "position": {
       "x": 38.98,
@@ -17025,14 +16379,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.639109
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "城东派出所警务室用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 90.12
+      "routeWeight": 90.37
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17049,7 +16403,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2242",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局交通警察大队虞山文化旅游度假区中队",
     "subtitle": "交通管理机构 · 虞山南路7号",
     "summary": "常熟市公安局交通警察大队虞山文化旅游度假区中队用于紧急求助、公共安全和游客应急联系。",
@@ -17058,8 +16412,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "交通管理机构",
-      "L3"
+      "交通管理机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17068,7 +16421,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路7号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "交通管理机构",
-    "tierLevel": "L3",
     "selectionScore": 90.233,
     "position": {
       "x": 36.24,
@@ -17077,14 +16429,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.646446
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市公安局交通警察大队虞山文化旅游度假区中队用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 90.08
+      "routeWeight": 90.23
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17101,7 +16453,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2330",
-    "type": "emergency",
+    "type": "police",
     "name": "方塔派出所烟雨社区警务室",
     "subtitle": "社会治安机构 · 烟雨路元和新村-3区",
     "summary": "方塔派出所烟雨社区警务室用于紧急求助、公共安全和游客应急联系。",
@@ -17110,8 +16462,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L3"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17120,7 +16471,6 @@ export const databasePlaces: Place[] = [
     "address": "烟雨路元和新村-3区",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L3",
     "selectionScore": 89.953,
     "position": {
       "x": 36.36,
@@ -17129,14 +16479,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.633607
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "方塔派出所烟雨社区警务室用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.98
+      "routeWeight": 89.95
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17153,7 +16503,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2383",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市琴湖派出所金山警务室",
     "subtitle": "公安警察 · 虞山街道金山苑二区",
     "summary": "常熟市琴湖派出所金山警务室用于紧急求助、公共安全和游客应急联系。",
@@ -17162,8 +16512,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17172,7 +16521,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山街道金山苑二区",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "selectionScore": 89.679,
     "position": {
       "x": 47.31,
@@ -17181,14 +16529,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.635877
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市琴湖派出所金山警务室用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.89
+      "routeWeight": 89.68
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17205,7 +16553,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2170",
-    "type": "emergency",
+    "type": "police",
     "name": "莫城派出所",
     "subtitle": "公安警察 · 东尖路8号",
     "summary": "莫城派出所用于紧急求助、公共安全和游客应急联系。",
@@ -17214,8 +16562,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17224,7 +16571,6 @@ export const databasePlaces: Place[] = [
     "address": "东尖路8号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52451110",
     "selectionScore": 89.514,
     "position": {
@@ -17234,14 +16580,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.59671
     },
     "openTime": "09:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "莫城派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：09:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.84
+      "routeWeight": 89.51
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17258,7 +16604,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2186",
-    "type": "emergency",
+    "type": "police",
     "name": "东南派出所",
     "subtitle": "公安警察 · 常昆路333号",
     "summary": "东南派出所用于紧急求助、公共安全和游客应急联系。",
@@ -17267,8 +16613,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17277,7 +16622,6 @@ export const databasePlaces: Place[] = [
     "address": "常昆路333号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52301110",
     "selectionScore": 89.324,
     "position": {
@@ -17287,14 +16631,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.591699
     },
     "openTime": "09:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "东南派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：09:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.77
+      "routeWeight": 89.32
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17311,7 +16655,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2250",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局交通警察大队东南中队",
     "subtitle": "政府及社会团体相关 · 常昆路323号",
     "summary": "常熟市公安局交通警察大队东南中队用于紧急求助、公共安全和游客应急联系。",
@@ -17320,8 +16664,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "政府及社会团体相关",
-      "L3"
+      "政府及社会团体相关"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17330,7 +16673,6 @@ export const databasePlaces: Place[] = [
     "address": "常昆路323号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "政府及社会团体相关",
-    "tierLevel": "L3",
     "phone": "0512-52526110",
     "selectionScore": 89.271,
     "position": {
@@ -17340,14 +16682,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.590589
     },
     "openTime": "周一至周五 08:30-11:00,13:30-16:30",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市公安局交通警察大队东南中队用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：周一至周五 08:30-11:00,13:30-16:30",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.76
+      "routeWeight": 89.27
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17364,7 +16706,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2400",
-    "type": "emergency",
+    "type": "police",
     "name": "迎春警务室",
     "subtitle": "公安警察 · 虞山镇陈家市23号城管机动中队",
     "summary": "迎春警务室用于紧急求助、公共安全和游客应急联系。",
@@ -17373,8 +16715,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17383,7 +16724,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇陈家市23号城管机动中队",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52763696",
     "selectionScore": 89.266,
     "position": {
@@ -17392,13 +16732,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.750487,
       "lat": 31.635045
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "迎春警务室用于紧急求助、公共安全和游客应急联系。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.76
+      "routeWeight": 89.27
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17415,7 +16755,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2187",
-    "type": "emergency",
+    "type": "police",
     "name": "周行派出所",
     "subtitle": "公安警察 · 陶舍泾路55号",
     "summary": "周行派出所用于紧急求助、公共安全和游客应急联系。",
@@ -17424,8 +16764,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17434,7 +16773,6 @@ export const databasePlaces: Place[] = [
     "address": "陶舍泾路55号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52591110;0512-52591191",
     "selectionScore": 89.217,
     "position": {
@@ -17444,14 +16782,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.70423
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "周行派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.74
+      "routeWeight": 89.22
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17468,7 +16806,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2165",
-    "type": "emergency",
+    "type": "police",
     "name": "虞山文化旅游度假区派出所",
     "subtitle": "公安警察 · 拂水堤9号",
     "summary": "虞山文化旅游度假区派出所用于紧急求助、公共安全和游客应急联系。",
@@ -17477,8 +16815,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17487,7 +16824,6 @@ export const databasePlaces: Place[] = [
     "address": "拂水堤9号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "selectionScore": 89.094,
     "position": {
       "x": 29.05,
@@ -17496,14 +16832,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.651008
     },
     "openTime": "09:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山文化旅游度假区派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：09:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.7
+      "routeWeight": 89.09
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17520,7 +16856,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2178",
-    "type": "emergency",
+    "type": "police",
     "name": "古里派出所",
     "subtitle": "公安警察 · 古里镇文学街36号",
     "summary": "古里派出所用于紧急求助、公共安全和游客应急联系。",
@@ -17529,8 +16865,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17539,7 +16874,6 @@ export const databasePlaces: Place[] = [
     "address": "古里镇文学街36号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52521110;0512-52524029",
     "selectionScore": 88.84,
     "position": {
@@ -17549,14 +16883,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.6324
     },
     "openTime": "09:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "古里派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：09:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.61
+      "routeWeight": 88.84
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17573,7 +16907,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2276",
-    "type": "emergency",
+    "type": "police",
     "name": "东南派出所小康村警务室",
     "subtitle": "社会治安机构 · 高新区小康文化中心东南门东60米",
     "summary": "东南派出所小康村警务室用于紧急求助、公共安全和游客应急联系。",
@@ -17582,8 +16916,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L3"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17592,7 +16925,6 @@ export const databasePlaces: Place[] = [
     "address": "高新区小康文化中心东南门东60米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L3",
     "selectionScore": 88.202,
     "position": {
       "x": 54.56,
@@ -17601,14 +16933,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.613741
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "东南派出所小康村警务室用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.4
+      "routeWeight": 88.2
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17625,7 +16957,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2190",
-    "type": "emergency",
+    "type": "police",
     "name": "练塘派出所",
     "subtitle": "公安警察 · 练塘大道58号",
     "summary": "练塘派出所用于紧急求助、公共安全和游客应急联系。",
@@ -17634,8 +16966,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17644,7 +16975,6 @@ export const databasePlaces: Place[] = [
     "address": "练塘大道58号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52441085;0512-52441110",
     "selectionScore": 88.097,
     "position": {
@@ -17654,14 +16984,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.613751
     },
     "openTime": "08:00-16:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "练塘派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：08:00-16:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.37
+      "routeWeight": 88.1
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17678,7 +17008,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2281",
-    "type": "emergency",
+    "type": "police",
     "name": "唐北警务室",
     "subtitle": "社会治安机构 · 南桥路11-1号(唐北村委会隔壁)",
     "summary": "唐北警务室用于紧急求助、公共安全和游客应急联系。",
@@ -17687,8 +17017,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L3"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17697,7 +17026,6 @@ export const databasePlaces: Place[] = [
     "address": "南桥路11-1号(唐北村委会隔壁)",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L3",
     "phone": "0512-52571110;0512-52578110",
     "selectionScore": 88.016,
     "position": {
@@ -17707,14 +17035,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.565202
     },
     "openTime": "08:30-21:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "唐北警务室用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：08:30-21:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.34
+      "routeWeight": 88.02
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17731,7 +17059,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2176",
-    "type": "emergency",
+    "type": "police",
     "name": "海虞派出所",
     "subtitle": "公安警察 · 海虞镇海阳路65号",
     "summary": "海虞派出所用于紧急求助、公共安全和游客应急联系。",
@@ -17740,8 +17068,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17750,7 +17077,6 @@ export const databasePlaces: Place[] = [
     "address": "海虞镇海阳路65号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52561423",
     "selectionScore": 87.982,
     "position": {
@@ -17760,14 +17086,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.74533
     },
     "openTime": "09:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "海虞派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：09:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.33
+      "routeWeight": 87.98
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17784,7 +17110,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2181",
-    "type": "emergency",
+    "type": "police",
     "name": "梅李派出所",
     "subtitle": "公安警察 · 人民路9号",
     "summary": "梅李派出所用于紧急求助、公共安全和游客应急联系。",
@@ -17793,8 +17119,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L3"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17803,7 +17128,6 @@ export const databasePlaces: Place[] = [
     "address": "人民路9号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L3",
     "phone": "0512-52661110",
     "selectionScore": 87.626,
     "position": {
@@ -17813,14 +17137,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.710141
     },
     "openTime": "09:00-17:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "梅李派出所用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：09:00-17:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.21
+      "routeWeight": 87.63
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17837,7 +17161,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2239",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局交通警察大队梅李中队",
     "subtitle": "交通管理机构 · 赵市路常熟市交巡警大队梅李中队",
     "summary": "常熟市公安局交通警察大队梅李中队用于紧急求助、公共安全和游客应急联系。",
@@ -17846,8 +17170,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "交通管理机构",
-      "L3"
+      "交通管理机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17856,7 +17179,6 @@ export const databasePlaces: Place[] = [
     "address": "赵市路常熟市交巡警大队梅李中队",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "交通管理机构",
-    "tierLevel": "L3",
     "phone": "0512-52215661",
     "selectionScore": 87.572,
     "position": {
@@ -17866,14 +17188,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.720178
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "常熟市公安局交通警察大队梅李中队用于紧急求助、公共安全和游客应急联系。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 89.19
+      "routeWeight": 87.57
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17890,7 +17212,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2373",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟公安局兴福派出所虞北梅园社区警务室",
     "subtitle": "公检法机关 · 山茶花路与虞山北路交叉口南40米",
     "summary": "常熟公安局兴福派出所虞北梅园社区警务室用于紧急求助、公共安全和游客应急联系。",
@@ -17899,8 +17221,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公检法机关",
-      "L2"
+      "公检法机关"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17909,7 +17230,6 @@ export const databasePlaces: Place[] = [
     "address": "山茶花路与虞山北路交叉口南40米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公检法机关",
-    "tierLevel": "L2",
     "selectionScore": 162.136,
     "position": {
       "x": 36.18,
@@ -17923,7 +17243,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 79.05
+      "routeWeight": 162.14
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17940,7 +17260,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2285",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局(虞山尚湖度假区派出所)",
     "subtitle": "公安警察 · 虞山林场寺路街11号",
     "summary": "常熟市公安局(虞山尚湖度假区派出所)用于紧急求助、公共安全和游客应急联系。",
@@ -17949,8 +17269,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -17959,7 +17278,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山林场寺路街11号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "selectionScore": 160.981,
     "position": {
       "x": 35.34,
@@ -17973,7 +17291,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 78.66
+      "routeWeight": 160.98
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -17990,7 +17308,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2394",
-    "type": "emergency",
+    "type": "police",
     "name": "小山村警务室",
     "subtitle": "公安警察 · 虞山镇山明路小山村委会旁",
     "summary": "小山村警务室用于紧急求助、公共安全和游客应急联系。",
@@ -17999,8 +17317,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18009,7 +17326,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇山明路小山村委会旁",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52362375",
     "selectionScore": 87.383,
     "position": {
@@ -18024,7 +17340,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 54.13
+      "routeWeight": 87.38
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18041,7 +17357,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2168",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市赵市派出所",
     "subtitle": "公安警察 · 赵市镇",
     "summary": "常熟市赵市派出所用于紧急求助、公共安全和游客应急联系。",
@@ -18050,8 +17366,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18060,7 +17375,6 @@ export const databasePlaces: Place[] = [
     "address": "赵市镇",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52381110",
     "selectionScore": 87.374,
     "position": {
@@ -18077,7 +17391,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 54.12
+      "routeWeight": 87.37
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18094,7 +17408,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2318",
-    "type": "emergency",
+    "type": "police",
     "name": "沙家浜派出所交通警务室",
     "subtitle": "公安警察 · 春来大道与澄南路交叉口北100米",
     "summary": "沙家浜派出所交通警务室用于紧急求助、公共安全和游客应急联系。",
@@ -18103,8 +17417,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18113,7 +17426,6 @@ export const databasePlaces: Place[] = [
     "address": "春来大道与澄南路交叉口北100米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "selectionScore": 86.969,
     "position": {
       "x": 44.98,
@@ -18129,7 +17441,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.99
+      "routeWeight": 86.97
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18146,7 +17458,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2420",
-    "type": "emergency",
+    "type": "police",
     "name": "辛庄交警中队",
     "subtitle": "交通管理机构 · 正义路",
     "summary": "辛庄交警中队用于紧急求助、公共安全和游客应急联系。",
@@ -18155,8 +17467,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "交通管理机构",
-      "L2"
+      "交通管理机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18165,7 +17476,6 @@ export const databasePlaces: Place[] = [
     "address": "正义路",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "交通管理机构",
-    "tierLevel": "L2",
     "phone": "0512-52481216;0512-52481401",
     "selectionScore": 86.876,
     "position": {
@@ -18182,7 +17492,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.96
+      "routeWeight": 86.88
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18199,7 +17509,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2179",
-    "type": "emergency",
+    "type": "police",
     "name": "辛庄派出所",
     "subtitle": "公安警察 · 正义路",
     "summary": "辛庄派出所用于紧急求助、公共安全和游客应急联系。",
@@ -18208,8 +17518,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18218,7 +17527,6 @@ export const databasePlaces: Place[] = [
     "address": "正义路",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52481216",
     "selectionScore": 86.871,
     "position": {
@@ -18235,7 +17543,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.96
+      "routeWeight": 86.87
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18252,7 +17560,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2325",
-    "type": "emergency",
+    "type": "police",
     "name": "尚湖派出所110处警服务中心",
     "subtitle": "公安警察 · 永平路常熟市公安局交警大队尚湖中队",
     "summary": "尚湖派出所110处警服务中心用于紧急求助、公共安全和游客应急联系。",
@@ -18261,8 +17569,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18271,7 +17578,6 @@ export const databasePlaces: Place[] = [
     "address": "永平路常熟市公安局交警大队尚湖中队",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "selectionScore": 86.798,
     "position": {
       "x": 15.19,
@@ -18287,7 +17593,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.93
+      "routeWeight": 86.8
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18304,7 +17610,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2193",
-    "type": "emergency",
+    "type": "police",
     "name": "福山派出所",
     "subtitle": "公安警察 · 东环路",
     "summary": "福山派出所用于紧急求助、公共安全和游客应急联系。",
@@ -18313,8 +17619,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18323,7 +17628,6 @@ export const databasePlaces: Place[] = [
     "address": "东环路",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52621110",
     "selectionScore": 86.694,
     "position": {
@@ -18340,7 +17644,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.9
+      "routeWeight": 86.69
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18357,7 +17661,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2182",
-    "type": "emergency",
+    "type": "police",
     "name": "张桥派出所",
     "subtitle": "公安警察 · 辛庄镇东新路2号",
     "summary": "张桥派出所用于紧急求助、公共安全和游客应急联系。",
@@ -18366,8 +17670,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18376,7 +17679,6 @@ export const databasePlaces: Place[] = [
     "address": "辛庄镇东新路2号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52462110",
     "selectionScore": 86.599,
     "position": {
@@ -18393,7 +17695,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.87
+      "routeWeight": 86.6
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18410,7 +17712,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2326",
-    "type": "emergency",
+    "type": "police",
     "name": "沙家浜派出所中利腾晖警务室",
     "subtitle": "社会治安机构 · 沙家浜镇复兴路腾辉光伏工业园腾辉路1号腾辉警务室附近",
     "summary": "沙家浜派出所中利腾晖警务室用于紧急求助、公共安全和游客应急联系。",
@@ -18419,8 +17721,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L2"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18429,7 +17730,6 @@ export const databasePlaces: Place[] = [
     "address": "沙家浜镇复兴路腾辉光伏工业园腾辉路1号腾辉警务室附近",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L2",
     "selectionScore": 86.596,
     "position": {
       "x": 55.66,
@@ -18445,7 +17745,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.87
+      "routeWeight": 86.6
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18462,7 +17762,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2173",
-    "type": "emergency",
+    "type": "police",
     "name": "白茆派出所",
     "subtitle": "公安警察 · 新市北路与红豆路交汇处南",
     "summary": "白茆派出所用于紧急求助、公共安全和游客应急联系。",
@@ -18471,8 +17771,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18481,7 +17780,6 @@ export const databasePlaces: Place[] = [
     "address": "新市北路与红豆路交汇处南",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52531110;0512-52531300",
     "selectionScore": 86.577,
     "position": {
@@ -18498,7 +17796,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.86
+      "routeWeight": 86.58
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18515,7 +17813,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2362",
-    "type": "emergency",
+    "type": "police",
     "name": "赵市派出所海城村警务室",
     "subtitle": "社会治安机构 · 梅李镇海城村委员会东南门旁",
     "summary": "赵市派出所海城村警务室用于紧急求助、公共安全和游客应急联系。",
@@ -18524,8 +17822,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L2"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18534,7 +17831,6 @@ export const databasePlaces: Place[] = [
     "address": "梅李镇海城村委员会东南门旁",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L2",
     "selectionScore": 86.024,
     "position": {
       "x": 57.71,
@@ -18550,7 +17846,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.67
+      "routeWeight": 86.02
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18567,7 +17863,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2194",
-    "type": "emergency",
+    "type": "police",
     "name": "董浜派出所",
     "subtitle": "公安警察 · 董浜镇",
     "summary": "董浜派出所用于紧急求助、公共安全和游客应急联系。",
@@ -18576,8 +17872,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18586,7 +17881,6 @@ export const databasePlaces: Place[] = [
     "address": "董浜镇",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52681101",
     "selectionScore": 85.974,
     "position": {
@@ -18603,7 +17897,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.66
+      "routeWeight": 85.97
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18620,7 +17914,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2390",
-    "type": "emergency",
+    "type": "police",
     "name": "董浜派出所永安村警务室",
     "subtitle": "社会治安机构 · 永安家园东北门东南90米",
     "summary": "董浜派出所永安村警务室用于紧急求助、公共安全和游客应急联系。",
@@ -18629,8 +17923,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L2"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18639,7 +17932,6 @@ export const databasePlaces: Place[] = [
     "address": "永安家园东北门东南90米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L2",
     "phone": "0512-52681110",
     "selectionScore": 85.931,
     "position": {
@@ -18656,7 +17948,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.64
+      "routeWeight": 85.93
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18673,7 +17965,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2416",
-    "type": "emergency",
+    "type": "police",
     "name": "潭荡村警务室",
     "subtitle": "公安警察 · 潭荡村村委会东南门旁",
     "summary": "潭荡村警务室用于紧急求助、公共安全和游客应急联系。",
@@ -18682,8 +17974,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18692,7 +17983,6 @@ export const databasePlaces: Place[] = [
     "address": "潭荡村村委会东南门旁",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52481110",
     "selectionScore": 85.054,
     "position": {
@@ -18707,7 +17997,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.35
+      "routeWeight": 85.05
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18724,7 +18014,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2172",
-    "type": "emergency",
+    "type": "police",
     "name": "滨江派出所",
     "subtitle": "公安警察 · 虹桥路68号",
     "summary": "滨江派出所用于紧急求助、公共安全和游客应急联系。",
@@ -18733,8 +18023,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18743,7 +18032,6 @@ export const databasePlaces: Place[] = [
     "address": "虹桥路68号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52631110;0512-52632110",
     "selectionScore": 85.002,
     "position": {
@@ -18760,7 +18048,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.33
+      "routeWeight": 85
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18777,7 +18065,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2183",
-    "type": "emergency",
+    "type": "police",
     "name": "支塘派出所",
     "subtitle": "公安警察 · 集贤路附近",
     "summary": "支塘派出所用于紧急求助、公共安全和游客应急联系。",
@@ -18786,8 +18074,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18796,7 +18083,6 @@ export const databasePlaces: Place[] = [
     "address": "集贤路附近",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52551525",
     "selectionScore": 84.717,
     "position": {
@@ -18813,7 +18099,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.24
+      "routeWeight": 84.72
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18830,7 +18116,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2251",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局交通警察大队滨江中队",
     "subtitle": "交通管理机构 · 电厂路与扬子江大道交叉口东北80米",
     "summary": "常熟市公安局交通警察大队滨江中队用于紧急求助、公共安全和游客应急联系。",
@@ -18839,8 +18125,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "交通管理机构",
-      "L2"
+      "交通管理机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18849,7 +18134,6 @@ export const databasePlaces: Place[] = [
     "address": "电厂路与扬子江大道交叉口东北80米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "交通管理机构",
-    "tierLevel": "L2",
     "phone": "0512-52269575",
     "selectionScore": 84.675,
     "position": {
@@ -18866,7 +18150,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.22
+      "routeWeight": 84.68
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18883,7 +18167,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2180",
-    "type": "emergency",
+    "type": "police",
     "name": "碧溪派出所",
     "subtitle": "公安警察 · 扬子江大道199号",
     "summary": "碧溪派出所用于紧急求助、公共安全和游客应急联系。",
@@ -18892,8 +18176,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18902,7 +18185,6 @@ export const databasePlaces: Place[] = [
     "address": "扬子江大道199号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52691110;0512-52691270",
     "selectionScore": 84.671,
     "position": {
@@ -18919,7 +18201,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 53.22
+      "routeWeight": 84.67
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18936,7 +18218,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2313",
-    "type": "emergency",
+    "type": "police",
     "name": "碧溪派出所吴市中心警务室",
     "subtitle": "公安警察 · 通化路与新建南路交叉口西南100米",
     "summary": "碧溪派出所吴市中心警务室用于紧急求助、公共安全和游客应急联系。",
@@ -18945,8 +18227,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -18955,7 +18236,6 @@ export const databasePlaces: Place[] = [
     "address": "通化路与新建南路交叉口西南100米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52691110",
     "selectionScore": 83.653,
     "position": {
@@ -18972,7 +18252,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.88
+      "routeWeight": 83.65
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -18989,7 +18269,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2366",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局巡逻防控警察大队招商城中队",
     "subtitle": "公安警察 · 商城中路常熟市公安局服装城派出所",
     "summary": "常熟市公安局巡逻防控警察大队招商城中队用于紧急求助、公共安全和游客应急联系。",
@@ -18998,8 +18278,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19008,7 +18287,6 @@ export const databasePlaces: Place[] = [
     "address": "商城中路常熟市公安局服装城派出所",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "selectionScore": 83.647,
     "position": {
       "x": 39.18,
@@ -19024,7 +18302,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.88
+      "routeWeight": 83.65
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19041,7 +18319,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2344",
-    "type": "emergency",
+    "type": "police",
     "name": "颜北社区警务室",
     "subtitle": "公安警察 · 颜北弄与颜港街交叉口东240米",
     "summary": "颜北社区警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19050,8 +18328,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19060,7 +18337,6 @@ export const databasePlaces: Place[] = [
     "address": "颜北弄与颜港街交叉口东240米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52763696",
     "selectionScore": 83.627,
     "position": {
@@ -19075,7 +18351,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.88
+      "routeWeight": 83.63
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19092,7 +18368,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2387",
-    "type": "emergency",
+    "type": "police",
     "name": "漕泾警务室",
     "subtitle": "社会治安机构 · 昭文路300号",
     "summary": "漕泾警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19101,8 +18377,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L2"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19111,7 +18386,6 @@ export const databasePlaces: Place[] = [
     "address": "昭文路300号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L2",
     "phone": "0512-52347110",
     "selectionScore": 83.483,
     "position": {
@@ -19126,7 +18400,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.83
+      "routeWeight": 83.48
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19143,7 +18417,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2426",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟交警24小时自助交警服务大厅",
     "subtitle": "交通管理机构 · 常安机动车检测有限公司西北门南100米",
     "summary": "常熟交警24小时自助交警服务大厅用于紧急求助、公共安全和游客应急联系。",
@@ -19152,8 +18426,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "交通管理机构",
-      "L2"
+      "交通管理机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19162,7 +18435,6 @@ export const databasePlaces: Place[] = [
     "address": "常安机动车检测有限公司西北门南100米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "交通管理机构",
-    "tierLevel": "L2",
     "selectionScore": 83.359,
     "position": {
       "x": 49.15,
@@ -19178,7 +18450,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.79
+      "routeWeight": 83.36
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19195,7 +18467,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2414",
-    "type": "emergency",
+    "type": "police",
     "name": "高新技术产业园派出所高新警务室",
     "subtitle": "社会治安机构 · 建业路与东山路交叉口东200米",
     "summary": "高新技术产业园派出所高新警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19204,8 +18476,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L2"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19214,7 +18485,6 @@ export const databasePlaces: Place[] = [
     "address": "建业路与东山路交叉口东200米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L2",
     "selectionScore": 83.185,
     "position": {
       "x": 32.54,
@@ -19230,7 +18500,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.73
+      "routeWeight": 83.19
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19247,7 +18517,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2348",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局服装城派出所湖泾警务室",
     "subtitle": "政府及社会团体相关 · 常熟服装城社区卫生服务中心东侧50米",
     "summary": "常熟市公安局服装城派出所湖泾警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19256,8 +18526,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "政府及社会团体相关",
-      "L2"
+      "政府及社会团体相关"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19266,7 +18535,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟服装城社区卫生服务中心东侧50米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "政府及社会团体相关",
-    "tierLevel": "L2",
     "phone": "0512-52232307;0512-52751783",
     "selectionScore": 83.152,
     "position": {
@@ -19281,7 +18549,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.72
+      "routeWeight": 83.15
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19298,7 +18566,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2322",
-    "type": "emergency",
+    "type": "police",
     "name": "高新技术产业园派出所高新园中专校区警务室",
     "subtitle": "社会治安机构 · 苏州路与南海路交叉口西北100米",
     "summary": "高新技术产业园派出所高新园中专校区警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19307,8 +18575,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L2"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19317,7 +18584,6 @@ export const databasePlaces: Place[] = [
     "address": "苏州路与南海路交叉口西北100米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L2",
     "selectionScore": 83.056,
     "position": {
       "x": 37.88,
@@ -19333,7 +18599,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.69
+      "routeWeight": 83.06
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19350,7 +18616,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2279",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局东南派出所东南食品城警务室",
     "subtitle": "社会治安机构 · 东南食品广场",
     "summary": "常熟市公安局东南派出所东南食品城警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19359,8 +18625,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L2"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19369,7 +18634,6 @@ export const databasePlaces: Place[] = [
     "address": "东南食品广场",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L2",
     "selectionScore": 82.995,
     "position": {
       "x": 50.87,
@@ -19385,7 +18649,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.67
+      "routeWeight": 83
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19402,7 +18666,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2185",
-    "type": "emergency",
+    "type": "police",
     "name": "高新技术产业园派出所",
     "subtitle": "公安警察 · 苏州路22号",
     "summary": "高新技术产业园派出所用于紧急求助、公共安全和游客应急联系。",
@@ -19411,8 +18675,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19421,7 +18684,6 @@ export const databasePlaces: Place[] = [
     "address": "苏州路22号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "selectionScore": 82.804,
     "position": {
       "x": 34.18,
@@ -19437,7 +18699,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.6
+      "routeWeight": 82.8
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19454,7 +18716,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2188",
-    "type": "emergency",
+    "type": "police",
     "name": "东张派出所",
     "subtitle": "公安警察 · 新闸路36号",
     "summary": "东张派出所用于紧急求助、公共安全和游客应急联系。",
@@ -19463,8 +18725,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19473,7 +18734,6 @@ export const databasePlaces: Place[] = [
     "address": "新闸路36号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52646110;0512-52646504",
     "selectionScore": 82.665,
     "position": {
@@ -19490,7 +18750,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.56
+      "routeWeight": 82.67
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19507,7 +18767,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2419",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局方塔派出所虞景文华警务室",
     "subtitle": "社会治安机构 · 虞景文华广场东门南260米",
     "summary": "常熟市公安局方塔派出所虞景文华警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19516,8 +18776,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "社会治安机构",
-      "L2"
+      "社会治安机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19526,7 +18785,6 @@ export const databasePlaces: Place[] = [
     "address": "虞景文华广场东门南260米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "社会治安机构",
-    "tierLevel": "L2",
     "selectionScore": 82.599,
     "position": {
       "x": 38.27,
@@ -19540,7 +18798,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.53
+      "routeWeight": 82.6
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19557,7 +18815,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2406",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局莫城派出所-接处警窗口",
     "subtitle": "政府及社会团体相关 · 东尖路8号附近",
     "summary": "常熟市公安局莫城派出所-接处警窗口用于紧急求助、公共安全和游客应急联系。",
@@ -19566,8 +18824,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "政府及社会团体相关",
-      "L2"
+      "政府及社会团体相关"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19576,7 +18833,6 @@ export const databasePlaces: Place[] = [
     "address": "东尖路8号附近",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "政府及社会团体相关",
-    "tierLevel": "L2",
     "selectionScore": 82.521,
     "position": {
       "x": 33.75,
@@ -19592,7 +18848,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.51
+      "routeWeight": 82.52
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19609,7 +18865,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2297",
-    "type": "emergency",
+    "type": "police",
     "name": "青莲警务室",
     "subtitle": "公安警察 · 商城新村200号",
     "summary": "青莲警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19618,8 +18874,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19628,7 +18883,6 @@ export const databasePlaces: Place[] = [
     "address": "商城新村200号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52747110",
     "selectionScore": 82.494,
     "position": {
@@ -19643,7 +18897,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.5
+      "routeWeight": 82.49
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19660,7 +18914,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2360",
-    "type": "emergency",
+    "type": "police",
     "name": "漕湖社区警务室",
     "subtitle": "公安警察 · 虞山街道湖苑新村一区2幢",
     "summary": "漕湖社区警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19669,8 +18923,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19679,7 +18932,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山街道湖苑新村一区2幢",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "selectionScore": 82.385,
     "position": {
       "x": 43.83,
@@ -19693,7 +18945,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.46
+      "routeWeight": 82.39
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19710,7 +18962,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2247",
-    "type": "emergency",
+    "type": "police",
     "name": "常熟市公安局交通警察大队莫城中队",
     "subtitle": "交通管理机构 · 莫城东尖路58号",
     "summary": "常熟市公安局交通警察大队莫城中队用于紧急求助、公共安全和游客应急联系。",
@@ -19719,8 +18971,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "交通管理机构",
-      "L2"
+      "交通管理机构"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19729,7 +18980,6 @@ export const databasePlaces: Place[] = [
     "address": "莫城东尖路58号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "交通管理机构",
-    "tierLevel": "L2",
     "selectionScore": 82.281,
     "position": {
       "x": 33.65,
@@ -19745,7 +18995,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.43
+      "routeWeight": 82.28
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19762,7 +19012,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2382",
-    "type": "emergency",
+    "type": "police",
     "name": "三峰警务室",
     "subtitle": "公安警察 · 三峰街9号",
     "summary": "三峰警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19771,8 +19021,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19781,7 +19030,6 @@ export const databasePlaces: Place[] = [
     "address": "三峰街9号",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52851303",
     "selectionScore": 82.271,
     "position": {
@@ -19796,7 +19044,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.42
+      "routeWeight": 82.27
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19813,7 +19061,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2376",
-    "type": "emergency",
+    "type": "police",
     "name": "毛桥村警务室",
     "subtitle": "公安警察 · 南沙路与支岐路交叉口东南40米",
     "summary": "毛桥村警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19822,8 +19070,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19832,7 +19079,6 @@ export const databasePlaces: Place[] = [
     "address": "南沙路与支岐路交叉口东南40米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "phone": "0512-52197110",
     "selectionScore": 82.244,
     "position": {
@@ -19847,7 +19093,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.41
+      "routeWeight": 82.24
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19864,7 +19110,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2371",
-    "type": "emergency",
+    "type": "police",
     "name": "莫城派出所莫城中学警务室",
     "subtitle": "公安警察 · 莫城管理区学前街1号莫城中学",
     "summary": "莫城派出所莫城中学警务室用于紧急求助、公共安全和游客应急联系。",
@@ -19873,8 +19119,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "公安警察",
-      "L2"
+      "公安警察"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19883,7 +19128,6 @@ export const databasePlaces: Place[] = [
     "address": "莫城管理区学前街1号莫城中学",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "公安警察",
-    "tierLevel": "L2",
     "selectionScore": 82.222,
     "position": {
       "x": 33.7,
@@ -19899,7 +19143,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.41
+      "routeWeight": 82.22
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19916,7 +19160,7 @@ export const databasePlaces: Place[] = [
   },
   {
     "id": "db-police-2218",
-    "type": "emergency",
+    "type": "police",
     "name": "泰慈警务室境外人员服务站",
     "subtitle": "政府机关相关 · 常熟市人民检察院南门西120米",
     "summary": "泰慈警务室境外人员服务站用于紧急求助、公共安全和游客应急联系。",
@@ -19925,8 +19169,7 @@ export const databasePlaces: Place[] = [
       "应急",
       "公共安全",
       "公安/警务点",
-      "政府机关相关",
-      "L2"
+      "政府机关相关"
     ],
     "imageUrl": "/assets/generated-placeholders/police.png",
     "fallbackImageUrl": "/assets/generated-placeholders/police.png",
@@ -19935,7 +19178,6 @@ export const databasePlaces: Place[] = [
     "address": "常熟市人民检察院南门西120米",
     "categoryLabel": "公安/警务点",
     "subtypeLabel": "政府机关相关",
-    "tierLevel": "L2",
     "selectionScore": 82.189,
     "position": {
       "x": 43.54,
@@ -19949,7 +19191,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 52.4
+      "routeWeight": 82.19
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -19974,8 +19216,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -19984,7 +19225,6 @@ export const databasePlaces: Place[] = [
     "address": "古里镇青墩塘路常熟东南医院东200米湖东村健康主题公园附近",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 105.263,
     "position": {
       "x": 51.57,
@@ -19993,14 +19233,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.631328
     },
     "openTime": "02:00-23:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "detail": "开放/服务时间：02:00-23:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 95.09
+      "routeWeight": 105.26
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20024,8 +19264,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20034,7 +19273,6 @@ export const databasePlaces: Place[] = [
     "address": "方塔东街48-2附近",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 101.669,
     "position": {
       "x": 40.94,
@@ -20043,14 +19281,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.644012
     },
     "openTime": "06:00-21:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共卫生间用于公共服务、亲子/老人路线便利性提示。",
     "detail": "开放/服务时间：06:00-21:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 93.89
+      "routeWeight": 101.67
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20074,8 +19312,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20084,7 +19321,6 @@ export const databasePlaces: Place[] = [
     "address": "琴湖路与沙家浜路交叉口东北220米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 101.365,
     "position": {
       "x": 41.86,
@@ -20093,14 +19329,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.635602
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 93.79
+      "routeWeight": 101.37
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20124,8 +19360,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20134,7 +19369,6 @@ export const databasePlaces: Place[] = [
     "address": "沙家浜路30号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 101.176,
     "position": {
       "x": 43.36,
@@ -20143,14 +19377,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.632205
     },
     "openTime": "19:00-23:00",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "detail": "开放/服务时间：19:00-23:00",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 93.73
+      "routeWeight": 101.18
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20174,8 +19408,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20184,7 +19417,6 @@ export const databasePlaces: Place[] = [
     "address": "尚湖大道1080号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 98.919,
     "position": {
       "x": 18.94,
@@ -20193,14 +19425,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.644916
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 92.97
+      "routeWeight": 98.92
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20224,8 +19456,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20234,7 +19465,6 @@ export const databasePlaces: Place[] = [
     "address": "胡琴路公园里",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 97.716,
     "position": {
       "x": 66.51,
@@ -20243,14 +19473,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.719231
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 92.57
+      "routeWeight": 97.72
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20274,8 +19504,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20284,7 +19513,6 @@ export const databasePlaces: Place[] = [
     "address": "江南大道97号滨江体育公园(西侧)",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 96.3,
     "position": {
       "x": 75.07,
@@ -20293,14 +19521,14 @@ export const databasePlaces: Place[] = [
       "lat": 31.741044
     },
     "openTime": "24小时营业",
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "detail": "开放/服务时间：24小时营业",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 92.1
+      "routeWeight": 96.3
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20324,8 +19552,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20334,7 +19561,6 @@ export const databasePlaces: Place[] = [
     "address": "西三环路尚湖风景区内(南侧)",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 90.119,
     "position": {
       "x": 27.81,
@@ -20342,13 +19568,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.689065,
       "lat": 31.638117
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "尚湖风景区-公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 90.04
+      "routeWeight": 90.12
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20372,8 +19598,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20382,7 +19607,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山南路东150米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 85.331,
     "position": {
       "x": 29.07,
@@ -20390,13 +19614,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.695328,
       "lat": 31.664701
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "虞山国家森林公园-公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 88.44
+      "routeWeight": 85.33
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20420,8 +19644,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20430,7 +19653,6 @@ export const databasePlaces: Place[] = [
     "address": "海虞北路与枫林路交叉口北220米公园内",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 81.824,
     "position": {
       "x": 41.08,
@@ -20438,13 +19660,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.755412,
       "lat": 31.658551
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 87.27
+      "routeWeight": 81.82
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20468,8 +19690,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20478,7 +19699,6 @@ export const databasePlaces: Place[] = [
     "address": "方塔东街82-1号附近",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 81.683,
     "position": {
       "x": 40.4,
@@ -20486,13 +19706,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.75199,
       "lat": 31.644314
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "方塔园-公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 87.23
+      "routeWeight": 81.68
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20516,8 +19736,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20526,7 +19745,6 @@ export const databasePlaces: Place[] = [
     "address": "山前街与虞山南路交叉口西140米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 81.331,
     "position": {
       "x": 36.2,
@@ -20534,13 +19752,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.731012,
       "lat": 31.645998
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共卫生间用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 87.11
+      "routeWeight": 81.33
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20564,8 +19782,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20574,7 +19791,6 @@ export const databasePlaces: Place[] = [
     "address": "中山南路兴福城管中队对面停车场",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 81.099,
     "position": {
       "x": 34.95,
@@ -20582,13 +19798,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.724739,
       "lat": 31.666575
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 87.03
+      "routeWeight": 81.1
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20612,8 +19828,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20622,7 +19837,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇金山社区卫生服务站东侧140米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 81.019,
     "position": {
       "x": 46.81,
@@ -20630,13 +19844,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.784064,
       "lat": 31.64146
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 87.01
+      "routeWeight": 81.02
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20660,8 +19874,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20670,7 +19883,6 @@ export const databasePlaces: Place[] = [
     "address": "琴川大道100号常熟站1F层",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 80.381,
     "position": {
       "x": 46.21,
@@ -20678,13 +19890,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.781067,
       "lat": 31.695913
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "卫生间(常熟站)用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.79
+      "routeWeight": 80.38
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20708,8 +19920,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20718,7 +19929,6 @@ export const databasePlaces: Place[] = [
     "address": "琴川大道100号常熟站B1层",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 80.372,
     "position": {
       "x": 45.83,
@@ -20726,13 +19936,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.779133,
       "lat": 31.697098
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "卫生间(常熟站)用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.79
+      "routeWeight": 80.37
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20756,8 +19966,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20766,7 +19975,6 @@ export const databasePlaces: Place[] = [
     "address": "顺益虞山商业街12号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 80.343,
     "position": {
       "x": 32.92,
@@ -20774,13 +19982,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.714621,
       "lat": 31.691431
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.78
+      "routeWeight": 80.34
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20804,8 +20012,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20814,7 +20021,6 @@ export const databasePlaces: Place[] = [
     "address": "红观音堂路与昆承湖西路交叉口西60米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 80.138,
     "position": {
       "x": 36.85,
@@ -20822,13 +20028,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.734274,
       "lat": 31.600242
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.71
+      "routeWeight": 80.14
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20852,8 +20058,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "女洗手间",
-      "L3"
+      "女洗手间"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20862,7 +20067,6 @@ export const databasePlaces: Place[] = [
     "address": "东南大道168号永旺梦乐城2F层",
     "categoryLabel": "卫生间",
     "subtypeLabel": "女洗手间",
-    "tierLevel": "L3",
     "selectionScore": 80.127,
     "position": {
       "x": 45.33,
@@ -20870,13 +20074,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.776641,
       "lat": 31.601475
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "女卫生间(永旺梦乐城)用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.71
+      "routeWeight": 80.13
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20900,8 +20104,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "男洗手间",
-      "L3"
+      "男洗手间"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20910,7 +20113,6 @@ export const databasePlaces: Place[] = [
     "address": "东南大道168号永旺梦乐城3F层",
     "categoryLabel": "卫生间",
     "subtypeLabel": "男洗手间",
-    "tierLevel": "L3",
     "selectionScore": 80.125,
     "position": {
       "x": 45.33,
@@ -20918,13 +20120,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.776673,
       "lat": 31.601418
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "男卫生间(永旺梦乐城)用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.71
+      "routeWeight": 80.13
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20948,8 +20150,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "男洗手间",
-      "L3"
+      "男洗手间"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -20958,7 +20159,6 @@ export const databasePlaces: Place[] = [
     "address": "东南大道168号永旺梦乐城2F层",
     "categoryLabel": "卫生间",
     "subtypeLabel": "男洗手间",
-    "tierLevel": "L3",
     "selectionScore": 80.09,
     "position": {
       "x": 45.56,
@@ -20966,13 +20166,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.777782,
       "lat": 31.600687
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "男卫生间(永旺梦乐城)用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.7
+      "routeWeight": 80.09
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -20996,8 +20196,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21006,7 +20205,6 @@ export const databasePlaces: Place[] = [
     "address": "澎湖路小康公园(东侧)",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 79.54,
     "position": {
       "x": 55.05,
@@ -21014,13 +20212,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.825273,
       "lat": 31.61354
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共卫生间用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.51
+      "routeWeight": 79.54
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21044,8 +20242,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21054,7 +20251,6 @@ export const databasePlaces: Place[] = [
     "address": "尤巷路与尚湖大道交叉口南40米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 78.438,
     "position": {
       "x": 15.54,
@@ -21062,13 +20258,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.627687,
       "lat": 31.662646
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "无障碍公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.15
+      "routeWeight": 78.44
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21092,8 +20288,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21102,7 +20297,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山镇莫城章强制版加工厂西侧100米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 78.258,
     "position": {
       "x": 14.18,
@@ -21110,13 +20304,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.620917,
       "lat": 31.654305
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.09
+      "routeWeight": 78.26
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21140,8 +20334,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21150,7 +20343,6 @@ export const databasePlaces: Place[] = [
     "address": "沙家浜大闸蟹养殖户西北侧110米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 78.196,
     "position": {
       "x": 45.15,
@@ -21158,13 +20350,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.77573,
       "lat": 31.541455
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共卫生间用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 86.07
+      "routeWeight": 78.2
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21188,8 +20380,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21198,7 +20389,6 @@ export const databasePlaces: Place[] = [
     "address": "沙家浜风景区-沙家浜芦荡湿地西侧170米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 76.479,
     "position": {
       "x": 50.62,
@@ -21206,13 +20396,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.80308,
       "lat": 31.557371
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 85.49
+      "routeWeight": 76.48
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21236,8 +20426,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21246,7 +20435,6 @@ export const databasePlaces: Place[] = [
     "address": "老街与丁家桥路交叉口西北420米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 76.232,
     "position": {
       "x": 78.54,
@@ -21254,13 +20442,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.942686,
       "lat": 31.715155
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "无障碍公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 85.41
+      "routeWeight": 76.23
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21284,8 +20472,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21294,7 +20481,6 @@ export const databasePlaces: Place[] = [
     "address": "中兴南路(苏州市常熟蒋巷乡村旅游景区)",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 74.053,
     "position": {
       "x": 84.16,
@@ -21302,13 +20488,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.970781,
       "lat": 31.504696
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 84.68
+      "routeWeight": 74.05
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21332,8 +20518,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21342,7 +20527,6 @@ export const databasePlaces: Place[] = [
     "address": "沙家浜服务区与锡太公路交叉口西北240米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 70.081,
     "position": {
       "x": 65.74,
@@ -21350,13 +20534,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.878719,
       "lat": 31.552698
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "S359沙家浜服务区公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 83.36
+      "routeWeight": 70.08
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21380,8 +20564,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L3"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21390,7 +20573,6 @@ export const databasePlaces: Place[] = [
     "address": "榆树街与河东街交叉口东40米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L3",
     "selectionScore": 69.717,
     "position": {
       "x": 38.94,
@@ -21398,13 +20580,13 @@ export const databasePlaces: Place[] = [
       "lng": 120.744721,
       "lat": 31.648709
     },
-    "crowdLevel": "medium",
+    "crowdLevel": "low",
     "duration": "10 分钟",
     "history": "燕园-公共厕所用于公共服务、亲子/老人路线便利性提示。",
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 83.24
+      "routeWeight": 69.72
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21428,8 +20610,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "残障洗手间/无障碍洗手间",
-      "L2"
+      "残障洗手间/无障碍洗手间"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21438,7 +20619,6 @@ export const databasePlaces: Place[] = [
     "address": "虞山北路与珠江路交叉口北40米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "残障洗手间/无障碍洗手间",
-    "tierLevel": "L2",
     "selectionScore": 69.441,
     "position": {
       "x": 37.2,
@@ -21452,7 +20632,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 48.15
+      "routeWeight": 69.44
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21476,8 +20656,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "男洗手间",
-      "L2"
+      "男洗手间"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21486,7 +20665,6 @@ export const databasePlaces: Place[] = [
     "address": "东南大道168号永旺梦乐城1F层",
     "categoryLabel": "卫生间",
     "subtypeLabel": "男洗手间",
-    "tierLevel": "L2",
     "selectionScore": 68.091,
     "position": {
       "x": 45.55,
@@ -21500,7 +20678,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 47.7
+      "routeWeight": 68.09
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21524,8 +20702,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "生活服务场所",
-      "L2"
+      "生活服务场所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21534,7 +20711,6 @@ export const databasePlaces: Place[] = [
     "address": "赵园路18号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "生活服务场所",
-    "tierLevel": "L2",
     "selectionScore": 64.992,
     "position": {
       "x": 67.59,
@@ -21548,7 +20724,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 46.66
+      "routeWeight": 64.99
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21572,8 +20748,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21582,7 +20757,6 @@ export const databasePlaces: Place[] = [
     "address": "锁澜北路与泰安街交叉口西北240米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.928,
     "position": {
       "x": 40.5,
@@ -21598,7 +20772,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.31
+      "routeWeight": 51.93
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21622,8 +20796,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21632,7 +20805,6 @@ export const databasePlaces: Place[] = [
     "address": "东门大街与五福街交叉口南40米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.755,
     "position": {
       "x": 39.69,
@@ -21648,7 +20820,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.25
+      "routeWeight": 51.76
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21672,8 +20844,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21682,7 +20853,6 @@ export const databasePlaces: Place[] = [
     "address": "颜北弄颜港北村-五区",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.698,
     "position": {
       "x": 41.11,
@@ -21698,7 +20868,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.23
+      "routeWeight": 51.7
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21722,8 +20892,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21732,7 +20901,6 @@ export const databasePlaces: Place[] = [
     "address": "工会驿站内",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.618,
     "position": {
       "x": 37.85,
@@ -21748,7 +20916,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.21
+      "routeWeight": 51.62
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21772,8 +20940,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21782,7 +20949,6 @@ export const databasePlaces: Place[] = [
     "address": "闽江东路五星新村六区",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.544,
     "position": {
       "x": 40.39,
@@ -21798,7 +20964,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.18
+      "routeWeight": 51.54
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21822,8 +20988,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21832,7 +20997,6 @@ export const databasePlaces: Place[] = [
     "address": "陶山路湖苑新村-一区",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.459,
     "position": {
       "x": 43.81,
@@ -21848,7 +21012,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.15
+      "routeWeight": 51.46
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21872,8 +21036,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21882,7 +21045,6 @@ export const databasePlaces: Place[] = [
     "address": "海虞北路41-4",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.35,
     "position": {
       "x": 40.9,
@@ -21898,7 +21060,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.12
+      "routeWeight": 51.35
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21922,8 +21084,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "残障洗手间/无障碍洗手间",
-      "L2"
+      "残障洗手间/无障碍洗手间"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21932,7 +21093,6 @@ export const databasePlaces: Place[] = [
     "address": "西庄街与元和路交叉口西北280米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "残障洗手间/无障碍洗手间",
-    "tierLevel": "L2",
     "selectionScore": 51.319,
     "position": {
       "x": 37.3,
@@ -21948,7 +21108,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.11
+      "routeWeight": 51.32
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -21972,8 +21132,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -21982,7 +21141,6 @@ export const databasePlaces: Place[] = [
     "address": "花园浜路200号1",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.304,
     "position": {
       "x": 38.5,
@@ -21998,7 +21156,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.1
+      "routeWeight": 51.3
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22022,8 +21180,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22032,7 +21189,6 @@ export const databasePlaces: Place[] = [
     "address": "报慈北路192附近",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.277,
     "position": {
       "x": 37.35,
@@ -22048,7 +21204,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.09
+      "routeWeight": 51.28
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22072,8 +21228,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22082,7 +21237,6 @@ export const databasePlaces: Place[] = [
     "address": "星光路与培文路交叉口西南40米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.244,
     "position": {
       "x": 45.86,
@@ -22098,7 +21252,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.08
+      "routeWeight": 51.24
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22122,8 +21276,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22132,7 +21285,6 @@ export const databasePlaces: Place[] = [
     "address": "烟雨路与湖心亭路交叉口东南140米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 51.096,
     "position": {
       "x": 36.38,
@@ -22148,7 +21300,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 42.03
+      "routeWeight": 51.1
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22172,8 +21324,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22182,7 +21333,6 @@ export const databasePlaces: Place[] = [
     "address": "富春江西路与金山路交界往东100米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 50.878,
     "position": {
       "x": 46.81,
@@ -22198,7 +21348,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.96
+      "routeWeight": 50.88
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22222,8 +21372,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22232,7 +21381,6 @@ export const databasePlaces: Place[] = [
     "address": "富民西路万达华府",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 50.875,
     "position": {
       "x": 36.77,
@@ -22248,7 +21396,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.96
+      "routeWeight": 50.88
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22272,8 +21420,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22282,7 +21429,6 @@ export const databasePlaces: Place[] = [
     "address": "黄浦路衡山路路口",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 50.804,
     "position": {
       "x": 42.79,
@@ -22298,7 +21444,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.93
+      "routeWeight": 50.8
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22322,8 +21468,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22332,7 +21477,6 @@ export const databasePlaces: Place[] = [
     "address": "富莲路与常兴路交叉口北120米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 50.799,
     "position": {
       "x": 39.01,
@@ -22348,7 +21492,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.93
+      "routeWeight": 50.8
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22372,8 +21516,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22382,7 +21525,6 @@ export const databasePlaces: Place[] = [
     "address": "环湖北路55号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 50.714,
     "position": {
       "x": 32.4,
@@ -22398,7 +21540,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.9
+      "routeWeight": 50.71
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22422,8 +21564,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22432,7 +21573,6 @@ export const databasePlaces: Place[] = [
     "address": "泯新路8号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 50.689,
     "position": {
       "x": 45.09,
@@ -22448,7 +21588,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.9
+      "routeWeight": 50.69
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22472,8 +21612,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22482,7 +21621,6 @@ export const databasePlaces: Place[] = [
     "address": "三峰街三峰寺牌楼旁",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 50.567,
     "position": {
       "x": 32.41,
@@ -22498,7 +21636,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.86
+      "routeWeight": 50.57
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22522,8 +21660,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22532,7 +21669,6 @@ export const databasePlaces: Place[] = [
     "address": "柳州路3号附近",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 50.341,
     "position": {
       "x": 35.18,
@@ -22548,7 +21684,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.78
+      "routeWeight": 50.34
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22572,8 +21708,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22582,7 +21717,6 @@ export const databasePlaces: Place[] = [
     "address": "淼泉社区日间照料中心对面",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 50.071,
     "position": {
       "x": 53.9,
@@ -22598,7 +21732,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.69
+      "routeWeight": 50.07
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22622,8 +21756,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22632,7 +21765,6 @@ export const databasePlaces: Place[] = [
     "address": "太公路3号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 50.066,
     "position": {
       "x": 27.08,
@@ -22648,7 +21780,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.69
+      "routeWeight": 50.07
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22672,8 +21804,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22682,7 +21813,6 @@ export const databasePlaces: Place[] = [
     "address": "福塘路与隐湖路交叉口西160米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 49.955,
     "position": {
       "x": 43.34,
@@ -22698,7 +21828,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.65
+      "routeWeight": 49.96
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22722,8 +21852,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22732,7 +21861,6 @@ export const databasePlaces: Place[] = [
     "address": "义虞路2号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 49.74,
     "position": {
       "x": 26.65,
@@ -22748,7 +21876,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.58
+      "routeWeight": 49.74
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22772,8 +21900,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22782,7 +21909,6 @@ export const databasePlaces: Place[] = [
     "address": "威海路小义新村四区",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 49.66,
     "position": {
       "x": 29.64,
@@ -22798,7 +21924,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.55
+      "routeWeight": 49.66
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22822,8 +21948,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22832,7 +21957,6 @@ export const databasePlaces: Place[] = [
     "address": "海虞北路524号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 49.536,
     "position": {
       "x": 44.02,
@@ -22848,7 +21972,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.51
+      "routeWeight": 49.54
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22872,8 +21996,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22882,7 +22005,6 @@ export const databasePlaces: Place[] = [
     "address": "新安江路庐山苑四区27幢",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 49.522,
     "position": {
       "x": 54.54,
@@ -22898,7 +22020,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.51
+      "routeWeight": 49.52
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22922,8 +22044,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22932,7 +22053,6 @@ export const databasePlaces: Place[] = [
     "address": "汪家桥汪桥路西侧靠近通港路",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 49.522,
     "position": {
       "x": 54.6,
@@ -22948,7 +22068,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.51
+      "routeWeight": 49.52
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -22972,8 +22092,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -22982,7 +22101,6 @@ export const databasePlaces: Place[] = [
     "address": "沙南路与阳澄路交叉口东南20米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 48.884,
     "position": {
       "x": 45.92,
@@ -22998,7 +22116,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.29
+      "routeWeight": 48.88
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -23022,8 +22140,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -23032,7 +22149,6 @@ export const databasePlaces: Place[] = [
     "address": "王市路与府前路交叉口东北180米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 48.54,
     "position": {
       "x": 49.78,
@@ -23048,7 +22164,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.18
+      "routeWeight": 48.54
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -23072,8 +22188,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -23082,7 +22197,6 @@ export const databasePlaces: Place[] = [
     "address": "冶压路与协和路交叉口东北60米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 48.45,
     "position": {
       "x": 15.94,
@@ -23098,7 +22212,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.15
+      "routeWeight": 48.45
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -23122,8 +22236,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -23132,7 +22245,6 @@ export const databasePlaces: Place[] = [
     "address": "西南路260号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 48.279,
     "position": {
       "x": 25.15,
@@ -23148,7 +22260,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.09
+      "routeWeight": 48.28
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -23172,8 +22284,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -23182,7 +22293,6 @@ export const databasePlaces: Place[] = [
     "address": "韩家浜路5号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 48.244,
     "position": {
       "x": 63.78,
@@ -23198,7 +22308,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.08
+      "routeWeight": 48.24
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -23222,8 +22332,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -23232,7 +22341,6 @@ export const databasePlaces: Place[] = [
     "address": "南园路",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 48.232,
     "position": {
       "x": 66.22,
@@ -23248,7 +22356,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.08
+      "routeWeight": 48.23
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -23272,8 +22380,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -23282,7 +22389,6 @@ export const databasePlaces: Place[] = [
     "address": "通江路5-1号",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 48.165,
     "position": {
       "x": 64.45,
@@ -23298,7 +22404,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 41.06
+      "routeWeight": 48.17
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -23322,8 +22428,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -23332,7 +22437,6 @@ export const databasePlaces: Place[] = [
     "address": "辛庄大道与周家基路交叉口东北100米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 47.922,
     "position": {
       "x": 30.15,
@@ -23348,7 +22452,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 40.97
+      "routeWeight": 47.92
     },
     "dataStatus": "verified",
     "serviceProfile": {
@@ -23372,8 +22476,7 @@ export const databasePlaces: Place[] = [
       "公厕",
       "公共服务",
       "卫生间",
-      "公共厕所",
-      "L2"
+      "公共厕所"
     ],
     "imageUrl": "/assets/generated-placeholders/restroom.png",
     "fallbackImageUrl": "/assets/generated-placeholders/restroom.png",
@@ -23382,7 +22485,6 @@ export const databasePlaces: Place[] = [
     "address": "金潭路与潭荡路交叉口北140米",
     "categoryLabel": "卫生间",
     "subtypeLabel": "公共厕所",
-    "tierLevel": "L2",
     "selectionScore": 47.768,
     "position": {
       "x": 26.95,
@@ -23398,7 +22500,7 @@ export const databasePlaces: Place[] = [
     "routeMeta": {
       "canRoute": true,
       "recommendedStayMinutes": 10,
-      "routeWeight": 40.92
+      "routeWeight": 47.77
     },
     "dataStatus": "verified",
     "serviceProfile": {

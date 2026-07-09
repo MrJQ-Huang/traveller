@@ -22,17 +22,17 @@ const CHANGSHU_BOUNDS = {
 
 const categoryToType = new Map([
   ["景点", "scenic"],
-  ["美食", "restaurant"],
+  ["美食", "food"],
   ["酒店", "lodging"],
-  ["医院", "emergency"],
+  ["医院", "hospital"],
   ["停车场", "parking"],
-  ["公安/警务点", "emergency"],
+  ["公安/警务点", "police"],
   ["卫生间", "restroom"],
 ]);
 
 const categoryToSlug = new Map([
   ["景点", "scenic"],
-  ["美食", "restaurant"],
+  ["美食", "food"],
   ["酒店", "lodging"],
   ["医院", "hospital"],
   ["停车场", "parking"],
@@ -49,15 +49,14 @@ const fallbackImageByType = {
   restaurant: "/assets/generated-placeholders/restaurant.png",
   parking: "/assets/generated-placeholders/parking.png",
   restroom: "/assets/generated-placeholders/restroom.png",
-  service: "/assets/generated-placeholders/service.png",
-  activity: "/assets/generated-placeholders/activity.png",
   lodging: "/assets/generated-placeholders/lodging.png",
-  emergency: "/assets/generated-placeholders/service.png",
+  hospital: "/assets/generated-placeholders/hospital.png",
+  police: "/assets/generated-placeholders/police.png",
 };
 
 const fallbackImageByCategory = {
   景点: "/assets/generated-placeholders/scenic.png",
-  美食: "/assets/generated-placeholders/restaurant.png",
+  美食: "/assets/generated-placeholders/food.png",
   酒店: "/assets/generated-placeholders/lodging.png",
   医院: "/assets/generated-placeholders/hospital.png",
   停车场: "/assets/generated-placeholders/parking.png",
@@ -198,8 +197,6 @@ function crowdLevelFrom(row) {
     return "low";
   }
 
-  const tier = cleanCell(row["等级"]);
-  if (tier === "L4" || tier === "L3") return "medium";
   return "low";
 }
 
@@ -207,7 +204,7 @@ function formatDuration(minutesText, type) {
   const minutes = Number.parseInt(cleanCell(minutesText), 10);
   if (!Number.isFinite(minutes) || minutes <= 0) {
     if (type === "lodging") return "过夜";
-    if (type === "parking" || type === "restroom" || type === "emergency") return "10 分钟";
+    if (type === "parking" || type === "restroom" || type === "hospital" || type === "police") return "10 分钟";
     return undefined;
   }
   if (minutes < 60) return `${minutes} 分钟`;
@@ -219,17 +216,15 @@ function recommendedStayMinutes(row, type) {
   const minutes = Number.parseInt(cleanCell(row["建议游览分钟"] ?? row["建议停留分钟"]), 10);
   if (Number.isFinite(minutes) && minutes > 0) return minutes;
   if (type === "scenic") return 90;
-  if (type === "restaurant") return 60;
+  if (type === "food") return 60;
   if (type === "lodging") return 0;
-  if (type === "parking" || type === "restroom" || type === "emergency") return 10;
+  if (type === "parking" || type === "restroom" || type === "hospital" || type === "police") return 10;
   return 45;
 }
 
 function routeWeightFrom(row) {
-  const tier = cleanCell(row["等级"]);
   const score = toNumber(row["选择分"]);
-  const tierWeight = tier === "L4" ? 100 : tier === "L3" ? 60 : tier === "L2" ? 25 : 35;
-  return typeof score === "number" ? Math.round((tierWeight + score / 3) * 100) / 100 : tierWeight;
+  return typeof score === "number" ? Math.round(score * 100) / 100 : 35;
 }
 
 function detailFrom(row) {
@@ -330,7 +325,6 @@ function mapTieredRowToPlace(row) {
   }
 
   const xy = lngLatToXY(lng, lat);
-  const tierLevel = cleanCell(row["等级"]);
   const subtype = cleanCell(row["子类"]);
   const address = cleanCell(row["地址"]);
   const crowdLevel = crowdLevelFrom(row);
@@ -340,7 +334,7 @@ function mapTieredRowToPlace(row) {
     !rawImageUrl || rawImageUrl === "/map-skins/guli-ancient-town.png"
       ? categoryFallbackImage
       : rawImageUrl;
-  const tags = splitTags(row["标签"], [category, subtype, tierLevel]);
+  const tags = splitTags(row["标签"], [category, subtype]);
   const duration = formatDuration(row["建议游览分钟"], type);
   const summary =
     cleanCell(row["简介/用途"]) ||
@@ -360,7 +354,6 @@ function mapTieredRowToPlace(row) {
     address: address || undefined,
     categoryLabel: category,
     subtypeLabel: subtype || undefined,
-    tierLevel: tierLevel || undefined,
     score: cleanCell(row["评分"]) || undefined,
     phone: cleanCell(row["电话"]) || undefined,
     dynamicText: cleanCell(row["动态字段"]) || undefined,
@@ -387,7 +380,7 @@ function mapTieredRowToPlace(row) {
 
   const serviceProfile = serviceProfileFrom(row, type, category);
   if (serviceProfile) place.serviceProfile = serviceProfile;
-  if (type === "restaurant") place.restaurantProfile = restaurantProfileFrom(row, crowdLevel);
+  if (type === "food" && category === "美食") place.restaurantProfile = restaurantProfileFrom(row, crowdLevel);
 
   return place;
 }

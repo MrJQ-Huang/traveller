@@ -18,6 +18,10 @@ type ChangshuMapProps = {
   itineraryIds: string[];
   routePlan: RoutePlan;
   selectedPlaceId: string | null;
+  focusPlaceRequest: {
+    placeId: string;
+    nonce: number;
+  } | null;
   expandedPlaceId: string | null;
   mode: PlannerMode;
   drawMode: boolean;

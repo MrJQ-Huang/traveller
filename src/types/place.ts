@@ -5,18 +5,15 @@ export type PlaceType =
   | "restaurant"
   | "parking"
   | "restroom"
-  | "service"
-  | "activity"
   | "lodging"
-  | "emergency";
+  | "hospital"
+  | "police";
 
 export type CrowdLevel = "low" | "medium" | "high" | "very-high";
 
 export type DataStatus = "demo" | "verified";
 
 export type DataSource = "local" | "database" | "amap" | "manual";
-
-export type TierLevel = "L4" | "L3" | "L2";
 
 export type PlannerMode = "j" | "p";
 
@@ -59,7 +56,6 @@ export type Place = {
   district?: string;
   categoryLabel?: string;
   subtypeLabel?: string;
-  tierLevel?: TierLevel;
   score?: string;
   phone?: string;
   dynamicText?: string;
@@ -104,13 +100,12 @@ export const placeTypeLabels: Record<PlaceType, string> = {
   scenic: "景点",
   heritage: "非遗",
   food: "美食",
-  restaurant: "店铺",
+  restaurant: "美食",
   parking: "停车",
   restroom: "厕所",
-  service: "服务",
-  activity: "活动",
   lodging: "住宿",
-  emergency: "救援",
+  hospital: "医院",
+  police: "公安",
 };
 
 export const crowdLabels: Record<CrowdLevel, string> = {
@@ -124,11 +119,10 @@ export const placeTypeShortLabels: Record<PlaceType, string> = {
   scenic: "景",
   heritage: "遗",
   food: "食",
-  restaurant: "店",
+  restaurant: "食",
   parking: "P",
   restroom: "厕",
-  service: "服",
-  activity: "演",
   lodging: "宿",
-  emergency: "救",
+  hospital: "医",
+  police: "警",
 };

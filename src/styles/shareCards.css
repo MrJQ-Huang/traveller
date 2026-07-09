@@ -14,6 +14,68 @@
   box-shadow: 0 16px 36px rgba(44, 32, 24, 0.28);
 }
 
+.share-fab {
+  justify-content: center;
+  gap: 0;
+  width: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  transition:
+    width 180ms ease 120ms,
+    gap 180ms ease 120ms,
+    padding 180ms ease 120ms,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.share-fab:hover,
+.share-fab:focus-visible {
+  width: 86px;
+  gap: 8px;
+  padding: 0 14px;
+  box-shadow: 0 18px 40px rgba(44, 32, 24, 0.32);
+  transform: translateY(-1px);
+}
+
+.share-fab.is-dragging,
+.share-fab.is-dragging:hover,
+.share-fab.is-dragging:focus-visible {
+  width: 44px;
+  gap: 0;
+  padding: 0;
+  cursor: grabbing;
+  transform: none;
+  transition: none;
+}
+
+.share-fab span {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition:
+    max-width 180ms ease,
+    opacity 140ms ease;
+}
+
+.share-fab:hover span,
+.share-fab:focus-visible span {
+  max-width: 36px;
+  opacity: 1;
+}
+
+.share-fab.is-dragging span,
+.share-fab.is-dragging:hover span,
+.share-fab.is-dragging:focus-visible span {
+  max-width: 0;
+  opacity: 0;
+}
+
 .share-studio-backdrop {
   position: fixed;
   inset: 0;

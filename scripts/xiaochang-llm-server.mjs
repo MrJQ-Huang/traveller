@@ -30,11 +30,50 @@ function loadDotEnv(filePath = ".env", override = false) {
   });
 }
 
+function toDisplayPath(filePath) {
+  const relativePath = path.relative(process.cwd(), filePath);
+  if (relativePath && !relativePath.startsWith("..") && !path.isAbsolute(relativePath)) {
+    return relativePath.replaceAll("\\", "/");
+  }
+
+  const homePath = os.homedir();
+  const relativeHomePath = path.relative(homePath, filePath);
+  if (relativeHomePath && !relativeHomePath.startsWith("..") && !path.isAbsolute(relativeHomePath)) {
+    return `~/${relativeHomePath.replaceAll("\\", "/")}`;
+  }
+
+  return filePath;
+}
+
+function uniquePaths(paths) {
+  const seen = new Set();
+  return paths.filter((item) => {
+    const normalized = path.resolve(item);
+    if (seen.has(normalized)) {
+      return false;
+    }
+
+    seen.add(normalized);
+    return true;
+  });
+}
+
+function getClaudeSettingsCandidates() {
+  const configDirs = [
+    process.env.CLAUDE_CONFIG_DIR,
+    path.join(process.cwd(), ".claude"),
+    path.join(os.homedir(), ".claude"),
+  ].filter(Boolean);
+
+  return uniquePaths(configDirs.flatMap((dir) => [
+    path.join(dir, "settings.local.json"),
+    path.join(dir, "settings.json"),
+    path.join(dir, "config.json"),
+  ]));
+}
+
 function readClaudeSettingsEnv() {
-  const candidates = [
-    path.join(os.homedir(), ".claude", "settings.json"),
-    path.join(os.homedir(), ".claude", "config.json"),
-  ];
+  const candidates = getClaudeSettingsCandidates();
 
   for (const candidate of candidates) {
     try {
@@ -45,13 +84,13 @@ function readClaudeSettingsEnv() {
       const parsed = JSON.parse(fs.readFileSync(candidate, "utf8"));
       if (parsed?.env && typeof parsed.env === "object") {
         return {
-          source: candidate,
+          source: toDisplayPath(candidate),
           env: parsed.env,
           modelAlias: typeof parsed.model === "string" ? parsed.model : "",
         };
       }
     } catch (error) {
-      console.warn(`[xiaochang-llm] could not read Claude settings: ${candidate}`);
+      console.warn(`[xiaochang-llm] could not read Claude settings: ${toDisplayPath(candidate)}`);
     }
   }
 
@@ -59,6 +98,7 @@ function readClaudeSettingsEnv() {
 }
 
 loadDotEnv();
+loadDotEnv(".env.local", true);
 
 const port = Number(process.env.XIAOCHANG_AGENT_PORT ?? 8787);
 const host = process.env.XIAOCHANG_AGENT_HOST ?? "127.0.0.1";

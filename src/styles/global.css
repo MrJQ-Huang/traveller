@@ -1032,6 +1032,11 @@ button:disabled {
     0 10px 22px rgba(19, 31, 27, 0.24),
     inset 0 1px 0 rgba(255, 255, 255, 0.24);
   transform: translateZ(0);
+  transition:
+    opacity 160ms ease,
+    filter 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
 }
 
 .map-marker::before {
@@ -1131,6 +1136,52 @@ button:disabled {
   background-color: #d14f45;
 }
 
+.map-marker.type-hospital,
+.map-marker.type-hospital::after {
+  background-color: #d14f45;
+}
+
+.map-marker.type-police,
+.map-marker.type-police::after {
+  background-color: #315fb4;
+}
+
+.map-marker.is-muted {
+  opacity: 0.32;
+  filter: saturate(0.72) contrast(0.92);
+  box-shadow:
+    0 5px 12px rgba(19, 31, 27, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transform: scale(0.88) translateZ(0);
+}
+
+.map-marker.is-muted:hover {
+  opacity: 0.72;
+  filter: saturate(0.9);
+  transform: scale(0.96) translateZ(0);
+}
+
+.map-marker.is-selected,
+.map-marker.is-planned {
+  opacity: 1;
+  filter: saturate(1.12) contrast(1.04);
+}
+
+.map-marker.is-planned {
+  border-color: #fff6c8;
+  box-shadow:
+    0 0 0 5px rgba(255, 214, 87, 0.38),
+    0 14px 28px rgba(19, 31, 27, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34);
+}
+
+.map-marker.is-planned span {
+  color: #fff8d2;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 0 8px rgba(255, 235, 151, 0.6);
+}
+
 .regional-skin {
   display: grid;
   gap: 5px;
@@ -1141,6 +1192,7 @@ button:disabled {
   transform: translateZ(0);
   transition:
     filter 160ms ease,
+    opacity 160ms ease,
     transform 160ms ease;
 }
 
@@ -1191,6 +1243,33 @@ button:disabled {
   color: var(--muted);
   font-size: 11px;
   font-style: normal;
+}
+
+.regional-skin.is-muted {
+  opacity: 0.28;
+  filter: grayscale(0.18) saturate(0.72) drop-shadow(0 6px 14px rgba(15, 31, 27, 0.1));
+  transform: scale(0.9) translateZ(0);
+}
+
+.regional-skin.is-muted:hover {
+  opacity: 0.75;
+  filter: drop-shadow(0 12px 24px rgba(15, 31, 27, 0.2));
+  transform: translateY(-1px) scale(0.95);
+}
+
+.regional-skin.is-planned,
+.regional-skin.is-selected {
+  opacity: 1;
+  filter: drop-shadow(0 18px 34px rgba(15, 31, 27, 0.32));
+}
+
+.regional-skin.is-planned img,
+.regional-skin.is-selected img {
+  border-color: rgba(255, 246, 200, 0.98);
+  box-shadow:
+    0 0 0 4px rgba(255, 214, 87, 0.32),
+    0 12px 26px rgba(15, 31, 27, 0.2);
+  opacity: 0.96;
 }
 
 .map-action-stack {
@@ -2548,6 +2627,14 @@ button:disabled {
   background-color: #d14f45;
 }
 
+.type-hospital {
+  background-color: #d14f45;
+}
+
+.type-police {
+  background-color: #315fb4;
+}
+
 .place-card.type-parking {
   border-left-color: #8a6f3d;
 }
@@ -2572,12 +2659,22 @@ button:disabled {
   border-left-color: #d14f45;
 }
 
+.place-card.type-hospital {
+  border-left-color: #d14f45;
+}
+
+.place-card.type-police {
+  border-left-color: #315fb4;
+}
+
 .planner-type-label.type-parking,
 .planner-type-label.type-restroom,
 .planner-type-label.type-service,
 .planner-type-label.type-activity,
 .planner-type-label.type-lodging,
-.planner-type-label.type-emergency {
+.planner-type-label.type-emergency,
+.planner-type-label.type-hospital,
+.planner-type-label.type-police {
   color: var(--accent-strong);
   background: rgba(22, 122, 98, 0.1);
 }
@@ -2611,6 +2708,18 @@ button:disabled {
   background:
     radial-gradient(circle at 28% 30%, rgba(255, 255, 255, 0.52), transparent 22%),
     linear-gradient(135deg, #ffd2ca, #d14f45 54%, #6c2f34);
+}
+
+.place-card.planner-place-card.type-hospital .planner-card-image {
+  background:
+    radial-gradient(circle at 28% 30%, rgba(255, 255, 255, 0.52), transparent 22%),
+    linear-gradient(135deg, #ffd2ca, #d14f45 54%, #6c2f34);
+}
+
+.place-card.planner-place-card.type-police .planner-card-image {
+  background:
+    radial-gradient(circle at 28% 30%, rgba(255, 255, 255, 0.52), transparent 22%),
+    linear-gradient(135deg, #d4e2ff, #315fb4 54%, #1d315f);
 }
 
 .map-card-popover {
@@ -3862,6 +3971,8 @@ button:disabled {
 .side-filter-chip.type-activity span { background: #b45a9a; }
 .side-filter-chip.type-lodging span { background: #6e6aa8; }
 .side-filter-chip.type-emergency span { background: #d14f45; }
+.side-filter-chip.type-hospital span { background: #d14f45; }
+.side-filter-chip.type-police span { background: #315fb4; }
 
 .side-filter-chip.is-active {
   color: var(--accent-strong);
@@ -3968,6 +4079,33 @@ button:disabled {
   background: white;
   border: 1px solid rgba(220, 228, 223, 0.96);
   border-radius: 12px;
+}
+
+.side-manual-copy {
+  display: grid;
+  gap: 8px;
+  padding: 13px 14px;
+  color: #365149;
+  background:
+    linear-gradient(135deg, rgba(223, 243, 236, 0.92), rgba(255, 250, 239, 0.92));
+  border: 1px solid rgba(22, 122, 98, 0.14);
+  border-radius: 14px;
+}
+
+.side-manual-copy svg {
+  color: var(--accent-strong);
+}
+
+.side-manual-copy strong {
+  color: var(--accent-strong);
+  font-size: 14px;
+}
+
+.side-manual-copy p {
+  margin: 0;
+  color: #65756f;
+  font-size: 12px;
+  line-height: 1.65;
 }
 
 .side-action-row {
@@ -4597,6 +4735,8 @@ button.status-pill:hover {
 .place-card.planner-place-card.type-service .planner-card-image,
 .place-card.planner-place-card.type-activity .planner-card-image,
 .place-card.planner-place-card.type-emergency .planner-card-image,
+.place-card.planner-place-card.type-hospital .planner-card-image,
+.place-card.planner-place-card.type-police .planner-card-image,
 .place-card.planner-place-card .planner-detail-image,
 .place-card.planner-place-card.type-food .planner-detail-image,
 .place-card.planner-place-card.type-restaurant .planner-detail-image {
@@ -5265,45 +5405,13 @@ button.status-pill:hover {
   }
 }
 
-/* Itinerary item removal: every right-panel view supports X delete and left-drag delete. */
+/* Itinerary item removal: keep only explicit X delete controls. */
 .itinerary-drop-row {
   position: relative;
   padding-right: 0;
   transition:
     transform 160ms ease,
     opacity 160ms ease;
-}
-
-.itinerary-drop-row::after,
-.itinerary-deck-card::before {
-  content: "左拖删除";
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  z-index: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 30px;
-  padding: 0 10px;
-  color: #b23d3a;
-  background: rgba(192, 63, 63, 0.09);
-  border: 1px solid rgba(192, 63, 63, 0.16);
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 900;
-  opacity: 0;
-  transform: translateY(-50%);
-  pointer-events: none;
-  transition:
-    opacity 160ms ease,
-    transform 160ms ease;
-}
-
-.itinerary-drop-row:hover::after,
-.itinerary-deck-card:hover::before {
-  opacity: 1;
-  transform: translateY(-50%) translateX(4px);
 }
 
 .itinerary-item-delete {

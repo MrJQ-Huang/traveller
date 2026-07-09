@@ -44,7 +44,6 @@ type TopBarProps = {
   onToggleItinerary: () => void;
   onShowAvoidPeak?: () => void;
   onRefreshLocation?: () => void;
-  onShowActivities?: () => void;
 };
 
 const weekdayLabels = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
@@ -125,7 +124,6 @@ export function TopBar({
   onToggleItinerary,
   onShowAvoidPeak,
   onRefreshLocation,
-  onShowActivities,
 }: TopBarProps) {
   const topbarRef = useRef<HTMLElement | null>(null);
   const [openPanel, setOpenPanel] = useState<OpenStatusPanel>(null);
@@ -159,8 +157,8 @@ export function TopBar({
         {
           label: "今天",
           date: `${formatMonthDay(today)} ${todayLabel}`,
-          title: "常熟当日活动",
-          meta: "6 个活动点位已点亮",
+          title: "常熟当日安排",
+          meta: "适合先看天气和已选行程",
         },
         {
           label: "明天",
@@ -220,12 +218,7 @@ export function TopBar({
   }
 
   function toggleDatePanel() {
-    const shouldOpen = openPanel !== "date";
-    setOpenPanel(shouldOpen ? "date" : null);
-
-    if (shouldOpen) {
-      onShowActivities?.();
-    }
+    setOpenPanel((current) => (current === "date" ? null : "date"));
   }
 
   return (
@@ -302,7 +295,7 @@ export function TopBar({
             <div className="date-popover" id="topbar-date-popover" role="dialog" aria-label="常熟日期活动">
               <div className="date-popover-head">
                 <strong>日期安排</strong>
-                <span>活动 6</span>
+                <span>{activeDayTitle}</span>
               </div>
               <div className="date-card-list">
                 {dateInsightItems.map((item) => (

@@ -1,7 +1,7 @@
 import { Check, Layers, LocateFixed, Palette, PencilLine, RotateCcw, SlidersHorizontal, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { hasFullCityHanddrawnTile } from "../data/fullCityHanddrawnTileRanges";
-import { mapSkinOverlays } from "../data/mapSkins";
+import { mapSkinOverlays, type MapSkinOverlay } from "../data/mapSkins";
 import { getAmapStyle, loadAmap, type AmapConfig } from "../map/amapLoader";
 import type { Place, PlannerMode } from "../types/place";
 import type { RoutePlan } from "../types/route";
@@ -23,6 +23,10 @@ type AmapChangshuMapProps = {
   itineraryIds: string[];
   routePlan: RoutePlan;
   selectedPlaceId: string | null;
+  focusPlaceRequest: {
+    placeId: string;
+    nonce: number;
+  } | null;
   expandedPlaceId: string | null;
   mode: PlannerMode;
   drawMode: boolean;
@@ -113,6 +117,36 @@ function getPopoverPlacement(position: { x: number; y: number } | null, expanded
   return "above";
 }
 
+function getRegionalSkinLevel(skin: MapSkinOverlay) {
+  const level = Number(skin.imageUrl.match(/_L(\d+)_/)?.[1] ?? 3);
+  return Number.isFinite(level) ? level : 3;
+}
+
+function getRegionalSkinMinZoom(skin: MapSkinOverlay) {
+  return getRegionalSkinLevel(skin) >= 4 ? 13 : 15;
+}
+
+function readPixelCoordinate(pixel: any) {
+  const x = typeof pixel?.getX === "function" ? pixel.getX() : pixel?.x;
+  const y = typeof pixel?.getY === "function" ? pixel.getY() : pixel?.y;
+
+  return typeof x === "number" && typeof y === "number" ? { x, y } : null;
+}
+
+function boxesOverlap(
+  left: { left: number; right: number; top: number; bottom: number },
+  right: { left: number; right: number; top: number; bottom: number },
+) {
+  const gap = 18;
+
+  return !(
+    left.right + gap < right.left ||
+    right.right + gap < left.left ||
+    left.bottom + gap < right.top ||
+    right.bottom + gap < left.top
+  );
+}
+
 export function AmapChangshuMap({
   amapConfig,
   places,
@@ -122,6 +156,7 @@ export function AmapChangshuMap({
   itineraryIds,
   routePlan,
   selectedPlaceId,
+  focusPlaceRequest,
   expandedPlaceId,
   mode,
   drawMode,
@@ -149,9 +184,12 @@ export function AmapChangshuMap({
   const [isMapToolsOpen, setIsMapToolsOpen] = useState(false);
   const [isSkinPickerOpen, setIsSkinPickerOpen] = useState(false);
   const [activeMapSkinId, setActiveMapSkinId] = useState<MapSkinId>("handdrawn");
+  const [showRegionalSkins, setShowRegionalSkins] = useState(true);
   const [mapZoom, setMapZoom] = useState(11);
+  const [mapViewportRevision, setMapViewportRevision] = useState(0);
   const [selectedCardPosition, setSelectedCardPosition] = useState<{ x: number; y: number } | null>(null);
   const activeMapSkin = mapSkinOptions.find((skin) => skin.id === activeMapSkinId) ?? mapSkinOptions[0];
+  const hasActiveRoutePlan = itineraryIds.length > 0;
 
   const selectedPlace = useMemo(
     () => places.find((place) => place.id === selectedPlaceId) ?? null,
@@ -264,15 +302,15 @@ export function AmapChangshuMap({
     tieredVisiblePlaces.forEach((place) => {
       const order = itineraryOrder[place.id];
       const isSelected = place.id === selectedPlaceId;
-      const tierClass = place.tierLevel ? `tier-${place.tierLevel.toLowerCase()}` : "tier-local";
+      const isMuted = hasActiveRoutePlan && !order && !isSelected;
       const marker = new AMap.Marker({
         position: [place.position.lng, place.position.lat],
         anchor: "center",
         title: place.name,
-        zIndex: order || isSelected ? 150 : 120,
+        zIndex: order || isSelected ? 240 : hasActiveRoutePlan ? 92 : 120,
         content: `
-          <button class="map-marker type-${place.type} ${tierClass} ${isSelected ? "is-selected" : ""} ${
-            order ? "is-planned" : ""
+          <button class="map-marker type-${place.type} ${isSelected ? "is-selected" : ""} ${order ? "is-planned" : ""} ${
+            isMuted ? "is-muted" : ""
           }" type="button">
             <span>${order ?? placeTypeShortLabels[place.type]}</span>
           </button>
@@ -289,7 +327,7 @@ export function AmapChangshuMap({
       marker.setMap(map);
       markerLayerRef.current.push(marker);
     });
-  }, [expandedPlaceId, itineraryOrder, onSelectPlace, onToggleExpand, selectedPlaceId, tieredVisiblePlaces]);
+  }, [expandedPlaceId, hasActiveRoutePlan, itineraryOrder, onSelectPlace, onToggleExpand, selectedPlaceId, tieredVisiblePlaces]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -297,15 +335,18 @@ export function AmapChangshuMap({
       return;
     }
 
-    function updateZoom() {
+    function updateViewport() {
       setMapZoom(map.getZoom());
+      setMapViewportRevision((current) => current + 1);
     }
 
-    updateZoom();
-    map.on("zoomchange", updateZoom);
+    updateViewport();
+    map.on("zoomchange", updateViewport);
+    map.on("moveend", updateViewport);
 
     return () => {
-      map.off("zoomchange", updateZoom);
+      map.off("zoomchange", updateViewport);
+      map.off("moveend", updateViewport);
     };
   }, [mapReady]);
 
@@ -431,22 +472,69 @@ export function AmapChangshuMap({
     }
 
     skinLayerRef.current.forEach((marker) => marker.setMap(null));
-    skinLayerRef.current = mapSkinOverlays
+    skinLayerRef.current = [];
+
+    if (!showRegionalSkins) {
+      return;
+    }
+
+    const skinCandidates = mapSkinOverlays
+      .filter((skin) => mapZoom >= getRegionalSkinMinZoom(skin))
       .filter((skin) => !skin.linkedPlaceId || visiblePlaceIds.has(skin.linkedPlaceId))
       .map((skin) => {
-      const linkedPlace = skin.linkedPlaceId
-        ? places.find((place) => place.id === skin.linkedPlaceId)
-        : null;
-      const skinCenter =
-        skin.lockToPlace && linkedPlace
-          ? [linkedPlace.position.lng, linkedPlace.position.lat]
-          : skin.center;
+        const linkedPlace = skin.linkedPlaceId
+          ? places.find((place) => place.id === skin.linkedPlaceId)
+          : null;
+        const skinCenter: [number, number] =
+          skin.lockToPlace && linkedPlace
+            ? [linkedPlace.position.lng, linkedPlace.position.lat]
+            : skin.center;
+
+        return {
+          skin,
+          skinCenter,
+          priority: getRegionalSkinLevel(skin) * 1000 - skin.width,
+        };
+      })
+      .sort((left, right) => right.priority - left.priority);
+
+    const occupiedBoxes: Array<{ left: number; right: number; top: number; bottom: number }> = [];
+    const visibleSkinCandidates = skinCandidates.filter((candidate) => {
+      const pixel = readPixelCoordinate(map.lngLatToContainer(candidate.skinCenter));
+
+      if (!pixel) {
+        return false;
+      }
+
+      const width = candidate.skin.width;
+      const height = width + 42;
+      const box = {
+        left: pixel.x - width / 2,
+        right: pixel.x + width / 2,
+        top: pixel.y - height,
+        bottom: pixel.y,
+      };
+
+      if (occupiedBoxes.some((occupiedBox) => boxesOverlap(occupiedBox, box))) {
+        return false;
+      }
+
+      occupiedBoxes.push(box);
+      return true;
+    });
+
+    skinLayerRef.current = visibleSkinCandidates.map(({ skin, skinCenter }) => {
+      const isPlannedSkin = Boolean(skin.linkedPlaceId && itineraryOrder[skin.linkedPlaceId]);
+      const isSelectedSkin = Boolean(skin.linkedPlaceId && skin.linkedPlaceId === selectedPlaceId);
+      const isMuted = hasActiveRoutePlan && !isPlannedSkin && !isSelectedSkin;
       const marker = new AMap.Marker({
         position: skinCenter,
         anchor: "bottom-center",
-        zIndex: 70,
+        zIndex: isPlannedSkin || isSelectedSkin ? 145 : 70,
         content: `
-          <button class="regional-skin" type="button" style="width:${skin.width}px">
+          <button class="regional-skin regional-skin-l${getRegionalSkinLevel(skin)} ${isPlannedSkin ? "is-planned" : ""} ${
+            isSelectedSkin ? "is-selected" : ""
+          } ${isMuted ? "is-muted" : ""}" type="button" style="width:${skin.width}px">
             <img src="${skin.imageUrl}" alt="${skin.name}" />
             <span>
               <strong>${skin.name}</strong>
@@ -469,7 +557,18 @@ export function AmapChangshuMap({
       skinLayerRef.current.forEach((marker) => marker.setMap(null));
       skinLayerRef.current = [];
     };
-  }, [mapReady, onSelectPlace, places, visiblePlaceIds]);
+  }, [
+    hasActiveRoutePlan,
+    itineraryOrder,
+    mapReady,
+    mapViewportRevision,
+    mapZoom,
+    onSelectPlace,
+    places,
+    selectedPlaceId,
+    showRegionalSkins,
+    visiblePlaceIds,
+  ]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -528,18 +627,30 @@ export function AmapChangshuMap({
     routeLayerRef.current = [];
 
     routePlan.segments.forEach((segment) => {
+      const casingLine = new AMap.Polyline({
+        path: segment.path,
+        strokeColor: "#ffffff",
+        strokeWeight: routePlan.status === "planned" ? 12 : 10,
+        strokeOpacity: routePlan.status === "preview" ? 0.8 : 0.92,
+        strokeStyle: "solid",
+        lineJoin: "round",
+        lineCap: "round",
+        zIndex: 176,
+      });
       const line = new AMap.Polyline({
         path: segment.path,
-        strokeColor: routePlan.status === "planned" ? "#167a62" : "#1a8068",
-        strokeWeight: 6,
-        strokeOpacity: routePlan.status === "preview" ? 0.62 : 0.86,
+        strokeColor: routePlan.status === "planned" ? "#0c6f5a" : "#137d66",
+        strokeWeight: routePlan.status === "planned" ? 7 : 6,
+        strokeOpacity: routePlan.status === "preview" ? 0.78 : 0.96,
         strokeStyle: routePlan.status === "preview" || routePlan.status === "planning" ? "dashed" : "solid",
         lineJoin: "round",
         lineCap: "round",
-        zIndex: 88,
+        zIndex: 178,
       });
 
+      casingLine.setMap(map);
       line.setMap(map);
+      routeLayerRef.current.push(casingLine);
       routeLayerRef.current.push(line);
     });
   }, [routePlan]);
@@ -562,6 +673,22 @@ export function AmapChangshuMap({
       selectedPlace.position.lat,
     ]);
   }, [selectedPlace]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    const targetPlace = focusPlaceRequest
+      ? places.find((place) => place.id === focusPlaceRequest.placeId)
+      : null;
+
+    if (!map || !targetPlace) {
+      return;
+    }
+
+    map.setZoomAndCenter(Math.max(map.getZoom(), 14), [
+      targetPlace.position.lng,
+      targetPlace.position.lat,
+    ]);
+  }, [focusPlaceRequest, places]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -728,6 +855,15 @@ export function AmapChangshuMap({
           <button className="map-tool-button" type="button" onClick={() => fitVisiblePlaces()}>
             <LocateFixed size={17} />
             全览
+          </button>
+          <button
+            className={`map-tool-button ${showRegionalSkins ? "is-active" : ""}`}
+            type="button"
+            onClick={() => setShowRegionalSkins((current) => !current)}
+            aria-pressed={showRegionalSkins}
+          >
+            <Layers size={17} />
+            大图
           </button>
           <div className="map-skin-picker">
             <button

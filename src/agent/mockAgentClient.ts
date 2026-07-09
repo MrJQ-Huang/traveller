@@ -16,7 +16,7 @@ import {
 
 const defaultPreference: AgentUserPreference = {
   pace: "normal",
-  interests: ["scenic", "heritage", "food", "restaurant"],
+  interests: ["scenic", "heritage", "food"],
   avoidCrowds: false,
   preferFood: false,
   preferHeritage: false,
@@ -59,7 +59,7 @@ function parsePreference(message: string, current?: AgentUserPreference): AgentU
 
   if (/美食|吃|饭|餐|小吃/.test(message)) {
     next.preferFood = true;
-    next.interests = mergeUniqueTypes(next.interests, ["food", "restaurant"]);
+    next.interests = mergeUniqueTypes(next.interests, ["food"]);
   }
 
   if (/非遗|手作|工艺|文化/.test(message)) {

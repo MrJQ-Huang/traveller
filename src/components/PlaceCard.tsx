@@ -33,13 +33,12 @@ const typeLabels: Record<Place["type"], string> = {
   scenic: "景点",
   heritage: "非遗",
   food: "美食",
-  restaurant: "店铺",
+  restaurant: "美食",
   parking: "停车",
   restroom: "厕所",
-  service: "服务",
-  activity: "活动",
   lodging: "住宿",
-  emergency: "救援",
+  hospital: "医院",
+  police: "公安",
 };
 
 const crowdText: Record<CrowdLevel, string> = {
@@ -53,13 +52,12 @@ const cardImageByType: Record<Place["type"], string | null> = {
   scenic: "/assets/generated-placeholders/scenic.png",
   heritage: "/assets/generated-placeholders/heritage.png",
   food: "/assets/generated-placeholders/food.png",
-  restaurant: "/assets/generated-placeholders/restaurant.png",
+  restaurant: "/assets/generated-placeholders/food.png",
   parking: "/assets/generated-placeholders/parking.png",
   restroom: "/assets/generated-placeholders/restroom.png",
-  service: "/assets/generated-placeholders/service.png",
-  activity: "/assets/generated-placeholders/activity.png",
   lodging: "/assets/generated-placeholders/lodging.png",
-  emergency: "/assets/generated-placeholders/service.png",
+  hospital: "/assets/generated-placeholders/hospital.png",
+  police: "/assets/generated-placeholders/police.png",
 };
 
 function getCardStyle(place: Place): CSSProperties {
@@ -72,13 +70,13 @@ function getCardStyle(place: Place): CSSProperties {
 }
 
 function getDetailTitle(place: Place) {
-  if (place.type === "restaurant") return "店铺点评";
+  if (place.restaurantProfile) return "美食点评";
   if (place.type === "food") return "美食历史简介";
   if (place.type === "heritage") return "非遗历史简介";
   if (place.type === "parking") return "停车与到达建议";
   if (place.type === "restroom") return "便民设施信息";
-  if (place.type === "emergency") return "诉求闭环与救援信息";
-  if (place.type === "service") return "旅游服务信息";
+  if (place.type === "hospital") return "医疗服务信息";
+  if (place.type === "police") return "公安警务信息";
   return "景点历史简介";
 }
 
@@ -98,8 +96,8 @@ export function PlaceCard({
   const crowd = place.restaurantProfile?.popularity ?? place.crowdLevel;
   const canAdd = !inItinerary && onAdd;
   const isFood = place.type === "food";
-  const isRestaurant = place.type === "restaurant";
-  const isFoodMapDemo = (isFood || isRestaurant) && place.dataStatus === "demo";
+  const hasRestaurantProfile = Boolean(place.restaurantProfile);
+  const isFoodMapDemo = (isFood || hasRestaurantProfile) && place.dataStatus === "demo";
   const isServiceLike = Boolean(place.serviceProfile);
   const detailTitle = getDetailTitle(place);
   const label = place.categoryLabel ?? typeLabels[place.type];
@@ -122,7 +120,6 @@ export function PlaceCard({
       <div className="planner-card-body">
         <span className={`planner-type-label type-${place.type}`}>
           {label}
-          {place.tierLevel ? ` · ${place.tierLevel}` : ""}
         </span>
         <h3>{place.name}</h3>
         <p>{place.summary}</p>
@@ -195,14 +192,14 @@ export function PlaceCard({
               </>
             )}
 
-            {isRestaurant && place.restaurantProfile && (
+            {hasRestaurantProfile && place.restaurantProfile && (
               <>
                 <section>
                   <h4>火热情况估计</h4>
                   <p>{crowdText[place.restaurantProfile.popularity]}</p>
                 </section>
                 <section>
-                  <h4>店铺点评</h4>
+                  <h4>美食点评</h4>
                   <p>{place.restaurantProfile.reviewSummary}</p>
                 </section>
                 <section>
@@ -283,7 +280,7 @@ export function PlaceCard({
             {isFoodMapDemo && (
               <section className="demo-data-note">
                 <h4>位置数据说明</h4>
-                <p>当前美食点位为 Demo 坐标，用于演示地图筛选、卡片和路线规划。后续接入数据库后会按真实店铺、POI 或人工校准坐标自动替换。</p>
+                <p>当前美食点位为 Demo 坐标，用于演示地图筛选、卡片和路线规划。后续接入数据库后会按真实美食、POI 或人工校准坐标自动替换。</p>
               </section>
             )}
           </div>

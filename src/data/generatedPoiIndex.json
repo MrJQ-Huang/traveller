@@ -6290,7 +6290,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffwyybk",
+    "id": "poi-food-b0fffwyybk",
     "poiId": "B0FFFWYYBK",
     "name": "洪泽湖土灶台",
     "categoryLabel": "美食",
@@ -6311,7 +6311,7 @@
     ],
     "summary": "洪泽湖土灶台，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/11eb0f2e2720e73d212f2220eb678882",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/11eb0f2e2720e73d212f2220eb678882"
     ],
@@ -6320,7 +6320,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffwtgxa",
+    "id": "poi-food-b0fffwtgxa",
     "poiId": "B0FFFWTGXA",
     "name": "马永斋(支塘芝溪路店)",
     "categoryLabel": "美食",
@@ -6341,7 +6341,7 @@
     ],
     "summary": "马永斋(支塘芝溪路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/29ae774025b256527da9e419a9fb742b",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/29ae774025b256527da9e419a9fb742b",
       "http://store.is.autonavi.com/showpic/0ae0f968ad7580f0319139053ebfcae9",
@@ -6352,7 +6352,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg34bt9",
+    "id": "poi-food-b0ffg34bt9",
     "poiId": "B0FFG34BT9",
     "name": "新圆点心店",
     "categoryLabel": "美食",
@@ -6372,7 +6372,7 @@
     ],
     "summary": "新圆点心店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/44fa89117470532cdebd8e4e1e294c19",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/44fa89117470532cdebd8e4e1e294c19"
     ],
@@ -6381,7 +6381,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhsklv4",
+    "id": "poi-food-b0ffhsklv4",
     "poiId": "B0FFHSKLV4",
     "name": "好福记烧烤龙虾海鲜排挡(荣安·尚湖中央花园店)",
     "categoryLabel": "美食",
@@ -6402,7 +6402,7 @@
     ],
     "summary": "好福记烧烤龙虾海鲜排挡(荣安·尚湖中央花园店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/1f78084853ee6d3ee467555d16f5eda0",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/1f78084853ee6d3ee467555d16f5eda0",
       "https://store.is.autonavi.com/showpic/cf37ff8fb113bf48d5089ddf7f24e7a4",
@@ -6413,7 +6413,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhjo0m6",
+    "id": "poi-food-b0ffhjo0m6",
     "poiId": "B0FFHJO0M6",
     "name": "伊来顺铜锅烧烤(长江路店)",
     "categoryLabel": "美食",
@@ -6434,7 +6434,7 @@
     ],
     "summary": "伊来顺铜锅烧烤(长江路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://aos-cdn-image.amap.com/sns/ugccomment/77377069-b4d5-4375-b1de-a94ce16bec14.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://aos-cdn-image.amap.com/sns/ugccomment/77377069-b4d5-4375-b1de-a94ce16bec14.jpg",
       "http://store.is.autonavi.com/showpic/cd10c62e92a56ae7d7c0314754e7ed20",
@@ -6445,7 +6445,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020017mcg",
+    "id": "poi-food-b020017mcg",
     "poiId": "B020017MCG",
     "name": "欧典咖啡(世茂店)",
     "categoryLabel": "美食",
@@ -6468,7 +6468,7 @@
     ],
     "summary": "欧典咖啡(世茂店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/539723498274c8727442b1936bbfbd50",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/539723498274c8727442b1936bbfbd50",
       "http://store.is.autonavi.com/showpic/291de7b38bc101988086533a396d2a3a",
@@ -6479,7 +6479,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffsjki4",
+    "id": "poi-food-b0fffsjki4",
     "poiId": "B0FFFSJKI4",
     "name": "新红点心(漕泾菜场店)",
     "categoryLabel": "美食",
@@ -6500,7 +6500,7 @@
     ],
     "summary": "新红点心(漕泾菜场店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/2cfcb7751eb4d73b5fbb9fba3e77fee8",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/2cfcb7751eb4d73b5fbb9fba3e77fee8"
     ],
@@ -6509,7 +6509,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffff6v3r",
+    "id": "poi-food-b0ffff6v3r",
     "poiId": "B0FFFF6V3R",
     "name": "高家骨头饭(招商东路店)",
     "categoryLabel": "美食",
@@ -6530,7 +6530,7 @@
     ],
     "summary": "高家骨头饭(招商东路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/c90fbf27ab848389c213b6d3ce303869",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/c90fbf27ab848389c213b6d3ce303869"
     ],
@@ -6539,7 +6539,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020001tma",
+    "id": "poi-food-b020001tma",
     "poiId": "B020001TMA",
     "name": "森林大酒店",
     "categoryLabel": "美食",
@@ -6557,7 +6557,7 @@
     ],
     "summary": "森林大酒店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/7bd44a5fa5358ead6b2dd4238e409757",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/7bd44a5fa5358ead6b2dd4238e409757",
       "https://store.is.autonavi.com/showpic/1159d6a173823da668d789bbb6e17bb5",
@@ -6568,7 +6568,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg1vzrm",
+    "id": "poi-food-b0ffg1vzrm",
     "poiId": "B0FFG1VZRM",
     "name": "何记饭店(聚沙路店)",
     "categoryLabel": "美食",
@@ -6589,7 +6589,7 @@
     ],
     "summary": "何记饭店(聚沙路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/df4b09b52e2fb17260f2e38febecef45",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/df4b09b52e2fb17260f2e38febecef45"
     ],
@@ -6598,7 +6598,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffib82dc",
+    "id": "poi-food-b0ffib82dc",
     "poiId": "B0FFIB82DC",
     "name": "兄弟糖藕(总马桥一店)",
     "categoryLabel": "美食",
@@ -6618,7 +6618,7 @@
     ],
     "summary": "兄弟糖藕(总马桥一店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFIB82DC/comment/file_media_Photo_3319_IMG_1771626320_2231_IMG_20260221_062340_jpg_ss__1771646394867_40320875.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFIB82DC/comment/file_media_Photo_3319_IMG_1771626320_2231_IMG_20260221_062340_jpg_ss__1771646394867_40320875.jpg",
       "https://aos-comment.amap.com/B0FFIB82DC/comment/content_media_external_file_1000036033_ss__1771398061783_61853804.jpg",
@@ -6629,7 +6629,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffrvq7z",
+    "id": "poi-food-b0fffrvq7z",
     "poiId": "B0FFFRVQ7Z",
     "name": "文轩铺子早点(富莲路店)",
     "categoryLabel": "美食",
@@ -6649,7 +6649,7 @@
     ],
     "summary": "文轩铺子早点(富莲路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/8d498fa063dd8a009e1e6a801e35fee4",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/8d498fa063dd8a009e1e6a801e35fee4",
       "http://store.is.autonavi.com/showpic/d3fa4b0262ba1658c6c2d2e5a30810b4",
@@ -6660,7 +6660,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02000jw0w",
+    "id": "poi-food-b02000jw0w",
     "poiId": "B02000JW0W",
     "name": "望虞台茶文化餐厅",
     "categoryLabel": "美食",
@@ -6680,7 +6680,7 @@
     ],
     "summary": "望虞台茶文化餐厅，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B02000JW0W/comment/content_media_external_file_6439_1760477697391_33369816.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B02000JW0W/comment/content_media_external_file_6439_1760477697391_33369816.jpg",
       "https://store.is.autonavi.com/showpic/e326de1d73f0d36dfd07bc60216c2aa9",
@@ -6691,7 +6691,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020015rnr",
+    "id": "poi-food-b020015rnr",
     "poiId": "B020015RNR",
     "name": "味作庄",
     "categoryLabel": "美食",
@@ -6714,7 +6714,7 @@
     ],
     "summary": "味作庄，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/ffc6953fa875161d746be63e93df18d2",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/ffc6953fa875161d746be63e93df18d2",
       "http://store.is.autonavi.com/showpic/3b5830408305b4f490bfb48b4691560c"
@@ -6724,7 +6724,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020001p96",
+    "id": "poi-food-b020001p96",
     "poiId": "B020001P96",
     "name": "虞城大酒店",
     "categoryLabel": "美食",
@@ -6742,7 +6742,7 @@
     ],
     "summary": "虞城大酒店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/a160ae2c13ffba877107194aba4310e6",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/a160ae2c13ffba877107194aba4310e6",
       "https://store.is.autonavi.com/showpic/73b2cb114676da814ef4af5ac87a5ec5",
@@ -6753,7 +6753,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgatqbv",
+    "id": "poi-food-b0ffgatqbv",
     "poiId": "B0FFGATQBV",
     "name": "蓝青岛茶苑",
     "categoryLabel": "美食",
@@ -6773,7 +6773,7 @@
     ],
     "summary": "蓝青岛茶苑，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/97a4563f319af1ee893e36e457aa832a",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/97a4563f319af1ee893e36e457aa832a",
       "http://store.is.autonavi.com/showpic/aecbf0599b7808ceb375d6d6c1b1337a",
@@ -6784,7 +6784,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg9uh2w",
+    "id": "poi-food-b0ffg9uh2w",
     "poiId": "B0FFG9UH2W",
     "name": "孟记龙虾(湘江东路店)",
     "categoryLabel": "美食",
@@ -6809,7 +6809,7 @@
     ],
     "summary": "孟记龙虾(湘江东路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/acc2e13b136110b5b7a15d3887c9869a",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/acc2e13b136110b5b7a15d3887c9869a",
       "https://store.is.autonavi.com/showpic/06001c3745b322e85233f7c56c6bc3d1",
@@ -6820,7 +6820,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffizatu8",
+    "id": "poi-food-b0ffizatu8",
     "poiId": "B0FFIZATU8",
     "name": "海味斋",
     "categoryLabel": "美食",
@@ -6840,7 +6840,7 @@
     ],
     "summary": "海味斋，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/dc378c1fbef90b18c5c8acd9c241277a",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/dc378c1fbef90b18c5c8acd9c241277a",
       "https://store.is.autonavi.com/showpic/323eff9b1916badb0000002262944573?type=pic",
@@ -6851,7 +6851,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffi24th5",
+    "id": "poi-food-b0ffi24th5",
     "poiId": "B0FFI24TH5",
     "name": "LEMONDE蕾莫法式西点(世茂店)",
     "categoryLabel": "美食",
@@ -6872,7 +6872,7 @@
     ],
     "summary": "LEMONDE蕾莫法式西点(世茂店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFI24TH5/comment/8836ebd9266f34ade78af4617e11d833_2048_2048_80.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFI24TH5/comment/8836ebd9266f34ade78af4617e11d833_2048_2048_80.jpg",
       "https://store.is.autonavi.com/showpic/5b42994cec7f4e060000002876008712?type=pic",
@@ -6883,7 +6883,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhf4iet",
+    "id": "poi-food-b0ffhf4iet",
     "poiId": "B0FFHF4IET",
     "name": "赵先森8090主题餐厅(锁澜路店)",
     "categoryLabel": "美食",
@@ -6908,7 +6908,7 @@
     ],
     "summary": "赵先森8090主题餐厅(锁澜路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/9013163c56fe34970000002672338948?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/9013163c56fe34970000002672338948?type=pic",
       "http://store.is.autonavi.com/showpic/f82abce25cd6bc71c8ccc7d2f3eac17f",
@@ -6919,7 +6919,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgl0o0m",
+    "id": "poi-food-b0ffgl0o0m",
     "poiId": "B0FFGL0O0M",
     "name": "陆记臭豆腐",
     "categoryLabel": "美食",
@@ -6940,7 +6940,7 @@
     ],
     "summary": "陆记臭豆腐，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFGL0O0M/comment/5541E654_DBAE_4A60_866E_A27910BECB59_L0_001_1280_853_1734171443382_51335254.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFGL0O0M/comment/5541E654_DBAE_4A60_866E_A27910BECB59_L0_001_1280_853_1734171443382_51335254.jpg",
       "https://aos-comment.amap.com/B0FFGL0O0M/comment/ED16F791_6FBF_4A53_9D27_A9EF6D568727_L0_001_1280_853_1734171443382_99869714.jpg",
@@ -6951,7 +6951,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgjpltr",
+    "id": "poi-food-b0ffgjpltr",
     "poiId": "B0FFGJPLTR",
     "name": "春风茶园",
     "categoryLabel": "美食",
@@ -6971,7 +6971,7 @@
     ],
     "summary": "春风茶园，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/93cab2f2abead2a2089252527646de4f",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/93cab2f2abead2a2089252527646de4f",
       "http://store.is.autonavi.com/showpic/71aab8fe47bd8f9cad4404e0fb8a71c5",
@@ -6982,7 +6982,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgaxgfu",
+    "id": "poi-food-b0ffgaxgfu",
     "poiId": "B0FFGAXGFU",
     "name": "鸟良日本料理",
     "categoryLabel": "美食",
@@ -7007,7 +7007,7 @@
     ],
     "summary": "鸟良日本料理，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/bf23a05a1e00b875daa315ee7b932e5a",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/bf23a05a1e00b875daa315ee7b932e5a",
       "https://aos-comment.amap.com/B0FFGAXGFU/comment/e46c79aa494d4d18055971c5fcc9e590_2048_2048_80.jpg",
@@ -7018,7 +7018,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02001fst7",
+    "id": "poi-food-b02001fst7",
     "poiId": "B02001FST7",
     "name": "旺达饭店(环城路店)",
     "categoryLabel": "美食",
@@ -7043,7 +7043,7 @@
     ],
     "summary": "旺达饭店(环城路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B02001FST7/comment/AD1552C3_AB73_46E8_95B3_E4A7FA0E6223_L0_001_1170_120_1772258974714_41123692.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B02001FST7/comment/AD1552C3_AB73_46E8_95B3_E4A7FA0E6223_L0_001_1170_120_1772258974714_41123692.jpg",
       "https://aos-comment.amap.com/B02001FST7/comment/6d6a5727765dccb8d74d2e8e73b981a4_2048_2048_80.jpg",
@@ -7054,7 +7054,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020017o58",
+    "id": "poi-food-b020017o58",
     "poiId": "B020017O58",
     "name": "望山螺蛳馆",
     "categoryLabel": "美食",
@@ -7079,7 +7079,7 @@
     ],
     "summary": "望山螺蛳馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/dd507c6913858b2f0000002318066128?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/dd507c6913858b2f0000002318066128?type=pic",
       "https://store.is.autonavi.com/showpic/e0a74612b5e884240000002318042562?type=pic",
@@ -7090,7 +7090,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02000k0ec",
+    "id": "poi-food-b02000k0ec",
     "poiId": "B02000K0EC",
     "name": "沁园饭店(海虞店)",
     "categoryLabel": "美食",
@@ -7114,7 +7114,7 @@
     ],
     "summary": "沁园饭店(海虞店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/6c2a96d9b7d95b14c2f0ca84a758ef35",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/6c2a96d9b7d95b14c2f0ca84a758ef35",
       "https://store.is.autonavi.com/showpic/de77bd8a15faff420000002674976827?type=pic",
@@ -7125,7 +7125,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0200087fi",
+    "id": "poi-food-b0200087fi",
     "poiId": "B0200087FI",
     "name": "荷花饭店(青墩塘路店)",
     "categoryLabel": "美食",
@@ -7150,7 +7150,7 @@
     ],
     "summary": "荷花饭店(青墩塘路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0200087FI/comment/content_media_external_images_media_100001445_1746538830123_39600986.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0200087FI/comment/content_media_external_images_media_100001445_1746538830123_39600986.jpg",
       "https://aos-comment.amap.com/B0200087FI/comment/content_media_external_images_media_100001445_1746538830145_54774342.jpg",
@@ -7161,7 +7161,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffjsw557",
+    "id": "poi-food-b0ffjsw557",
     "poiId": "B0FFJSW557",
     "name": "荷花蒸菜馆(鸿景名苑店)",
     "categoryLabel": "美食",
@@ -7182,7 +7182,7 @@
     ],
     "summary": "荷花蒸菜馆(鸿景名苑店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/d32f43e7f67c35b27207a22176fadde9",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/d32f43e7f67c35b27207a22176fadde9"
     ],
@@ -7191,7 +7191,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02001723r",
+    "id": "poi-food-b02001723r",
     "poiId": "B02001723R",
     "name": "苏通大酒店",
     "categoryLabel": "美食",
@@ -7212,7 +7212,7 @@
     ],
     "summary": "苏通大酒店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/9a477fa8aa6f78f5c5185221f7d3943a",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/9a477fa8aa6f78f5c5185221f7d3943a",
       "https://aos-comment.amap.com/B02001723R/comment/BBD4C725_A8E0_45E5_9769_457138040071_L0_001_1170_148_1767097095900_64986444.jpg",
@@ -7223,7 +7223,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffjd4oql",
+    "id": "poi-food-b0ffjd4oql",
     "poiId": "B0FFJD4OQL",
     "name": "河南烩面",
     "categoryLabel": "美食",
@@ -7244,7 +7244,7 @@
     ],
     "summary": "河南烩面，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/b6a7dad994cb480996604fe4b39878d6",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/b6a7dad994cb480996604fe4b39878d6",
       "https://store.is.autonavi.com/showpic/42568ab34e38b25dce6681976242d94f",
@@ -7255,7 +7255,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgh9jvr",
+    "id": "poi-food-b0ffgh9jvr",
     "poiId": "B0FFGH9JVR",
     "name": "嵩山面馆(沙家浜分店)",
     "categoryLabel": "美食",
@@ -7275,7 +7275,7 @@
     ],
     "summary": "嵩山面馆(沙家浜分店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFGH9JVR/comment/869e15bd46ad04bdb7f965ff4ed71323_2048_2048_80.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFGH9JVR/comment/869e15bd46ad04bdb7f965ff4ed71323_2048_2048_80.jpg",
       "https://aos-comment.amap.com/B0FFGH9JVR/comment/94d9d4d1f467f17a7f5648122bcad0f4_2048_2048_80.jpg",
@@ -7286,7 +7286,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg2wmer",
+    "id": "poi-food-b0ffg2wmer",
     "poiId": "B0FFG2WMER",
     "name": "鑫凯利酒店",
     "categoryLabel": "美食",
@@ -7304,7 +7304,7 @@
     ],
     "summary": "鑫凯利酒店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/4fabd1276c135bc0cb4b7f0c0a6fd5d3",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/4fabd1276c135bc0cb4b7f0c0a6fd5d3",
       "http://store.is.autonavi.com/showpic/68ecffd2e1dec807cfb70878e3b91afd",
@@ -7315,7 +7315,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgk0zp8",
+    "id": "poi-food-b0ffgk0zp8",
     "poiId": "B0FFGK0ZP8",
     "name": "定食(世茂店)",
     "categoryLabel": "美食",
@@ -7336,7 +7336,7 @@
     ],
     "summary": "定食(世茂店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/cd20e2594e6267c96b9a0e7df2ffa538",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/cd20e2594e6267c96b9a0e7df2ffa538",
       "http://store.is.autonavi.com/showpic/ba052c2cddcbe97e0b023c5909da0aa1",
@@ -7347,7 +7347,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffh1mi41",
+    "id": "poi-food-b0ffh1mi41",
     "poiId": "B0FFH1MI41",
     "name": "姚记烧烤(新溪路店)",
     "categoryLabel": "美食",
@@ -7370,7 +7370,7 @@
     ],
     "summary": "姚记烧烤(新溪路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/cc9eff950deb380c055df436635cdc40",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/cc9eff950deb380c055df436635cdc40",
       "https://aos-comment.amap.com/B0FFH1MI41/comment/49C2D5C4_E564_4B01_8877_6DD0554AFF59_L0_001_1850_200_1756347978612_13702957.jpg",
@@ -7381,7 +7381,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgxn9fz",
+    "id": "poi-food-b0ffgxn9fz",
     "poiId": "B0FFGXN9FZ",
     "name": "蒲公英日本料理(华府世家店)",
     "categoryLabel": "美食",
@@ -7403,7 +7403,7 @@
     ],
     "summary": "蒲公英日本料理(华府世家店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/418062354b4563d50000000664470070?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/418062354b4563d50000000664470070?type=pic",
       "https://store.is.autonavi.com/showpic/d36f3fdeb90f09460000000664452516?type=pic",
@@ -7414,7 +7414,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgd3mf3",
+    "id": "poi-food-b0ffgd3mf3",
     "poiId": "B0FFGD3MF3",
     "name": "地锅佳宴(常熟王市店)",
     "categoryLabel": "美食",
@@ -7435,7 +7435,7 @@
     ],
     "summary": "地锅佳宴(常熟王市店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/96a0eacc418654149a1bec9c173162cb",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/96a0eacc418654149a1bec9c173162cb",
       "https://store.is.autonavi.com/showpic/9b570fdfcfab525aa6ac346db672396d",
@@ -7446,7 +7446,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02000jkyl",
+    "id": "poi-food-b02000jkyl",
     "poiId": "B02000JKYL",
     "name": "兴福望岳楼老面馆(正宗第一馆)",
     "categoryLabel": "美食",
@@ -7471,7 +7471,7 @@
     ],
     "summary": "兴福望岳楼老面馆(正宗第一馆)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B02000JKYL/comment/content_media_external_file_1000066078_ss__1759759901456_45203827.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B02000JKYL/comment/content_media_external_file_1000066078_ss__1759759901456_45203827.jpg",
       "https://aos-comment.amap.com/B02000JKYL/comment/content_media_external_file_1000066079_ss__1759759901496_49555744.jpg",
@@ -7482,7 +7482,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhkqo6i",
+    "id": "poi-food-b0ffhkqo6i",
     "poiId": "B0FFHKQO6I",
     "name": "鸿运蒸菜馆",
     "categoryLabel": "美食",
@@ -7503,7 +7503,7 @@
     ],
     "summary": "鸿运蒸菜馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/11673131821aa608af156cc047dfa04d",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/11673131821aa608af156cc047dfa04d",
       "http://store.is.autonavi.com/showpic/cc00470dcea66ee33717da19a01b9e56",
@@ -7514,7 +7514,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhnjwg6",
+    "id": "poi-food-b0ffhnjwg6",
     "poiId": "B0FFHNJWG6",
     "name": "老朱快餐",
     "categoryLabel": "美食",
@@ -7534,7 +7534,7 @@
     ],
     "summary": "老朱快餐，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/aef8b1a086b86e33a593453dbdbfdfba",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/aef8b1a086b86e33a593453dbdbfdfba"
     ],
@@ -7543,7 +7543,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02000j4lw",
+    "id": "poi-food-b02000j4lw",
     "poiId": "B02000J4LW",
     "name": "常熟市虞山镇厨师帮家常菜",
     "categoryLabel": "美食",
@@ -7564,7 +7564,7 @@
     ],
     "summary": "常熟市虞山镇厨师帮家常菜，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/d3a33acf3619b66ee737fab52a4144d9",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/d3a33acf3619b66ee737fab52a4144d9",
       "http://store.is.autonavi.com/showpic/740add73ed3a1bf3862cc5ca40aca9d5",
@@ -7575,7 +7575,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffj22bw4",
+    "id": "poi-food-b0ffj22bw4",
     "poiId": "B0FFJ22BW4",
     "name": "八戒烤猪蹄(庐山苑三区店)",
     "categoryLabel": "美食",
@@ -7595,7 +7595,7 @@
     ],
     "summary": "八戒烤猪蹄(庐山苑三区店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/fb9ba5274f89891ce22492e0f8bfd33d",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/fb9ba5274f89891ce22492e0f8bfd33d",
       "http://store.is.autonavi.com/showpic/dfaab31bb6f0f6946eb758fa038583d0",
@@ -7606,7 +7606,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffi1awd4",
+    "id": "poi-food-b0ffi1awd4",
     "poiId": "B0FFI1AWD4",
     "name": "陕西美食(老街黄埔店)",
     "categoryLabel": "美食",
@@ -7626,7 +7626,7 @@
     ],
     "summary": "陕西美食(老街黄埔店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/e6ddcd28612308ac213186148a1925f6",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/e6ddcd28612308ac213186148a1925f6",
       "http://store.is.autonavi.com/showpic/76d48cdf2819abad9f1cbb5b30889763",
@@ -7637,7 +7637,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgsgcwp",
+    "id": "poi-food-b0ffgsgcwp",
     "poiId": "B0FFGSGCWP",
     "name": "沈记羊庄",
     "categoryLabel": "美食",
@@ -7658,7 +7658,7 @@
     ],
     "summary": "沈记羊庄，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/18b3f0c9eef42f6cfda860bbe07b1a80",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/18b3f0c9eef42f6cfda860bbe07b1a80"
     ],
@@ -7667,7 +7667,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgc8x3c",
+    "id": "poi-food-b0ffgc8x3c",
     "poiId": "B0FFGC8X3C",
     "name": "盛旗黑糖剉冰",
     "categoryLabel": "美食",
@@ -7692,7 +7692,7 @@
     ],
     "summary": "盛旗黑糖剉冰，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/4363316a64c38a640000003059314797?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/4363316a64c38a640000003059314797?type=pic",
       "https://store.is.autonavi.com/showpic/3989e2efb704c33a0000000689796334?type=pic",
@@ -7703,7 +7703,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgatz0r",
+    "id": "poi-food-b0ffgatz0r",
     "poiId": "B0FFGATZ0R",
     "name": "新城酒楼(和美家园店)",
     "categoryLabel": "美食",
@@ -7724,7 +7724,7 @@
     ],
     "summary": "新城酒楼(和美家园店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/cc642e19e8bbe08dbefb82622a2f1211",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/cc642e19e8bbe08dbefb82622a2f1211"
     ],
@@ -7733,7 +7733,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fff4r0kw",
+    "id": "poi-food-b0fff4r0kw",
     "poiId": "B0FFF4R0KW",
     "name": "虞东酒家(人民路店)",
     "categoryLabel": "美食",
@@ -7754,7 +7754,7 @@
     ],
     "summary": "虞东酒家(人民路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/5f5de6fcb725b9d5e0cc827325bd11bd",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/5f5de6fcb725b9d5e0cc827325bd11bd",
       "http://store.is.autonavi.com/showpic/dbb281055e3113f0f32187057e90a2b0"
@@ -7764,7 +7764,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffi1e62y",
+    "id": "poi-food-b0ffi1e62y",
     "poiId": "B0FFI1E62Y",
     "name": "喜悦汇一站式宴会中心(虞东店)",
     "categoryLabel": "美食",
@@ -7785,7 +7785,7 @@
     ],
     "summary": "喜悦汇一站式宴会中心(虞东店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/3dd4400d6babedcda9b6b67cce7dc655",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/3dd4400d6babedcda9b6b67cce7dc655",
       "http://store.is.autonavi.com/showpic/91747e80d62ab92d37404a95e844d6c9"
@@ -7795,7 +7795,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgr2th2",
+    "id": "poi-food-b0ffgr2th2",
     "poiId": "B0FFGR2TH2",
     "name": "金三峡烧鸡公",
     "categoryLabel": "美食",
@@ -7820,7 +7820,7 @@
     ],
     "summary": "金三峡烧鸡公，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/f6140f71c365c49e2dbe6138e8e427b9",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/f6140f71c365c49e2dbe6138e8e427b9",
       "https://aos-comment.amap.com/B0FFGR2TH2/comment/content_media_external_file_1199_1769206152483_19601378.jpg",
@@ -7831,7 +7831,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffghiubr",
+    "id": "poi-food-b0ffghiubr",
     "poiId": "B0FFGHIUBR",
     "name": "浒东食府(浒浦店)",
     "categoryLabel": "美食",
@@ -7853,7 +7853,7 @@
     ],
     "summary": "浒东食府(浒浦店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/b665f71b0fe06638db64666bc0722a18",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/b665f71b0fe06638db64666bc0722a18",
       "https://aos-comment.amap.com/B0FFGHIUBR/comment/content_media_external_file_1000039310_ss__1762234658702_99006235.jpg",
@@ -7864,7 +7864,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg12gl1",
+    "id": "poi-food-b0ffg12gl1",
     "poiId": "B0FFG12GL1",
     "name": "生态园菜馆",
     "categoryLabel": "美食",
@@ -7887,7 +7887,7 @@
     ],
     "summary": "生态园菜馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFG12GL1/comment/content_media_external_images_media_82364_ss__1731926786674_48713621.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFG12GL1/comment/content_media_external_images_media_82364_ss__1731926786674_48713621.jpg",
       "https://store.is.autonavi.com/showpic/26a53a22aee1da360000001352716204?type=pic",
@@ -7898,7 +7898,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffwnjkv",
+    "id": "poi-food-b0fffwnjkv",
     "poiId": "B0FFFWNJKV",
     "name": "香缘面馆(吴市店)",
     "categoryLabel": "美食",
@@ -7923,7 +7923,7 @@
     ],
     "summary": "香缘面馆(吴市店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/51022eed1093cf690000002393346332?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/51022eed1093cf690000002393346332?type=pic",
       "https://aos-comment.amap.com/B0FFFWNJKV/comment/7efddf3e513fe5790ddb4089d0487d0d_2048_2048_80.jpg",
@@ -7934,7 +7934,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffwgx8x",
+    "id": "poi-food-b0fffwgx8x",
     "poiId": "B0FFFWGX8X",
     "name": "珍门鸭头蒸菜馆",
     "categoryLabel": "美食",
@@ -7955,7 +7955,7 @@
     ],
     "summary": "珍门鸭头蒸菜馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/fc8ea263d83f9ebeb909ab5cad4d42bd",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/fc8ea263d83f9ebeb909ab5cad4d42bd",
       "https://aos-comment.amap.com/B0FFFWGX8X/comment/38350FF6_135C_48A8_A4F4_CAD1A6BFE528_L0_001_IMG_4538_1665459988533_cee37728.JPG",
@@ -7966,7 +7966,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffvw3f8",
+    "id": "poi-food-b0fffvw3f8",
     "poiId": "B0FFFVW3F8",
     "name": "重庆川菜馆(洞港经店)",
     "categoryLabel": "美食",
@@ -7987,7 +7987,7 @@
     ],
     "summary": "重庆川菜馆(洞港经店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/ae8bd41fbb9a47f8563f46930b7ad6d0",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/ae8bd41fbb9a47f8563f46930b7ad6d0",
       "http://store.is.autonavi.com/showpic/f1d2a1fc1c6fc57594cefd7e6641f9ae",
@@ -7998,7 +7998,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffff69t9",
+    "id": "poi-food-b0ffff69t9",
     "poiId": "B0FFFF69T9",
     "name": "碧云轩(常熟店)",
     "categoryLabel": "美食",
@@ -8023,7 +8023,7 @@
     ],
     "summary": "碧云轩(常熟店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/50c9fd618d58a00b0000002324030662?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/50c9fd618d58a00b0000002324030662?type=pic",
       "https://aos-comment.amap.com/B0FFFF69T9/comment/content_media_external_file_1000004252_ss__1756353112208_68395885.jpg",
@@ -8034,7 +8034,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02001d7oy",
+    "id": "poi-food-b02001d7oy",
     "poiId": "B02001D7OY",
     "name": "美乐滋休闲餐厅(梅李店)",
     "categoryLabel": "美食",
@@ -8059,7 +8059,7 @@
     ],
     "summary": "美乐滋休闲餐厅(梅李店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/4834cfd261256e923e0b6ee0c3673222",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/4834cfd261256e923e0b6ee0c3673222",
       "http://store.is.autonavi.com/showpic/b5b5aeaf2089afcdafa1f5578e944a37",
@@ -8070,7 +8070,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02001cz2g",
+    "id": "poi-food-b02001cz2g",
     "poiId": "B02001CZ2G",
     "name": "胡子烧烤(百盛花园北区店)",
     "categoryLabel": "美食",
@@ -8092,7 +8092,7 @@
     ],
     "summary": "胡子烧烤(百盛花园北区店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B02001CZ2G/comment/ee23c3a77631908e2ae868b9e37b9484_2048_2048_80.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B02001CZ2G/comment/ee23c3a77631908e2ae868b9e37b9484_2048_2048_80.jpg",
       "https://store.is.autonavi.com/showpic/5afe3c9c674f020e7496f7c8c54a8fcf",
@@ -8103,7 +8103,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020015sck",
+    "id": "poi-food-b020015sck",
     "poiId": "B020015SCK",
     "name": "海丰家常菜馆",
     "categoryLabel": "美食",
@@ -8124,7 +8124,7 @@
     ],
     "summary": "海丰家常菜馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B020015SCK/comment/08E497EB_922F_4306_93DD_1AD002E1AE07_L0_001_2000_150_1761381024216_88811687.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B020015SCK/comment/08E497EB_922F_4306_93DD_1AD002E1AE07_L0_001_2000_150_1761381024216_88811687.jpg",
       "https://aos-comment.amap.com/B020015SCK/comment/content_media_external_images_media_100008088_1741491355330_22640394.jpg",
@@ -8135,7 +8135,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffia8de6",
+    "id": "poi-food-b0ffia8de6",
     "poiId": "B0FFIA8DE6",
     "name": "西元里(江南印象店)",
     "categoryLabel": "美食",
@@ -8160,7 +8160,7 @@
     ],
     "summary": "西元里(江南印象店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/03b3f10804aa2ef214f2f1bc72bb1eeb",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/03b3f10804aa2ef214f2f1bc72bb1eeb",
       "https://store.is.autonavi.com/showpic/8c0a332ea8bbd293941eb0fe2061b62a?type=7",
@@ -8171,7 +8171,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffh7ya2s",
+    "id": "poi-food-b0ffh7ya2s",
     "poiId": "B0FFH7YA2S",
     "name": "百姓家常菜(白茆店)",
     "categoryLabel": "美食",
@@ -8191,7 +8191,7 @@
     ],
     "summary": "百姓家常菜(白茆店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/9dfa444ec5c6e108656d400dba8c3fe3",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/9dfa444ec5c6e108656d400dba8c3fe3",
       "http://store.is.autonavi.com/showpic/58245b90906c7dd9cbf73240770cab55",
@@ -8202,7 +8202,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffh0141h",
+    "id": "poi-food-b0ffh0141h",
     "poiId": "B0FFH0141H",
     "name": "山城川菜酸菜鱼(山明路店)",
     "categoryLabel": "美食",
@@ -8223,7 +8223,7 @@
     ],
     "summary": "山城川菜酸菜鱼(山明路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/21f27a94ea1bdfc62c36c9e2d1c50867",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/21f27a94ea1bdfc62c36c9e2d1c50867",
       "https://store.is.autonavi.com/showpic/c7e3b829a404fc82b2d4dbb4449c1b13",
@@ -8234,7 +8234,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgpqsx0",
+    "id": "poi-food-b0ffgpqsx0",
     "poiId": "B0FFGPQSX0",
     "name": "食力π(商城中路店)",
     "categoryLabel": "美食",
@@ -8259,7 +8259,7 @@
     ],
     "summary": "食力π(商城中路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/comment/content_service__1770685972524_58233543_1770685975212_44039956.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/comment/content_service__1770685972524_58233543_1770685975212_44039956.jpg",
       "http://store.is.autonavi.com/showpic/9b54f21f6405fe89a171761b887e6dda",
@@ -8270,7 +8270,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffwacf6",
+    "id": "poi-food-b0fffwacf6",
     "poiId": "B0FFFWACF6",
     "name": "我家早点(古里店)",
     "categoryLabel": "美食",
@@ -8291,7 +8291,7 @@
     ],
     "summary": "我家早点(古里店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/73ae84986ede44149b778ae2a3114d2c",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/73ae84986ede44149b778ae2a3114d2c",
       "https://store.is.autonavi.com/showpic/7f1c2403fdb260e0458239212ba3ebca",
@@ -8302,7 +8302,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffd8rq9",
+    "id": "poi-food-b0fffd8rq9",
     "poiId": "B0FFFD8RQ9",
     "name": "小潘麻辣烫(碧溪东路店)",
     "categoryLabel": "美食",
@@ -8322,7 +8322,7 @@
     ],
     "summary": "小潘麻辣烫(碧溪东路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFFD8RQ9/comment/77973490ba0463a0843ca17603af60c9_2048_2048_80.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFFD8RQ9/comment/77973490ba0463a0843ca17603af60c9_2048_2048_80.jpg",
       "https://aos-comment.amap.com/B0FFFD8RQ9/comment/7ad0b7fc4bd548bd15ad6d3b35cff27d_2048_2048_80.jpg",
@@ -8333,7 +8333,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02000j3tz",
+    "id": "poi-food-b02000j3tz",
     "poiId": "B02000J3TZ",
     "name": "红灯笼菜馆(东湖路店)",
     "categoryLabel": "美食",
@@ -8358,7 +8358,7 @@
     ],
     "summary": "红灯笼菜馆(东湖路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/989efcef6609d4579c2e17565e893594",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/989efcef6609d4579c2e17565e893594",
       "http://store.is.autonavi.com/showpic/2b9a9892711017e85427e5dfc5c010c2",
@@ -8369,7 +8369,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffiu4ysn",
+    "id": "poi-food-b0ffiu4ysn",
     "poiId": "B0FFIU4YSN",
     "name": "高茗生态茶园",
     "categoryLabel": "美食",
@@ -8389,7 +8389,7 @@
     ],
     "summary": "高茗生态茶园，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFIU4YSN/comment/3D04C82A_7806_43FA_90FF_2C0D674EB10F_L0_001_1500_200_1762906160547_68809943.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFIU4YSN/comment/3D04C82A_7806_43FA_90FF_2C0D674EB10F_L0_001_1500_200_1762906160547_68809943.jpg",
       "https://aos-comment.amap.com/B0FFIU4YSN/comment/E95D331B_9C5C_4C18_BCE4_0E06D4D34D15_L0_001_1080_1440_1744248543101_34321032.jpg",
@@ -8400,7 +8400,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffh94bxa",
+    "id": "poi-food-b0ffh94bxa",
     "poiId": "B0FFH94BXA",
     "name": "全聚仁果木烤鸭店(梅李综合市场商业街店)",
     "categoryLabel": "美食",
@@ -8420,7 +8420,7 @@
     ],
     "summary": "全聚仁果木烤鸭店(梅李综合市场商业街店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/45ec90180e61aa5e956b5321f29f07f0",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/45ec90180e61aa5e956b5321f29f07f0",
       "https://store.is.autonavi.com/showpic/e5a8cebf066f20c3d2a92568b9bf5c2d",
@@ -8431,7 +8431,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffghfrmk",
+    "id": "poi-food-b0ffghfrmk",
     "poiId": "B0FFGHFRMK",
     "name": "清真兰州拉面(唐市店)",
     "categoryLabel": "美食",
@@ -8452,7 +8452,7 @@
     ],
     "summary": "清真兰州拉面(唐市店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/96b889bfee279629e16fa3802901c851",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/96b889bfee279629e16fa3802901c851",
       "http://store.is.autonavi.com/showpic/e4fece9ed57b103615ee11f49fd11b4b",
@@ -8463,7 +8463,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg6dzhp",
+    "id": "poi-food-b0ffg6dzhp",
     "poiId": "B0FFG6DZHP",
     "name": "武藏日本料理(华府世家店)",
     "categoryLabel": "美食",
@@ -8488,7 +8488,7 @@
     ],
     "summary": "武藏日本料理(华府世家店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFG6DZHP/comment/0a04fe4c116bd5a7ecc50f986f02976c_2048_2048_80.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFG6DZHP/comment/0a04fe4c116bd5a7ecc50f986f02976c_2048_2048_80.jpg",
       "https://aos-comment.amap.com/B0FFG6DZHP/comment/de73743c5d4a235f101ab294e175cfcc_2048_2048_80.jpg",
@@ -8499,7 +8499,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg1f2xg",
+    "id": "poi-food-b0ffg1f2xg",
     "poiId": "B0FFG1F2XG",
     "name": "徐裕泰百年老店(总店)",
     "categoryLabel": "美食",
@@ -8523,7 +8523,7 @@
     ],
     "summary": "徐裕泰百年老店(总店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/f6c36f40796a31eba1b6f4bbe7a70c09",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/f6c36f40796a31eba1b6f4bbe7a70c09",
       "https://aos-comment.amap.com/B0FFG1F2XG/comment/ad2b600138b7bfdf0c0628c61f73799a_2048_2048_80.jpg",
@@ -8534,7 +8534,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg13i2v",
+    "id": "poi-food-b0ffg13i2v",
     "poiId": "B0FFG13I2V",
     "name": "小四川饭店",
     "categoryLabel": "美食",
@@ -8554,7 +8554,7 @@
     ],
     "summary": "小四川饭店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFG13I2V/comment/content_media_external_file_100003509_1765590154041_53191822.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFG13I2V/comment/content_media_external_file_100003509_1765590154041_53191822.jpg",
       "https://aos-comment.amap.com/B0FFG13I2V/comment/content_media_external_file_1000035098_ss__1765590154055_13818698.jpg",
@@ -8565,7 +8565,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffrypt5",
+    "id": "poi-food-b0fffrypt5",
     "poiId": "B0FFFRYPT5",
     "name": "聚金苑农家菜馆(珠江路二店)",
     "categoryLabel": "美食",
@@ -8590,7 +8590,7 @@
     ],
     "summary": "聚金苑农家菜馆(珠江路二店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFFRYPT5/comment/c67ccf8c843dcce3d6a4828d8ad07704_2048_2048_80.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFFRYPT5/comment/c67ccf8c843dcce3d6a4828d8ad07704_2048_2048_80.jpg",
       "https://aos-comment.amap.com/B0FFFRYPT5/comment/content_media_external_images_media_2418895_ss_2_1725510952298_33997945.jpg",
@@ -8601,7 +8601,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02001cz2i",
+    "id": "poi-food-b02001cz2i",
     "poiId": "B02001CZ2I",
     "name": "忆江南菜馆(东张中心路店)",
     "categoryLabel": "美食",
@@ -8626,7 +8626,7 @@
     ],
     "summary": "忆江南菜馆(东张中心路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B02001CZ2I/comment/content_media_external_file_100004781_1758333611555_68454117.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B02001CZ2I/comment/content_media_external_file_100004781_1758333611555_68454117.jpg",
       "http://store.is.autonavi.com/showpic/2f892480c5d2d0fba1f55d4d246cf4f6"
@@ -8636,7 +8636,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020017a4k",
+    "id": "poi-food-b020017a4k",
     "poiId": "B020017A4K",
     "name": "向阳农庄",
     "categoryLabel": "美食",
@@ -8655,7 +8655,7 @@
     ],
     "summary": "向阳农庄，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/122d9698fb8ab09adee29a7d92326155",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/122d9698fb8ab09adee29a7d92326155"
     ],
@@ -8664,7 +8664,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02000jghs",
+    "id": "poi-food-b02000jghs",
     "poiId": "B02000JGHS",
     "name": "港顺美食坊(长江路店)",
     "categoryLabel": "美食",
@@ -8689,7 +8689,7 @@
     ],
     "summary": "港顺美食坊(长江路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/95c995cceec76793b1b1e51f6f744203",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/95c995cceec76793b1b1e51f6f744203",
       "https://aos-comment.amap.com/B02000JGHS/comment/29538560f6d064df501d63c5eb5b4323_2048_2048_80.jpg",
@@ -8700,7 +8700,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffwoxix",
+    "id": "poi-food-b0fffwoxix",
     "poiId": "B0FFFWOXIX",
     "name": "明记烧烤(碧溪店)",
     "categoryLabel": "美食",
@@ -8720,7 +8720,7 @@
     ],
     "summary": "明记烧烤(碧溪店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/00b133c26e4b5b9c4600586cb0b20e09",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/00b133c26e4b5b9c4600586cb0b20e09",
       "https://store.is.autonavi.com/showpic/2f2dd0a5e6936916d7f358b12b2ddad9",
@@ -8731,7 +8731,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020015y3u",
+    "id": "poi-food-b020015y3u",
     "poiId": "B020015Y3U",
     "name": "芳芳肉串",
     "categoryLabel": "美食",
@@ -8752,7 +8752,7 @@
     ],
     "summary": "芳芳肉串，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://aos-cdn-image.amap.com/sns/ugccomment/e9c47dbb-0a47-4a4c-b759-7d840f654694.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://aos-cdn-image.amap.com/sns/ugccomment/e9c47dbb-0a47-4a4c-b759-7d840f654694.jpg",
       "https://store.is.autonavi.com/showpic/f0c9795beb2684626383284658703b47",
@@ -8763,7 +8763,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhf5bw6",
+    "id": "poi-food-b0ffhf5bw6",
     "poiId": "B0FFHF5BW6",
     "name": "港岛咖啡俱乐部(长江路店)",
     "categoryLabel": "美食",
@@ -8788,7 +8788,7 @@
     ],
     "summary": "港岛咖啡俱乐部(长江路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/ab286ecfe8348f4bb27528362a02d409",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/ab286ecfe8348f4bb27528362a02d409",
       "http://store.is.autonavi.com/showpic/5580e8cea3109f1e8a1b5b9c",
@@ -8799,7 +8799,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffjv1o3m",
+    "id": "poi-food-b0ffjv1o3m",
     "poiId": "B0FFJV1O3M",
     "name": "小方圆面馆(任阳店)",
     "categoryLabel": "美食",
@@ -8819,7 +8819,7 @@
     ],
     "summary": "小方圆面馆(任阳店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/2f0e4047db0523b00000000811242246?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/2f0e4047db0523b00000000811242246?type=pic",
       "https://store.is.autonavi.com/showpic/46fd721c390c31ef0000000811186758?type=pic",
@@ -8830,7 +8830,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffjfs4gs",
+    "id": "poi-food-b0ffjfs4gs",
     "poiId": "B0FFJFS4GS",
     "name": "渔鼎我家酸菜鱼(王市店)",
     "categoryLabel": "美食",
@@ -8852,7 +8852,7 @@
     ],
     "summary": "渔鼎我家酸菜鱼(王市店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/49c7a65bbe429a760894ff1fce7e5fbc",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/49c7a65bbe429a760894ff1fce7e5fbc",
       "https://aos-comment.amap.com/B0FFJFS4GS/comment/4769e64e37321e80294a639f5f40f2c5_2048_2048_80.jpg",
@@ -8863,7 +8863,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffjdjlh5",
+    "id": "poi-food-b0ffjdjlh5",
     "poiId": "B0FFJDJLH5",
     "name": "老树餐厅",
     "categoryLabel": "美食",
@@ -8885,7 +8885,7 @@
     ],
     "summary": "老树餐厅，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFJDJLH5/comment/content_media_external_file_1000111414_ss__1766046937112_10350786.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFJDJLH5/comment/content_media_external_file_1000111414_ss__1766046937112_10350786.jpg",
       "https://store.is.autonavi.com/showpic/9210f5d7627289da0000002658958407?type=pic",
@@ -8896,7 +8896,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffiwth3s",
+    "id": "poi-food-b0ffiwth3s",
     "poiId": "B0FFIWTH3S",
     "name": "郭记阿能鹅汤火锅(方塔园店)",
     "categoryLabel": "美食",
@@ -8921,7 +8921,7 @@
     ],
     "summary": "郭记阿能鹅汤火锅(方塔园店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/74c50f094088e711ab43494bcbbe22ca",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/74c50f094088e711ab43494bcbbe22ca",
       "https://aos-comment.amap.com/B0FFIWTH3S/comment/content_media_external_images_media_100003595_1738844003702_22285314.jpg",
@@ -8932,7 +8932,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffiwg1s8",
+    "id": "poi-food-b0ffiwg1s8",
     "poiId": "B0FFIWG1S8",
     "name": "清源茶社",
     "categoryLabel": "美食",
@@ -8952,7 +8952,7 @@
     ],
     "summary": "清源茶社，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/f740ec8ee8cf1d16b05d947004ab7aa8",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/f740ec8ee8cf1d16b05d947004ab7aa8",
       "http://store.is.autonavi.com/showpic/777b04088330cf1eff74c40b4c48b883",
@@ -8963,7 +8963,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffir395b",
+    "id": "poi-food-b0ffir395b",
     "poiId": "B0FFIR395B",
     "name": "一带一炉总店",
     "categoryLabel": "美食",
@@ -8986,7 +8986,7 @@
     ],
     "summary": "一带一炉总店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/d31bc1464b2726e3098f88d4fa406955",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/d31bc1464b2726e3098f88d4fa406955",
       "http://store.is.autonavi.com/showpic/60bd3f188ec5b70f7fb644ee45df7514",
@@ -8997,7 +8997,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffif96n7",
+    "id": "poi-food-b0ffif96n7",
     "poiId": "B0FFIF96N7",
     "name": "老家大锅台(世茂店)",
     "categoryLabel": "美食",
@@ -9021,7 +9021,7 @@
     ],
     "summary": "老家大锅台(世茂店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/4b981e6ba8a69ca92416006cd356eb9a",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/4b981e6ba8a69ca92416006cd356eb9a",
       "http://store.is.autonavi.com/showpic/18ae8fe11a62fad7410b5171cb872513",
@@ -9032,7 +9032,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffi9qey4",
+    "id": "poi-food-b0ffi9qey4",
     "poiId": "B0FFI9QEY4",
     "name": "红泥食府(海虞北路店)",
     "categoryLabel": "美食",
@@ -9055,7 +9055,7 @@
     ],
     "summary": "红泥食府(海虞北路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/d04ac7d566bd2e0d58f254b1ac32509f",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/d04ac7d566bd2e0d58f254b1ac32509f",
       "http://store.is.autonavi.com/showpic/fa153454d3aef5fedac72d26935fae11",
@@ -9066,7 +9066,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhlofsz",
+    "id": "poi-food-b0ffhlofsz",
     "poiId": "B0FFHLOFSZ",
     "name": "山景园 始于光绪十六年",
     "categoryLabel": "美食",
@@ -9086,7 +9086,7 @@
     ],
     "summary": "山景园 始于光绪十六年，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/4818b8ca504f379b0000000411964266",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/4818b8ca504f379b0000000411964266",
       "https://store.is.autonavi.com/showpic/9da0803c53a10bcb0000000428502279",
@@ -9097,7 +9097,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhdx9as",
+    "id": "poi-food-b0ffhdx9as",
     "poiId": "B0FFHDX9AS",
     "name": "兄弟生态羊庄(碧溪中路店)",
     "categoryLabel": "美食",
@@ -9117,7 +9117,7 @@
     ],
     "summary": "兄弟生态羊庄(碧溪中路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/852e92ce92866ee86a2d7691e24435c1",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/852e92ce92866ee86a2d7691e24435c1",
       "http://store.is.autonavi.com/showpic/d5f86c8a123bae67a1cd9284d9ed491b",
@@ -9128,7 +9128,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgxxnm0",
+    "id": "poi-food-b0ffgxxnm0",
     "poiId": "B0FFGXXNM0",
     "name": "湖畔居花园餐厅(昆承湖)",
     "categoryLabel": "美食",
@@ -9152,7 +9152,7 @@
     ],
     "summary": "湖畔居花园餐厅(昆承湖)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/76d5651becdcb63ea4b43d7a7bb00d32",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/76d5651becdcb63ea4b43d7a7bb00d32",
       "https://aos-comment.amap.com/B0FFGXXNM0/comment/0bd8e39f07645a12a1c6b1100447b77d_2048_2048_80.jpg",
@@ -9163,7 +9163,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgxuwfq",
+    "id": "poi-food-b0ffgxuwfq",
     "poiId": "B0FFGXUWFQ",
     "name": "春暖花开(虞山南路店)",
     "categoryLabel": "美食",
@@ -9188,7 +9188,7 @@
     ],
     "summary": "春暖花开(虞山南路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFGXUWFQ/comment/content_media_external_file_35786_1756330538015_36282271.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFGXUWFQ/comment/content_media_external_file_35786_1756330538015_36282271.jpg",
       "https://aos-comment.amap.com/B0FFGXUWFQ/comment/content_media_external_file_35786_1756330538014_53716407.jpg",
@@ -9199,7 +9199,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffginxmu",
+    "id": "poi-food-b0ffginxmu",
     "poiId": "B0FFGINXMU",
     "name": "水云涧茶坊",
     "categoryLabel": "美食",
@@ -9219,7 +9219,7 @@
     ],
     "summary": "水云涧茶坊，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/05fd4c0e15007886a081f21498102722",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/05fd4c0e15007886a081f21498102722",
       "https://store.is.autonavi.com/showpic/2e6ae9a9bebbd52a0000002352918408?type=pic",
@@ -9230,7 +9230,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgh2lpj",
+    "id": "poi-food-b0ffgh2lpj",
     "poiId": "B0FFGH2LPJ",
     "name": "东旺面馆快餐店",
     "categoryLabel": "美食",
@@ -9250,7 +9250,7 @@
     ],
     "summary": "东旺面馆快餐店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/1da0dd72e5ed6afa862d9a3c44e87768",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/1da0dd72e5ed6afa862d9a3c44e87768",
       "http://store.is.autonavi.com/showpic/f35a4eb2106f550ca69ba1c5c2ac6a26"
@@ -9260,7 +9260,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg2eqwg",
+    "id": "poi-food-b0ffg2eqwg",
     "poiId": "B0FFG2EQWG",
     "name": "联珠茶苑",
     "categoryLabel": "美食",
@@ -9280,7 +9280,7 @@
     ],
     "summary": "联珠茶苑，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFG2EQWG/comment/2F6721C3_278B_46B8_940F_3A1D77835481_L0_001_877_137_1759533392317_69720649.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFG2EQWG/comment/2F6721C3_278B_46B8_940F_3A1D77835481_L0_001_877_137_1759533392317_69720649.jpg",
       "https://store.is.autonavi.com/showpic/d40a8a4397bb69010000000954812152?type=pic",
@@ -9291,7 +9291,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg13i2w",
+    "id": "poi-food-b0ffg13i2w",
     "poiId": "B0FFG13I2W",
     "name": "铭香园饭庄(洞泾港店)",
     "categoryLabel": "美食",
@@ -9312,7 +9312,7 @@
     ],
     "summary": "铭香园饭庄(洞泾港店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFG13I2W/comment/4bcb80b6031dac657561afaf74e5104a_2048_2048_80.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFG13I2W/comment/4bcb80b6031dac657561afaf74e5104a_2048_2048_80.jpg",
       "https://aos-comment.amap.com/B0FFG13I2W/comment/70168486bed548f77f8d270303b40ca6_2048_2048_80.jpg",
@@ -9323,7 +9323,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffxtwa6",
+    "id": "poi-food-b0fffxtwa6",
     "poiId": "B0FFFXTWA6",
     "name": "无锡汤包店(桑园街店)",
     "categoryLabel": "美食",
@@ -9342,7 +9342,7 @@
     ],
     "summary": "无锡汤包店(桑园街店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/72945bb90e647ddb678a815e9ff8c72f",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/72945bb90e647ddb678a815e9ff8c72f",
       "http://store.is.autonavi.com/showpic/e38c855a70d406031e710430b530e0a2"
@@ -9352,7 +9352,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffwkqsy",
+    "id": "poi-food-b0fffwkqsy",
     "poiId": "B0FFFWKQSY",
     "name": "优悠虞品面馆",
     "categoryLabel": "美食",
@@ -9374,7 +9374,7 @@
     ],
     "summary": "优悠虞品面馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/761cdb9816b2537a1b690c7e2ce2c547",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/761cdb9816b2537a1b690c7e2ce2c547",
       "https://aos-comment.amap.com/B0FFFWKQSY/comment/a9cab55fc81bd13818d1a9264789f2d3_2048_2048_80.jpg",
@@ -9385,7 +9385,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffftt05k",
+    "id": "poi-food-b0ffftt05k",
     "poiId": "B0FFFTT05K",
     "name": "松月楼早餐快餐店",
     "categoryLabel": "美食",
@@ -9405,7 +9405,7 @@
     ],
     "summary": "松月楼早餐快餐店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/c83bf0eb30b8712155aebe49e4023a3d",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/c83bf0eb30b8712155aebe49e4023a3d",
       "https://store.is.autonavi.com/showpic/dd7c0ea2a0741063e63aeca789550b6a"
@@ -9415,7 +9415,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffff65t7",
+    "id": "poi-food-b0ffff65t7",
     "poiId": "B0FFFF65T7",
     "name": "南半球自助海鲜烤肉火锅",
     "categoryLabel": "美食",
@@ -9440,7 +9440,7 @@
     ],
     "summary": "南半球自助海鲜烤肉火锅，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFFF65T7/comment/70d86f4d19df8c7158cacadeee440b6b_2048_2048_80.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFFF65T7/comment/70d86f4d19df8c7158cacadeee440b6b_2048_2048_80.jpg",
       "https://aos-comment.amap.com/B0FFFF65T7/comment/275786c1184e12dbeb004d84787b4640_2048_2048_80.jpg",
@@ -9451,7 +9451,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffa0b2d",
+    "id": "poi-food-b0fffa0b2d",
     "poiId": "B0FFFA0B2D",
     "name": "东北水饺(梅李店)",
     "categoryLabel": "美食",
@@ -9471,7 +9471,7 @@
     ],
     "summary": "东北水饺(梅李店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/66de991ee0e1f3dc012c134d4aa320d6",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/66de991ee0e1f3dc012c134d4aa320d6",
       "https://store.is.autonavi.com/showpic/2f085ddbceb8f6d685095dd2391c5424",
@@ -9482,7 +9482,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02001c4b0",
+    "id": "poi-food-b02001c4b0",
     "poiId": "B02001C4B0",
     "name": "千杯少酒楼(中宏新农中心店)",
     "categoryLabel": "美食",
@@ -9504,7 +9504,7 @@
     ],
     "summary": "千杯少酒楼(中宏新农中心店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/c0d8df4adaa4da34accca549dbd078e9",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/c0d8df4adaa4da34accca549dbd078e9",
       "http://store.is.autonavi.com/showpic/827bb1726cab4b72b2ef137c05f465b0",
@@ -9515,7 +9515,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020017md9",
+    "id": "poi-food-b020017md9",
     "poiId": "B020017MD9",
     "name": "桐庐石锅鱼(常熟店)",
     "categoryLabel": "美食",
@@ -9540,7 +9540,7 @@
     ],
     "summary": "桐庐石锅鱼(常熟店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/f29d9dd5bcb8933360857be2df8859d7",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/f29d9dd5bcb8933360857be2df8859d7",
       "https://aos-comment.amap.com/B020017MD9/comment/e312115b1189f32758b3528d51bde7e9_2048_2048_80.jpg",
@@ -9551,7 +9551,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020015s2f",
+    "id": "poi-food-b020015s2f",
     "poiId": "B020015S2F",
     "name": "重庆烧鸡公(毛桥店)",
     "categoryLabel": "美食",
@@ -9576,7 +9576,7 @@
     ],
     "summary": "重庆烧鸡公(毛桥店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/f863d16db88fb5957469733efe9c9fcd",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/f863d16db88fb5957469733efe9c9fcd",
       "https://store.is.autonavi.com/showpic/ad99847e789a418dd0f7c31c426d2c7b",
@@ -9587,7 +9587,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02000jhkx",
+    "id": "poi-food-b02000jhkx",
     "poiId": "B02000JHKX",
     "name": "山湖酒家",
     "categoryLabel": "美食",
@@ -9608,7 +9608,7 @@
     ],
     "summary": "山湖酒家，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/cf12b00b1caad6b70000002690266563?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/cf12b00b1caad6b70000002690266563?type=pic",
       "https://store.is.autonavi.com/showpic/a9e7db7e2bb5aa5c0000002690342210?type=pic",
@@ -9619,7 +9619,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02000j30e",
+    "id": "poi-food-b02000j30e",
     "poiId": "B02000J30E",
     "name": "小华联酒家(新颜路店)",
     "categoryLabel": "美食",
@@ -9640,7 +9640,7 @@
     ],
     "summary": "小华联酒家(新颜路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/ca53450b4b79a9ca7f0344d3e6bd36e1",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/ca53450b4b79a9ca7f0344d3e6bd36e1",
       "http://store.is.autonavi.com/showpic/6b3453ea4556a7664039e4f872027eb5",
@@ -9651,7 +9651,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020008bq2",
+    "id": "poi-food-b020008bq2",
     "poiId": "B020008BQ2",
     "name": "鹏程饭店(衡山路)",
     "categoryLabel": "美食",
@@ -9676,7 +9676,7 @@
     ],
     "summary": "鹏程饭店(衡山路)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/a00ae9b093674abaace2e3127a8ee4c7",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/a00ae9b093674abaace2e3127a8ee4c7",
       "https://aos-comment.amap.com/B020008BQ2/comment/214c577ec08270753ae11e9ccc683c27_2048_2048_80.jpg",
@@ -9687,7 +9687,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020006ahh",
+    "id": "poi-food-b020006ahh",
     "poiId": "B020006AHH",
     "name": "小铅皮鹅汤馆",
     "categoryLabel": "美食",
@@ -9712,7 +9712,7 @@
     ],
     "summary": "小铅皮鹅汤馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/b11268d7055ab77bd78feba1769f3f87",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/b11268d7055ab77bd78feba1769f3f87",
       "https://aos-comment.amap.com/B020006AHH/comment/8190ba0d03a665fcdd7b4ce295124b4f_2048_2048_80.jpg",
@@ -9723,7 +9723,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgy8pvt",
+    "id": "poi-food-b0ffgy8pvt",
     "poiId": "B0FFGY8PVT",
     "name": "好朋友面馆",
     "categoryLabel": "美食",
@@ -9743,7 +9743,7 @@
     ],
     "summary": "好朋友面馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/5cd11eff0011e4b500f23aa092118a2d",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/5cd11eff0011e4b500f23aa092118a2d"
     ],
@@ -9752,7 +9752,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgsfi3m",
+    "id": "poi-food-b0ffgsfi3m",
     "poiId": "B0FFGSFI3M",
     "name": "虾虾跳纸上烤鱼(湘江路店)",
     "categoryLabel": "美食",
@@ -9777,7 +9777,7 @@
     ],
     "summary": "虾虾跳纸上烤鱼(湘江路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/3ec12fbb33124cc2973aafabb8429a66",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/3ec12fbb33124cc2973aafabb8429a66",
       "http://store.is.autonavi.com/showpic/356a9eb8092ef6d5875bb59866d87b9b",
@@ -9788,7 +9788,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhg3q9s",
+    "id": "poi-food-b0ffhg3q9s",
     "poiId": "B0FFHG3Q9S",
     "name": "兰州牛肉拉面",
     "categoryLabel": "美食",
@@ -9809,7 +9809,7 @@
     ],
     "summary": "兰州牛肉拉面，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/query_pic?id=st1c70706a-ddd6-4231-b85f-91ffd4561d53&user=search&operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/query_pic?id=st1c70706a-ddd6-4231-b85f-91ffd4561d53&user=search&operate=original",
       "https://store.is.autonavi.com/showpic/269d967af211dbb5c4ada233d5a4bdb3",
@@ -9820,7 +9820,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02000j4bv",
+    "id": "poi-food-b02000j4bv",
     "poiId": "B02000J4BV",
     "name": "名人酒家(富仓路5号小区店)",
     "categoryLabel": "美食",
@@ -9840,7 +9840,7 @@
     ],
     "summary": "名人酒家(富仓路5号小区店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/16aa0a371f38fc093df956e9a78bf646",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/16aa0a371f38fc093df956e9a78bf646",
       "http://store.is.autonavi.com/showpic/ad201b9afe27f5e73db432417ca58efd",
@@ -9851,7 +9851,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffiaf5ay",
+    "id": "poi-food-b0ffiaf5ay",
     "poiId": "B0FFIAF5AY",
     "name": "幽鲜面馆(忠欣路店)",
     "categoryLabel": "美食",
@@ -9874,7 +9874,7 @@
     ],
     "summary": "幽鲜面馆(忠欣路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/cfd5d3cb631dda05141367e6976e4807",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/cfd5d3cb631dda05141367e6976e4807",
       "https://aos-comment.amap.com/B0FFIAF5AY/comment/content_media_external_file_100000564_1753600767350_83266026.jpg",
@@ -9885,7 +9885,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgchxxx",
+    "id": "poi-food-b0ffgchxxx",
     "poiId": "B0FFGCHXXX",
     "name": "一缕炊烟主题餐厅(虞山北路店)",
     "categoryLabel": "美食",
@@ -9910,7 +9910,7 @@
     ],
     "summary": "一缕炊烟主题餐厅(虞山北路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/21d16a8c1fed476aa7c96d0948c8054c",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/21d16a8c1fed476aa7c96d0948c8054c",
       "http://store.is.autonavi.com/showpic/4e10f974610b63d39272625ea6964695",
@@ -9921,7 +9921,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020019o0c",
+    "id": "poi-food-b020019o0c",
     "poiId": "B020019O0C",
     "name": "百村面馆馄饨",
     "categoryLabel": "美食",
@@ -9944,7 +9944,7 @@
     ],
     "summary": "百村面馆馄饨，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/3b975dfec322fbfd49a4cf5fdb1ef894",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/3b975dfec322fbfd49a4cf5fdb1ef894",
       "https://aos-comment.amap.com/B020019O0C/comment/202601_21-12151_1768968920721_45847357.jpg"
@@ -9954,7 +9954,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0mgaddone",
+    "id": "poi-food-b0mgaddone",
     "poiId": "B0MGADDONE",
     "name": "朴大叔拌饭(常熟辛庄创乐橙店)",
     "categoryLabel": "美食",
@@ -9975,7 +9975,7 @@
     ],
     "summary": "朴大叔拌饭(常熟辛庄创乐橙店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/ed6e49159bf975dd0e005ae8cb43088d",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/ed6e49159bf975dd0e005ae8cb43088d",
       "https://store.is.autonavi.com/showpic/30aa699998ffe16ccfe5b170539c47ca",
@@ -9986,7 +9986,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0mb2u16bb",
+    "id": "poi-food-b0mb2u16bb",
     "poiId": "B0MB2U16BB",
     "name": "星巴克(苏州常熟辛庄镇创乐橙店)",
     "categoryLabel": "美食",
@@ -10008,7 +10008,7 @@
     ],
     "summary": "星巴克(苏州常熟辛庄镇创乐橙店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/272ae4014c6418526bef23d799ac9c33",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/272ae4014c6418526bef23d799ac9c33"
     ],
@@ -10017,7 +10017,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0makymw45",
+    "id": "poi-food-b0makymw45",
     "poiId": "B0MAKYMW45",
     "name": "茉莉奶白",
     "categoryLabel": "美食",
@@ -10037,7 +10037,7 @@
     ],
     "summary": "茉莉奶白，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/9081274e79ecd3b00000000965102638?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/9081274e79ecd3b00000000965102638?type=pic",
       "https://store.is.autonavi.com/showpic/093ad3c7e4519df20000000965126389?type=pic",
@@ -10048,7 +10048,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0lk0r9ne6",
+    "id": "poi-food-b0lk0r9ne6",
     "poiId": "B0LK0R9NE6",
     "name": "瑞幸咖啡(常熟颜巷明珠路店)",
     "categoryLabel": "美食",
@@ -10068,7 +10068,7 @@
     ],
     "summary": "瑞幸咖啡(常熟颜巷明珠路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/c287706810a95e84ab635a931ccf264d?operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/c287706810a95e84ab635a931ccf264d?operate=original",
       "https://store.is.autonavi.com/showpic/e54a5ad65e5ddf24745da09db822b0e0"
@@ -10078,7 +10078,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0lglunmnk",
+    "id": "poi-food-b0lglunmnk",
     "poiId": "B0LGLUNMNK",
     "name": "方记牛肉(衡山店)",
     "categoryLabel": "美食",
@@ -10098,7 +10098,7 @@
     ],
     "summary": "方记牛肉(衡山店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/923e8ac999f69c0e066dabb35241baff",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/923e8ac999f69c0e066dabb35241baff",
       "https://aos-comment.amap.com/B0LGLUNMNK/comment/20260323-bea9e45b2f90a0069b0aa189-4YxepdtsIqW8qHnylvE6O8.jpg",
@@ -10109,7 +10109,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0lboubnnm",
+    "id": "poi-food-b0lboubnnm",
     "poiId": "B0LBOUBNNM",
     "name": "米村拌饭(常熟星光天地店)",
     "categoryLabel": "美食",
@@ -10129,7 +10129,7 @@
     ],
     "summary": "米村拌饭(常熟星光天地店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/query_pic?id=st596b1fbb-f39e-4563-a573-71db96d80dc8&user=search&operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/query_pic?id=st596b1fbb-f39e-4563-a573-71db96d80dc8&user=search&operate=original",
       "https://store.is.autonavi.com/showpic/1af6c2177fb41c84fb49ac0b3108f591"
@@ -10139,7 +10139,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0lavd5dl1",
+    "id": "poi-food-b0lavd5dl1",
     "poiId": "B0LAVD5DL1",
     "name": "代数学家algebraist(常熟昆承湖凯悦店)",
     "categoryLabel": "美食",
@@ -10164,7 +10164,7 @@
     ],
     "summary": "代数学家algebraist(常熟昆承湖凯悦店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/7db7ba6a30e9d23b07829099f5eb2c66",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/7db7ba6a30e9d23b07829099f5eb2c66",
       "https://aos-comment.amap.com/B0LAVD5DL1/comment/FF669E5B_3E53_4E34_A8A0_57B3622F107C_L0_001_1205_137_1770186406000_35238932.jpg",
@@ -10175,7 +10175,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0la9us5vx",
+    "id": "poi-food-b0la9us5vx",
     "poiId": "B0LA9US5VX",
     "name": "火地铁板烧(常熟永旺店)",
     "categoryLabel": "美食",
@@ -10200,7 +10200,7 @@
     ],
     "summary": "火地铁板烧(常熟永旺店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/b19025771bf6c6ecc10759b2e9ed9821",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/b19025771bf6c6ecc10759b2e9ed9821",
       "https://store.is.autonavi.com/showpic/f7f74805678b01217a74e1e7f0d8f30f"
@@ -10210,7 +10210,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l3m9om8p",
+    "id": "poi-food-b0l3m9om8p",
     "poiId": "B0L3M9OM8P",
     "name": "老香港炸鸡(阜湖路店)",
     "categoryLabel": "美食",
@@ -10231,7 +10231,7 @@
     ],
     "summary": "老香港炸鸡(阜湖路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0L3M9OM8P/comment/file_media_Photo_577_IMG_1760264415_539_IMG_20251012_181835_jpg_ss__1761380353676_71558456.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0L3M9OM8P/comment/file_media_Photo_577_IMG_1760264415_539_IMG_20251012_181835_jpg_ss__1761380353676_71558456.jpg",
       "https://store.is.autonavi.com/showpic/e9369b44edf73da11c7fe35e98ba9a57",
@@ -10242,7 +10242,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l3cajj4p",
+    "id": "poi-food-b0l3cajj4p",
     "poiId": "B0L3CAJJ4P",
     "name": "Tims天好咖啡(常熟雅致昆承居店)",
     "categoryLabel": "美食",
@@ -10262,7 +10262,7 @@
     ],
     "summary": "Tims天好咖啡(常熟雅致昆承居店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/query_pic?id=st1a318338-7770-4717-a3c2-d24271293e86&user=search&operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/query_pic?id=st1a318338-7770-4717-a3c2-d24271293e86&user=search&operate=original",
       "https://store.is.autonavi.com/showpic/28922ee74ef323924549578ab15f334f"
@@ -10272,7 +10272,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l33ub4n6",
+    "id": "poi-food-b0l33ub4n6",
     "poiId": "B0L33UB4N6",
     "name": "森林子.健康果蔬茶(凤凰城店)",
     "categoryLabel": "美食",
@@ -10293,7 +10293,7 @@
     ],
     "summary": "森林子.健康果蔬茶(凤凰城店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/6e587e0253c93957d3acf474474c1517",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/6e587e0253c93957d3acf474474c1517",
       "https://store.is.autonavi.com/showpic/065ac206ebd19d1b74d5c7c173ecdeed",
@@ -10304,7 +10304,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l2rzm41u",
+    "id": "poi-food-b0l2rzm41u",
     "poiId": "B0L2RZM41U",
     "name": "梧桐姥姥(常熟凤凰城店)",
     "categoryLabel": "美食",
@@ -10325,7 +10325,7 @@
     ],
     "summary": "梧桐姥姥(常熟凤凰城店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/18f8acd0b5126f05419fe593e3c9881a",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/18f8acd0b5126f05419fe593e3c9881a"
     ],
@@ -10334,7 +10334,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l23555tj",
+    "id": "poi-food-b0l23555tj",
     "poiId": "B0L23555TJ",
     "name": "融柳大铁牛螺蛳粉(常熟小康村店)",
     "categoryLabel": "美食",
@@ -10354,7 +10354,7 @@
     ],
     "summary": "融柳大铁牛螺蛳粉(常熟小康村店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/48daece986c4b41602451aa98e2f3c80",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/48daece986c4b41602451aa98e2f3c80",
       "https://store.is.autonavi.com/showpic/9b14d10a79e796fa91ff99540f158045"
@@ -10364,7 +10364,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l2rzm41u",
+    "id": "poi-food-b0l2rzm41u",
     "poiId": "B0L2RZM41U",
     "name": "梧桐姥姥(常熟凤凰城店)",
     "categoryLabel": "美食",
@@ -10385,7 +10385,7 @@
     ],
     "summary": "梧桐姥姥(常熟凤凰城店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/18f8acd0b5126f05419fe593e3c9881a",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/18f8acd0b5126f05419fe593e3c9881a"
     ],
@@ -10394,7 +10394,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l23555tj",
+    "id": "poi-food-b0l23555tj",
     "poiId": "B0L23555TJ",
     "name": "融柳大铁牛螺蛳粉(常熟小康村店)",
     "categoryLabel": "美食",
@@ -10414,7 +10414,7 @@
     ],
     "summary": "融柳大铁牛螺蛳粉(常熟小康村店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/48daece986c4b41602451aa98e2f3c80",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/48daece986c4b41602451aa98e2f3c80",
       "https://store.is.autonavi.com/showpic/9b14d10a79e796fa91ff99540f158045"
@@ -10424,7 +10424,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l1alkldw",
+    "id": "poi-food-b0l1alkldw",
     "poiId": "B0L1ALKLDW",
     "name": "古茗(常熟新桥中宏店)",
     "categoryLabel": "美食",
@@ -10447,7 +10447,7 @@
     ],
     "summary": "古茗(常熟新桥中宏店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://img.alicdn.com/imgextra/i2/O1CN013xzjdi1RsXLRp0pfX_!!6000000002167-2-tps-3333-3333.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://img.alicdn.com/imgextra/i2/O1CN013xzjdi1RsXLRp0pfX_!!6000000002167-2-tps-3333-3333.png"
     ],
@@ -10456,7 +10456,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l16csso0",
+    "id": "poi-food-b0l16csso0",
     "poiId": "B0L16CSSO0",
     "name": "食宜鲜炖(常熟星光天地店)",
     "categoryLabel": "美食",
@@ -10477,7 +10477,7 @@
     ],
     "summary": "食宜鲜炖(常熟星光天地店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/45cf4bf880fdd15d1fa8cfc7b1b29c14",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/45cf4bf880fdd15d1fa8cfc7b1b29c14",
       "https://aos-comment.amap.com/B0L16CSSO0/comment/content_media_external_file_25650_1768363805328_48708659.jpg",
@@ -10488,7 +10488,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l0gc4e2v",
+    "id": "poi-food-b0l0gc4e2v",
     "poiId": "B0L0GC4E2V",
     "name": "一鸣真鲜奶吧(苏州常熟鲲湖天镜花园店)",
     "categoryLabel": "美食",
@@ -10510,7 +10510,7 @@
     ],
     "summary": "一鸣真鲜奶吧(苏州常熟鲲湖天镜花园店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/8ab59bfd812f19820000002420164568?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/8ab59bfd812f19820000002420164568?type=pic",
       "https://store.is.autonavi.com/showpic/920a6b5e39e154590000002420188207?type=pic",
@@ -10521,7 +10521,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0kur9a35u",
+    "id": "poi-food-b0kur9a35u",
     "poiId": "B0KUR9A35U",
     "name": "围炉三国锅盔(琴湖溪里花园城店)",
     "categoryLabel": "美食",
@@ -10541,7 +10541,7 @@
     ],
     "summary": "围炉三国锅盔(琴湖溪里花园城店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/comment/content_service__1769065418050_72587762_1769065426507_44525816.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/comment/content_service__1769065418050_72587762_1769065426507_44525816.jpg",
       "https://store.is.autonavi.com/showpic/9af04287807b1fa46aaca58816515515",
@@ -10552,7 +10552,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ku37gdg2",
+    "id": "poi-food-b0ku37gdg2",
     "poiId": "B0KU37GDG2",
     "name": "波比艾斯牛乳冰淇淋(常熟永旺梦乐城店)",
     "categoryLabel": "美食",
@@ -10572,7 +10572,7 @@
     ],
     "summary": "波比艾斯牛乳冰淇淋(常熟永旺梦乐城店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/4d1d37976e199261660919b7e7c55d32",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/4d1d37976e199261660919b7e7c55d32"
     ],
@@ -10581,7 +10581,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0krxd684g",
+    "id": "poi-food-b0krxd684g",
     "poiId": "B0KRXD684G",
     "name": "鱼你在一起(董浜丰晟商业广场店 )",
     "categoryLabel": "美食",
@@ -10602,7 +10602,7 @@
     ],
     "summary": "鱼你在一起(董浜丰晟商业广场店 )，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/query_pic?id=st9171851d-863d-485d-865b-25a5c54937ae&user=search&operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/query_pic?id=st9171851d-863d-485d-865b-25a5c54937ae&user=search&operate=original",
       "http://store.is.autonavi.com/showpic/05d7b11bc642c3132bddcf94d8557e1a",
@@ -10613,7 +10613,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0kkvu0gkv",
+    "id": "poi-food-b0kkvu0gkv",
     "poiId": "B0KKVU0GKV",
     "name": "三五筷伴市井冒菜(江南印象店)",
     "categoryLabel": "美食",
@@ -10634,7 +10634,7 @@
     ],
     "summary": "三五筷伴市井冒菜(江南印象店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/c95bf8bb52e3bf9b8071b683f268071b",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/c95bf8bb52e3bf9b8071b683f268071b",
       "https://store.is.autonavi.com/showpic/1a4ad31579013f8e0000000576000029"
@@ -10644,7 +10644,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0kkv93o3i",
+    "id": "poi-food-b0kkv93o3i",
     "poiId": "B0KKV93O3I",
     "name": "烤官大人·烤鱼·鲜蛙煲(辛庄店)",
     "categoryLabel": "美食",
@@ -10665,7 +10665,7 @@
     ],
     "summary": "烤官大人·烤鱼·鲜蛙煲(辛庄店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/7c9bdb15963022cc3a2dcdf1eeabeff1",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/7c9bdb15963022cc3a2dcdf1eeabeff1",
       "http://store.is.autonavi.com/showpic/b3b796d4d95e7dbbb80a7706ba86d2de",
@@ -10676,7 +10676,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0k3jha4om",
+    "id": "poi-food-b0k3jha4om",
     "poiId": "B0K3JHA4OM",
     "name": "麦伴伴爆炒浇头面(梅李店)",
     "categoryLabel": "美食",
@@ -10697,7 +10697,7 @@
     ],
     "summary": "麦伴伴爆炒浇头面(梅李店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/3b6b843d2d70776c4ec704c3f35c19a8",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/3b6b843d2d70776c4ec704c3f35c19a8",
       "https://store.is.autonavi.com/showpic/51129866b243556ef556291b52c023a6",
@@ -10708,7 +10708,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0jdf5o6tx",
+    "id": "poi-food-b0jdf5o6tx",
     "poiId": "B0JDF5O6TX",
     "name": "蜀湘曹氏鸭脖(颜港南村店)",
     "categoryLabel": "美食",
@@ -10728,7 +10728,7 @@
     ],
     "summary": "蜀湘曹氏鸭脖(颜港南村店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/bf8687e271fcb1e6ae54fe99fba191b5",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/bf8687e271fcb1e6ae54fe99fba191b5",
       "http://store.is.autonavi.com/showpic/1480a1e7f98f301d242f4affdf2e9a3a"
@@ -10738,7 +10738,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0j3f1eofd",
+    "id": "poi-food-b0j3f1eofd",
     "poiId": "B0J3F1EOFD",
     "name": "柠檬森林(海虞新天地店)",
     "categoryLabel": "美食",
@@ -10763,7 +10763,7 @@
     ],
     "summary": "柠檬森林(海虞新天地店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0J3F1EOFD/comment/content_media_external_file_1000014517_ss__1760773187528_43873106.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0J3F1EOFD/comment/content_media_external_file_1000014517_ss__1760773187528_43873106.jpg",
       "http://store.is.autonavi.com/showpic/5c38520e60abb3e64c949612a59de904",
@@ -10774,7 +10774,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0j36rovmt",
+    "id": "poi-food-b0j36rovmt",
     "poiId": "B0J36ROVMT",
     "name": "蜜雪冰城(董徐大道745号如家商旅店)",
     "categoryLabel": "美食",
@@ -10797,7 +10797,7 @@
     ],
     "summary": "蜜雪冰城(董徐大道745号如家商旅店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/query_pic?id=st2c745913-adf3-4bec-a8ae-2ecccab199fe&user=search&operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/query_pic?id=st2c745913-adf3-4bec-a8ae-2ecccab199fe&user=search&operate=original"
     ],
@@ -10806,7 +10806,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0h33cwt7u",
+    "id": "poi-food-b0h33cwt7u",
     "poiId": "B0H33CWT7U",
     "name": "小春日和(海虞北路店)",
     "categoryLabel": "美食",
@@ -10826,7 +10826,7 @@
     ],
     "summary": "小春日和(海虞北路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/11f58602bdcb2e860000002454150939?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/11f58602bdcb2e860000002454150939?type=pic",
       "https://store.is.autonavi.com/showpic/cbdc6d9f197634810000002454214025?type=pic",
@@ -10837,7 +10837,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0g3yavbvl",
+    "id": "poi-food-b0g3yavbvl",
     "poiId": "B0G3YAVBVL",
     "name": "张亮麻辣烫(常熟老街店)",
     "categoryLabel": "美食",
@@ -10858,7 +10858,7 @@
     ],
     "summary": "张亮麻辣烫(常熟老街店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://img.alicdn.com/imgextra/i2/O1CN013Da1GK1Ex2GzcHFBd_!!6000000000417-49-tps-750-750.webp",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://img.alicdn.com/imgextra/i2/O1CN013Da1GK1Ex2GzcHFBd_!!6000000000417-49-tps-750-750.webp",
       "https://store.is.autonavi.com/showpic/4a1fbd99d124b99296114295440eb883",
@@ -10869,7 +10869,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0g3tro6wo",
+    "id": "poi-food-b0g3tro6wo",
     "poiId": "B0G3TRO6WO",
     "name": "如意馄饨(苏州常熟汽车站店)",
     "categoryLabel": "美食",
@@ -10889,7 +10889,7 @@
     ],
     "summary": "如意馄饨(苏州常熟汽车站店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://img.alicdn.com/imgextra/i3/O1CN01iBQRQf1JGxybm2qFj_!!6000000001002-0-tps-500-500.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://img.alicdn.com/imgextra/i3/O1CN01iBQRQf1JGxybm2qFj_!!6000000001002-0-tps-500-500.jpg",
       "https://aos-comment.amap.com/B0G3TRO6WO/comment/500e9db1-1d63-42fe-a60e-b289f1f23d62.png",
@@ -10900,7 +10900,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffkgs53z",
+    "id": "poi-food-b0ffkgs53z",
     "poiId": "B0FFKGS53Z",
     "name": "溢香阁炸串(常客隆广场店)",
     "categoryLabel": "美食",
@@ -10921,7 +10921,7 @@
     ],
     "summary": "溢香阁炸串(常客隆广场店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/ca730a2ed423dacfc1649c56d850e00d",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/ca730a2ed423dacfc1649c56d850e00d",
       "https://store.is.autonavi.com/showpic/13c95085dd33f5b3a4b13366d8a85f72",
@@ -10932,7 +10932,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffk5ziv3",
+    "id": "poi-food-b0ffk5ziv3",
     "poiId": "B0FFK5ZIV3",
     "name": "正新鸡排(康康店)",
     "categoryLabel": "美食",
@@ -10953,7 +10953,7 @@
     ],
     "summary": "正新鸡排(康康店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/query_pic?id=st80923c27-cd0e-4450-83a2-239a22584288&user=search&operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/query_pic?id=st80923c27-cd0e-4450-83a2-239a22584288&user=search&operate=original",
       "http://store.is.autonavi.com/showpic/ed7de3d74616d964b9e03256b67c57c6"
@@ -10963,7 +10963,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffjfs2ot",
+    "id": "poi-food-b0ffjfs2ot",
     "poiId": "B0FFJFS2OT",
     "name": "蜜雪冰城",
     "categoryLabel": "美食",
@@ -10982,7 +10982,7 @@
     ],
     "summary": "蜜雪冰城，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/query_pic?id=st2c745913-adf3-4bec-a8ae-2ecccab199fe&user=search&operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/query_pic?id=st2c745913-adf3-4bec-a8ae-2ecccab199fe&user=search&operate=original",
       "https://aos-comment.amap.com/B0FFJFS2OT/comment/176909322287_1769093229256_23262034.jpg",
@@ -10993,7 +10993,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffibwt4h",
+    "id": "poi-food-b0ffibwt4h",
     "poiId": "B0FFIBWT4H",
     "name": "如意馄饨(苏州常熟世茂店)",
     "categoryLabel": "美食",
@@ -11013,7 +11013,7 @@
     ],
     "summary": "如意馄饨(苏州常熟世茂店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://img.alicdn.com/imgextra/i3/O1CN01iBQRQf1JGxybm2qFj_!!6000000001002-0-tps-500-500.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://img.alicdn.com/imgextra/i3/O1CN01iBQRQf1JGxybm2qFj_!!6000000001002-0-tps-500-500.jpg",
       "http://store.is.autonavi.com/showpic/ef346f068b05321f8c36b5bd8376c722",
@@ -11024,7 +11024,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgkkyto",
+    "id": "poi-food-b0ffgkkyto",
     "poiId": "B0FFGKKYTO",
     "name": "杨园阿娟爊味(辛庄店)",
     "categoryLabel": "美食",
@@ -11044,7 +11044,7 @@
     ],
     "summary": "杨园阿娟爊味(辛庄店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/b8907d5fa30d18109b24b5f3273572ab",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/b8907d5fa30d18109b24b5f3273572ab",
       "http://store.is.autonavi.com/showpic/62b5c9580d61b4f372ea3185fe0e5f04",
@@ -11055,7 +11055,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffyfbab",
+    "id": "poi-food-b0fffyfbab",
     "poiId": "B0FFFYFBAB",
     "name": "名月日本料理(常熟花园店)",
     "categoryLabel": "美食",
@@ -11080,7 +11080,7 @@
     ],
     "summary": "名月日本料理(常熟花园店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFFYFBAB/comment/866f462f688ee9c6beeaff18a77b1797_2048_2048_80.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFFYFBAB/comment/866f462f688ee9c6beeaff18a77b1797_2048_2048_80.jpg",
       "https://aos-comment.amap.com/B0FFFYFBAB/comment/9feab65f1e783fe58b3c63cb2d7123c0_2048_2048_80.jpg",
@@ -11091,7 +11091,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b020005q18",
+    "id": "poi-food-b020005q18",
     "poiId": "B020005Q18",
     "name": "汉堡小新(桂村大街店)",
     "categoryLabel": "美食",
@@ -11111,7 +11111,7 @@
     ],
     "summary": "汉堡小新(桂村大街店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/7fd282641675a9caa5d539d5903218d5",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/7fd282641675a9caa5d539d5903218d5"
     ],
@@ -11120,7 +11120,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffi10xac",
+    "id": "poi-food-b0ffi10xac",
     "poiId": "B0FFI10XAC",
     "name": "7浪吧·龙虾·烤鱼(世茂店)",
     "categoryLabel": "美食",
@@ -11142,7 +11142,7 @@
     ],
     "summary": "7浪吧·龙虾·烤鱼(世茂店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/e80d90124b6fd0c119eca4fe75639398",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/e80d90124b6fd0c119eca4fe75639398",
       "http://store.is.autonavi.com/showpic/bf8eb954be8dd5f1601f705b1d2c6639",
@@ -11153,7 +11153,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhiva5k",
+    "id": "poi-food-b0ffhiva5k",
     "poiId": "B0FFHIVA5K",
     "name": "家购来台湾小吃店",
     "categoryLabel": "美食",
@@ -11173,7 +11173,7 @@
     ],
     "summary": "家购来台湾小吃店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/619df77d0cdb4998c448c3c113be1f9e",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/619df77d0cdb4998c448c3c113be1f9e",
       "http://store.is.autonavi.com/showpic/51690f1a7bc5bd3be9224514fde21284",
@@ -11184,7 +11184,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhi1c0n",
+    "id": "poi-food-b0ffhi1c0n",
     "poiId": "B0FFHI1C0N",
     "name": "望湖面馆",
     "categoryLabel": "美食",
@@ -11209,7 +11209,7 @@
     ],
     "summary": "望湖面馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/d59b5447837296c59364a8cdd0891bbc",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/d59b5447837296c59364a8cdd0891bbc",
       "http://store.is.autonavi.com/showpic/cd0235c5750c2cf55d18683e6735672a",
@@ -11220,7 +11220,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgwzkxg",
+    "id": "poi-food-b0ffgwzkxg",
     "poiId": "B0FFGWZKXG",
     "name": "阿虎小灶常兴店",
     "categoryLabel": "美食",
@@ -11240,7 +11240,7 @@
     ],
     "summary": "阿虎小灶常兴店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/6e8db4aec902ce824a49d93ad79a0333",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/6e8db4aec902ce824a49d93ad79a0333"
     ],
@@ -11249,7 +11249,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffi45h4b",
+    "id": "poi-food-b0ffi45h4b",
     "poiId": "B0FFI45H4B",
     "name": "铁皮棚棚饭店(华茂国际商务中心店)",
     "categoryLabel": "美食",
@@ -11269,7 +11269,7 @@
     ],
     "summary": "铁皮棚棚饭店(华茂国际商务中心店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/69f53a077f1768c50000002898674561?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/69f53a077f1768c50000002898674561?type=pic",
       "https://store.is.autonavi.com/showpic/85a3934e1e695a6c0000002300884144?type=pic",
@@ -11280,7 +11280,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhu9x55",
+    "id": "poi-food-b0ffhu9x55",
     "poiId": "B0FFHU9X55",
     "name": "金之都蛋糕房(铁琴北街店)",
     "categoryLabel": "美食",
@@ -11303,7 +11303,7 @@
     ],
     "summary": "金之都蛋糕房(铁琴北街店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/1ddf48eecf8673d0d5787f6e2e9fb13c",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/1ddf48eecf8673d0d5787f6e2e9fb13c",
       "http://store.is.autonavi.com/showpic/02c49705874ea7ce91a8d159bccbc870",
@@ -11314,7 +11314,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgh94jy",
+    "id": "poi-food-b0ffgh94jy",
     "poiId": "B0FFGH94JY",
     "name": "小弟羊庄龙虾(中欧大厦店)",
     "categoryLabel": "美食",
@@ -11335,7 +11335,7 @@
     ],
     "summary": "小弟羊庄龙虾(中欧大厦店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/c16d57daf11daf1109d8113103fbead7",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/c16d57daf11daf1109d8113103fbead7",
       "http://store.is.autonavi.com/showpic/7a3446d53f42b2fcd63bd18f517811c5",
@@ -11346,7 +11346,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02001dokr",
+    "id": "poi-food-b02001dokr",
     "poiId": "B02001DOKR",
     "name": "重庆烧鸡公(谢桥店)",
     "categoryLabel": "美食",
@@ -11367,7 +11367,7 @@
     ],
     "summary": "重庆烧鸡公(谢桥店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/508f6d82f52b6c815749c4b0dbc39ec7",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/508f6d82f52b6c815749c4b0dbc39ec7",
       "http://store.is.autonavi.com/showpic/4e0f747a888966dd8b69554fe1b88b69",
@@ -11378,7 +11378,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg312ys",
+    "id": "poi-food-b0ffg312ys",
     "poiId": "B0FFG312YS",
     "name": "六安家乡菜(华山路店)",
     "categoryLabel": "美食",
@@ -11399,7 +11399,7 @@
     ],
     "summary": "六安家乡菜(华山路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/2870320027b8455523635d33c2c9e3ce",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/2870320027b8455523635d33c2c9e3ce",
       "http://store.is.autonavi.com/showpic/34e17deef57167e0151e08f83a78511c"
@@ -11409,7 +11409,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg8lj7g",
+    "id": "poi-food-b0ffg8lj7g",
     "poiId": "B0FFG8LJ7G",
     "name": "宝岩生态观光园小凤饭店",
     "categoryLabel": "美食",
@@ -11434,7 +11434,7 @@
     ],
     "summary": "宝岩生态观光园小凤饭店，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/a7c10ab0ed86417dbb6169a8472c0426",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/a7c10ab0ed86417dbb6169a8472c0426",
       "http://store.is.autonavi.com/showpic/670117fade4d0057664daddbd6aa6ef4",
@@ -11445,7 +11445,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffi5zo8b",
+    "id": "poi-food-b0ffi5zo8b",
     "poiId": "B0FFI5ZO8B",
     "name": "m+甜品店(常熟老街店)",
     "categoryLabel": "美食",
@@ -11467,7 +11467,7 @@
     ],
     "summary": "m+甜品店(常熟老街店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/2ed5d8ea55c437c7844bea627e2ce0d8",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/2ed5d8ea55c437c7844bea627e2ce0d8",
       "https://store.is.autonavi.com/showpic/03d506aefb11c91580eafe0361b812fd",
@@ -11478,7 +11478,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0mbdafsk9",
+    "id": "poi-food-b0mbdafsk9",
     "poiId": "B0MBDAFSK9",
     "name": "满巍明生炸鸡架(常熟天虹购物中心店)",
     "categoryLabel": "美食",
@@ -11502,7 +11502,7 @@
     ],
     "summary": "满巍明生炸鸡架(常熟天虹购物中心店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0MBDAFSK9/comment/F9917754_A7FE_4822_9B8B_522820E84144_L0_001_1500_200_1771439810257_92191706.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0MBDAFSK9/comment/F9917754_A7FE_4822_9B8B_522820E84144_L0_001_1500_200_1771439810257_92191706.jpg",
       "https://aos-comment.amap.com/B0MBDAFSK9/comment/C7E540A5_362B_4EE1_830C_9F3FE766FEF0_L0_001_1500_200_1771439810253_29931759.jpg",
@@ -11513,7 +11513,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0m6xnnfi0",
+    "id": "poi-food-b0m6xnnfi0",
     "poiId": "B0M6XNNFI0",
     "name": "乔杉杉生烫牛肉米线(银通路店)",
     "categoryLabel": "美食",
@@ -11531,15 +11531,15 @@
       "快餐厅"
     ],
     "summary": "乔杉杉生烫牛肉米线(银通路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
-    "imageUrl": "/assets/generated-placeholders/restaurant.png",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "imageUrl": "/assets/generated-placeholders/food.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [],
     "dynamicText": "{\"biz_type\": null, \"tag\": null, \"keytag\": \"米线\"}",
     "source": "amap",
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0m6pcm06i",
+    "id": "poi-food-b0m6pcm06i",
     "poiId": "B0M6PCM06I",
     "name": "柠檬森林(常熟福山店)",
     "categoryLabel": "美食",
@@ -11559,7 +11559,7 @@
     ],
     "summary": "柠檬森林(常熟福山店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/9e64ad7342fc7182692ddfad3bd17609",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/9e64ad7342fc7182692ddfad3bd17609",
       "https://store.is.autonavi.com/showpic/9c8a33eee00ba71ce3d8109c21108278"
@@ -11569,7 +11569,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0m6f5zg2c",
+    "id": "poi-food-b0m6f5zg2c",
     "poiId": "B0M6F5ZG2C",
     "name": "蜜雪冰城(长浜路店)",
     "categoryLabel": "美食",
@@ -11590,7 +11590,7 @@
     ],
     "summary": "蜜雪冰城(长浜路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/bf8220fff70fb1bd968cfca159712888",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/bf8220fff70fb1bd968cfca159712888",
       "https://store.is.autonavi.com/showpic/ad41ca9a7b4695bcd076613cbb262340",
@@ -11601,7 +11601,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0lrzh2fti",
+    "id": "poi-food-b0lrzh2fti",
     "poiId": "B0LRZH2FTI",
     "name": "CHAGEE霸王茶姬(江苏苏州常熟印象城一楼店)",
     "categoryLabel": "美食",
@@ -11622,7 +11622,7 @@
     ],
     "summary": "CHAGEE霸王茶姬(江苏苏州常熟印象城一楼店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/9649ccaf040ba720c3b27fd02d7ced80?operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/9649ccaf040ba720c3b27fd02d7ced80?operate=original",
       "https://store.is.autonavi.com/showpic/e43998bfa87ca9552d634b1f79b67e5d",
@@ -11633,7 +11633,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ld554ii4",
+    "id": "poi-food-b0ld554ii4",
     "poiId": "B0LD554II4",
     "name": "晨跑的杯子(苏州常熟店)",
     "categoryLabel": "美食",
@@ -11654,7 +11654,7 @@
     ],
     "summary": "晨跑的杯子(苏州常熟店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/a8e1898dd480f49ab3a03119b9b5495b",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/a8e1898dd480f49ab3a03119b9b5495b"
     ],
@@ -11663,7 +11663,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0lbf5uj1v",
+    "id": "poi-food-b0lbf5uj1v",
     "poiId": "B0LBF5UJ1V",
     "name": "库迪咖啡(常熟常客隆大义店)",
     "categoryLabel": "美食",
@@ -11684,7 +11684,7 @@
     ],
     "summary": "库迪咖啡(常熟常客隆大义店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/7b0db620ddccbe9ff42ce59100617216?operate=original?operate=original?operate=original?operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/7b0db620ddccbe9ff42ce59100617216?operate=original?operate=original?operate=original?operate=original",
       "http://store.is.autonavi.com/showpic/2f17de440abf35ece8a1ecd4564f6fb1",
@@ -11695,7 +11695,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l6ngr73v",
+    "id": "poi-food-b0l6ngr73v",
     "poiId": "B0L6NGR73V",
     "name": "功夫煎饼(莱迪美食城店)",
     "categoryLabel": "美食",
@@ -11716,7 +11716,7 @@
     ],
     "summary": "功夫煎饼(莱迪美食城店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/97dfa922546fe8490eb1965c373bfb42",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/97dfa922546fe8490eb1965c373bfb42"
     ],
@@ -11725,7 +11725,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l3azqg7z",
+    "id": "poi-food-b0l3azqg7z",
     "poiId": "B0L3AZQG7Z",
     "name": "沙县小吃",
     "categoryLabel": "美食",
@@ -11743,7 +11743,7 @@
     ],
     "summary": "沙县小吃，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/23acfcf80e801b334c5e2eb94b1da1bf",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/23acfcf80e801b334c5e2eb94b1da1bf"
     ],
@@ -11752,7 +11752,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l35bd9pp",
+    "id": "poi-food-b0l35bd9pp",
     "poiId": "B0L35BD9PP",
     "name": "辣掌柜(常熟店)",
     "categoryLabel": "美食",
@@ -11771,7 +11771,7 @@
     ],
     "summary": "辣掌柜(常熟店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/bb55834225589297e6923414d2220241",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/bb55834225589297e6923414d2220241"
     ],
@@ -11780,7 +11780,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l2vd7yqm",
+    "id": "poi-food-b0l2vd7yqm",
     "poiId": "B0L2VD7YQM",
     "name": "华莱士·全鸡汉堡(常熟招商城店)",
     "categoryLabel": "美食",
@@ -11802,7 +11802,7 @@
     ],
     "summary": "华莱士·全鸡汉堡(常熟招商城店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/c406ecbf863a7c93518b1bad6a34294e?operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/c406ecbf863a7c93518b1bad6a34294e?operate=original",
       "https://store.is.autonavi.com/showpic/a679f5526bac809e871e64f5fb0bbb10",
@@ -11813,7 +11813,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l2mzz7iq",
+    "id": "poi-food-b0l2mzz7iq",
     "poiId": "B0L2MZZ7IQ",
     "name": "N多寿司(常熟天虹购物中心店)",
     "categoryLabel": "美食",
@@ -11834,7 +11834,7 @@
     ],
     "summary": "N多寿司(常熟天虹购物中心店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/5a9fdbe4659ac76d8eaa65a71fa1853e",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/5a9fdbe4659ac76d8eaa65a71fa1853e",
       "https://aos-comment.amap.com/B0L2MZZ7IQ/comment/content_media_external_file_100001672_1763197276959_98092527.jpg",
@@ -11845,7 +11845,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l2c9iqqp",
+    "id": "poi-food-b0l2c9iqqp",
     "poiId": "B0L2C9IQQP",
     "name": "瑞幸咖啡(常熟尚湖梦乐城店)",
     "categoryLabel": "美食",
@@ -11866,7 +11866,7 @@
     ],
     "summary": "瑞幸咖啡(常熟尚湖梦乐城店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/c287706810a95e84ab635a931ccf264d?operate=original",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/c287706810a95e84ab635a931ccf264d?operate=original",
       "https://aos-comment.amap.com/comment/content_service__1771930204187_92193834_1771930206937_29151465.jpg",
@@ -11877,7 +11877,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0l0narqd1",
+    "id": "poi-food-b0l0narqd1",
     "poiId": "B0L0NARQD1",
     "name": "故里炸鸡(常熟古里新桥店)",
     "categoryLabel": "美食",
@@ -11897,7 +11897,7 @@
     ],
     "summary": "故里炸鸡(常熟古里新桥店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/1c15e300d83b7fdbd3e7afc36331c72a",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/1c15e300d83b7fdbd3e7afc36331c72a"
     ],
@@ -11906,7 +11906,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0krju4nje",
+    "id": "poi-food-b0krju4nje",
     "poiId": "B0KRJU4NJE",
     "name": "朴大叔拌饭(常熟时尚莱迪店)",
     "categoryLabel": "美食",
@@ -11930,7 +11930,7 @@
     ],
     "summary": "朴大叔拌饭(常熟时尚莱迪店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/2d7eed78fc03ae6260d38fa7a4743096",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/2d7eed78fc03ae6260d38fa7a4743096"
     ],
@@ -11939,7 +11939,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0krju4nje",
+    "id": "poi-food-b0krju4nje",
     "poiId": "B0KRJU4NJE",
     "name": "朴大叔拌饭(常熟时尚莱迪店)",
     "categoryLabel": "美食",
@@ -11963,7 +11963,7 @@
     ],
     "summary": "朴大叔拌饭(常熟时尚莱迪店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/2d7eed78fc03ae6260d38fa7a4743096",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/2d7eed78fc03ae6260d38fa7a4743096"
     ],
@@ -11972,7 +11972,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0k2hzhwpt",
+    "id": "poi-food-b0k2hzhwpt",
     "poiId": "B0K2HZHWPT",
     "name": "燕喜娜.滋补炖品.姨妈热饮(常熟琴枫苑店)",
     "categoryLabel": "美食",
@@ -11993,7 +11993,7 @@
     ],
     "summary": "燕喜娜.滋补炖品.姨妈热饮(常熟琴枫苑店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/beb77bfa11ed7b11172a17de7237a9ee",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/beb77bfa11ed7b11172a17de7237a9ee",
       "http://store.is.autonavi.com/showpic/27b78810aa44c0f204ebe37593099654",
@@ -12004,7 +12004,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0jdks9fog",
+    "id": "poi-food-b0jdks9fog",
     "poiId": "B0JDKS9FOG",
     "name": "巴蜀人家川菜馆(新建路店)",
     "categoryLabel": "美食",
@@ -12024,7 +12024,7 @@
     ],
     "summary": "巴蜀人家川菜馆(新建路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/ba9784d45800159f88047d93709c8ccb",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/ba9784d45800159f88047d93709c8ccb",
       "https://store.is.autonavi.com/showpic/ea09aa84c9c013b78aaeac30f081c309",
@@ -12035,7 +12035,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0j3gzbthr",
+    "id": "poi-food-b0j3gzbthr",
     "poiId": "B0J3GZBTHR",
     "name": "胥先生鸭血粉丝汤(好润多广场店)",
     "categoryLabel": "美食",
@@ -12060,7 +12060,7 @@
     ],
     "summary": "胥先生鸭血粉丝汤(好润多广场店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/1f60469d9209dd15d64c519f769f4d9d",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/1f60469d9209dd15d64c519f769f4d9d",
       "https://store.is.autonavi.com/showpic/ee9ce541bde265b1e5d0d0e63a132ada",
@@ -12071,7 +12071,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0j3dbhskc",
+    "id": "poi-food-b0j3dbhskc",
     "poiId": "B0J3DBHSKC",
     "name": "小淮娘鸭血粉丝锅贴(凤凰城店)",
     "categoryLabel": "美食",
@@ -12095,7 +12095,7 @@
     ],
     "summary": "小淮娘鸭血粉丝锅贴(凤凰城店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/1f3a24e996b20c7c36004f857e3871bd",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/1f3a24e996b20c7c36004f857e3871bd"
     ],
@@ -12104,7 +12104,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0j21re7da",
+    "id": "poi-food-b0j21re7da",
     "poiId": "B0J21RE7DA",
     "name": "潮粤客茶点(佳和广场店)",
     "categoryLabel": "美食",
@@ -12124,7 +12124,7 @@
     ],
     "summary": "潮粤客茶点(佳和广场店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0J21RE7DA/comment/content_media_external_images_media_1000085245_ss__1743663150177_76187835.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0J21RE7DA/comment/content_media_external_images_media_1000085245_ss__1743663150177_76187835.jpg",
       "https://aos-comment.amap.com/B0J21RE7DA/comment/content_media_external_images_media_1000085244_ss__1743663150176_74872423.jpg",
@@ -12135,7 +12135,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0j0soemys",
+    "id": "poi-food-b0j0soemys",
     "poiId": "B0J0SOEMYS",
     "name": "漫猫咖啡(常熟辛庄店)",
     "categoryLabel": "美食",
@@ -12156,7 +12156,7 @@
     ],
     "summary": "漫猫咖啡(常熟辛庄店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0J0SOEMYS/comment/content_media_external_file_1000108912_ss__1768599342526_68795203.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0J0SOEMYS/comment/content_media_external_file_1000108912_ss__1768599342526_68795203.jpg",
       "https://aos-comment.amap.com/comment/content_service_84640b64c30c51f3a07260cae44045dc_1768599344222_48720986.jpg",
@@ -12167,7 +12167,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0iu65prua",
+    "id": "poi-food-b0iu65prua",
     "poiId": "B0IU65PRUA",
     "name": "龙虾先生(明日星洲店)",
     "categoryLabel": "美食",
@@ -12187,7 +12187,7 @@
     ],
     "summary": "龙虾先生(明日星洲店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/5a59edd4a080bf3de953c88aba3dfdb8",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/5a59edd4a080bf3de953c88aba3dfdb8",
       "http://store.is.autonavi.com/showpic/cc55fdae977ada26cd36fdc6844e8313"
@@ -12197,7 +12197,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0h1olukns",
+    "id": "poi-food-b0h1olukns",
     "poiId": "B0H1OLUKNS",
     "name": "百分茶(苏州常熟凤凰城店)",
     "categoryLabel": "美食",
@@ -12220,7 +12220,7 @@
     ],
     "summary": "百分茶(苏州常熟凤凰城店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/472080e3d1c99831d7606b864daaa31d",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/472080e3d1c99831d7606b864daaa31d",
       "http://store.is.autonavi.com/showpic/a8ca912d1fea6ee17666d1365a11d4ff",
@@ -12231,7 +12231,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0g3arhnvn",
+    "id": "poi-food-b0g3arhnvn",
     "poiId": "B0G3ARHNVN",
     "name": "张亮麻辣烫(赵市路店)",
     "categoryLabel": "美食",
@@ -12252,7 +12252,7 @@
     ],
     "summary": "张亮麻辣烫(赵市路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://img.alicdn.com/imgextra/i2/O1CN013Da1GK1Ex2GzcHFBd_!!6000000000417-49-tps-750-750.webp",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://img.alicdn.com/imgextra/i2/O1CN013Da1GK1Ex2GzcHFBd_!!6000000000417-49-tps-750-750.webp",
       "https://store.is.autonavi.com/showpic/696d2f92eb42255a6717543aa44f2020",
@@ -12263,7 +12263,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0g0uco92t",
+    "id": "poi-food-b0g0uco92t",
     "poiId": "B0G0UCO92T",
     "name": "王胖子烧烤(甸桥店)",
     "categoryLabel": "美食",
@@ -12283,7 +12283,7 @@
     ],
     "summary": "王胖子烧烤(甸桥店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/7112ea97f9345ed5cf57b0c181bc1609",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/7112ea97f9345ed5cf57b0c181bc1609"
     ],
@@ -12292,7 +12292,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhqdq6d",
+    "id": "poi-food-b0ffhqdq6d",
     "poiId": "B0FFHQDQ6D",
     "name": "叶叶排骨(银环路店)",
     "categoryLabel": "美食",
@@ -12313,7 +12313,7 @@
     ],
     "summary": "叶叶排骨(银环路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/cbc959955d2d55909be04454a1a75f05",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/cbc959955d2d55909be04454a1a75f05"
     ],
@@ -12322,7 +12322,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02001buxl",
+    "id": "poi-food-b02001buxl",
     "poiId": "B02001BUXL",
     "name": "箐竹茶苑",
     "categoryLabel": "美食",
@@ -12342,7 +12342,7 @@
     ],
     "summary": "箐竹茶苑，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/6eb2d1957d9e8efdfaaf1e9bd33df3b0",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/6eb2d1957d9e8efdfaaf1e9bd33df3b0",
       "https://store.is.autonavi.com/showpic/2a27896c57c4369b0000002273242052?type=pic",
@@ -12353,7 +12353,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgwkv2k",
+    "id": "poi-food-b0ffgwkv2k",
     "poiId": "B0FFGWKV2K",
     "name": "红叶菜馆",
     "categoryLabel": "美食",
@@ -12373,7 +12373,7 @@
     ],
     "summary": "红叶菜馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/cb9f8fdcc13792fba02f68ae6d6e9b3f",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/cb9f8fdcc13792fba02f68ae6d6e9b3f",
       "http://store.is.autonavi.com/showpic/4063bf883236ae5b37b103542af35969",
@@ -12384,7 +12384,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffhdszlb",
+    "id": "poi-food-b0ffhdszlb",
     "poiId": "B0FFHDSZLB",
     "name": "全生态天宝羊庄(华茂国际商务中心店)",
     "categoryLabel": "美食",
@@ -12403,7 +12403,7 @@
     ],
     "summary": "全生态天宝羊庄(华茂国际商务中心店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/ff51d8745f9e2313f71980971214a707",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/ff51d8745f9e2313f71980971214a707",
       "https://aos-comment.amap.com/B0FFHDSZLB/comment/51b07c9b4bd1d98e5e2189c674218bd3_2048_2048_80.jpg",
@@ -12414,7 +12414,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffh9vovw",
+    "id": "poi-food-b0ffh9vovw",
     "poiId": "B0FFH9VOVW",
     "name": "啡时光(膨膨冰梅李店)",
     "categoryLabel": "美食",
@@ -12436,7 +12436,7 @@
     ],
     "summary": "啡时光(膨膨冰梅李店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/9dab2e82857c804e844fc40a2e2ea516",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/9dab2e82857c804e844fc40a2e2ea516",
       "http://store.is.autonavi.com/showpic/540743689a4f6328f5a8303580ed9efd",
@@ -12447,7 +12447,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffh34e3a",
+    "id": "poi-food-b0ffh34e3a",
     "poiId": "B0FFH34E3A",
     "name": "小眼镜菜馆(中宏新农中心店)",
     "categoryLabel": "美食",
@@ -12467,7 +12467,7 @@
     ],
     "summary": "小眼镜菜馆(中宏新农中心店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/96346c61968d1b304bfb07332ad3d5aa",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/96346c61968d1b304bfb07332ad3d5aa",
       "http://store.is.autonavi.com/showpic/c28fdc98d9820e7a32ddb72c71e8395e",
@@ -12478,7 +12478,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgqi9o6",
+    "id": "poi-food-b0ffgqi9o6",
     "poiId": "B0FFGQI9O6",
     "name": "图们烧烤(辛庄店)",
     "categoryLabel": "美食",
@@ -12500,7 +12500,7 @@
     ],
     "summary": "图们烧烤(辛庄店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/dee96064860ed62ad511c85f5ac0192c",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/dee96064860ed62ad511c85f5ac0192c",
       "https://aos-comment.amap.com/B0FFGQI9O6/comment/6838894D_06F6_4CBD_8882_70A551EBAF5D_L0_001_1500_200_1745543569353_34414455.jpg",
@@ -12511,7 +12511,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffgjbhsk",
+    "id": "poi-food-b0ffgjbhsk",
     "poiId": "B0FFGJBHSK",
     "name": "常熟蒸菜研发中心(李闸路店)",
     "categoryLabel": "美食",
@@ -12536,7 +12536,7 @@
     ],
     "summary": "常熟蒸菜研发中心(李闸路店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/4dd191cc7a00add00000002392570174?type=pic",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/4dd191cc7a00add00000002392570174?type=pic",
       "http://store.is.autonavi.com/showpic/bab8815c7b6f8131395b34c18f89855e",
@@ -12547,7 +12547,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffg1zdxo",
+    "id": "poi-food-b0ffg1zdxo",
     "poiId": "B0FFG1ZDXO",
     "name": "奥灶面馆",
     "categoryLabel": "美食",
@@ -12571,7 +12571,7 @@
     ],
     "summary": "奥灶面馆，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://store.is.autonavi.com/showpic/90e1a0879097bebba98fa01f20220dee",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://store.is.autonavi.com/showpic/90e1a0879097bebba98fa01f20220dee",
       "http://store.is.autonavi.com/showpic/05d2774affa60ed1e4f3facc8d30942a",
@@ -12582,7 +12582,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffwtjbx",
+    "id": "poi-food-b0fffwtjbx",
     "poiId": "B0FFFWTJBX",
     "name": "川湘阁(白峁店)",
     "categoryLabel": "美食",
@@ -12602,7 +12602,7 @@
     ],
     "summary": "川湘阁(白峁店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/d01a4c5be5a41ffafdadfb2a7b921955",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/d01a4c5be5a41ffafdadfb2a7b921955",
       "http://store.is.autonavi.com/showpic/f7fc676f17ac2f8bfd64da737b5f45ed",
@@ -12613,7 +12613,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0fffsjj3l",
+    "id": "poi-food-b0fffsjj3l",
     "poiId": "B0FFFSJJ3L",
     "name": "小飞飞羊庄",
     "categoryLabel": "美食",
@@ -12637,7 +12637,7 @@
     ],
     "summary": "小飞飞羊庄，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "https://aos-comment.amap.com/B0FFFSJJ3L/comment/98665329_AB7C_424D_9EE7_111C5A3B7D2E_L0_001_1500_200_1760285521766_40325813.jpg",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "https://aos-comment.amap.com/B0FFFSJJ3L/comment/98665329_AB7C_424D_9EE7_111C5A3B7D2E_L0_001_1500_200_1760285521766_40325813.jpg",
       "https://aos-comment.amap.com/B0FFFSJJ3L/comment/F10D23AB_CB96_4B4D_92E9_2D1CE5F0DE29_L0_001_1707_1280_1729909848963_65771819.jpg",
@@ -12648,7 +12648,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02001czqb",
+    "id": "poi-food-b02001czqb",
     "poiId": "B02001CZQB",
     "name": "金都西饼屋(浒浦店)",
     "categoryLabel": "美食",
@@ -12673,7 +12673,7 @@
     ],
     "summary": "金都西饼屋(浒浦店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/8a348b60d6bb14e814dfd3b3b1730de6",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/8a348b60d6bb14e814dfd3b3b1730de6",
       "http://store.is.autonavi.com/showpic/352e19c1e6fcdf6209ec8a954ad8b2f2",
@@ -12684,7 +12684,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b02001br5z",
+    "id": "poi-food-b02001br5z",
     "poiId": "B02001BR5Z",
     "name": "飞飞冷饮(东南店)",
     "categoryLabel": "美食",
@@ -12703,7 +12703,7 @@
     ],
     "summary": "飞飞冷饮(东南店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/e87713df542846eb678b3d698369f3ba",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/e87713df542846eb678b3d698369f3ba",
       "https://store.is.autonavi.com/showpic/e3315728565b13ea748fdce411913034",
@@ -12714,7 +12714,7 @@
     "remark": "全量POI数据库，未经精选分层；坐标系为GCJ-02，运营信息以现场或平台实时结果为准。"
   },
   {
-    "id": "poi-restaurant-b0ffi56abj",
+    "id": "poi-food-b0ffi56abj",
     "poiId": "B0FFI56ABJ",
     "name": "不厌生活(星光天地店)",
     "categoryLabel": "美食",
@@ -12733,7 +12733,7 @@
     ],
     "summary": "不厌生活(星光天地店)，来源于高德 POI 数据，可用于地图展示、检索和路线规划。",
     "imageUrl": "http://store.is.autonavi.com/showpic/f5927c31fe57c8064bce135109f4b5b5",
-    "fallbackImageUrl": "/assets/generated-placeholders/restaurant.png",
+    "fallbackImageUrl": "/assets/generated-placeholders/food.png",
     "allImageUrls": [
       "http://store.is.autonavi.com/showpic/f5927c31fe57c8064bce135109f4b5b5",
       "http://store.is.autonavi.com/showpic/48925e9178d05011308d4acee61180bc",

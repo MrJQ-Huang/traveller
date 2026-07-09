@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { ClipboardList, PanelRightClose, PanelRightOpen, Share2 } from "lucide-react";
 import { sendAgentMessage } from "./agent/agentClient";
 import type {
@@ -36,20 +36,36 @@ type UserLocation = {
   address?: string;
 };
 
+type ShareFabPosition = {
+  x: number;
+  y: number;
+};
+
+type ShareFabDragState = {
+  pointerId: number;
+  startX: number;
+  startY: number;
+  originX: number;
+  originY: number;
+  moved: boolean;
+};
+
 const allPlaceTypes: PlaceType[] = [
   "scenic",
   "heritage",
   "food",
-  "restaurant",
   "parking",
   "restroom",
-  "service",
-  "activity",
   "lodging",
-  "emergency",
+  "hospital",
+  "police",
 ];
 
-const defaultVisiblePlaceTypes: PlaceType[] = ["scenic", "heritage", "food", "restaurant"];
+const defaultVisiblePlaceTypes: PlaceType[] = ["scenic"];
+
+const shareFabCollapsedSize = 44;
+const shareFabViewportMargin = 12;
+const shareFabDragThreshold = 10;
 
 const dayPlansStorageKey = "changshu-day-plans-v1";
 
@@ -97,6 +113,34 @@ function readAmapCallbackResult<T>(first: unknown, second: unknown): AmapCallbac
   }
 
   return { ok: false, data: null };
+}
+
+function clampShareFabPosition(position: ShareFabPosition): ShareFabPosition {
+  if (typeof window === "undefined") {
+    return position;
+  }
+
+  return {
+    x: Math.min(
+      Math.max(position.x, shareFabViewportMargin),
+      window.innerWidth - shareFabCollapsedSize - shareFabViewportMargin,
+    ),
+    y: Math.min(
+      Math.max(position.y, shareFabViewportMargin),
+      window.innerHeight - shareFabCollapsedSize - shareFabViewportMargin,
+    ),
+  };
+}
+
+function getInitialShareFabPosition(): ShareFabPosition {
+  if (typeof window === "undefined") {
+    return { x: 22, y: 92 };
+  }
+
+  return clampShareFabPosition({
+    x: window.innerWidth / 2 + 390,
+    y: 26,
+  });
 }
 
 function normalizeAmapWeek(week: unknown) {
@@ -222,7 +266,7 @@ function loadInitialActiveDayId(dayPlans: DayPlan[]) {
 
 export default function App() {
   const [initialDayPlans] = useState(loadInitialDayPlans);
-  const [mode, setMode] = useState<PlannerMode>("j");
+  const [mode, setMode] = useState<PlannerMode>("p");
   const [activeTypes, setActiveTypes] = useState<PlaceType[]>(defaultVisiblePlaceTypes);
   const [selectedPlaceId, setSelectedPlaceId] = useState<string | null>(null);
   const [mapExpandedPlaceId, setMapExpandedPlaceId] = useState<string | null>(null);
@@ -234,6 +278,8 @@ export default function App() {
   const [isItineraryOpen, setIsItineraryOpen] = useState(false);
   const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
   const [isShareStudioOpen, setIsShareStudioOpen] = useState(false);
+  const [isShareFabDragging, setIsShareFabDragging] = useState(false);
+  const [shareFabPosition, setShareFabPosition] = useState<ShareFabPosition>(getInitialShareFabPosition);
   const [isDayPlannerOpen, setIsDayPlannerOpen] = useState(true);
   const [transportMode, setTransportMode] = useState<TransportMode>("walking");
   const [agentMessages, setAgentMessages] = useState<AgentChatMessage[]>([
@@ -258,6 +304,10 @@ export default function App() {
   const [topBarLocation, setTopBarLocation] = useState<TopBarLocation>(defaultTopBarLocation);
   const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
   const [focusUserLocationRequest, setFocusUserLocationRequest] = useState(0);
+  const [focusPlaceRequest, setFocusPlaceRequest] = useState<{ placeId: string; nonce: number } | null>(null);
+  const hasAutoFocusedUserLocationRef = useRef(false);
+  const shareFabDragRef = useRef<ShareFabDragState | null>(null);
+  const suppressShareClickRef = useRef(false);
 
   const activeDayPlan = useMemo(
     () => dayPlans.find((day) => day.id === activeDayId) ?? dayPlans[0] ?? createDefaultDayPlan(),
@@ -293,8 +343,7 @@ export default function App() {
     visiblePlaces
       .slice()
       .sort((left, right) => {
-        const tierWeight = { L4: 0, L3: 1, L2: 2 };
-        return (tierWeight[left.tierLevel ?? "L2"] ?? 3) - (tierWeight[right.tierLevel ?? "L2"] ?? 3);
+        return (right.routeMeta?.routeWeight ?? 0) - (left.routeMeta?.routeWeight ?? 0);
       })
       .slice(0, 120)
       .forEach((place) => candidates.set(place.id, place));
@@ -482,6 +531,27 @@ export default function App() {
   useEffect(() => {
     refreshLiveContext();
   }, [refreshLiveContext]);
+
+  useEffect(() => {
+    if (!userLocation || hasAutoFocusedUserLocationRef.current) {
+      return;
+    }
+
+    hasAutoFocusedUserLocationRef.current = true;
+    setFocusUserLocationRequest((current) => current + 1);
+  }, [userLocation]);
+
+  useEffect(() => {
+    function handleResize() {
+      setShareFabPosition((current) => clampShareFabPosition(current));
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleLocationStatusClick = useCallback(() => {
     if (userLocation) {
@@ -709,6 +779,10 @@ export default function App() {
 
   function toggleMapExpand(placeId: string) {
     setMapExpandedPlaceId((current) => (current === placeId ? null : placeId));
+  }
+
+  function focusItineraryPlace(placeId: string) {
+    setFocusPlaceRequest({ placeId, nonce: Date.now() });
   }
 
   function toggleItineraryExpand(placeId: string) {
@@ -945,13 +1019,18 @@ export default function App() {
       return;
     }
 
-    if (query.includes("活动") || query.includes("演出")) {
-      setActiveTypes(["activity"]);
+    if (query.includes("医院") || query.includes("医疗") || query.includes("急救")) {
+      setActiveTypes(["hospital"]);
+      return;
+    }
+
+    if (query.includes("公安") || query.includes("警务") || query.includes("报警")) {
+      setActiveTypes(["police"]);
       return;
     }
 
     if (query.includes("美食") || query.includes("本帮菜") || query.includes("饭店")) {
-      setActiveTypes(["food", "restaurant"]);
+      setActiveTypes(["food"]);
       setRoutePresetId("food-walk");
       return;
     }
@@ -959,6 +1038,74 @@ export default function App() {
     setMode("p");
     setDrawMode(false);
     setIsItineraryOpen(true);
+  }
+
+  function handleShareFabPointerDown(event: ReactPointerEvent<HTMLButtonElement>) {
+    if (event.button !== 0) {
+      return;
+    }
+
+    event.currentTarget.setPointerCapture(event.pointerId);
+    shareFabDragRef.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      originX: shareFabPosition.x,
+      originY: shareFabPosition.y,
+      moved: false,
+    };
+  }
+
+  function handleShareFabPointerMove(event: ReactPointerEvent<HTMLButtonElement>) {
+    const dragState = shareFabDragRef.current;
+
+    if (!dragState || dragState.pointerId !== event.pointerId) {
+      return;
+    }
+
+    const deltaX = event.clientX - dragState.startX;
+    const deltaY = event.clientY - dragState.startY;
+
+    if (!dragState.moved && Math.hypot(deltaX, deltaY) < shareFabDragThreshold) {
+      return;
+    }
+
+    dragState.moved = true;
+    setIsShareFabDragging(true);
+    setShareFabPosition(clampShareFabPosition({
+      x: dragState.originX + deltaX,
+      y: dragState.originY + deltaY,
+    }));
+  }
+
+  function finishShareFabDrag(event: ReactPointerEvent<HTMLButtonElement>) {
+    const dragState = shareFabDragRef.current;
+
+    if (!dragState || dragState.pointerId !== event.pointerId) {
+      return;
+    }
+
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+
+    shareFabDragRef.current = null;
+    setIsShareFabDragging(false);
+
+    if (dragState.moved) {
+      suppressShareClickRef.current = true;
+      window.setTimeout(() => {
+        suppressShareClickRef.current = false;
+      }, 180);
+    }
+  }
+
+  function handleShareFabClick() {
+    if (suppressShareClickRef.current) {
+      return;
+    }
+
+    setIsShareStudioOpen(true);
   }
 
   return (
@@ -972,6 +1119,7 @@ export default function App() {
           itineraryIds={itineraryIds}
           routePlan={routePlan}
           selectedPlaceId={selectedPlaceId}
+          focusPlaceRequest={focusPlaceRequest}
           expandedPlaceId={mapExpandedPlaceId}
           mode={mode}
           drawMode={drawMode}
@@ -1015,7 +1163,6 @@ export default function App() {
           onToggleItinerary={() => setIsItineraryOpen((current) => !current)}
           onShowAvoidPeak={() => setActiveTypes(["scenic"])}
           onRefreshLocation={handleLocationStatusClick}
-          onShowActivities={() => setActiveTypes(["activity"])}
         />
 
         <SideControlPanel
@@ -1056,9 +1203,19 @@ export default function App() {
         </button>
 
         <button
-          className="share-fab"
+          className={`share-fab ${isShareFabDragging ? "is-dragging" : ""}`}
           type="button"
-          onClick={() => setIsShareStudioOpen(true)}
+          style={{
+            left: shareFabPosition.x,
+            top: shareFabPosition.y,
+            right: "auto",
+            bottom: "auto",
+          }}
+          onPointerDown={handleShareFabPointerDown}
+          onPointerMove={handleShareFabPointerMove}
+          onPointerUp={finishShareFabDrag}
+          onPointerCancel={finishShareFabDrag}
+          onClick={handleShareFabClick}
           aria-label="生成分享卡片"
         >
           <Share2 size={19} />
@@ -1090,7 +1247,7 @@ export default function App() {
             onDropPlace={addPlace}
             onDropBefore={dropBefore}
             onRemove={removePlace}
-            onFocusPlace={selectMapPlace}
+            onFocusPlace={focusItineraryPlace}
             onClear={clearRoute}
             onToggleExpand={toggleItineraryExpand}
             onTransportModeChange={setTransportMode}

@@ -5,6 +5,7 @@ import {
   Dice5,
   Eraser,
   Grid3X3,
+  HeartHandshake,
   Route,
   Search,
   Sparkles,
@@ -34,13 +35,11 @@ const filterOrder: PlaceType[] = [
   "scenic",
   "heritage",
   "food",
-  "restaurant",
   "parking",
   "restroom",
-  "service",
-  "activity",
   "lodging",
-  "emergency",
+  "hospital",
+  "police",
 ];
 
 export function SideControlPanel({
@@ -106,29 +105,39 @@ export function SideControlPanel({
             </button>
           </div>
 
-          <select
-            className="side-route-select"
-            value={routePresetId}
-            onChange={(event) => onSelectRoutePreset(event.target.value)}
-            aria-label="路线主题"
-          >
-            {routePresets.map((route) => (
-              <option key={route.id} value={route.id}>
-                {route.name}
-              </option>
-            ))}
-          </select>
+          {mode === "j" ? (
+            <div className="side-manual-copy">
+              <HeartHandshake size={18} />
+              <strong>慢慢选，路线会自己长出来</strong>
+              <p>好的旅行不急着被算法排满。先在地图上点开想去的地方，把喜欢的点收进右侧行程，今天的节奏由你决定。</p>
+            </div>
+          ) : (
+            <>
+              <select
+                className="side-route-select"
+                value={routePresetId}
+                onChange={(event) => onSelectRoutePreset(event.target.value)}
+                aria-label="路线主题"
+              >
+                {routePresets.map((route) => (
+                  <option key={route.id} value={route.id}>
+                    {route.name}
+                  </option>
+                ))}
+              </select>
 
-          <div className="side-action-row">
-            <button className="side-primary-button" type="button" onClick={onGenerateRoute}>
-              <Route size={16} />
-              生成路线
-            </button>
-            <button className="side-ghost-button" type="button" onClick={onRandomRoute}>
-              <Dice5 size={16} />
-              随机
-            </button>
-          </div>
+              <div className="side-action-row">
+                <button className="side-primary-button" type="button" onClick={onGenerateRoute}>
+                  <Route size={16} />
+                  生成路线
+                </button>
+                <button className="side-ghost-button" type="button" onClick={onRandomRoute}>
+                  <Dice5 size={16} />
+                  随机
+                </button>
+              </div>
+            </>
+          )}
 
           <button className="side-clear-button" type="button" onClick={onClear}>
             <Eraser size={16} />

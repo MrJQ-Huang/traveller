@@ -7,7 +7,7 @@ export function getRoutePreset(id: string): RoutePreset {
 }
 
 export function buildRandomRoute(activeTypes: PlaceType[], length = 5): RoutePreset {
-  const preferredTypes = new Set<PlaceType>(["scenic", "heritage", "food", "restaurant", "activity", "lodging"]);
+  const preferredTypes = new Set<PlaceType>(["scenic", "heritage", "food", "lodging"]);
   const preferredPool = places.filter(
     (place) =>
       activeTypes.includes(place.type) &&
