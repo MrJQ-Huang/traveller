@@ -27,6 +27,10 @@ type AmapChangshuMapProps = {
     placeId: string;
     nonce: number;
   } | null;
+  focusRouteRequest: {
+    placeIds: string[];
+    nonce: number;
+  } | null;
   expandedPlaceId: string | null;
   mode: PlannerMode;
   drawMode: boolean;
@@ -157,6 +161,7 @@ export function AmapChangshuMap({
   routePlan,
   selectedPlaceId,
   focusPlaceRequest,
+  focusRouteRequest,
   expandedPlaceId,
   mode,
   drawMode,
@@ -689,6 +694,18 @@ export function AmapChangshuMap({
       targetPlace.position.lat,
     ]);
   }, [focusPlaceRequest, places]);
+
+  useEffect(() => {
+    if (!focusRouteRequest?.placeIds.length) {
+      return;
+    }
+
+    const routePlaces = focusRouteRequest.placeIds
+      .map((id) => places.find((place) => place.id === id))
+      .filter((place): place is Place => Boolean(place));
+
+    fitVisiblePlaces(routePlaces);
+  }, [focusRouteRequest, places]);
 
   useEffect(() => {
     const map = mapRef.current;

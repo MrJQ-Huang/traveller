@@ -22,6 +22,10 @@ type ChangshuMapProps = {
     placeId: string;
     nonce: number;
   } | null;
+  focusRouteRequest: {
+    placeIds: string[];
+    nonce: number;
+  } | null;
   expandedPlaceId: string | null;
   mode: PlannerMode;
   drawMode: boolean;

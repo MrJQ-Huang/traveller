@@ -36,6 +36,7 @@ type ItineraryPanelProps = {
   isDayPlannerOpen: boolean;
   onToggleDayPlanner: () => void;
   onSelectDay: (dayId: string) => void;
+  onFocusDayRoute: (dayId: string) => void;
   onCreateDay: () => void;
   onDeleteDay: (dayId: string) => void;
   onReorderDay: (dragDayId: string, targetDayId: string) => void;
@@ -77,6 +78,7 @@ export function ItineraryPanel({
   isDayPlannerOpen,
   onToggleDayPlanner,
   onSelectDay,
+  onFocusDayRoute,
   onCreateDay,
   onDeleteDay,
   onReorderDay,
@@ -207,10 +209,11 @@ export function ItineraryPanel({
                     className={`day-chip ${isActive ? "is-active" : ""} ${isEmpty ? "is-empty" : ""}`}
                     draggable
                     onClick={() => onSelectDay(day.id)}
+                    onDoubleClick={() => onFocusDayRoute(day.id)}
                     onDragStart={(event) => handleDayDragStart(day.id, event)}
                     onDragOver={(event) => event.preventDefault()}
                     onDrop={(event) => handleDayDrop(day.id, event)}
-                    title="点击编辑该日，可拖拽调整天数顺序"
+                    title="点击编辑该日，双击查看全局路线，可拖拽调整天数顺序"
                   >
                     <div>
                       <strong>{day.title}</strong>

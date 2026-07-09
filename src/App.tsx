@@ -138,7 +138,7 @@ function getInitialShareFabPosition(): ShareFabPosition {
   }
 
   return clampShareFabPosition({
-    x: window.innerWidth / 2 + 390,
+    x: window.innerWidth / 2 + 470,
     y: 26,
   });
 }
@@ -305,6 +305,7 @@ export default function App() {
   const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
   const [focusUserLocationRequest, setFocusUserLocationRequest] = useState(0);
   const [focusPlaceRequest, setFocusPlaceRequest] = useState<{ placeId: string; nonce: number } | null>(null);
+  const [focusRouteRequest, setFocusRouteRequest] = useState<{ placeIds: string[]; nonce: number } | null>(null);
   const hasAutoFocusedUserLocationRef = useRef(false);
   const shareFabDragRef = useRef<ShareFabDragState | null>(null);
   const suppressShareClickRef = useRef(false);
@@ -631,6 +632,23 @@ export default function App() {
     });
   }
 
+  function revealDayPlanTypes(dayId = activeDayId) {
+    const targetDay = dayPlans.find((day) => day.id === dayId);
+    if (!targetDay) {
+      return;
+    }
+
+    const itineraryTypes = targetDay.placeIds
+      .map((id) => places.find((place) => place.id === id)?.type)
+      .filter((type): type is PlaceType => Boolean(type));
+
+    if (itineraryTypes.length === 0) {
+      return;
+    }
+
+    setActiveTypes((current) => Array.from(new Set([...current, ...itineraryTypes])));
+  }
+
   function addPlace(placeId: string) {
     if (!places.some((place) => place.id === placeId)) {
       return;
@@ -783,6 +801,16 @@ export default function App() {
 
   function focusItineraryPlace(placeId: string) {
     setFocusPlaceRequest({ placeId, nonce: Date.now() });
+  }
+
+  function focusDayRoute(dayId: string) {
+    const targetDay = dayPlans.find((day) => day.id === dayId);
+    if (!targetDay || targetDay.placeIds.length === 0) {
+      return;
+    }
+
+    revealDayPlanTypes(dayId);
+    setFocusRouteRequest({ placeIds: targetDay.placeIds, nonce: Date.now() });
   }
 
   function toggleItineraryExpand(placeId: string) {
@@ -1120,6 +1148,7 @@ export default function App() {
           routePlan={routePlan}
           selectedPlaceId={selectedPlaceId}
           focusPlaceRequest={focusPlaceRequest}
+          focusRouteRequest={focusRouteRequest}
           expandedPlaceId={mapExpandedPlaceId}
           mode={mode}
           drawMode={drawMode}
@@ -1235,11 +1264,16 @@ export default function App() {
             activeDayId={activeDayId}
             activeDayTitle={activeDayPlan.title}
             isDayPlannerOpen={isDayPlannerOpen}
-            onToggleDayPlanner={() => setIsDayPlannerOpen((current) => !current)}
+            onToggleDayPlanner={() => {
+              revealDayPlanTypes();
+              setIsDayPlannerOpen((current) => !current);
+            }}
             onSelectDay={(dayId) => {
               setActiveDayId(dayId);
               setItineraryExpandedPlaceId(null);
+              revealDayPlanTypes(dayId);
             }}
+            onFocusDayRoute={focusDayRoute}
             onCreateDay={createNextDay}
             onDeleteDay={deleteDay}
             onReorderDay={reorderDays}

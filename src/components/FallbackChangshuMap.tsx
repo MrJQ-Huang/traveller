@@ -24,6 +24,10 @@ type FallbackChangshuMapProps = {
     placeId: string;
     nonce: number;
   } | null;
+  focusRouteRequest: {
+    placeIds: string[];
+    nonce: number;
+  } | null;
   expandedPlaceId: string | null;
   mode: PlannerMode;
   drawMode: boolean;
@@ -157,6 +161,7 @@ export function FallbackChangshuMap({
   routePlan,
   selectedPlaceId,
   focusPlaceRequest,
+  focusRouteRequest,
   expandedPlaceId,
   mode,
   drawMode,
@@ -414,6 +419,25 @@ export function FallbackChangshuMap({
       duration: 0.3,
     });
   }, [focusPlaceRequest, places]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    const routePlaces = focusRouteRequest?.placeIds
+      .map((id) => places.find((place) => place.id === id))
+      .filter((place): place is Place => Boolean(place)) ?? [];
+
+    if (!map || routePlaces.length === 0) {
+      return;
+    }
+
+    map.fitBounds(getPlacesBounds(routePlaces).pad(0.24), {
+      animate: true,
+      duration: 0.3,
+      paddingTopLeft: [34, 108],
+      paddingBottomRight: [34, 58],
+      maxZoom: 13,
+    });
+  }, [focusRouteRequest, places]);
 
   useEffect(() => {
     const map = mapRef.current;
