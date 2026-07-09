@@ -8,6 +8,13 @@ import { FallbackChangshuMap } from "./FallbackChangshuMap";
 type ChangshuMapProps = {
   places: Place[];
   visiblePlaces: Place[];
+  userLocation: {
+    lng: number;
+    lat: number;
+    accuracy?: number;
+    address?: string;
+  } | null;
+  focusUserLocationRequest: number;
   itineraryIds: string[];
   routePlan: RoutePlan;
   selectedPlaceId: string | null;

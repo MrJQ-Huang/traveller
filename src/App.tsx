@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { ClipboardList, PanelRightClose, PanelRightOpen } from "lucide-react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { ClipboardList, PanelRightClose, PanelRightOpen, Share2 } from "lucide-react";
 import { sendAgentMessage } from "./agent/agentClient";
 import type {
   AgentAnswerCard,
@@ -16,17 +16,25 @@ import { AgentIsland } from "./components/AgentIsland";
 import { AgentErrorBoundary } from "./components/AgentErrorBoundary";
 import { ChangshuMap } from "./components/ChangshuMap";
 import { ItineraryPanel } from "./components/ItineraryPanel";
+import { ShareCardStudio } from "./components/shareCards/ShareCardStudio";
 import { SideControlPanel } from "./components/SideControlPanel";
-import { TopBar } from "./components/TopBar";
+import { TopBar, type TopBarLocation, type TopBarWeather } from "./components/TopBar";
 import { places } from "./data/places";
 import { routePresets } from "./data/routes";
-import { getAmapConfig } from "./map/amapLoader";
+import { getAmapConfig, loadAmap } from "./map/amapLoader";
 import { planAmapRoutePlan } from "./map/amapRouteService";
 import type { DayPlan } from "./types/itinerary";
 import type { PlaceType, PlannerMode } from "./types/place";
 import type { RoutePlan, TransportMode } from "./types/route";
 import { buildPreviewRoutePlan } from "./utils/itineraryRoute";
 import { buildRandomRoute, estimateTotalMinutes, formatEstimatedTime, getRoutePreset } from "./utils/routePlanner";
+
+type UserLocation = {
+  lng: number;
+  lat: number;
+  accuracy?: number;
+  address?: string;
+};
 
 const allPlaceTypes: PlaceType[] = [
   "scenic",
@@ -54,6 +62,76 @@ const defaultAgentPreference: AgentUserPreference = {
   preferNature: false,
   walkingTolerance: "medium",
 };
+
+const defaultTopBarWeather: TopBarWeather = {
+  temperature: "29",
+  weather: "多云",
+};
+
+const defaultTopBarLocation: TopBarLocation = {
+  area: "虞山-尚湖",
+  detail: "默认常熟核心文旅片区",
+};
+
+type AmapCallbackResult<T> = {
+  ok: boolean;
+  data: T | null;
+};
+
+function getReadableArea(addressComponent: Record<string, unknown> | null | undefined) {
+  const township = typeof addressComponent?.township === "string" ? addressComponent.township : "";
+  const district = typeof addressComponent?.district === "string" ? addressComponent.district : "";
+  const city = typeof addressComponent?.city === "string" ? addressComponent.city : "";
+  const province = typeof addressComponent?.province === "string" ? addressComponent.province : "";
+
+  return township || district || city || province || "常熟市";
+}
+
+function readAmapCallbackResult<T>(first: unknown, second: unknown): AmapCallbackResult<T> {
+  if (first === "complete") {
+    return { ok: true, data: (second ?? null) as T | null };
+  }
+
+  if (!first && second) {
+    return { ok: true, data: second as T };
+  }
+
+  return { ok: false, data: null };
+}
+
+function normalizeAmapWeek(week: unknown) {
+  const text = String(week ?? "").trim();
+
+  if (!text) {
+    return "";
+  }
+
+  if (/^周/.test(text)) {
+    return text;
+  }
+
+  return `周${text}`;
+}
+
+function readAmapForecastItems(raw: unknown) {
+  const record = raw && typeof raw === "object" ? raw as Record<string, any> : {};
+  const directForecasts = Array.isArray(record.forecasts) ? record.forecasts : [];
+  const casts = Array.isArray(record.forecasts?.[0]?.casts) ? record.forecasts[0].casts : [];
+  const sourceItems = directForecasts.length ? directForecasts : casts;
+
+  return sourceItems
+    .map((item: any) => ({
+      date: String(item.date ?? ""),
+      week: normalizeAmapWeek(item.week),
+      dayWeather: String(item.dayWeather ?? item.dayweather ?? item.weather ?? ""),
+      nightWeather: String(item.nightWeather ?? item.nightweather ?? item.weather ?? ""),
+      dayTemp: String(item.dayTemp ?? item.daytemp ?? item.temperature ?? ""),
+      nightTemp: String(item.nightTemp ?? item.nighttemp ?? item.temperature ?? ""),
+    }))
+    .filter((item: NonNullable<TopBarWeather["forecasts"]>[number]) =>
+      item.date || item.dayWeather || item.nightWeather || item.dayTemp || item.nightTemp,
+    );
+}
 
 function createAgentMessage(role: AgentChatMessage["role"], content: string): AgentChatMessage {
   return {
@@ -154,7 +232,8 @@ export default function App() {
   const [routePresetId, setRoutePresetId] = useState(routePresets[0].id);
   const [drawMode, setDrawMode] = useState(false);
   const [isItineraryOpen, setIsItineraryOpen] = useState(false);
-  const [isSidePanelOpen, setIsSidePanelOpen] = useState(true);
+  const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
+  const [isShareStudioOpen, setIsShareStudioOpen] = useState(false);
   const [isDayPlannerOpen, setIsDayPlannerOpen] = useState(true);
   const [transportMode, setTransportMode] = useState<TransportMode>("walking");
   const [agentMessages, setAgentMessages] = useState<AgentChatMessage[]>([
@@ -175,6 +254,10 @@ export default function App() {
   const [agentExecutionNotes, setAgentExecutionNotes] = useState<string[]>([]);
   const [agentDebug, setAgentDebug] = useState<AgentDebugInfo | null>(null);
   const [agentIslandActive, setAgentIslandActive] = useState(false);
+  const [topBarWeather, setTopBarWeather] = useState<TopBarWeather>(defaultTopBarWeather);
+  const [topBarLocation, setTopBarLocation] = useState<TopBarLocation>(defaultTopBarLocation);
+  const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
+  const [focusUserLocationRequest, setFocusUserLocationRequest] = useState(0);
 
   const activeDayPlan = useMemo(
     () => dayPlans.find((day) => day.id === activeDayId) ?? dayPlans[0] ?? createDefaultDayPlan(),
@@ -232,6 +315,11 @@ export default function App() {
     [itineraryIds],
   );
 
+  const routeCardTitle = activeDayPlan.routeName ?? `${activeDayPlan.title}常熟路线`;
+  const routeCardDescription =
+    activeDayPlan.routeDescription ??
+    `${activeDayPlan.title} 已选 ${itineraryPlaces.length} 站，预计 ${estimatedTime}`;
+
   const dayPlanSummaries = useMemo(
     () =>
       dayPlans.map((day) => {
@@ -265,6 +353,144 @@ export default function App() {
       // Local persistence is a convenience only.
     }
   }, [activeDayId, dayPlans]);
+
+  const refreshLiveContext = useCallback(async () => {
+    const amapConfig = getAmapConfig();
+
+    if (!amapConfig) {
+      return;
+    }
+
+    setTopBarWeather((current) => ({ ...current, loading: true }));
+    setTopBarLocation((current) => ({ ...current, loading: true }));
+
+    try {
+      const AMap = await loadAmap(amapConfig);
+
+      await Promise.allSettled([
+        new Promise<void>((resolve) => {
+          if (!AMap.Weather) {
+            resolve();
+            return;
+          }
+
+          const weatherService = new AMap.Weather();
+          weatherService.getLive("常熟市", (statusOrError: unknown, result: unknown) => {
+            const liveResult = readAmapCallbackResult<any>(statusOrError, result);
+            const liveWeather = liveResult.ok && liveResult.data
+              ? {
+                  temperature: String(liveResult.data.temperature ?? defaultTopBarWeather.temperature),
+                  weather: String(liveResult.data.weather ?? defaultTopBarWeather.weather),
+                }
+              : null;
+
+            weatherService.getForecast("常熟市", (forecastStatusOrError: unknown, forecastResult: unknown) => {
+              const forecastCallbackResult = readAmapCallbackResult<any>(forecastStatusOrError, forecastResult);
+              const forecasts = forecastCallbackResult.ok
+                ? readAmapForecastItems(forecastCallbackResult.data)
+                : undefined;
+
+              setTopBarWeather((current) => ({
+                temperature: liveWeather?.temperature ?? current.temperature,
+                weather: liveWeather?.weather ?? current.weather,
+                forecasts: forecasts?.length ? forecasts : current.forecasts,
+                loading: false,
+              }));
+              resolve();
+            });
+          });
+        }),
+        new Promise<void>((resolve) => {
+          if (!AMap.Geolocation) {
+            setTopBarLocation((current) => ({ ...current, loading: false }));
+            resolve();
+            return;
+          }
+
+          const geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,
+            timeout: 8000,
+            convert: true,
+            showButton: false,
+            showMarker: false,
+            showCircle: false,
+          });
+
+          geolocation.getCurrentPosition((status: string, result: any) => {
+            if (status !== "complete" || !result?.position) {
+              setTopBarLocation((current) => ({
+                ...current,
+                loading: false,
+                detail: "定位暂不可用，保留默认常熟片区",
+              }));
+              resolve();
+              return;
+            }
+
+            const lng = typeof result.position.lng === "number" ? result.position.lng : result.position.getLng?.();
+            const lat = typeof result.position.lat === "number" ? result.position.lat : result.position.getLat?.();
+
+            if (!AMap.Geocoder || typeof lng !== "number" || typeof lat !== "number") {
+              setUserLocation({ lng, lat });
+              setTopBarLocation({
+                area: "当前位置",
+                detail: "已获取定位，暂未解析片区",
+                loading: false,
+              });
+              resolve();
+              return;
+            }
+
+            const geocoder = new AMap.Geocoder({
+              city: "常熟市",
+            });
+
+            geocoder.getAddress([lng, lat], (geoStatus: string, geoResult: any) => {
+              const component = geoResult?.regeocode?.addressComponent;
+              const area = geoStatus === "complete" ? getReadableArea(component) : "当前位置";
+              const formattedAddress =
+                typeof geoResult?.regeocode?.formattedAddress === "string"
+                  ? geoResult.regeocode.formattedAddress
+                  : `经度 ${lng.toFixed(4)}，纬度 ${lat.toFixed(4)}`;
+
+              setTopBarLocation({
+                area,
+                detail: formattedAddress,
+                loading: false,
+              });
+              setUserLocation({
+                lng,
+                lat,
+                accuracy: typeof result.accuracy === "number" ? result.accuracy : undefined,
+                address: formattedAddress,
+              });
+              resolve();
+            });
+          });
+        }),
+      ]);
+    } catch {
+      setTopBarWeather((current) => ({ ...current, loading: false }));
+      setTopBarLocation((current) => ({
+        ...current,
+        loading: false,
+        detail: "高德实时信息暂不可用，保留默认常熟片区",
+      }));
+    }
+  }, []);
+
+  useEffect(() => {
+    refreshLiveContext();
+  }, [refreshLiveContext]);
+
+  const handleLocationStatusClick = useCallback(() => {
+    if (userLocation) {
+      setFocusUserLocationRequest((current) => current + 1);
+      return;
+    }
+
+    refreshLiveContext();
+  }, [refreshLiveContext, userLocation]);
 
   useEffect(() => {
     let cancelled = false;
@@ -741,6 +967,8 @@ export default function App() {
         <ChangshuMap
           places={places}
           visiblePlaces={visiblePlaces}
+          userLocation={userLocation}
+          focusUserLocationRequest={focusUserLocationRequest}
           itineraryIds={itineraryIds}
           routePlan={routePlan}
           selectedPlaceId={selectedPlaceId}
@@ -781,10 +1009,12 @@ export default function App() {
           estimatedTime={estimatedTime}
           activeDayTitle={activeDayPlan.title}
           totalDays={dayPlans.length}
+          weather={topBarWeather}
+          location={topBarLocation}
           isItineraryOpen={isItineraryOpen}
           onToggleItinerary={() => setIsItineraryOpen((current) => !current)}
           onShowAvoidPeak={() => setActiveTypes(["scenic"])}
-          onShowAreaRecommend={() => setActiveTypes(["scenic", "heritage", "food", "restaurant", "activity"])}
+          onRefreshLocation={handleLocationStatusClick}
           onShowActivities={() => setActiveTypes(["activity"])}
         />
 
@@ -823,6 +1053,16 @@ export default function App() {
           {isItineraryOpen ? <PanelRightClose size={20} /> : <PanelRightOpen size={20} />}
           <span>{activeDayPlan.title}</span>
           <strong>{itineraryIds.length}</strong>
+        </button>
+
+        <button
+          className="share-fab"
+          type="button"
+          onClick={() => setIsShareStudioOpen(true)}
+          aria-label="生成分享卡片"
+        >
+          <Share2 size={19} />
+          <span>卡片</span>
         </button>
 
         <div className={`itinerary-drawer ${isItineraryOpen ? "is-open" : ""}`}>
@@ -865,6 +1105,15 @@ export default function App() {
             {activeDayPlan.title} 已选 {itineraryIds.length} 站，点击右侧「行程」继续规划
           </div>
         )}
+
+        <ShareCardStudio
+          open={isShareStudioOpen}
+          routeTitle={routeCardTitle}
+          routeDescription={routeCardDescription}
+          places={itineraryPlaces}
+          routePlan={routePlan}
+          onClose={() => setIsShareStudioOpen(false)}
+        />
       </main>
     </div>
   );

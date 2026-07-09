@@ -10,6 +10,13 @@ import { PlaceCard } from "./PlaceCard";
 type FallbackChangshuMapProps = {
   places: Place[];
   visiblePlaces: Place[];
+  userLocation: {
+    lng: number;
+    lat: number;
+    accuracy?: number;
+    address?: string;
+  } | null;
+  focusUserLocationRequest: number;
   itineraryIds: string[];
   routePlan: RoutePlan;
   selectedPlaceId: string | null;
@@ -140,6 +147,8 @@ function addLightweightBaseMap(map: L.Map) {
 export function FallbackChangshuMap({
   places,
   visiblePlaces,
+  userLocation,
+  focusUserLocationRequest,
   itineraryIds,
   routePlan,
   selectedPlaceId,
@@ -157,6 +166,7 @@ export function FallbackChangshuMap({
   const mapRef = useRef<L.Map | null>(null);
   const markerLayerRef = useRef<L.LayerGroup | null>(null);
   const routeLayerRef = useRef<L.LayerGroup | null>(null);
+  const userLocationLayerRef = useRef<L.LayerGroup | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
   const [mapReady, setMapReady] = useState(false);
@@ -209,6 +219,7 @@ export function FallbackChangshuMap({
 
     markerLayerRef.current = L.layerGroup().addTo(map);
     routeLayerRef.current = L.layerGroup().addTo(map);
+    userLocationLayerRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
 
     function updateZoom() {
@@ -235,6 +246,7 @@ export function FallbackChangshuMap({
       mapRef.current = null;
       markerLayerRef.current = null;
       routeLayerRef.current = null;
+      userLocationLayerRef.current = null;
     };
   }, [places]);
 
@@ -325,6 +337,51 @@ export function FallbackChangshuMap({
       ).addTo(layer);
     });
   }, [routePlan]);
+
+  useEffect(() => {
+    const layer = userLocationLayerRef.current;
+    if (!layer) {
+      return;
+    }
+
+    layer.clearLayers();
+
+    if (!userLocation) {
+      return;
+    }
+
+    const latLng: L.LatLngExpression = [userLocation.lat, userLocation.lng];
+    L.circle(latLng, {
+      radius: Math.max(30, Math.min(userLocation.accuracy ?? 80, 500)),
+      color: "#2f80ed",
+      fillColor: "#2f80ed",
+      fillOpacity: 0.12,
+      weight: 1,
+      interactive: false,
+    }).addTo(layer);
+    L.marker(latLng, {
+      icon: L.divIcon({
+        className: "user-location-host",
+        html: `<div class="user-location-marker" title="${userLocation.address || "我的位置"}"><span></span></div>`,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
+      }),
+      title: userLocation.address || "我的位置",
+    }).addTo(layer);
+  }, [userLocation]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+
+    if (!map || !mapReady || !userLocation || focusUserLocationRequest <= 0) {
+      return;
+    }
+
+    map.flyTo([userLocation.lat, userLocation.lng], Math.max(map.getZoom(), 15), {
+      animate: true,
+      duration: 0.35,
+    });
+  }, [focusUserLocationRequest, mapReady, userLocation]);
 
   useEffect(() => {
     const map = mapRef.current;

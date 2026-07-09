@@ -1,4 +1,3 @@
-import { useState, type FormEvent } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -6,7 +5,6 @@ import {
   Dice5,
   Eraser,
   Grid3X3,
-  LocateFixed,
   Route,
   Search,
   Sparkles,
@@ -58,19 +56,7 @@ export function SideControlPanel({
   onRandomRoute,
   onClear,
   onActivateService,
-  onSubmitAiQuery,
 }: SideControlPanelProps) {
-  const [query, setQuery] = useState("");
-
-  function handleAiQuery(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const nextQuery = query.trim();
-
-    if (nextQuery) {
-      onSubmitAiQuery?.(nextQuery);
-    }
-  }
-
   return (
     <aside className={`side-control-panel ${isOpen ? "is-open" : "is-collapsed"}`} aria-label="地图规划控制台">
       <button
@@ -84,24 +70,6 @@ export function SideControlPanel({
       </button>
 
       <div className="side-panel-inner">
-        <section className="side-panel-hero">
-          <span>常熟属地文旅大模型</span>
-          <strong>点位、客流、停车和行程统一在地图上完成</strong>
-          <p>根据你的时间、偏好和当前位置，智能推荐常熟景点、美食、停车和便民服务。</p>
-          <form className="side-hero-ai-search" role="search" onSubmit={handleAiQuery}>
-            <Sparkles size={16} />
-            <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="问一句：半日游 / 找停车 / 推荐美食"
-              aria-label="一句话询问常熟文旅助手"
-            />
-            <button type="submit" aria-label="提交 AI 查询">
-              <Search size={15} />
-            </button>
-          </form>
-        </section>
-
         <section className="side-panel-section">
           <div className="side-section-title">
             <Search size={16} />
@@ -187,18 +155,6 @@ export function SideControlPanel({
                 <em>{service.hint}</em>
               </button>
             ))}
-          </div>
-        </section>
-
-        <section className="side-panel-section live-tips-section">
-          <div className="side-section-title">
-            <LocateFixed size={16} />
-            <strong>实时建议</strong>
-          </div>
-          <div className="live-tip-list">
-            <span>虞山片区舒适，适合先游览。</span>
-            <span>尚湖停车余位充足，建议自驾优先。</span>
-            <span>沙家浜演艺点位可预约提醒。</span>
           </div>
         </section>
       </div>

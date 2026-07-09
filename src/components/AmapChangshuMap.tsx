@@ -1,4 +1,4 @@
-import { Layers, LocateFixed, PencilLine, RotateCcw, SlidersHorizontal, X } from "lucide-react";
+import { Check, Layers, LocateFixed, Palette, PencilLine, RotateCcw, SlidersHorizontal, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { hasFullCityHanddrawnTile } from "../data/fullCityHanddrawnTileRanges";
 import { mapSkinOverlays } from "../data/mapSkins";
@@ -13,6 +13,13 @@ type AmapChangshuMapProps = {
   amapConfig: AmapConfig;
   places: Place[];
   visiblePlaces: Place[];
+  userLocation: {
+    lng: number;
+    lat: number;
+    accuracy?: number;
+    address?: string;
+  } | null;
+  focusUserLocationRequest: number;
   itineraryIds: string[];
   routePlan: RoutePlan;
   selectedPlaceId: string | null;
@@ -32,6 +39,68 @@ const changshuCenter: [number, number] = [120.755, 31.62];
 const transparentTile =
   "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
 
+type MapSkinId = "handdrawn" | "normal" | "fresh" | "grey" | "light" | "dark" | "macaron";
+
+type MapSkinOption = {
+  id: MapSkinId;
+  name: string;
+  description: string;
+  amapStyle: string;
+  handdrawn: boolean;
+};
+
+const mapSkinOptions: MapSkinOption[] = [
+  {
+    id: "handdrawn",
+    name: "手绘文旅",
+    description: "当前风格化瓦片",
+    amapStyle: getAmapStyle(),
+    handdrawn: true,
+  },
+  {
+    id: "normal",
+    name: "高德默认",
+    description: "原生标准配色",
+    amapStyle: "amap://styles/normal",
+    handdrawn: false,
+  },
+  {
+    id: "fresh",
+    name: "清新",
+    description: "浅绿低饱和",
+    amapStyle: "amap://styles/fresh",
+    handdrawn: false,
+  },
+  {
+    id: "grey",
+    name: "雅灰",
+    description: "弱化背景信息",
+    amapStyle: "amap://styles/grey",
+    handdrawn: false,
+  },
+  {
+    id: "light",
+    name: "月光银",
+    description: "明亮简洁",
+    amapStyle: "amap://styles/light",
+    handdrawn: false,
+  },
+  {
+    id: "dark",
+    name: "幻影黑",
+    description: "夜间暗色",
+    amapStyle: "amap://styles/dark",
+    handdrawn: false,
+  },
+  {
+    id: "macaron",
+    name: "马卡龙",
+    description: "柔和明快",
+    amapStyle: "amap://styles/macaron",
+    handdrawn: false,
+  },
+];
+
 function getPopoverPlacement(position: { x: number; y: number } | null, expanded: boolean) {
   if (expanded || !position || typeof window === "undefined") {
     return "center";
@@ -48,6 +117,8 @@ export function AmapChangshuMap({
   amapConfig,
   places,
   visiblePlaces,
+  userLocation,
+  focusUserLocationRequest,
   itineraryIds,
   routePlan,
   selectedPlaceId,
@@ -65,6 +136,7 @@ export function AmapChangshuMap({
   const mapNodeRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<any>(null);
   const markerLayerRef = useRef<any[]>([]);
+  const userLocationLayerRef = useRef<any[]>([]);
   const routeLayerRef = useRef<any[]>([]);
   const boundaryLayerRef = useRef<any[]>([]);
   const skinLayerRef = useRef<any[]>([]);
@@ -75,8 +147,11 @@ export function AmapChangshuMap({
   const hasInitialFitRef = useRef(false);
   const [mapReady, setMapReady] = useState(false);
   const [isMapToolsOpen, setIsMapToolsOpen] = useState(false);
+  const [isSkinPickerOpen, setIsSkinPickerOpen] = useState(false);
+  const [activeMapSkinId, setActiveMapSkinId] = useState<MapSkinId>("handdrawn");
   const [mapZoom, setMapZoom] = useState(11);
   const [selectedCardPosition, setSelectedCardPosition] = useState<{ x: number; y: number } | null>(null);
+  const activeMapSkin = mapSkinOptions.find((skin) => skin.id === activeMapSkinId) ?? mapSkinOptions[0];
 
   const selectedPlace = useMemo(
     () => places.find((place) => place.id === selectedPlaceId) ?? null,
@@ -104,6 +179,12 @@ export function AmapChangshuMap({
   );
 
   useEffect(() => {
+    if (!isMapToolsOpen) {
+      setIsSkinPickerOpen(false);
+    }
+  }, [isMapToolsOpen]);
+
+  useEffect(() => {
     let disposed = false;
 
     async function initMap() {
@@ -127,7 +208,7 @@ export function AmapChangshuMap({
           zoom: 11,
           zooms: [10, 18],
           center: changshuCenter,
-          mapStyle: getAmapStyle(),
+          mapStyle: mapSkinOptions[0].amapStyle,
           features: ["bg", "road", "building", "point"],
         });
 
@@ -236,6 +317,66 @@ export function AmapChangshuMap({
       return;
     }
 
+    userLocationLayerRef.current.forEach((layer) => layer.setMap(null));
+    userLocationLayerRef.current = [];
+
+    if (!userLocation) {
+      return;
+    }
+
+    const position = [userLocation.lng, userLocation.lat];
+    const accuracy = Math.max(30, Math.min(userLocation.accuracy ?? 80, 500));
+    const circle = new AMap.Circle({
+      center: position,
+      radius: accuracy,
+      strokeColor: "#2f80ed",
+      strokeOpacity: 0.42,
+      strokeWeight: 1,
+      fillColor: "#2f80ed",
+      fillOpacity: 0.12,
+      zIndex: 95,
+      bubble: true,
+    });
+    const marker = new AMap.Marker({
+      position,
+      anchor: "center",
+      title: userLocation.address || "我的位置",
+      zIndex: 220,
+      content: `
+        <div class="user-location-marker" title="${userLocation.address || "我的位置"}">
+          <span></span>
+        </div>
+      `,
+    });
+
+    circle.setMap(map);
+    marker.setMap(map);
+    userLocationLayerRef.current = [circle, marker];
+
+    return () => {
+      circle.setMap(null);
+      marker.setMap(null);
+    };
+  }, [mapReady, userLocation]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+
+    if (!map || !mapReady || !userLocation || focusUserLocationRequest <= 0) {
+      return;
+    }
+
+    map.setZoomAndCenter(Math.max(map.getZoom(), 16), [userLocation.lng, userLocation.lat]);
+  }, [focusUserLocationRequest, mapReady, userLocation]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    const AMap = window.AMap;
+
+    if (!map || !AMap || !mapReady) {
+      return;
+    }
+
     let disposed = false;
 
     boundaryLayerRef.current.forEach((layer) => layer.setMap(null));
@@ -334,7 +475,22 @@ export function AmapChangshuMap({
     const map = mapRef.current;
     const AMap = window.AMap;
 
-    if (!map || !AMap || !mapReady || stylizedTileLayerRef.current) {
+    if (!map || !AMap || !mapReady) {
+      return;
+    }
+
+    if (typeof map.setMapStyle === "function") {
+      map.setMapStyle(activeMapSkin.amapStyle);
+    }
+
+    if (!activeMapSkin.handdrawn) {
+      stylizedTileLayerRef.current?.setMap(null);
+      stylizedTileLayerRef.current = null;
+      return;
+    }
+
+    if (stylizedTileLayerRef.current) {
+      stylizedTileLayerRef.current.setMap(map);
       return;
     }
 
@@ -358,7 +514,7 @@ export function AmapChangshuMap({
       tileLayer.setMap(null);
       stylizedTileLayerRef.current = null;
     };
-  }, [mapReady]);
+  }, [activeMapSkin, mapReady]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -567,12 +723,48 @@ export function AmapChangshuMap({
         <div className={`map-action-stack ${isMapToolsOpen ? "is-open" : ""}`}>
           <span className={`tile-badge ${mapReady ? "is-ready" : ""}`}>
             <Layers size={15} />
-            {mapReady ? "真实地图皮肤已启用" : "真实地图加载中"}
+            {mapReady ? activeMapSkin.name : "真实地图加载中"}
           </span>
           <button className="map-tool-button" type="button" onClick={() => fitVisiblePlaces()}>
             <LocateFixed size={17} />
             全览
           </button>
+          <div className="map-skin-picker">
+            <button
+              className={`map-tool-button ${isSkinPickerOpen ? "is-active" : ""}`}
+              type="button"
+              onClick={() => setIsSkinPickerOpen((current) => !current)}
+              aria-expanded={isSkinPickerOpen}
+              aria-label="选择地图皮肤"
+            >
+              <Palette size={17} />
+              皮肤
+            </button>
+            {isSkinPickerOpen && (
+              <div className="map-skin-popover" role="menu" aria-label="地图皮肤选择">
+                {mapSkinOptions.map((skin) => (
+                  <button
+                    className={`map-skin-option ${skin.id === activeMapSkinId ? "is-active" : ""}`}
+                    type="button"
+                    role="menuitemradio"
+                    aria-checked={skin.id === activeMapSkinId}
+                    key={skin.id}
+                    onClick={() => {
+                      setActiveMapSkinId(skin.id);
+                      setIsSkinPickerOpen(false);
+                    }}
+                  >
+                    <span className={`map-skin-swatch skin-${skin.id}`} aria-hidden="true" />
+                    <span>
+                      <strong>{skin.name}</strong>
+                      <em>{skin.description}</em>
+                    </span>
+                    {skin.id === activeMapSkinId && <Check size={15} />}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
           <button
             className={`map-tool-button ${drawMode ? "is-active" : ""}`}
             type="button"

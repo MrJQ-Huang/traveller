@@ -7,11 +7,35 @@ import {
   PanelRightOpen,
   TrendingDown,
 } from "lucide-react";
-import type { ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+
+export type TopBarWeatherForecast = {
+  date: string;
+  week: string;
+  dayWeather: string;
+  nightWeather: string;
+  dayTemp: string;
+  nightTemp: string;
+};
+
+export type TopBarWeather = {
+  temperature: string;
+  weather: string;
+  loading?: boolean;
+  forecasts?: TopBarWeatherForecast[];
+};
+
+export type TopBarLocation = {
+  area: string;
+  detail: string;
+  loading?: boolean;
+};
 
 type TopBarProps = {
   agentSlot?: ReactNode;
   agentActive?: boolean;
+  weather: TopBarWeather;
+  location: TopBarLocation;
   itemCount: number;
   estimatedTime: string;
   activeDayTitle: string;
@@ -19,13 +43,80 @@ type TopBarProps = {
   isItineraryOpen: boolean;
   onToggleItinerary: () => void;
   onShowAvoidPeak?: () => void;
-  onShowAreaRecommend?: () => void;
+  onRefreshLocation?: () => void;
   onShowActivities?: () => void;
 };
+
+const weekdayLabels = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+
+type OpenStatusPanel = "weather" | "date" | null;
+
+function addDays(date: Date, days: number) {
+  const next = new Date(date);
+  next.setDate(date.getDate() + days);
+  return next;
+}
+
+function formatMonthDay(date: Date) {
+  return `${date.getMonth() + 1}/${date.getDate()}`;
+}
+
+function getRelativeDateLabel(index: number) {
+  if (index === 0) {
+    return "今天";
+  }
+  if (index === 1) {
+    return "明天";
+  }
+  if (index === 2) {
+    return "后天";
+  }
+  return "";
+}
+
+function getWeekLabel(date: Date) {
+  return weekdayLabels[date.getDay()];
+}
+
+function normalizeWeekLabel(week: string) {
+  const trimmed = week.trim();
+  const numericWeek = trimmed.match(/^周?([1-7])$/)?.[1];
+
+  if (numericWeek) {
+    return weekdayLabels[Number(numericWeek) % 7];
+  }
+
+  return trimmed;
+}
+
+function formatWeatherPair(dayWeather: string, nightWeather: string) {
+  const day = dayWeather.trim();
+  const night = nightWeather.trim();
+
+  if (day && night && day !== night) {
+    return `${day} / ${night}`;
+  }
+
+  return day || night || "待更新";
+}
+
+function formatTemperatureRange(dayTemp: string, nightTemp: string) {
+  const day = dayTemp.trim();
+  const night = nightTemp.trim();
+
+  if (day && night && day !== night) {
+    return `${night}° - ${day}°`;
+  }
+
+  const onlyTemp = day || night;
+  return onlyTemp ? `${onlyTemp}°` : "待更新";
+}
 
 export function TopBar({
   agentSlot,
   agentActive = false,
+  weather,
+  location,
   itemCount,
   estimatedTime,
   activeDayTitle,
@@ -33,11 +124,112 @@ export function TopBar({
   isItineraryOpen,
   onToggleItinerary,
   onShowAvoidPeak,
-  onShowAreaRecommend,
+  onRefreshLocation,
   onShowActivities,
 }: TopBarProps) {
+  const topbarRef = useRef<HTMLElement | null>(null);
+  const [openPanel, setOpenPanel] = useState<OpenStatusPanel>(null);
+  const today = useMemo(() => new Date(), []);
+  const todayLabel = useMemo(() => getWeekLabel(today), [today]);
+  const fallbackForecastItems = useMemo(
+    () =>
+      Array.from({ length: 4 }, (_, index) => {
+        const date = addDays(today, index);
+        const relativeLabel = getRelativeDateLabel(index);
+        const hasLiveWeather = index === 0;
+
+        return {
+          date: relativeLabel || formatMonthDay(date),
+          week: getWeekLabel(date),
+          dayWeather: hasLiveWeather ? weather.weather : "待更新",
+          nightWeather: hasLiveWeather ? weather.weather : "待更新",
+          dayTemp: hasLiveWeather ? weather.temperature : "",
+          nightTemp: hasLiveWeather ? weather.temperature : "",
+        };
+      }),
+    [today, weather.temperature, weather.weather],
+  );
+  const forecastItems = weather.forecasts?.length ? weather.forecasts : fallbackForecastItems;
+  const dateInsightItems = useMemo(
+    () => {
+      const tomorrow = addDays(today, 1);
+      const afterTomorrow = addDays(today, 2);
+
+      return [
+        {
+          label: "今天",
+          date: `${formatMonthDay(today)} ${todayLabel}`,
+          title: "常熟当日活动",
+          meta: "6 个活动点位已点亮",
+        },
+        {
+          label: "明天",
+          date: `${formatMonthDay(tomorrow)} ${getWeekLabel(tomorrow)}`,
+          title: "轻量半日游",
+          meta: "适合补餐饮、古城与亲水点位",
+        },
+        {
+          label: "后天",
+          date: `${formatMonthDay(afterTomorrow)} ${getWeekLabel(afterTomorrow)}`,
+          title: "错峰备选日",
+          meta: "优先安排尚湖、虞山慢行",
+        },
+        {
+          label: activeDayTitle,
+          date: `${totalDays} 天行程`,
+          title: `当前已选 ${itemCount} 站`,
+          meta: estimatedTime,
+        },
+      ];
+    },
+    [activeDayTitle, estimatedTime, itemCount, today, todayLabel, totalDays],
+  );
+
+  useEffect(() => {
+    if (!openPanel || typeof document === "undefined") {
+      return;
+    }
+
+    function handlePointerDown(event: PointerEvent) {
+      const target = event.target;
+
+      if (target instanceof Node && topbarRef.current?.contains(target)) {
+        return;
+      }
+
+      setOpenPanel(null);
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setOpenPanel(null);
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [openPanel]);
+
+  function toggleWeatherPanel() {
+    setOpenPanel((current) => (current === "weather" ? null : "weather"));
+  }
+
+  function toggleDatePanel() {
+    const shouldOpen = openPanel !== "date";
+    setOpenPanel(shouldOpen ? "date" : null);
+
+    if (shouldOpen) {
+      onShowActivities?.();
+    }
+  }
+
   return (
-    <header className={`topbar smart-status-topbar ${agentActive ? "is-agent-active" : ""}`} aria-label="常熟文旅实时状态栏">
+    <header ref={topbarRef} className={`topbar smart-status-topbar ${agentActive ? "is-agent-active" : ""}`} aria-label="常熟文旅实时状态栏">
       {agentSlot ?? (
         <div className="topbar-brand">
           <span className="brand-mark">游</span>
@@ -49,26 +241,82 @@ export function TopBar({
       )}
 
       <div className="topbar-status-strip" aria-label="全域实时状态">
-        <span className="status-pill weather-pill-live">
-          <CloudSun size={16} />
-          <strong>29°C</strong>
-          多云
-        </span>
+        <div className="weather-pill-shell">
+          <button
+            className={`status-pill weather-pill-live ${openPanel === "weather" ? "is-active" : ""}`}
+            type="button"
+            onClick={toggleWeatherPanel}
+            aria-expanded={openPanel === "weather"}
+            aria-haspopup="dialog"
+            aria-controls="topbar-weather-popover"
+          >
+            <CloudSun size={16} />
+            <strong>{weather.loading ? "--" : `${weather.temperature}°C`}</strong>
+            <span>{todayLabel}</span>
+            {weather.loading ? "更新中" : weather.weather}
+          </button>
+          {openPanel === "weather" && (
+            <div className="weather-popover" id="topbar-weather-popover" role="dialog" aria-label="常熟天气预报">
+              <div className="weather-popover-head">
+                <strong>常熟天气</strong>
+                <span>{weather.loading ? "更新中" : `最近 ${forecastItems.slice(0, 4).length} 天`}</span>
+              </div>
+              <div className="weather-forecast-list">
+                {forecastItems.slice(0, 4).map((forecast, index) => (
+                  <div className="weather-forecast-card" key={`${forecast.date}-${forecast.week}-${index}`}>
+                    <strong>{forecast.date || "今天"}</strong>
+                    <span>{normalizeWeekLabel(forecast.week)}</span>
+                    <p>{formatWeatherPair(forecast.dayWeather, forecast.nightWeather)}</p>
+                    <em>{formatTemperatureRange(forecast.dayTemp, forecast.nightTemp)}</em>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
         <button className="status-pill status-pill-priority" type="button" onClick={onShowAvoidPeak}>
           <TrendingDown size={16} />
           <span>避峰</span>
           <strong>尚湖优先</strong>
         </button>
-        <button className="status-pill status-pill-location" type="button" onClick={onShowAreaRecommend}>
+        <button className="status-pill status-pill-location" type="button" onClick={onRefreshLocation} title={location.detail}>
           <LocateFixed size={16} />
-          <span>当前片区</span>
-          <strong>虞山-尚湖</strong>
+          <span>{location.loading ? "定位中" : "当前片区"}</span>
+          <strong>{location.area}</strong>
         </button>
-        <button className="status-pill" type="button" onClick={onShowActivities}>
-          <CalendarDays size={16} />
-          <span>活动</span>
-          <strong>6</strong>
-        </button>
+        <div className="date-pill-shell">
+          <button
+            className={`status-pill date-pill-live ${openPanel === "date" ? "is-active" : ""}`}
+            type="button"
+            onClick={toggleDatePanel}
+            aria-expanded={openPanel === "date"}
+            aria-haspopup="dialog"
+            aria-controls="topbar-date-popover"
+          >
+            <CalendarDays size={16} />
+            <span>{todayLabel}</span>
+            <strong>{formatMonthDay(today)}</strong>
+          </button>
+          {openPanel === "date" && (
+            <div className="date-popover" id="topbar-date-popover" role="dialog" aria-label="常熟日期活动">
+              <div className="date-popover-head">
+                <strong>日期安排</strong>
+                <span>活动 6</span>
+              </div>
+              <div className="date-card-list">
+                {dateInsightItems.map((item) => (
+                  <div className="date-insight-card" key={`${item.label}-${item.date}`}>
+                    <span>{item.label}</span>
+                    <strong>{item.date}</strong>
+                    <p>{item.title}</p>
+                    <em>{item.meta}</em>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
         <button
           className="status-pill topbar-trip-button"
           type="button"
