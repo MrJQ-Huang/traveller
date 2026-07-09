@@ -7,8 +7,22 @@ export function getRoutePreset(id: string): RoutePreset {
 }
 
 export function buildRandomRoute(activeTypes: PlaceType[], length = 5): RoutePreset {
-  const pool = places.filter((place) => activeTypes.includes(place.type));
-  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  const preferredTypes = new Set<PlaceType>(["scenic", "heritage", "food", "restaurant", "activity", "lodging"]);
+  const preferredPool = places.filter(
+    (place) =>
+      activeTypes.includes(place.type) &&
+      preferredTypes.has(place.type) &&
+      place.routeMeta?.canRoute !== false,
+  );
+  const fallbackPool = places.filter(
+    (place) => activeTypes.includes(place.type) && place.routeMeta?.canRoute !== false,
+  );
+  const pool = preferredPool.length >= length ? preferredPool : fallbackPool;
+  const shuffled = [...pool].sort((a, b) => {
+    const aWeight = a.routeMeta?.routeWeight ?? 30;
+    const bWeight = b.routeMeta?.routeWeight ?? 30;
+    return bWeight + Math.random() * 20 - (aWeight + Math.random() * 20);
+  });
   const placeIds = shuffled.slice(0, Math.min(length, shuffled.length)).map((place) => place.id);
 
   return {
@@ -24,7 +38,7 @@ export function estimateTotalMinutes(placeIds: string[]): number {
     const place = places.find((item) => item.id === id);
 
     if (!place?.duration) {
-      return total + 45;
+      return total + (place?.routeMeta?.recommendedStayMinutes ?? 45);
     }
 
     const matchedNumbers = place.duration.match(/\d+/g)?.map(Number) ?? [];

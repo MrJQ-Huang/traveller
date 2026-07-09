@@ -1,8 +1,22 @@
-export type PlaceType = "scenic" | "heritage" | "food" | "restaurant";
+export type PlaceType =
+  | "scenic"
+  | "heritage"
+  | "food"
+  | "restaurant"
+  | "parking"
+  | "restroom"
+  | "service"
+  | "activity"
+  | "lodging"
+  | "emergency";
 
 export type CrowdLevel = "low" | "medium" | "high" | "very-high";
 
 export type DataStatus = "demo" | "verified";
+
+export type DataSource = "local" | "database" | "amap" | "manual";
+
+export type TierLevel = "L4" | "L3" | "L2";
 
 export type PlannerMode = "j" | "p";
 
@@ -37,6 +51,21 @@ export type Place = {
   subtitle: string;
   summary: string;
   tags: string[];
+  imageUrl?: string;
+  fallbackImageUrl?: string;
+  source?: DataSource;
+  poiId?: string;
+  address?: string;
+  district?: string;
+  categoryLabel?: string;
+  subtypeLabel?: string;
+  tierLevel?: TierLevel;
+  score?: string;
+  phone?: string;
+  dynamicText?: string;
+  selectionScore?: number;
+  bookingUrl?: string;
+  guideUrl?: string;
   position: {
     x: number;
     y: number;
@@ -53,6 +82,13 @@ export type Place = {
   notice?: string;
   foodProfile?: FoodProfile;
   restaurantProfile?: RestaurantProfile;
+  serviceProfile?: {
+    status: string;
+    capacity?: string;
+    distanceTip?: string;
+    actionLabel?: string;
+    detailItems?: string[];
+  };
   routeMeta?: PlaceRouteMeta;
   dataStatus: DataStatus;
 };
@@ -69,6 +105,12 @@ export const placeTypeLabels: Record<PlaceType, string> = {
   heritage: "非遗",
   food: "美食",
   restaurant: "店铺",
+  parking: "停车",
+  restroom: "厕所",
+  service: "服务",
+  activity: "活动",
+  lodging: "住宿",
+  emergency: "救援",
 };
 
 export const crowdLabels: Record<CrowdLevel, string> = {
@@ -83,4 +125,10 @@ export const placeTypeShortLabels: Record<PlaceType, string> = {
   heritage: "遗",
   food: "食",
   restaurant: "店",
+  parking: "P",
+  restroom: "厕",
+  service: "服",
+  activity: "演",
+  lodging: "宿",
+  emergency: "救",
 };

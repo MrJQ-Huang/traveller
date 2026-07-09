@@ -1,130 +1,87 @@
 import {
-  ClipboardList,
-  Compass,
-  Dice5,
-  Eraser,
+  CalendarDays,
+  CloudSun,
+  LocateFixed,
+  MapPinned,
   PanelRightClose,
   PanelRightOpen,
-  Route,
-  Sparkles,
+  TrendingDown,
 } from "lucide-react";
-import { routePresets } from "../data/routes";
-import type { PlaceType, PlannerMode } from "../types/place";
-import { placeTypeLabels } from "../types/place";
+import type { ReactNode } from "react";
 
 type TopBarProps = {
-  mode: PlannerMode;
-  activeTypes: PlaceType[];
-  routePresetId: string;
+  agentSlot?: ReactNode;
+  agentActive?: boolean;
   itemCount: number;
-  routeDistance: string | null;
-  routeDuration: string;
+  estimatedTime: string;
+  activeDayTitle: string;
+  totalDays: number;
   isItineraryOpen: boolean;
-  onModeChange: (mode: PlannerMode) => void;
-  onToggleType: (type: PlaceType) => void;
-  onSelectRoutePreset: (id: string) => void;
-  onGenerateRoute: () => void;
-  onRandomRoute: () => void;
-  onClear: () => void;
   onToggleItinerary: () => void;
+  onShowAvoidPeak?: () => void;
+  onShowAreaRecommend?: () => void;
+  onShowActivities?: () => void;
 };
-
-const typeIcons: Record<PlaceType, string> = {
-  scenic: "景",
-  heritage: "遗",
-  food: "食",
-  restaurant: "店",
-};
-
-const filterOrder: PlaceType[] = ["scenic", "heritage", "food", "restaurant"];
 
 export function TopBar({
-  mode,
-  activeTypes,
-  routePresetId,
+  agentSlot,
+  agentActive = false,
   itemCount,
-  routeDistance,
-  routeDuration,
+  estimatedTime,
+  activeDayTitle,
+  totalDays,
   isItineraryOpen,
-  onModeChange,
-  onToggleType,
-  onSelectRoutePreset,
-  onGenerateRoute,
-  onRandomRoute,
-  onClear,
   onToggleItinerary,
+  onShowAvoidPeak,
+  onShowAreaRecommend,
+  onShowActivities,
 }: TopBarProps) {
   return (
-    <header className="topbar" aria-label="地图规划工具">
-      <div className="toolbar-section filter-section" aria-label="四类点位筛选">
-        {filterOrder.map((type) => (
-          <button
-            key={type}
-            className={`chip ${activeTypes.includes(type) ? "is-active" : ""}`}
-            type="button"
-            onClick={() => onToggleType(type)}
-          >
-            <span className={`chip-mark type-${type}`}>{typeIcons[type]}</span>
-            {placeTypeLabels[type]}
-          </button>
-        ))}
-      </div>
+    <header className={`topbar smart-status-topbar ${agentActive ? "is-agent-active" : ""}`} aria-label="常熟文旅实时状态栏">
+      {agentSlot ?? (
+        <div className="topbar-brand">
+          <span className="brand-mark">游</span>
+          <span>
+            <strong>常熟全域文旅助手</strong>
+            <em>Changshu Smart Travel</em>
+          </span>
+        </div>
+      )}
 
-      <div className="toolbar-section mode-section" aria-label="规划模式">
-        <button
-          className={`mode-button ${mode === "j" ? "is-active" : ""}`}
-          type="button"
-          onClick={() => onModeChange("j")}
-        >
-          <Compass size={17} />J 人
+      <div className="topbar-status-strip" aria-label="全域实时状态">
+        <span className="status-pill weather-pill-live">
+          <CloudSun size={16} />
+          <strong>29°C</strong>
+          多云
+        </span>
+        <button className="status-pill status-pill-priority" type="button" onClick={onShowAvoidPeak}>
+          <TrendingDown size={16} />
+          <span>避峰</span>
+          <strong>尚湖优先</strong>
+        </button>
+        <button className="status-pill status-pill-location" type="button" onClick={onShowAreaRecommend}>
+          <LocateFixed size={16} />
+          <span>当前片区</span>
+          <strong>虞山-尚湖</strong>
+        </button>
+        <button className="status-pill" type="button" onClick={onShowActivities}>
+          <CalendarDays size={16} />
+          <span>活动</span>
+          <strong>6</strong>
         </button>
         <button
-          className={`mode-button ${mode === "p" ? "is-active" : ""}`}
+          className="status-pill topbar-trip-button"
           type="button"
-          onClick={() => onModeChange("p")}
+          onClick={onToggleItinerary}
+          aria-label={isItineraryOpen ? "收起行程规划" : "展开行程规划"}
         >
-          <Sparkles size={17} />P 人
+          <MapPinned size={16} />
+          <span>{totalDays > 1 ? activeDayTitle : "我的行程"}</span>
+          <strong>{itemCount}站</strong>
+          <em>{estimatedTime}</em>
+          {isItineraryOpen ? <PanelRightClose size={16} /> : <PanelRightOpen size={16} />}
         </button>
       </div>
-
-      <div className="toolbar-section route-actions" aria-label="P 人路线生成">
-        <select
-          value={routePresetId}
-          onChange={(event) => onSelectRoutePreset(event.target.value)}
-          aria-label="路线主题"
-        >
-          {routePresets.map((route) => (
-            <option key={route.id} value={route.id}>
-              {route.name}
-            </option>
-          ))}
-        </select>
-        <button className="primary-button" type="button" onClick={onGenerateRoute}>
-          <Route size={17} />
-          生成
-        </button>
-        <button className="icon-text-button" type="button" onClick={onRandomRoute}>
-          <Dice5 size={17} />
-          随机
-        </button>
-      </div>
-
-      <button
-        className="trip-stat-button"
-        type="button"
-        onClick={onToggleItinerary}
-        aria-label={isItineraryOpen ? "收起行程规划" : "展开行程规划"}
-      >
-        <ClipboardList size={17} />
-        <span>{itemCount} 站</span>
-        {routeDistance && <span className="trip-stat-distance">{routeDistance}</span>}
-        <strong>{routeDuration}</strong>
-        {isItineraryOpen ? <PanelRightClose size={17} /> : <PanelRightOpen size={17} />}
-      </button>
-
-      <button className="ghost-icon-button" type="button" onClick={onClear} aria-label="清空行程">
-        <Eraser size={18} />
-      </button>
     </header>
   );
 }

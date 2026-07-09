@@ -1,0 +1,252 @@
+import {
+  Bot,
+  Check,
+  Loader2,
+  RefreshCw,
+  Send,
+  Sparkles,
+} from "lucide-react";
+import { useMemo, useState, type FormEvent, type MouseEvent } from "react";
+import { syncCcswitchConnection, type AgentConnectionResult } from "../agent/agentConnection";
+import type {
+  AgentAnswerCard,
+  AgentChatMessage,
+  AgentClarification,
+  AgentDebugInfo,
+  AgentRouteSuggestion as AgentRouteSuggestionType,
+} from "../agent/agentTypes";
+import type { Place } from "../types/place";
+
+type AgentIslandProps = {
+  active: boolean;
+  messages: AgentChatMessage[];
+  places: Place[];
+  latestRouteSuggestion: AgentRouteSuggestionType | null;
+  routeSuggestions: AgentRouteSuggestionType[];
+  answerCards: AgentAnswerCard[];
+  clarification: AgentClarification | null;
+  executionNotes: string[];
+  debugInfo: AgentDebugInfo | null;
+  quickReplies: string[];
+  thinking: boolean;
+  onActiveChange: (active: boolean) => void;
+  onSend: (message: string) => void;
+  onApplyRoute: (route: AgentRouteSuggestionType) => void;
+};
+
+const transportLabels = {
+  walking: "步行",
+  riding: "骑行",
+  driving: "驾车",
+};
+
+function getConnectionLabel(connection: AgentConnectionResult | null, debugInfo: AgentDebugInfo | null) {
+  if (connection?.connectedToCcswitch) {
+    return connection.model ? `CC LLM · ${connection.model}` : "CC LLM 已连接";
+  }
+
+  if (connection && !connection.connectedToCcswitch) {
+    return "本地规则脑";
+  }
+
+  if (debugInfo && !debugInfo.fallback && debugInfo.provider === "backend") {
+    return "CC LLM 工作中";
+  }
+
+  return "本地规则脑";
+}
+
+export function AgentIsland({
+  active,
+  messages,
+  places,
+  latestRouteSuggestion,
+  routeSuggestions,
+  answerCards,
+  clarification,
+  executionNotes,
+  debugInfo,
+  quickReplies,
+  thinking,
+  onActiveChange,
+  onSend,
+  onApplyRoute,
+}: AgentIslandProps) {
+  const [draft, setDraft] = useState("");
+  const [connection, setConnection] = useState<AgentConnectionResult | null>(null);
+  const [connectionBusy, setConnectionBusy] = useState(false);
+
+  const visibleSuggestions = routeSuggestions.length > 0 ? routeSuggestions : latestRouteSuggestion ? [latestRouteSuggestion] : [];
+  const latestRoute = visibleSuggestions[0] ?? null;
+  const connectionLabel = getConnectionLabel(connection, debugInfo);
+  const isConnected = connection?.connectedToCcswitch || (!debugInfo?.fallback && debugInfo?.provider === "backend");
+  const recentMessages = messages.slice(-6);
+
+  const activePlaceNames = useMemo(() => {
+    if (!latestRoute) {
+      return "";
+    }
+
+    return latestRoute.placeIds
+      .map((id) => places.find((place) => place.id === id)?.name)
+      .filter(Boolean)
+      .slice(0, 4)
+      .join(" → ");
+  }, [latestRoute, places]);
+
+  function submitMessage(message = draft) {
+    const trimmed = message.trim();
+    if (!trimmed || thinking) {
+      return;
+    }
+
+    onSend(trimmed);
+    setDraft("");
+  }
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    submitMessage();
+  }
+
+  async function runConnectionAction(event: MouseEvent<HTMLButtonElement>) {
+    event.stopPropagation();
+    setConnectionBusy(true);
+    try {
+      const result = await syncCcswitchConnection();
+      setConnection(result);
+    } finally {
+      setConnectionBusy(false);
+    }
+  }
+
+  return (
+    <section className={`agent-island ${active ? "is-active" : "is-idle"} ${thinking ? "is-thinking" : ""}`} aria-label="小常智能陪游助手">
+      <button
+        className="agent-island-avatar"
+        type="button"
+        onClick={() => onActiveChange(!active)}
+        aria-label={active ? "收起小常输入栏" : "唤醒小常"}
+      >
+        <span className="agent-avatar-orbit" aria-hidden="true">
+          <Sparkles size={13} />
+        </span>
+        <span className="agent-avatar-core">
+          {thinking ? <Loader2 size={20} /> : <Bot size={20} />}
+        </span>
+        <strong>小常</strong>
+      </button>
+
+      {!active && (
+        <button className="agent-island-idle-copy" type="button" onClick={() => onActiveChange(true)}>
+          <span>{thinking ? "小常正在规划" : "常熟全域文旅助手"}</span>
+          <em>{thinking ? "可收起等待，不会中断大脑进程" : "点击唤醒陪游 Agent"}</em>
+        </button>
+      )}
+
+      {active && (
+        <div className="agent-island-workspace">
+          <div className="agent-island-status-row">
+            <span className={`agent-brain-pill ${isConnected ? "is-connected" : "is-local"}`}>
+              <Bot size={14} />
+              {connectionLabel}
+            </span>
+            <button type="button" className="agent-status-button" onClick={runConnectionAction} disabled={connectionBusy}>
+              {connectionBusy ? <Loader2 size={13} /> : <RefreshCw size={13} />}
+              连接测试
+            </button>
+          </div>
+
+          <form className="agent-island-input-row" onSubmit={handleSubmit}>
+            <input
+              value={draft}
+              onChange={(event) => setDraft(event.target.value)}
+              placeholder={thinking ? "小常正在思考，也可以先收起等待" : "跟小常说说你想怎么玩"}
+              disabled={thinking}
+            />
+            <button type="submit" disabled={thinking || !draft.trim()} aria-label="发送给小常">
+              {thinking ? <Loader2 size={16} /> : <Send size={16} />}
+            </button>
+          </form>
+
+          <div className="agent-island-chat-panel">
+            <div className="agent-island-message-list">
+              {recentMessages.map((message) => (
+                <div className={`agent-island-message is-${message.role}`} key={message.id}>
+                  <p>{message.content}</p>
+                </div>
+              ))}
+
+              {thinking && (
+                <div className="agent-island-message is-assistant">
+                  <p className="agent-island-thinking">
+                    <Loader2 size={14} />
+                    小常正在想路线...
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {clarification && (
+              <div className="agent-island-clarify">
+                <strong>{clarification.question}</strong>
+                <div>
+                  {clarification.options.slice(0, 4).map((option) => (
+                    <button type="button" key={option} onClick={() => submitMessage(option)} disabled={thinking}>
+                      {option}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {!clarification && latestRoute && (
+              <div className="agent-island-route">
+                <span>
+                  <Check size={14} />
+                  {latestRoute.title}
+                </span>
+                <small>
+                  {transportLabels[latestRoute.transportMode]} · {activePlaceNames || latestRoute.summary}
+                </small>
+                <button type="button" onClick={() => onApplyRoute(latestRoute)}>
+                  应用路线
+                </button>
+              </div>
+            )}
+
+            {answerCards.slice(0, 2).map((card) => (
+              <div className="agent-island-answer" key={card.title}>
+                <strong>{card.title}</strong>
+                {card.sections.slice(0, 2).map((section) => (
+                  <p key={section.heading}>
+                    <span>{section.heading}</span>
+                    {section.content}
+                  </p>
+                ))}
+              </div>
+            ))}
+
+            {executionNotes.length > 0 && (
+              <div className="agent-island-notes">
+                {executionNotes.slice(0, 3).map((note) => (
+                  <span key={note}>{note}</span>
+                ))}
+              </div>
+            )}
+
+            {quickReplies.length > 0 && !clarification && (
+              <div className="agent-island-quick">
+                {quickReplies.slice(0, 3).map((reply) => (
+                  <button type="button" key={reply} onClick={() => submitMessage(reply)} disabled={thinking}>
+                    {reply}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}

@@ -12,25 +12,42 @@ import type {
   AgentToolCall,
   AgentUserPreference,
 } from "./agent/agentTypes";
-import { AgentCompanion } from "./components/AgentCompanion";
+import { AgentIsland } from "./components/AgentIsland";
 import { AgentErrorBoundary } from "./components/AgentErrorBoundary";
 import { ChangshuMap } from "./components/ChangshuMap";
 import { ItineraryPanel } from "./components/ItineraryPanel";
+import { SideControlPanel } from "./components/SideControlPanel";
 import { TopBar } from "./components/TopBar";
 import { places } from "./data/places";
 import { routePresets } from "./data/routes";
 import { getAmapConfig } from "./map/amapLoader";
 import { planAmapRoutePlan } from "./map/amapRouteService";
+import type { DayPlan } from "./types/itinerary";
 import type { PlaceType, PlannerMode } from "./types/place";
 import type { RoutePlan, TransportMode } from "./types/route";
-import { buildPreviewRoutePlan, formatDistance, formatDuration } from "./utils/itineraryRoute";
+import { buildPreviewRoutePlan } from "./utils/itineraryRoute";
 import { buildRandomRoute, estimateTotalMinutes, formatEstimatedTime, getRoutePreset } from "./utils/routePlanner";
 
-const allPlaceTypes: PlaceType[] = ["scenic", "heritage", "food", "restaurant"];
+const allPlaceTypes: PlaceType[] = [
+  "scenic",
+  "heritage",
+  "food",
+  "restaurant",
+  "parking",
+  "restroom",
+  "service",
+  "activity",
+  "lodging",
+  "emergency",
+];
+
+const defaultVisiblePlaceTypes: PlaceType[] = ["scenic", "heritage", "food", "restaurant"];
+
+const dayPlansStorageKey = "changshu-day-plans-v1";
 
 const defaultAgentPreference: AgentUserPreference = {
   pace: "normal",
-  interests: allPlaceTypes,
+  interests: defaultVisiblePlaceTypes,
   avoidCrowds: false,
   preferFood: false,
   preferHeritage: false,
@@ -47,20 +64,101 @@ function createAgentMessage(role: AgentChatMessage["role"], content: string): Ag
   };
 }
 
+function createDefaultDayPlan(): DayPlan {
+  return {
+    id: "day-1",
+    title: "第 1 天",
+    placeIds: [],
+    routeName: null,
+    routeDescription: null,
+    createdAt: Date.now(),
+  };
+}
+
+function normalizeDayTitles(dayPlans: DayPlan[]) {
+  return dayPlans.map((day, index) => ({
+    ...day,
+    title: `第 ${index + 1} 天`,
+  }));
+}
+
+function sanitizeDayPlans(raw: unknown): DayPlan[] {
+  if (!Array.isArray(raw)) {
+    return [createDefaultDayPlan()];
+  }
+
+  const placeIds = new Set(places.map((place) => place.id));
+  const sanitized = raw
+    .map((item, index): DayPlan | null => {
+      if (!item || typeof item !== "object") {
+        return null;
+      }
+
+      const record = item as Partial<DayPlan>;
+      const ids = Array.isArray(record.placeIds)
+        ? record.placeIds.filter((id): id is string => typeof id === "string" && placeIds.has(id))
+        : [];
+
+      return {
+        id: typeof record.id === "string" ? record.id : `day-${index + 1}`,
+        title: `第 ${index + 1} 天`,
+        placeIds: ids,
+        routeName: typeof record.routeName === "string" ? record.routeName : null,
+        routeDescription: typeof record.routeDescription === "string" ? record.routeDescription : null,
+        createdAt: typeof record.createdAt === "number" ? record.createdAt : Date.now() + index,
+      };
+    })
+    .filter((day): day is DayPlan => Boolean(day));
+
+  return sanitized.length ? normalizeDayTitles(sanitized) : [createDefaultDayPlan()];
+}
+
+function loadInitialDayPlans() {
+  if (typeof window === "undefined") {
+    return [createDefaultDayPlan()];
+  }
+
+  try {
+    const stored = window.localStorage.getItem(dayPlansStorageKey);
+    return stored ? sanitizeDayPlans(JSON.parse(stored).dayPlans) : [createDefaultDayPlan()];
+  } catch {
+    return [createDefaultDayPlan()];
+  }
+}
+
+function loadInitialActiveDayId(dayPlans: DayPlan[]) {
+  if (typeof window === "undefined") {
+    return dayPlans[0]?.id ?? "day-1";
+  }
+
+  try {
+    const stored = window.localStorage.getItem(dayPlansStorageKey);
+    const activeDayId = stored ? JSON.parse(stored).activeDayId : null;
+    return typeof activeDayId === "string" && dayPlans.some((day) => day.id === activeDayId)
+      ? activeDayId
+      : dayPlans[0]?.id ?? "day-1";
+  } catch {
+    return dayPlans[0]?.id ?? "day-1";
+  }
+}
+
 export default function App() {
+  const [initialDayPlans] = useState(loadInitialDayPlans);
   const [mode, setMode] = useState<PlannerMode>("j");
-  const [activeTypes, setActiveTypes] = useState<PlaceType[]>(allPlaceTypes);
+  const [activeTypes, setActiveTypes] = useState<PlaceType[]>(defaultVisiblePlaceTypes);
   const [selectedPlaceId, setSelectedPlaceId] = useState<string | null>(null);
-  const [expandedPlaceId, setExpandedPlaceId] = useState<string | null>(null);
-  const [itineraryIds, setItineraryIds] = useState<string[]>([]);
+  const [mapExpandedPlaceId, setMapExpandedPlaceId] = useState<string | null>(null);
+  const [itineraryExpandedPlaceId, setItineraryExpandedPlaceId] = useState<string | null>(null);
+  const [dayPlans, setDayPlans] = useState<DayPlan[]>(initialDayPlans);
+  const [activeDayId, setActiveDayId] = useState(() => loadInitialActiveDayId(initialDayPlans));
   const [routePresetId, setRoutePresetId] = useState(routePresets[0].id);
-  const [generatedRouteName, setGeneratedRouteName] = useState<string | null>(null);
-  const [generatedRouteDescription, setGeneratedRouteDescription] = useState<string | null>(null);
   const [drawMode, setDrawMode] = useState(false);
   const [isItineraryOpen, setIsItineraryOpen] = useState(false);
+  const [isSidePanelOpen, setIsSidePanelOpen] = useState(true);
+  const [isDayPlannerOpen, setIsDayPlannerOpen] = useState(true);
   const [transportMode, setTransportMode] = useState<TransportMode>("walking");
   const [agentMessages, setAgentMessages] = useState<AgentChatMessage[]>([
-    createAgentMessage("assistant", "我是小常。你可以跟我说想怎么玩，我会先用本地演示脑帮你选点、排顺，再把路线放进右侧行程栏。"),
+    createAgentMessage("assistant", "我是小常。你可以跟我说想怎么玩，我会结合当前地图点位帮你选点、排顺，并把路线放进当前天的行程栏。"),
   ]);
   const [agentThinking, setAgentThinking] = useState(false);
   const [agentQuickReplies, setAgentQuickReplies] = useState<string[]>([
@@ -76,6 +174,13 @@ export default function App() {
   const [agentClarification, setAgentClarification] = useState<AgentClarification | null>(null);
   const [agentExecutionNotes, setAgentExecutionNotes] = useState<string[]>([]);
   const [agentDebug, setAgentDebug] = useState<AgentDebugInfo | null>(null);
+  const [agentIslandActive, setAgentIslandActive] = useState(false);
+
+  const activeDayPlan = useMemo(
+    () => dayPlans.find((day) => day.id === activeDayId) ?? dayPlans[0] ?? createDefaultDayPlan(),
+    [activeDayId, dayPlans],
+  );
+  const itineraryIds = activeDayPlan.placeIds;
 
   const previewRoutePlan = useMemo(
     () => buildPreviewRoutePlan(itineraryIds, places, transportMode),
@@ -87,6 +192,32 @@ export default function App() {
     () => places.filter((place) => activeTypes.includes(place.type)),
     [activeTypes],
   );
+
+  const agentPlaces = useMemo(() => {
+    const candidates = new Map<string, (typeof places)[number]>();
+    itineraryIds.forEach((id) => {
+      const place = places.find((item) => item.id === id);
+      if (place) {
+        candidates.set(place.id, place);
+      }
+    });
+
+    const selectedPlace = selectedPlaceId ? places.find((place) => place.id === selectedPlaceId) : null;
+    if (selectedPlace) {
+      candidates.set(selectedPlace.id, selectedPlace);
+    }
+
+    visiblePlaces
+      .slice()
+      .sort((left, right) => {
+        const tierWeight = { L4: 0, L3: 1, L2: 2 };
+        return (tierWeight[left.tierLevel ?? "L2"] ?? 3) - (tierWeight[right.tierLevel ?? "L2"] ?? 3);
+      })
+      .slice(0, 120)
+      .forEach((place) => candidates.set(place.id, place));
+
+    return [...candidates.values()];
+  }, [itineraryIds, selectedPlaceId, visiblePlaces]);
 
   const itineraryPlaces = useMemo(
     () =>
@@ -100,19 +231,40 @@ export default function App() {
     () => formatEstimatedTime(estimateTotalMinutes(itineraryIds)),
     [itineraryIds],
   );
-  const routeMetric = useMemo(() => {
-    if (routePlan.segments.length === 0) {
-      return {
-        distance: null,
-        duration: estimatedTime,
-      };
-    }
 
-    return {
-      distance: formatDistance(routePlan.totalDistanceMeters),
-      duration: formatDuration(routePlan.totalDurationSeconds),
-    };
-  }, [estimatedTime, routePlan.segments.length, routePlan.totalDistanceMeters, routePlan.totalDurationSeconds]);
+  const dayPlanSummaries = useMemo(
+    () =>
+      dayPlans.map((day) => {
+        const dayPlaces = day.placeIds
+          .map((id) => places.find((place) => place.id === id))
+          .filter((place): place is (typeof places)[number] => Boolean(place));
+
+        return {
+          id: day.id,
+          title: day.title,
+          count: day.placeIds.length,
+          estimatedTime: formatEstimatedTime(estimateTotalMinutes(day.placeIds)),
+          routeName: day.routeName,
+          firstPlaceName: dayPlaces[0]?.name,
+          lastPlaceName: dayPlaces[dayPlaces.length - 1]?.name,
+        };
+      }),
+    [dayPlans],
+  );
+
+  useEffect(() => {
+    if (!dayPlans.some((day) => day.id === activeDayId)) {
+      setActiveDayId(dayPlans[0]?.id ?? "day-1");
+    }
+  }, [activeDayId, dayPlans]);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(dayPlansStorageKey, JSON.stringify({ dayPlans, activeDayId }));
+    } catch {
+      // Local persistence is a convenience only.
+    }
+  }, [activeDayId, dayPlans]);
 
   useEffect(() => {
     let cancelled = false;
@@ -158,6 +310,21 @@ export default function App() {
     };
   }, [itineraryIds, previewRoutePlan, transportMode]);
 
+  function updateActiveDay(updater: (day: DayPlan) => DayPlan) {
+    setDayPlans((currentDays) =>
+      currentDays.map((day) => (day.id === activeDayId ? updater(day) : day)),
+    );
+  }
+
+  function updateActiveDayPlaceIds(updater: (current: string[]) => string[]) {
+    updateActiveDay((day) => ({
+      ...day,
+      placeIds: updater(day.placeIds),
+      routeName: mode === "j" ? null : day.routeName,
+      routeDescription: mode === "j" ? null : day.routeDescription,
+    }));
+  }
+
   function toggleType(type: PlaceType) {
     setActiveTypes((current) => {
       if (current.includes(type)) {
@@ -173,26 +340,25 @@ export default function App() {
       return;
     }
 
-    setItineraryIds((current) => (current.includes(placeId) ? current : [...current, placeId]));
+    updateActiveDayPlaceIds((current) => (current.includes(placeId) ? current : [...current, placeId]));
     setIsItineraryOpen(true);
-    if (mode === "j") {
-      setGeneratedRouteName(null);
-      setGeneratedRouteDescription(null);
-    }
   }
 
   function removePlace(placeId: string) {
-    setItineraryIds((current) => current.filter((id) => id !== placeId));
-    if (expandedPlaceId === placeId) {
-      setExpandedPlaceId(null);
+    updateActiveDayPlaceIds((current) => current.filter((id) => id !== placeId));
+    if (itineraryExpandedPlaceId === placeId) {
+      setItineraryExpandedPlaceId(null);
     }
   }
 
   function clearRoute() {
-    setItineraryIds([]);
-    setGeneratedRouteName(null);
-    setGeneratedRouteDescription(null);
-    setExpandedPlaceId(null);
+    updateActiveDay((day) => ({
+      ...day,
+      placeIds: [],
+      routeName: null,
+      routeDescription: null,
+    }));
+    setItineraryExpandedPlaceId(null);
   }
 
   function dropBefore(placeId: string, targetId: string) {
@@ -200,7 +366,7 @@ export default function App() {
       return;
     }
 
-    setItineraryIds((current) => {
+    updateActiveDayPlaceIds((current) => {
       const withoutDragged = current.filter((id) => id !== placeId);
       const targetIndex = withoutDragged.indexOf(targetId);
 
@@ -222,18 +388,118 @@ export default function App() {
     event.dataTransfer.effectAllowed = "move";
   }
 
-  function toggleExpand(placeId: string) {
-    setExpandedPlaceId((current) => (current === placeId ? null : placeId));
+  function saveCurrentDay() {
+    setIsDayPlannerOpen(true);
+    setIsItineraryOpen(true);
+    updateActiveDay((day) => ({
+      ...day,
+      routeName: day.routeName ?? `${day.title}路线`,
+    }));
+  }
+
+  function createNextDay() {
+    const nextDay: DayPlan = {
+      id: `day-${Date.now()}`,
+      title: `第 ${dayPlans.length + 1} 天`,
+      placeIds: [],
+      routeName: null,
+      routeDescription: null,
+      createdAt: Date.now(),
+    };
+
+    setDayPlans((current) => normalizeDayTitles([...current, nextDay]));
+    setActiveDayId(nextDay.id);
+    setItineraryExpandedPlaceId(null);
+    setIsItineraryOpen(true);
+    setIsDayPlannerOpen(true);
+  }
+
+  function deleteDay(dayId: string) {
+    if (dayPlans.length <= 1) {
+      setDayPlans((currentDays) => [
+        {
+          ...currentDays[0],
+          title: "第 1 天",
+          placeIds: [],
+          routeName: null,
+          routeDescription: null,
+        },
+      ]);
+      return;
+    }
+
+    const deleteIndex = dayPlans.findIndex((day) => day.id === dayId);
+    const nextDays = normalizeDayTitles(dayPlans.filter((day) => day.id !== dayId));
+    setDayPlans(nextDays);
+
+    if (dayId === activeDayId) {
+      const nextActive = nextDays[Math.max(0, deleteIndex - 1)] ?? nextDays[0];
+      setActiveDayId(nextActive.id);
+    }
+
+    setItineraryExpandedPlaceId(null);
+  }
+
+  function reorderDays(dragDayId: string, targetDayId: string) {
+    if (dragDayId === targetDayId) {
+      return;
+    }
+
+    setDayPlans((currentDays) => {
+      const dragged = currentDays.find((day) => day.id === dragDayId);
+      if (!dragged) {
+        return currentDays;
+      }
+
+      const withoutDragged = currentDays.filter((day) => day.id !== dragDayId);
+      const targetIndex = withoutDragged.findIndex((day) => day.id === targetDayId);
+      if (targetIndex < 0) {
+        return currentDays;
+      }
+
+      return normalizeDayTitles([
+        ...withoutDragged.slice(0, targetIndex),
+        dragged,
+        ...withoutDragged.slice(targetIndex),
+      ]);
+    });
+  }
+
+  function selectMapPlace(placeId: string | null) {
+    setSelectedPlaceId(placeId);
+    setMapExpandedPlaceId((current) => {
+      if (!placeId || current !== placeId) {
+        return null;
+      }
+
+      return current;
+    });
+  }
+
+  function closeMapPlaceCard() {
+    setSelectedPlaceId(null);
+    setMapExpandedPlaceId(null);
+  }
+
+  function toggleMapExpand(placeId: string) {
+    setMapExpandedPlaceId((current) => (current === placeId ? null : placeId));
+  }
+
+  function toggleItineraryExpand(placeId: string) {
+    setItineraryExpandedPlaceId((current) => (current === placeId ? null : placeId));
   }
 
   function generatePresetRoute() {
     const preset = getRoutePreset(routePresetId);
     setMode("p");
     setDrawMode(false);
-    setItineraryIds(preset.placeIds);
-    setGeneratedRouteName(preset.name);
-    setGeneratedRouteDescription(preset.description);
-    setExpandedPlaceId(null);
+    updateActiveDay((day) => ({
+      ...day,
+      placeIds: preset.placeIds,
+      routeName: preset.name,
+      routeDescription: preset.description,
+    }));
+    setItineraryExpandedPlaceId(null);
     setIsItineraryOpen(true);
   }
 
@@ -241,10 +507,13 @@ export default function App() {
     const route = buildRandomRoute(activeTypes, 5);
     setMode("p");
     setDrawMode(false);
-    setItineraryIds(route.placeIds);
-    setGeneratedRouteName(route.name);
-    setGeneratedRouteDescription(route.description);
-    setExpandedPlaceId(null);
+    updateActiveDay((day) => ({
+      ...day,
+      placeIds: route.placeIds,
+      routeName: route.name,
+      routeDescription: route.description,
+    }));
+    setItineraryExpandedPlaceId(null);
     setIsItineraryOpen(true);
   }
 
@@ -270,14 +539,21 @@ export default function App() {
       if (nextIds.length === 0) {
         return;
       }
-      setItineraryIds(nextIds);
+
+      updateActiveDay((day) => ({
+        ...day,
+        placeIds: nextIds,
+        routeName: toolCall.args.routeName ?? "小常规划路线",
+        routeDescription: toolCall.args.routeDescription ?? "由小常根据当前点位生成，真实道路由高德地图计算。",
+      }));
+
       if (toolCall.args.transportMode) {
         setTransportMode(toolCall.args.transportMode);
       }
-      setGeneratedRouteName(toolCall.args.routeName ?? "小常规划路线");
-      setGeneratedRouteDescription(toolCall.args.routeDescription ?? "由小常根据当前演示数据生成，真实道路由高德地图计算。");
+      setMode("p");
+      setDrawMode(false);
       setIsItineraryOpen(true);
-      setExpandedPlaceId(null);
+      setItineraryExpandedPlaceId(null);
       return;
     }
 
@@ -286,7 +562,11 @@ export default function App() {
       if (nextIds.length === 0) {
         return;
       }
-      setItineraryIds((current) => [...current, ...nextIds.filter((id) => !current.includes(id))]);
+
+      updateActiveDay((day) => ({
+        ...day,
+        placeIds: [...day.placeIds, ...nextIds.filter((id) => !day.placeIds.includes(id))],
+      }));
       setIsItineraryOpen(true);
       return;
     }
@@ -296,7 +576,11 @@ export default function App() {
       if (removing.size === 0) {
         return;
       }
-      setItineraryIds((current) => current.filter((id) => !removing.has(id)));
+
+      updateActiveDay((day) => ({
+        ...day,
+        placeIds: day.placeIds.filter((id) => !removing.has(id)),
+      }));
       return;
     }
 
@@ -305,9 +589,13 @@ export default function App() {
       if (nextIds.length === 0) {
         return;
       }
-      setItineraryIds(nextIds);
-      setGeneratedRouteName(toolCall.args.routeName ?? "小常排顺路线");
-      setGeneratedRouteDescription(toolCall.args.routeDescription ?? "小常已根据当前点位顺路关系调整顺序。");
+
+      updateActiveDay((day) => ({
+        ...day,
+        placeIds: nextIds,
+        routeName: toolCall.args.routeName ?? "小常排顺路线",
+        routeDescription: toolCall.args.routeDescription ?? "小常已根据当前点位顺路关系调整顺序。",
+      }));
       setIsItineraryOpen(true);
       return;
     }
@@ -322,14 +610,14 @@ export default function App() {
 
     if (toolCall.name === "focus_place") {
       if (places.some((place) => place.id === toolCall.args.placeId)) {
-        setSelectedPlaceId(toolCall.args.placeId);
+        selectMapPlace(toolCall.args.placeId);
       }
       return;
     }
 
     if (toolCall.name === "open_place_card" && places.some((place) => place.id === toolCall.args.placeId)) {
       setSelectedPlaceId(toolCall.args.placeId);
-      setExpandedPlaceId(toolCall.args.placeId);
+      setMapExpandedPlaceId(toolCall.args.placeId);
     }
   }
 
@@ -371,7 +659,7 @@ export default function App() {
       const response = await sendAgentMessage({
         userMessage: message,
         conversation,
-        places,
+        places: agentPlaces,
         currentItineraryIds: itineraryIds,
         selectedPlaceId,
         visibleTypes: activeTypes,
@@ -403,8 +691,48 @@ export default function App() {
     });
     setAgentMessages((current) => [
       ...current,
-      createAgentMessage("assistant", "好，我已经把这条路线放进右侧行程栏。地图会继续用高德来生成真实道路。"),
+      createAgentMessage("assistant", `好，我已经把「${route.title}」放进 ${activeDayPlan.title} 的行程栏。地图会继续用高德生成真实道路。`),
     ]);
+  }
+
+  function activateService(types?: PlaceType[], serviceId?: string) {
+    if (types?.length) {
+      setActiveTypes(types);
+    }
+
+    if (serviceId === "ai") {
+      setMode("p");
+      setDrawMode(false);
+      setIsItineraryOpen(true);
+    }
+
+    if (serviceId === "food") {
+      setRoutePresetId("food-walk");
+    }
+  }
+
+  function handleAiQuery(query: string) {
+    const normalizedQuery = query.toLowerCase();
+
+    if (query.includes("停车") || normalizedQuery.includes("parking")) {
+      setActiveTypes(["parking"]);
+      return;
+    }
+
+    if (query.includes("活动") || query.includes("演出")) {
+      setActiveTypes(["activity"]);
+      return;
+    }
+
+    if (query.includes("美食") || query.includes("本帮菜") || query.includes("饭店")) {
+      setActiveTypes(["food", "restaurant"]);
+      setRoutePresetId("food-walk");
+      return;
+    }
+
+    setMode("p");
+    setDrawMode(false);
+    setIsItineraryOpen(true);
   }
 
   return (
@@ -416,50 +744,64 @@ export default function App() {
           itineraryIds={itineraryIds}
           routePlan={routePlan}
           selectedPlaceId={selectedPlaceId}
-          expandedPlaceId={expandedPlaceId}
+          expandedPlaceId={mapExpandedPlaceId}
           mode={mode}
           drawMode={drawMode}
-          onSelectPlace={setSelectedPlaceId}
+          onSelectPlace={selectMapPlace}
+          onClosePlaceCard={closeMapPlaceCard}
           onAddPlace={addPlace}
-          onToggleExpand={toggleExpand}
+          onToggleExpand={toggleMapExpand}
           onDragStart={handleDragStart}
           onToggleDrawMode={() => setDrawMode((current) => !current)}
         />
 
-        <AgentErrorBoundary>
-          <AgentCompanion
-            messages={agentMessages}
-            places={places}
-            latestRouteSuggestion={latestAgentRoute}
-            routeSuggestions={agentRouteSuggestions}
-            preference={agentPreference}
-            timeBudget={agentTimeBudget}
-            answerCards={agentAnswerCards}
-            clarification={agentClarification}
-            executionNotes={agentExecutionNotes}
-            debugInfo={agentDebug}
-            quickReplies={agentQuickReplies}
-            thinking={agentThinking}
-            onSend={handleAgentSend}
-            onApplyRoute={applyAgentRoute}
-          />
-        </AgentErrorBoundary>
-
         <TopBar
+          agentActive={agentIslandActive}
+          agentSlot={
+            <AgentErrorBoundary>
+              <AgentIsland
+                active={agentIslandActive}
+                messages={agentMessages}
+                places={places}
+                latestRouteSuggestion={latestAgentRoute}
+                routeSuggestions={agentRouteSuggestions}
+                answerCards={agentAnswerCards}
+                clarification={agentClarification}
+                executionNotes={agentExecutionNotes}
+                debugInfo={agentDebug}
+                quickReplies={agentQuickReplies}
+                thinking={agentThinking}
+                onActiveChange={setAgentIslandActive}
+                onSend={handleAgentSend}
+                onApplyRoute={applyAgentRoute}
+              />
+            </AgentErrorBoundary>
+          }
+          itemCount={itineraryIds.length}
+          estimatedTime={estimatedTime}
+          activeDayTitle={activeDayPlan.title}
+          totalDays={dayPlans.length}
+          isItineraryOpen={isItineraryOpen}
+          onToggleItinerary={() => setIsItineraryOpen((current) => !current)}
+          onShowAvoidPeak={() => setActiveTypes(["scenic"])}
+          onShowAreaRecommend={() => setActiveTypes(["scenic", "heritage", "food", "restaurant", "activity"])}
+          onShowActivities={() => setActiveTypes(["activity"])}
+        />
+
+        <SideControlPanel
           mode={mode}
           activeTypes={activeTypes}
           routePresetId={routePresetId}
-          itemCount={itineraryIds.length}
-          routeDistance={routeMetric.distance}
-          routeDuration={routeMetric.duration}
-          isItineraryOpen={isItineraryOpen}
+          isOpen={isSidePanelOpen}
+          onToggleOpen={() => setIsSidePanelOpen((current) => !current)}
           onModeChange={changeMode}
           onToggleType={toggleType}
           onSelectRoutePreset={setRoutePresetId}
           onGenerateRoute={generatePresetRoute}
           onRandomRoute={generateRandomRoute}
           onClear={clearRoute}
-          onToggleItinerary={() => setIsItineraryOpen((current) => !current)}
+          onActivateService={activateService}
+          onSubmitAiQuery={handleAiQuery}
         />
 
         <button
@@ -479,25 +821,38 @@ export default function App() {
           aria-label={isItineraryOpen ? "收起行程规划" : "展开行程规划"}
         >
           {isItineraryOpen ? <PanelRightClose size={20} /> : <PanelRightOpen size={20} />}
-          <span>行程</span>
+          <span>{activeDayPlan.title}</span>
           <strong>{itineraryIds.length}</strong>
         </button>
 
         <div className={`itinerary-drawer ${isItineraryOpen ? "is-open" : ""}`}>
           <ItineraryPanel
             places={itineraryPlaces}
-            expandedPlaceId={expandedPlaceId}
-            routeName={generatedRouteName}
-            routeDescription={generatedRouteDescription}
-            fallbackTime={estimatedTime}
+            expandedPlaceId={itineraryExpandedPlaceId}
+            routeName={activeDayPlan.routeName ?? null}
+            routeDescription={activeDayPlan.routeDescription ?? null}
+            estimatedTime={estimatedTime}
             routePlan={routePlan}
             transportMode={transportMode}
+            dayPlans={dayPlanSummaries}
+            activeDayId={activeDayId}
+            activeDayTitle={activeDayPlan.title}
+            isDayPlannerOpen={isDayPlannerOpen}
+            onToggleDayPlanner={() => setIsDayPlannerOpen((current) => !current)}
+            onSelectDay={(dayId) => {
+              setActiveDayId(dayId);
+              setItineraryExpandedPlaceId(null);
+            }}
+            onCreateDay={createNextDay}
+            onDeleteDay={deleteDay}
+            onReorderDay={reorderDays}
+            onSaveCurrentDay={saveCurrentDay}
             onDropPlace={addPlace}
             onDropBefore={dropBefore}
             onRemove={removePlace}
-            onFocusPlace={setSelectedPlaceId}
+            onFocusPlace={selectMapPlace}
             onClear={clearRoute}
-            onToggleExpand={toggleExpand}
+            onToggleExpand={toggleItineraryExpand}
             onTransportModeChange={setTransportMode}
             onDragStart={handleDragStart}
             onClose={() => setIsItineraryOpen(false)}
@@ -507,7 +862,7 @@ export default function App() {
         {!isItineraryOpen && itineraryIds.length > 0 && (
           <div className="route-toast">
             <ClipboardList size={17} />
-            已选 {itineraryIds.length} 站，点击右侧「行程」继续规划
+            {activeDayPlan.title} 已选 {itineraryIds.length} 站，点击右侧「行程」继续规划
           </div>
         )}
       </main>

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Place, PlannerMode } from "../types/place";
 import type { RoutePlan } from "../types/route";
 import { placeTypeShortLabels } from "../types/place";
+import { filterPlacesByZoom } from "../utils/tierVisibility";
 import { PlaceCard } from "./PlaceCard";
 
 type FallbackChangshuMapProps = {
@@ -16,6 +17,7 @@ type FallbackChangshuMapProps = {
   mode: PlannerMode;
   drawMode: boolean;
   onSelectPlace: (placeId: string | null) => void;
+  onClosePlaceCard: () => void;
   onAddPlace: (placeId: string) => void;
   onToggleExpand: (placeId: string) => void;
   onDragStart: (placeId: string, event: React.DragEvent<HTMLElement>) => void;
@@ -24,6 +26,18 @@ type FallbackChangshuMapProps = {
 
 const changshuCenter: L.LatLngExpression = [31.62, 120.755];
 const changshuViewBounds = L.latLngBounds([31.47, 120.61], [31.73, 120.91]);
+
+function getPopoverPlacement(position: { x: number; y: number } | null, expanded: boolean) {
+  if (expanded || !position || typeof window === "undefined") {
+    return "center";
+  }
+
+  if (position.y < 230) return "below";
+  if (position.y > window.innerHeight - 380) return "above";
+  if (position.x < 300) return "right";
+  if (position.x > window.innerWidth - 500) return "left";
+  return "above";
+}
 
 function getPlacesBounds(places: Place[]) {
   if (places.length === 0) {
@@ -133,6 +147,7 @@ export function FallbackChangshuMap({
   mode,
   drawMode,
   onSelectPlace,
+  onClosePlaceCard,
   onAddPlace,
   onToggleExpand,
   onDragStart,
@@ -146,11 +161,16 @@ export function FallbackChangshuMap({
   const isDrawingRef = useRef(false);
   const [mapReady, setMapReady] = useState(false);
   const [isMapToolsOpen, setIsMapToolsOpen] = useState(false);
+  const [mapZoom, setMapZoom] = useState(11);
   const [selectedCardPosition, setSelectedCardPosition] = useState<{ x: number; y: number } | null>(null);
 
   const selectedPlace = useMemo(
     () => places.find((place) => place.id === selectedPlaceId) ?? null,
     [places, selectedPlaceId],
+  );
+  const popoverPlacement = getPopoverPlacement(
+    selectedCardPosition,
+    expandedPlaceId === selectedPlace?.id,
   );
 
   const itineraryOrder = useMemo(() => {
@@ -159,6 +179,11 @@ export function FallbackChangshuMap({
       return record;
     }, {});
   }, [itineraryIds]);
+
+  const tieredVisiblePlaces = useMemo(
+    () => filterPlacesByZoom(visiblePlaces, mapZoom, 10, 15),
+    [mapZoom, visiblePlaces],
+  );
 
   useEffect(() => {
     if (!mapNodeRef.current || mapRef.current) {
@@ -186,6 +211,13 @@ export function FallbackChangshuMap({
     routeLayerRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
 
+    function updateZoom() {
+      setMapZoom(map.getZoom());
+    }
+
+    updateZoom();
+    map.on("zoomend", updateZoom);
+
     window.requestAnimationFrame(() => {
       map.invalidateSize();
       map.fitBounds(getPlacesBounds(places).pad(0.22), {
@@ -198,6 +230,7 @@ export function FallbackChangshuMap({
     });
 
     return () => {
+      map.off("zoomend", updateZoom);
       map.remove();
       mapRef.current = null;
       markerLayerRef.current = null;
@@ -231,11 +264,12 @@ export function FallbackChangshuMap({
 
     layer.clearLayers();
 
-    visiblePlaces.forEach((place) => {
+    tieredVisiblePlaces.forEach((place) => {
       const isSelected = place.id === selectedPlaceId;
       const order = itineraryOrder[place.id];
+      const tierClass = place.tierLevel ? `tier-${place.tierLevel.toLowerCase()}` : "tier-local";
       const markerHtml = `
-        <button class="map-marker type-${place.type} ${isSelected ? "is-selected" : ""} ${
+        <button class="map-marker type-${place.type} ${tierClass} ${isSelected ? "is-selected" : ""} ${
           order ? "is-planned" : ""
         }" type="button">
           <span>${order ?? placeTypeShortLabels[place.type]}</span>
@@ -268,7 +302,7 @@ export function FallbackChangshuMap({
       });
       marker.addTo(layer);
     });
-  }, [expandedPlaceId, itineraryOrder, onSelectPlace, onToggleExpand, selectedPlaceId, visiblePlaces]);
+  }, [expandedPlaceId, itineraryOrder, onSelectPlace, onToggleExpand, selectedPlaceId, tieredVisiblePlaces]);
 
   useEffect(() => {
     const layer = routeLayerRef.current;
@@ -496,7 +530,9 @@ export function FallbackChangshuMap({
 
         {selectedPlace && selectedCardPosition && (
           <div
-            className={`map-card-popover ${expandedPlaceId === selectedPlace.id ? "is-expanded" : ""}`}
+            className={`map-card-popover placement-${popoverPlacement} ${
+              expandedPlaceId === selectedPlace.id ? "is-expanded" : ""
+            }`}
             style={
               expandedPlaceId === selectedPlace.id
                 ? {
@@ -514,7 +550,7 @@ export function FallbackChangshuMap({
               type="button"
               className="close-popover"
               aria-label="关闭卡片"
-              onClick={() => onSelectPlace(null)}
+              onClick={onClosePlaceCard}
             >
               <X size={18} />
             </button>

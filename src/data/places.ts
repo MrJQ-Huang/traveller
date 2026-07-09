@@ -1,6 +1,7 @@
 import type { Place } from "../types/place";
+import { databasePlaces } from "./generatedPlaces";
 
-export const places: Place[] = [
+const curatedLocalPlaces: Place[] = [
   {
     id: "yushan",
     type: "scenic",
@@ -8,6 +9,7 @@ export const places: Place[] = [
     subtitle: "北门大街 21 号的国家级森林公园",
     summary: "适合轻徒步和老城慢游，是常熟山水文化的代表点位。",
     tags: ["山水", "历史", "Citywalk"],
+    imageUrl: "/assets/photo-library/spot-yushan-01.jpg",
     position: { x: 42, y: 36, lng: 120.709847, lat: 31.665592 },
     openTime: "约 08:00-17:00",
     price: "部分区域免费，部分项目另收费",
@@ -26,6 +28,7 @@ export const places: Place[] = [
     subtitle: "湖面、湿地与花季景观组合",
     summary: "适合亲子、拍照和轻松半日游。",
     tags: ["湖景", "亲子", "花季"],
+    imageUrl: "/assets/photo-library/spot-shanghu-01.jpg",
     position: { x: 31, y: 48, lng: 120.686, lat: 31.626 },
     openTime: "约 08:10-16:30",
     price: "门票示例价 60-80 元区间",
@@ -44,6 +47,7 @@ export const places: Place[] = [
     subtitle: "芦苇荡与红色文化场景",
     summary: "适合湿地游船、红色文化和家庭游客。",
     tags: ["红色文化", "湿地", "船游"],
+    imageUrl: "/assets/photo-library/spot-shajiabang-02.jpg",
     position: { x: 63, y: 76, lng: 120.839, lat: 31.527 },
     openTime: "约 08:00-16:30",
     price: "门票示例价 80-100 元区间",
@@ -62,6 +66,7 @@ export const places: Place[] = [
     subtitle: "古城核心的园林与塔影",
     summary: "适合放入老城 Citywalk，停留时间灵活。",
     tags: ["古城", "园林", "建筑"],
+    imageUrl: "/assets/photo-library/spot-fangta-01.jpg",
     position: { x: 49, y: 42, lng: 120.752, lat: 31.646 },
     openTime: "约 08:00-17:00",
     price: "门票示例价 20-30 元区间",
@@ -80,6 +85,7 @@ export const places: Place[] = [
     subtitle: "江南私家园林气质",
     summary: "适合慢慢看园林空间、窗景与水石关系。",
     tags: ["园林", "老城", "慢游"],
+    imageUrl: "/assets/photo-library/spot-zhaoyuan-zengyuan-01.jpg",
     position: { x: 46, y: 39, lng: 120.744, lat: 31.651 },
     openTime: "约 08:00-16:30",
     price: "门票示例价 20-40 元区间",
@@ -98,6 +104,7 @@ export const places: Place[] = [
     subtitle: "名人故居与地方文脉",
     summary: "适合把常熟历史人物线索串联起来。",
     tags: ["名人", "故居", "历史"],
+    imageUrl: "/assets/photo-library/spot-wengtonghe-01.jpg",
     position: { x: 51, y: 38, lng: 120.757, lat: 31.654 },
     openTime: "约 09:00-16:30",
     price: "门票示例价免费或低价区间",
@@ -116,6 +123,7 @@ export const places: Place[] = [
     subtitle: "常熟东部的江南古镇与水乡街巷",
     summary: "适合放入古镇慢游与非遗体验线路，作为常熟水乡肌理的测试点位。",
     tags: ["古镇", "水乡", "慢游"],
+    imageUrl: "/map-skins/guli-ancient-town.png",
     position: { x: 73, y: 43, lng: 120.887, lat: 31.646 },
     openTime: "约 09:00-17:00",
     price: "开放街区示例免费，部分体验另计",
@@ -134,6 +142,7 @@ export const places: Place[] = [
     subtitle: "针线纹样里的地方手作",
     summary: "以花边工艺展示和轻体验为主。",
     tags: ["手作", "非遗", "体验"],
+    imageUrl: "/assets/photo-library/spot-shanghu-02.jpg",
     position: { x: 55, y: 45, lng: 120.766, lat: 31.639 },
     openTime: "约 09:30-17:00",
     price: "体验示例价 39-128 元",
@@ -152,6 +161,7 @@ export const places: Place[] = [
     subtitle: "木作纹理与雕刻技艺",
     summary: "展示红木雕刻、打磨、纹样设计等内容。",
     tags: ["木作", "雕刻", "工坊"],
+    imageUrl: "/assets/photo-library/spot-yanyuan-02.jpg",
     position: { x: 37, y: 58, lng: 120.712, lat: 31.592 },
     openTime: "约 10:00-17:00",
     price: "参观示例价免费，体验另计",
@@ -170,6 +180,7 @@ export const places: Place[] = [
     subtitle: "把本地味道做成手上记忆",
     summary: "结合糕团制作、节令食俗与品尝体验。",
     tags: ["糕团", "节令", "亲子"],
+    imageUrl: "/assets/photo-library/food-changshu-02.jpg",
     position: { x: 53, y: 52, lng: 120.763, lat: 31.618 },
     openTime: "约 09:00-18:00",
     price: "体验示例价 49-99 元",
@@ -188,6 +199,7 @@ export const places: Place[] = [
     subtitle: "吴地声腔与茶馆时间",
     summary: "适合把曲艺体验加入下午或夜间路线。",
     tags: ["曲艺", "茶馆", "慢体验"],
+    imageUrl: "/assets/photo-library/spot-yanyuan-01.jpg",
     position: { x: 58, y: 40, lng: 120.779, lat: 31.65 },
     openTime: "约 14:00-20:30",
     price: "茶座示例价 38-88 元",
@@ -206,6 +218,7 @@ export const places: Place[] = [
     subtitle: "荷叶泥封的江南名菜",
     summary: "以整鸡、荷叶香和焖烤香气形成记忆点。",
     tags: ["本帮菜", "名菜", "故事感"],
+    imageUrl: "/assets/photo-library/food-changshu-08.jpg",
     position: { x: 44, y: 53, lng: 120.739, lat: 31.612 },
     duration: "40-60 分钟",
     history: "叫化鸡常被放入江南饮食故事中讲述，做法强调包裹、焖烤和香气保存。",
@@ -225,6 +238,7 @@ export const places: Place[] = [
     subtitle: "菌香入汤的常熟面食记忆",
     summary: "适合早餐或午间轻食路线，和老城步行很搭。",
     tags: ["面食", "早餐", "老城"],
+    imageUrl: "/assets/photo-library/food-changshu-06.jpg",
     position: { x: 50, y: 47, lng: 120.755, lat: 31.632 },
     duration: "30-45 分钟",
     history: "蕈油面以菌菇香气和面汤风味见长，适合体现江南面馆的日常性。",
@@ -244,6 +258,7 @@ export const places: Place[] = [
     subtitle: "秋日香气与甜糯口感",
     summary: "适合作为伴手礼或轻食卡片加入路线。",
     tags: ["甜食", "伴手礼", "节令"],
+    imageUrl: "/assets/photo-library/food-changshu-05.jpg",
     position: { x: 47, y: 57, lng: 120.748, lat: 31.596 },
     duration: "15-30 分钟",
     history: "桂花与栗子都带有鲜明的江南季节感，常和秋季、街巷、伴手礼记忆关联在一起。",
@@ -263,6 +278,7 @@ export const places: Place[] = [
     subtitle: "清鲜、家常与时令食材",
     summary: "适合正餐路线，强调本地家常风味。",
     tags: ["本地菜", "正餐", "时令"],
+    imageUrl: "/assets/photo-library/food-changshu-10.jpg",
     position: { x: 59, y: 55, lng: 120.782, lat: 31.606 },
     duration: "60-90 分钟",
     history: "蒸菜体现了江南饮食中对食材本味和火候的重视。",
@@ -282,6 +298,7 @@ export const places: Place[] = [
     subtitle: "示例店铺，主打蕈油面",
     summary: "适合作为老城路线的早餐或午餐轻食点。",
     tags: ["面馆", "老城", "快吃"],
+    imageUrl: "/assets/photo-library/food-changshu-07.jpg",
     position: { x: 52, y: 43, lng: 120.761, lat: 31.642 },
     openTime: "约 06:30-14:00",
     duration: "30-45 分钟",
@@ -302,6 +319,7 @@ export const places: Place[] = [
     subtitle: "示例店铺，适合多人正餐",
     summary: "主打本地菜、蒸菜和叫化鸡类菜品。",
     tags: ["本帮菜", "正餐", "虞山"],
+    imageUrl: "/assets/photo-library/food-changshu-01.jpg",
     position: { x: 43, y: 41, lng: 120.74, lat: 31.647 },
     openTime: "约 10:30-20:30",
     duration: "60-90 分钟",
@@ -322,6 +340,7 @@ export const places: Place[] = [
     subtitle: "示例店铺，湖区周边正餐",
     summary: "适合安排在尚湖游玩前后，节奏比较轻松。",
     tags: ["农家菜", "湖区", "亲子"],
+    imageUrl: "/assets/photo-library/food-changshu-04.jpg",
     position: { x: 28, y: 52, lng: 120.677, lat: 31.613 },
     openTime: "约 10:00-20:00",
     duration: "60-90 分钟",
@@ -342,6 +361,7 @@ export const places: Place[] = [
     subtitle: "示例店铺，沙家浜周边餐饮",
     summary: "适合沙家浜半日线的午餐或晚餐。",
     tags: ["景区周边", "农家菜", "红色线"],
+    imageUrl: "/assets/photo-library/food-changshu-03.jpg",
     position: { x: 67, y: 72, lng: 120.854, lat: 31.542 },
     openTime: "约 10:00-20:30",
     duration: "60-90 分钟",
@@ -362,6 +382,7 @@ export const places: Place[] = [
     subtitle: "示例店铺，糕团与伴手礼",
     summary: "适合路线结尾购买甜食或伴手礼。",
     tags: ["糕团", "伴手礼", "甜食"],
+    imageUrl: "/assets/photo-library/food-changshu-09.jpg",
     position: { x: 54, y: 49, lng: 120.766, lat: 31.627 },
     openTime: "约 08:00-19:00",
     duration: "15-30 分钟",
@@ -375,4 +396,213 @@ export const places: Place[] = [
     },
     dataStatus: "demo",
   },
+  {
+    id: "yushan-parking-north",
+    type: "parking",
+    name: "虞山北门停车场",
+    subtitle: "距离虞山北门步行约 6 分钟",
+    summary: "剩余车位 86 个，适合虞山文化线和古城慢游用户。",
+    tags: ["停车", "虞山", "自驾"],
+    position: { x: 36, y: 34, lng: 120.718, lat: 31.667 },
+    duration: "10-20 分钟",
+    detail: "建议上午 9:30 前进入，周末午后可能出现排队。银发慢游可优先选择靠近北门的落客点。",
+    serviceProfile: {
+      status: "较舒适，入口通行正常",
+      capacity: "剩余 86 位，新能源充电 8 个",
+      distanceTip: "步行至虞山北门约 6 分钟",
+      actionLabel: "导航到停车场",
+      detailItems: ["实时余位", "收费标准", "新能源充电", "无障碍车位"],
+    },
+    dataStatus: "demo",
+  },
+  {
+    id: "shanghu-parking-p2",
+    type: "parking",
+    name: "尚湖 P2 停车场",
+    subtitle: "亲子和银发游客优先推荐",
+    summary: "剩余车位 214 个，湖区入口距离短，适合家庭自驾。",
+    tags: ["停车", "尚湖", "亲子"],
+    position: { x: 31, y: 54, lng: 120.682, lat: 31.619 },
+    duration: "10-20 分钟",
+    detail: "P2 停车场更适合亲子、银发慢游和雨天路线。系统会在客流较高时建议错峰入园。",
+    serviceProfile: {
+      status: "舒适，入口无明显拥堵",
+      capacity: "剩余 214 位，新能源充电 18 个",
+      distanceTip: "步行至游客中心约 8 分钟",
+      actionLabel: "查看余位",
+      detailItems: ["亲子友好", "充电桩", "游客中心近", "无障碍通道"],
+    },
+    dataStatus: "demo",
+  },
+  {
+    id: "shajiabang-transfer-parking",
+    type: "parking",
+    name: "沙家浜换乘停车场",
+    subtitle: "团队研学和演艺高峰换乘点",
+    summary: "剩余车位 52 个，建议团队车辆使用换乘接驳。",
+    tags: ["停车", "沙家浜", "接驳"],
+    position: { x: 66, y: 76, lng: 120.846, lat: 31.532 },
+    duration: "15-25 分钟",
+    detail: "演艺散场和团队研学高峰时段容易拥堵，建议提前预约团队车位或使用景区接驳。",
+    serviceProfile: {
+      status: "较拥挤，建议换乘接驳",
+      capacity: "剩余 52 位，团队车位紧张",
+      distanceTip: "接驳至景区入口约 4 分钟",
+      actionLabel: "预约团队车位",
+      detailItems: ["团队车位", "接驳提醒", "演艺散场避峰", "停车投诉入口"],
+    },
+    dataStatus: "demo",
+  },
+  {
+    id: "old-town-restroom",
+    type: "restroom",
+    name: "古城无障碍公共厕所",
+    subtitle: "方塔园至曾赵园步行线便民点",
+    summary: "开放中，含无障碍厕位和母婴整理台。",
+    tags: ["厕所", "无障碍", "古城"],
+    position: { x: 48, y: 47, lng: 120.752, lat: 31.642 },
+    duration: "5-10 分钟",
+    detail: "适合古城 Citywalk、亲子和银发慢游路线中途休息。可在详情中进入设施报修和满意度评价。",
+    serviceProfile: {
+      status: "开放中，清洁状态良好",
+      distanceTip: "距离方塔园步行约 3 分钟",
+      actionLabel: "导航前往",
+      detailItems: ["无障碍厕位", "母婴整理台", "饮水点", "设施报修"],
+    },
+    dataStatus: "demo",
+  },
+  {
+    id: "tourist-station-old-town",
+    type: "service",
+    name: "常熟古城旅游驿站",
+    subtitle: "咨询、饮水、休息、寄存一站式服务",
+    summary: "提供游客咨询、行李寄存、饮水休息和应急求助。",
+    tags: ["旅游驿站", "寄存", "客服"],
+    position: { x: 52, y: 45, lng: 120.763, lat: 31.64 },
+    openTime: "09:00-20:00",
+    duration: "10-30 分钟",
+    detail: "可作为游客服务统一入口，后续可接入一码通、活动预约、消费核销和满意度评价。",
+    serviceProfile: {
+      status: "开放中，当前排队约 3 分钟",
+      capacity: "行李寄存剩余 28 格",
+      distanceTip: "靠近古城美食和非遗体验点",
+      actionLabel: "打开一码通",
+      detailItems: ["游客咨询", "行李寄存", "饮水休息", "一键客服", "满意度评价"],
+    },
+    dataStatus: "demo",
+  },
+  {
+    id: "shanghu-night-activity",
+    type: "activity",
+    name: "尚湖荷风夜游",
+    subtitle: "夜游活动与湖畔演艺提醒",
+    summary: "19:30 场余票充足，适合傍晚湖区路线收尾。",
+    tags: ["夜游", "活动", "预约"],
+    position: { x: 28, y: 50, lng: 120.672, lat: 31.625 },
+    openTime: "19:30-21:00",
+    price: "活动票示例 68 元起",
+    duration: "1.5 小时",
+    detail: "可在景区一码通中完成活动预约、入园提醒和演艺开场通知。",
+    serviceProfile: {
+      status: "余票充足",
+      capacity: "当前剩余 126 张",
+      distanceTip: "建议 18:50 前抵达湖畔入口",
+      actionLabel: "预约活动",
+      detailItems: ["门票预约", "演艺提醒", "入园码", "满意度评价"],
+    },
+    dataStatus: "demo",
+  },
+  {
+    id: "yushan-hotel",
+    type: "lodging",
+    name: "虞山脚下文化客栈",
+    subtitle: "靠近虞山与古城步行线",
+    summary: "适合两日慢游、亲子周末和银发游客。",
+    tags: ["住宿", "古城", "慢游"],
+    position: { x: 40, y: 38, lng: 120.732, lat: 31.653 },
+    price: "示例价 398 元起",
+    duration: "过夜",
+    detail: "可和虞山、古城园林、本帮菜组成两日慢游。后续可接入住宿查询和预订能力。",
+    serviceProfile: {
+      status: "可订，周末房量偏紧",
+      capacity: "剩余示例 12 间",
+      distanceTip: "步行至虞山约 12 分钟",
+      actionLabel: "查看住宿",
+      detailItems: ["无障碍房型", "亲子房", "停车位", "早餐"],
+    },
+    dataStatus: "demo",
+  },
+  {
+    id: "tourism-help-center",
+    type: "emergency",
+    name: "游客诉求闭环中心",
+    subtitle: "投诉、救援、失物、设施报修统一入口",
+    summary: "提交后生成工单编号，模拟派单、处理和回访闭环。",
+    tags: ["投诉", "救援", "闭环"],
+    position: { x: 57, y: 46, lng: 120.774, lat: 31.636 },
+    openTime: "24 小时",
+    duration: "即时",
+    detail: "可处理停车收费疑问、景区设施报修、失物招领、医疗救援和服务投诉。当前为前端模拟状态，后续可接入工单系统。",
+    serviceProfile: {
+      status: "在线，平均响应 18 分钟",
+      capacity: "今日已办结率 96.8%",
+      distanceTip: "支持按所在点位自动定位派单",
+      actionLabel: "提交诉求",
+      detailItems: ["生成工单", "处理进度", "短信通知", "回访评价"],
+    },
+    dataStatus: "demo",
+  },
+];
+
+const legacyDatabaseAliases = [
+  { id: "shanghu", name: "尚湖风景区", localId: "shanghu" },
+  { id: "shajiabang", name: "沙家浜风景区", localId: "shajiabang" },
+  { id: "fangta", name: "方塔园", localId: "fangta" },
+  { id: "yanyuan", name: "燕园" },
+  { id: "yushan", name: "虞山国家森林公园", localId: "yushan" },
+  { id: "zengzhao", name: "曾赵园", localId: "zengzhao" },
+  { id: "weng-tonghe", name: "翁同龢纪念馆", localId: "weng-tonghe" },
+];
+
+const databasePlacesByName = new Map(databasePlaces.map((place) => [place.name, place]));
+const aliasedDatabaseIds = new Set<string>();
+const aliasedLocalIds = new Set<string>();
+
+const legacyPlaces = legacyDatabaseAliases.flatMap((alias) => {
+  const databasePlace = databasePlacesByName.get(alias.name);
+  if (!databasePlace) {
+    return [];
+  }
+
+  aliasedDatabaseIds.add(databasePlace.id);
+  if (alias.localId) {
+    aliasedLocalIds.add(alias.localId);
+  }
+
+  return [
+    {
+      ...databasePlace,
+      id: alias.id,
+      tags: [...new Set([...databasePlace.tags, "预设路线"])],
+    },
+  ];
+});
+
+const databasePlaceNames = new Set(databasePlaces.map((place) => place.name));
+const localSupplementPlaces = curatedLocalPlaces.filter((place) => {
+  if (aliasedLocalIds.has(place.id)) {
+    return false;
+  }
+
+  if (databasePlaceNames.has(place.name) && place.type === "scenic") {
+    return false;
+  }
+
+  return true;
+});
+
+export const places: Place[] = [
+  ...legacyPlaces,
+  ...databasePlaces.filter((place) => !aliasedDatabaseIds.has(place.id)),
+  ...localSupplementPlaces,
 ];

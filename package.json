@@ -4,8 +4,11 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "data:convert": "node scripts/convert-csv-to-places.mjs",
+    "prebuild": "npm run data:convert",
     "dev": "vite --host 0.0.0.0",
     "agent:llm": "node scripts/xiaochang-llm-server.mjs",
+    "dev:data": "npm run data:convert && vite --host 0.0.0.0",
     "dev:llm": "vite --host 0.0.0.0 --host 127.0.0.1 --port 5173",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0"

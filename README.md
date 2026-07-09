@@ -1,687 +1,26 @@
-# 常熟地图旅行规划 Web 开发方案
+# 常熟全域文旅智能出行助手
 
-## 0. 当前版本调整说明
+这是一个以地图为核心的一页式 Web 原型，当前已经从原来的静态滚动页面升级为 `master` 分支的 React/Vite 地图架构，并在此基础上融合了本地页面的卡片风格、图片素材、服务入口和文旅内容。
 
-第一版 Demo 已经跑通核心功能，但根据当前反馈，产品方向需要更聚焦：
+当前版本的产品重点是：
 
-- 页面一进入必须是纯粹的常熟地图。
-- 首屏只突出地图和四类点位：景点、非遗、美食、美食店铺。
-- 右侧行程规划框不能一开始就在外面占位，需要改成可隐藏式面板。
-- 当前阶段暂时不做数据库、后端管理、真实数据链路。
-- 当前阶段优先做前端交互能力、视觉排版、地图体验和卡片规划流程。
-- 图片素材可以先使用占位图或替代图，正式图片制作完成后再统一替换。
+- 打开页面即进入常熟地图工作台。
+- 保留 `master` 的地图、点位筛选、J/P 模式、路线生成、随机路线、右侧行程面板、拖拽规划、地图工具、手绘层、路线连线和高德路线规划能力。
+- 把原滚动页面中的 AI 行程、实时地图、停车客流、景区讲解、诉求闭环等能力迁移到顶部“服务”菜单、地图点位、小卡片、展开详情和右侧路线面板中。
+- 使用本地常熟景点、美食和非遗图片素材，避免卡片展开后图片拉伸。
 
-因此，本阶段的开发目标从「完整旅游平台雏形」收敛为：
-
-```text
-纯地图首屏 -> 四类点位发现 -> 点击卡片 -> 展开隐藏式行程面板 -> 拖拽规划路线
-```
-
-## 1. 项目定位
-
-### 1.1 一句话定位
-
-一个以常熟市地图为首屏主体的本地文化旅行规划 Web。用户在地图上发现景点、非遗、美食和店铺，点击点位查看卡片，并在需要规划时展开隐藏式行程面板，把卡片拖入面板形成路线。
-
-### 1.2 当前阶段关键词
-
-- 纯地图首屏
-- 四类地图点位
-- 前端交互 Demo
-- 卡片式信息展示
-- 可隐藏式行程面板
-- 拖拽式规划
-- J 人手动规划
-- P 人路线生成
-- 占位图片可替换
-- 暂不建设数据库
-
-### 1.3 产品核心闭环
-
-J 人手动规划闭环：
-
-```text
-进入页面
-  -> 看到完整常熟地图
-  -> 看到四类点位
-  -> 点击点位
-  -> 查看卡片
-  -> 展开行程面板
-  -> 拖入或加入卡片
-  -> 调整顺序
-  -> 地图同步显示路线
-```
-
-P 人路线生成闭环：
-
-```text
-进入页面
-  -> 看到完整常熟地图
-  -> 切换 P 人模式
-  -> 选择主题路线或随机路线
-  -> 系统展开行程面板
-  -> 自动填入路线卡片
-  -> 用户继续修改
-```
-
-### 1.4 产品边界
-
-当前阶段重点是前端体验，不追求真实旅游平台能力。
-
-当前要做：
-
-- 地图全屏展示。
-- 四类点位可视化。
-- 点位点击弹卡片。
-- 卡片简化 / 详细两种状态。
-- 行程面板默认隐藏。
-- 行程面板可展开、收起。
-- 卡片可加入行程。
-- 卡片可拖入行程。
-- 行程可排序、删除、清空。
-- 地图显示已选序号和连线。
-- P 人生成预设路线或随机路线。
-- 前端图片先使用占位资源。
-
-当前不做：
-
-- 数据库。
-- 后端接口。
-- 后台管理。
-- 登录注册。
-- 真实购票预约。
-- 实时人流。
-- 实时点评。
-- 真实导航路线算法。
-- 复杂数据治理。
-
-## 2. 页面体验要求
-
-### 2.1 首屏要求
-
-用户打开页面后，第一眼应该看到：
-
-- 一整块常熟市地图。
-- 地图上的四类点位。
-- 少量浮动控制入口。
-- 不应该看到固定占位的右侧大面板。
-
-首屏不应该出现：
-
-- 传统双栏后台布局。
-- 默认展开的行程规划框。
-- 大面积介绍文案。
-- 营销型首页。
-- 数据库、表格、后台管理感很重的界面。
-
-### 2.2 主布局
-
-当前推荐布局：
-
-```text
-┌──────────────────────────────────────────────────────────────┐
-│                                                              │
-│  浮动工具条：类型筛选 / J-P模式 / 路线生成 / 行程入口          │
-│                                                              │
-│                                                              │
-│                       常熟市地图                              │
-│                                                              │
-│       景点点位    非遗点位    美食点位    店铺点位             │
-│                                                              │
-│                                               [行程浮动按钮]  │
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
-```
-
-行程面板展开后：
-
-```text
-┌──────────────────────────────────────────────────────────────┐
-│                                                              │
-│                       常熟市地图                              │
-│                                                              │
-│                                      ┌────────────────────┐  │
-│                                      │ 行程规划面板        │  │
-│                                      │ 已选卡片            │  │
-│                                      │ 排序 / 删除 / 清空   │  │
-│                                      └────────────────────┘  │
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
-```
-
-移动端展开后推荐为底部抽屉：
-
-```text
-┌─────────────────────────────┐
-│          常熟市地图          │
-│                             │
-│                             │
-├─────────────────────────────┤
-│        行程规划抽屉          │
-│        卡片列表              │
-└─────────────────────────────┘
-```
-
-### 2.3 浮动工具条
-
-浮动工具条只提供必要操作，不喧宾夺主。
-
-必须包含：
-
-- 常熟地图标识。
-- 四类点位筛选：景点、非遗、美食、店铺。
-- J 人 / P 人模式切换。
-- P 人路线主题选择。
-- 生成路线按钮。
-- 随机路线按钮。
-- 行程统计入口。
-- 清空行程按钮。
-
-设计要求：
-
-- 浮在地图上。
-- 尺寸克制。
-- 不遮挡地图主体。
-- 可以换行但不能把页面变成工具面板。
-- 移动端允许折行或收纳。
-
-### 2.4 行程规划面板
-
-行程规划面板默认隐藏。
-
-展开入口：
-
-- 点击右侧「行程」浮动按钮。
-- 点击顶部行程统计按钮。
-- 点击卡片「加入」按钮。
-- P 人生成路线后自动展开。
-- 拖拽卡片到行程按钮或面板区域。
-
-收起入口：
-
-- 点击面板关闭按钮。
-- 点击右侧「行程」浮动按钮。
-
-面板功能：
-
-- 展示路线名称。
-- 展示路线说明。
-- 展示已选站点数。
-- 展示预计游玩时长。
-- 展示已选卡片列表。
-- 支持拖拽排序。
-- 支持删除单个卡片。
-- 支持清空全部。
-- 支持卡片详情展开。
-
-空状态文案：
-
-```text
-先在地图上选点
-点击点位看卡片，拖进来就是路线。
-```
-
-### 2.5 地图点位
-
-点位必须清晰表达四种类型：
-
-| 类型 | 说明 | 建议视觉 |
-| --- | --- | --- |
-| 景点 | 景区、园林、历史文化地点 | 绿色 |
-| 非遗 | 非遗体验点、工坊、曲艺空间 | 蓝色 |
-| 美食 | 具体美食条目 | 橙色 |
-| 店铺 | 具体美食店铺 | 红色 |
-
-点位状态：
-
-- 默认状态：显示类型字或图标。
-- 悬浮状态：显示名称。
-- 点击状态：弹出卡片。
-- 已加入状态：高亮。
-- 已加入且有顺序：显示路线序号。
-
-## 3. 卡片系统
-
-### 3.1 卡片状态
-
-简化卡片：
-
-- 用于地图点位弹出。
-- 用于行程面板列表展示。
-- 信息要短，方便扫读。
-
-详细卡片：
-
-- 双击卡片进入。
-- 点击详情按钮进入。
-- 卡片宽高增加。
-- 内容区域可滚动。
-
-### 3.2 通用交互
-
-卡片必须支持：
-
-- 单击点位后出现。
-- 点击加入行程。
-- 拖拽进入行程面板。
-- 双击展开详情。
-- 点击详情展开。
-- 点击收起恢复简化。
-- 在行程面板中删除。
-- 在行程面板中拖拽排序。
-
-### 3.3 景点卡片
-
-简化展示：
-
-- 景点名称。
-- 类型标签。
-- 一句话简介。
-- 人流量估计。
-- 推荐游玩时长。
-
-详细展示：
-
-- 开放时间。
-- 景区门票价位。
-- 景区人流量估计。
-- 景点历史简介。
-- 推荐游玩方式。
-- 注意事项。
-
-### 3.4 非遗卡片
-
-简化展示：
-
-- 非遗名称。
-- 类型标签。
-- 一句话简介。
-- 人流量估计。
-- 推荐停留时长。
-
-详细展示：
-
-- 开放时间。
-- 门票或体验价位。
-- 人流量估计。
-- 非遗历史简介。
-- 可体验内容。
-- 预约提示。
-
-### 3.5 具体美食卡片
-
-简化展示：
-
-- 美食名称。
-- 类型标签。
-- 一句话简介。
-- 口味特点。
-
-详细展示：
-
-- 美食历史简介。
-- 口味特点。
-- 推荐品尝场景。
-- 相关故事。
-- 关联店铺。
-
-### 3.6 具体美食店铺卡片
-
-简化展示：
-
-- 店铺名称。
-- 主打美食。
-- 火热情况估计。
-- 人均消费。
-
-详细展示：
-
-- 营业时间。
-- 主打美食。
-- 人均消费。
-- 店铺火热情况估计。
-- 店铺点评。
-- 推荐菜品。
-- 排队提示。
-
-## 4. 图片与视觉素材策略
-
-当前阶段图片不作为阻塞项。
-
-V1 图片策略：
-
-- 可以先不放真实图片。
-- 可以使用统一占位图。
-- 可以使用色块、图标、渐变占位。
-- 可以使用临时替代图片。
-- 图片容器尺寸先设计好，避免后续替换时页面变形。
-
-正式图片交付后替换规则：
-
-- 景点图片替换到景点卡片或详情区。
-- 非遗图片替换到非遗卡片或详情区。
-- 美食图片替换到具体美食卡片。
-- 店铺图片替换到店铺卡片。
-- 图片命名需和 `place.id` 对齐。
-- 图片资源建议放入 `src/assets/places/`。
-
-建议文件命名：
-
-```text
-src/assets/places/yushan.jpg
-src/assets/places/shanghu.jpg
-src/assets/places/jiaohua-chicken.jpg
-src/assets/places/noodle-house.jpg
-```
-
-前端组件应预留：
-
-- 图片容器。
-- 图片加载失败占位。
-- 默认占位图。
-- 后续图片替换入口。
-
-## 5. 数据策略
-
-### 5.1 当前阶段不做数据库
-
-当前阶段明确不做数据库。
-
-原因：
-
-- 黑客松第一阶段核心是交互演示。
-- 前端排版和地图体验优先。
-- 点位数量有限，本地静态数据足够。
-- 数据库会带来后端、部署、接口、鉴权等额外复杂度。
-- 真实数据后续可以再补，不影响当前前端体验验证。
-
-### 5.2 当前数据方式
-
-当前使用本地静态 TypeScript 数据：
-
-```text
-src/data/places.ts
-src/data/routes.ts
-```
-
-作用：
-
-- 支撑地图点位。
-- 支撑卡片内容。
-- 支撑 P 人预设路线。
-- 支撑随机路线。
-
-当前数据应理解为：
-
-```text
-前端演示数据，不是正式数据库。
-```
-
-### 5.3 后续数据演进
-
-后续如果需要真实产品化，可以再演进：
-
-1. 本地静态数据。
-2. JSON 文件。
-3. 简单后端接口。
-4. 数据库。
-5. 后台管理系统。
-6. 实时数据源。
-
-但当前阶段停留在第 1 步即可。
-
-## 6. J 人 / P 人规划设计
-
-### 6.1 J 人模式
-
-J 人模式强调手动控制。
-
-能力：
-
-- 用户自己点击点位。
-- 用户自己查看卡片。
-- 用户自己展开行程面板。
-- 用户自己拖拽卡片。
-- 用户自己排序。
-- 用户可以使用地图手绘层。
-
-设计重点：
-
-```text
-地图保持自由，规划面板只在需要时出现。
-```
-
-### 6.2 P 人模式
-
-P 人模式强调给用户灵感。
-
-能力：
-
-- 生成预设路线。
-- 随机生成路线。
-- 自动展开行程面板。
-- 自动填充卡片。
-- 用户仍可继续修改。
-
-当前 P 人不是完整 AI Agent，而是前端规则和预设路线。
-
-后续可接入 Agent：
-
-- 用户偏好输入。
-- 时间预算输入。
-- 主题路线生成。
-- 推荐理由生成。
-- 可替换点位推荐。
-
-## 7. 技术方案
-
-### 7.1 当前技术栈
+## 技术栈
 
 - Vite
 - React
 - TypeScript
 - Leaflet
+- 高德 JavaScript API
 - lucide-react
 - 原生 HTML Drag and Drop
-- 普通 CSS
 - 本地静态 TypeScript 数据
 
-### 7.2 当前目录结构
-
-```text
-src/
-  App.tsx
-  main.tsx
-  components/
-    ChangshuMap.tsx
-    ItineraryPanel.tsx
-    PlaceCard.tsx
-    TopBar.tsx
-  data/
-    places.ts
-    routes.ts
-  styles/
-    global.css
-  types/
-    place.ts
-  utils/
-    routePlanner.ts
-```
-
-### 7.3 模块职责
-
-`App.tsx`
-
-- 管理全局状态。
-- 管理行程面板展开/收起。
-- 管理模式切换。
-- 管理筛选、加入、删除、排序、生成路线。
-
-`ChangshuMap.tsx`
-
-- 渲染全屏地图。
-- 渲染四类点位。
-- 渲染路线连线。
-- 展示地图卡片弹层。
-- 提供 J 人手绘层。
-
-`TopBar.tsx`
-
-- 渲染浮动工具条。
-- 提供类型筛选。
-- 提供 J/P 切换。
-- 提供路线生成。
-- 提供行程入口。
-
-`ItineraryPanel.tsx`
-
-- 渲染可隐藏式行程面板。
-- 展示已选卡片。
-- 支持拖拽排序。
-- 支持删除、清空、关闭。
-
-`PlaceCard.tsx`
-
-- 渲染不同类型的卡片。
-- 支持简化/详细模式。
-- 支持加入、移除、拖拽、展开。
-
-## 8. 当前状态设计
-
-```ts
-type AppState = {
-  mode: "j" | "p";
-  activeTypes: PlaceType[];
-  selectedPlaceId: string | null;
-  expandedPlaceId: string | null;
-  itineraryIds: string[];
-  routePresetId: string;
-  generatedRouteName: string | null;
-  generatedRouteDescription: string | null;
-  drawMode: boolean;
-  isItineraryOpen: boolean;
-};
-```
-
-关键状态：
-
-- `isItineraryOpen`：控制行程面板是否展开。
-- `itineraryIds`：控制路线顺序。
-- `activeTypes`：控制地图显示哪些类型点位。
-- `selectedPlaceId`：控制当前地图弹卡片。
-- `expandedPlaceId`：控制当前展开的详细卡片。
-
-## 9. 验收标准
-
-### 9.1 首屏验收
-
-必须满足：
-
-1. 打开页面后地图铺满首屏。
-2. 地图上能看到四类点位。
-3. 右侧行程规划框默认不展开。
-4. 页面不是传统左右分栏布局。
-5. 工具条是浮动式，不破坏地图主视觉。
-
-### 9.2 交互验收
-
-必须满足：
-
-1. 点击地图点位可以打开卡片。
-2. 卡片可以点击加入行程。
-3. 加入行程后行程面板自动展开。
-4. 用户可以手动收起行程面板。
-5. 用户可以再次通过行程按钮展开面板。
-6. 卡片可以拖入行程面板。
-7. 行程面板内卡片可以排序。
-8. 行程面板内卡片可以删除。
-9. 清空行程后地图路线同步消失。
-10. P 人生成路线后行程面板自动展开。
-11. 地图上已选点位显示序号。
-12. 地图上按行程顺序连线。
-
-### 9.3 内容验收
-
-必须满足：
-
-1. 景点卡片包含开放时间、票价、人流估计、历史简介。
-2. 非遗卡片包含开放时间、体验价位、人流估计、历史简介。
-3. 具体美食卡片包含美食历史简介。
-4. 美食店铺卡片包含火热情况估计和店铺点评。
-5. 当前内容允许是演示数据。
-6. 不要求接入数据库。
-
-### 9.4 技术验收
-
-必须满足：
-
-1. `npm install` 可以安装依赖。
-2. `npm run dev` 可以启动本地开发服务。
-3. `npm run build` 可以成功构建。
-4. TypeScript 无构建错误。
-5. 不提交 `node_modules`。
-6. 不提交 `dist`。
-
-## 10. 开发优先级
-
-### P0
-
-- 全屏地图首屏。
-- 四类点位展示。
-- 行程面板默认隐藏。
-- 行程面板展开/收起。
-- 卡片加入行程。
-- P 人生成路线后展开面板。
-
-### P1
-
-- 卡片拖拽进入行程。
-- 行程面板内拖拽排序。
-- 地图路线同步。
-- 详情卡片滚动。
-- 移动端底部抽屉适配。
-
-### P2
-
-- 图片占位容器。
-- 正式图片替换机制。
-- 路线导出。
-- 更丰富的 P 人偏好选择。
-- 更完整的移动端手势体验。
-
-## 11. 后续版本方向
-
-V1.1 前端体验增强：
-
-- 优化浮动工具条布局。
-- 优化移动端行程抽屉。
-- 增加图片占位。
-- 增加路线主题说明。
-- 增加卡片视觉层次。
-
-V1.2 内容展示增强：
-
-- 替换正式图片。
-- 优化卡片文案。
-- 增加更多点位。
-- 增加更多路线。
-
-V2 Agent 规划：
-
-- 接入真实 Agent 或大模型接口。
-- 支持用户输入偏好。
-- 支持生成推荐理由。
-- 支持替换某一站。
-
-V3 数据产品化：
-
-- 接入后端接口。
-- 接入数据库。
-- 接入真实地图服务。
-- 建立后台管理。
-- 建立数据更新机制。
-
-## 12. 当前运行方式
+## 快速启动
 
 安装依赖：
 
@@ -695,31 +34,725 @@ npm install
 npm run dev
 ```
 
+默认会启动在：
+
+```text
+http://localhost:5173/
+```
+
+如果 `5173` 被占用，Vite 会自动切换到下一个端口。例如本次本地启动地址为：
+
+```text
+http://127.0.0.1:5174/
+```
+
 构建生产版本：
 
 ```bash
 npm run build
 ```
 
-预览生产版本：
+预览生产构建：
 
 ```bash
 npm run preview
 ```
 
-默认访问地址：
+## 当前目录结构
 
 ```text
-http://localhost:5173/
+.
+├── index.html
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+├── public/
+│   ├── assets/                         # 当前页面使用的本地图片素材
+│   │   └── photo-library/
+│   ├── map-skins/                      # master 原有区域贴图
+│   └── map-tiles/                      # 本地瓦片包解压位置，默认被 gitignore
+├── src/
+│   ├── App.tsx                         # 全局状态、J/P 模式、路线生成、行程面板
+│   ├── main.tsx
+│   ├── components/
+│   │   ├── AmapChangshuMap.tsx         # 高德地图实现
+│   │   ├── ChangshuMap.tsx             # 高德 / 备用地图切换
+│   │   ├── FallbackChangshuMap.tsx     # Leaflet 备用地图
+│   │   ├── ItineraryPanel.tsx          # 右侧行程规划面板
+│   │   ├── PlaceCard.tsx               # 地图小卡片和详情卡片
+│   │   └── TopBar.tsx                  # 紧凑顶部工具条、服务菜单、筛选和路线工具
+│   ├── api/
+│   │   └── placesApi.ts                # 未来数据库 / 实时接口预留入口
+│   ├── data/
+│   │   ├── places.ts                   # 地图点位、卡片详情和服务点位
+│   │   ├── routes.ts                   # P 人预设路线
+│   │   ├── services.ts                 # 顶部“服务”菜单配置
+│   │   ├── mapSkins.ts                 # 地图区域贴图
+│   │   └── fullCityHanddrawnTileRanges.ts
+│   ├── map/
+│   │   ├── amapLoader.ts               # 高德脚本加载和配置读取
+│   │   └── amapRouteService.ts         # 高德步行/骑行/驾车路线规划
+│   ├── styles/
+│   │   └── global.css
+│   ├── types/
+│   │   ├── place.ts
+│   │   └── route.ts
+│   └── utils/
+│       ├── itineraryRoute.ts
+│       └── routePlanner.ts
 ```
 
-## 13. 当前结论
+## 高德地图配置
 
-当前阶段的重点不是数据库，也不是后端，而是把前端 Demo 做得更像一个真正能用、能展示、能让人一眼看懂的地图规划工具。
-
-本阶段最重要的产品原则：
+高德配置通过环境变量读取。当前本地开发使用 `.env.local`：
 
 ```text
-地图先行，面板隐藏，交互优先，图片可替换，数据先静态。
+VITE_AMAP_KEY=你的高德 Web 端 Key
+VITE_AMAP_SECURITY_CODE=你的高德安全密钥
+VITE_AMAP_STYLE=amap://styles/fresh
 ```
 
+`.env.local` 已经在 `.gitignore` 中，不会被提交。
+
+如果其他人拉代码后地图没有加载，需要自己创建 `.env.local`，或者复制 `.env.example` 后补充真实 Key。
+
+排查高德问题时重点检查：
+
+- Key 是否是 JavaScript API 的 Web 端 Key。
+- 安全密钥是否与 Key 匹配。
+- 高德控制台域名白名单是否包含 `localhost`、`127.0.0.1` 和正式部署域名。
+- 浏览器控制台是否有鉴权失败、脚本加载失败或插件加载失败。
+- 网络是否可以访问 `https://webapi.amap.com/maps`。
+
+如果高德加载失败，页面会回退到 `FallbackChangshuMap`，仍然可以演示点位、卡片、拖拽规划和路线预览。
+
+## 风格化瓦片包
+
+如果需要启用 master 的常熟手绘风格瓦片，把 `changshu-full-city-all-zooms-handdrawn.zip` 解压到：
+
+```text
+public/map-tiles/
+```
+
+正确目录应为：
+
+```text
+public/map-tiles/changshu-full-city-all-zooms/handdrawn/
+```
+
+正确验证文件示例：
+
+```text
+public/map-tiles/changshu-full-city-all-zooms/handdrawn/18/218897/106686.png
+```
+
+不要解压成：
+
+```text
+public/map-tiles/changshu-full-city-all-zooms-handdrawn/changshu-full-city-all-zooms/...
+public/map-tiles/changshu-full-city-all-zooms.zip/...
+```
+
+`public/map-tiles/` 默认被 `.gitignore` 忽略，避免把大体积瓦片提交进仓库。
+
+## 当前保留的 master 功能
+
+本次改造以 `master` 为底座，以下功能仍然保留：
+
+- 高德地图优先加载。
+- 高德失败后回退 Leaflet 备用地图。
+- 手绘风格瓦片叠加。
+- 区域贴图覆盖。
+- 点位筛选。
+- J 人 / P 人模式。
+- 主题路线选择。
+- 生成预设路线。
+- 随机路线。
+- 右侧行程面板。
+- 右侧行程面板默认可收起。
+- 点击地图点位打开卡片。
+- 双击或点击按钮展开详情。
+- 卡片加入行程。
+- 卡片拖拽到右侧行程面板。
+- 行程面板内拖拽排序。
+- 删除单个点位。
+- 清空路线。
+- 路线点数和预计时长。
+- 步行 / 骑行 / 驾车切换。
+- 列表 / 卡牌视图切换。
+- 地图路线连线。
+- 高德道路级路线规划。
+- 地图手绘层和清除手绘。
+- 地图工具收起 / 展开。
+
+## 本次新增和融合的能力
+
+在保留 master 功能的基础上，当前版本新增：
+
+- 顶部紧凑工具条：品牌、点位筛选、J/P 模式、路线主题、生成、随机、行程统计和清空保留在一行内。
+- 顶部“服务”菜单：行程规划、智能讲解、景区舒适度、停车查询、实时路况、门票预约、找厕所、行李寄存、旅游驿站、美食推荐、投诉求助、一键客服默认收起，点击后展开。
+- 更多地图点位类型：停车、厕所、服务、活动、住宿、救援。
+- 点位卡片接入本地图片素材。
+- 展开卡片可覆盖地图内容，但不撑大页面。
+- 卡片根据点位位置自动选择上方、下方、左侧、右侧或居中展开。
+- 详情内容在卡片内部滚动。
+- 停车、厕所、驿站、活动、住宿、救援点位支持服务型详情字段。
+- 地图服务菜单可以直接切换对应图层，默认不再横向铺开大服务卡片。
+
+## 如何更新点位
+
+点位数据在：
+
+```text
+src/data/places.ts
+```
+
+一个点位的基本结构：
+
+```ts
+{
+  id: "yushan",
+  type: "scenic",
+  name: "虞山国家森林公园",
+  subtitle: "北门大街 21 号的国家级森林公园",
+  summary: "适合轻徒步和老城慢游。",
+  tags: ["山水", "历史", "Citywalk"],
+  imageUrl: "/assets/photo-library/spot-yushan-01.jpg",
+  source: "local",
+  poiId: "amap-or-db-poi-id",
+  address: "常熟市虞山片区",
+  district: "常熟市",
+  position: { x: 42, y: 36, lng: 120.709847, lat: 31.665592 },
+  openTime: "约 08:00-17:00",
+  price: "部分区域免费，部分项目另收费",
+  crowdLevel: "high",
+  duration: "2-3 小时",
+  history: "历史文化简介",
+  detail: "展开详情中的规划建议",
+  suitableFor: ["历史文化爱好者", "轻徒步用户"],
+  notice: "开放信息以景区公告为准。",
+  dataStatus: "demo"
+}
+```
+
+字段说明：
+
+- `source`：数据来源，可选 `local`、`database`、`amap`、`manual`。
+- `poiId`：后续接入高德 POI 或数据库时使用的真实标识。
+- `address` / `district`：后续数据库字段预留。
+- `dataStatus`：`demo` 表示演示数据，`verified` 表示已经校准。当前美食和店铺坐标多为 demo，后续接数据库后再校准。
+
+常用 `type`：
+
+- `scenic`：景点
+- `heritage`：非遗
+- `food`：具体美食
+- `restaurant`：美食店铺
+- `parking`：停车场
+- `restroom`：厕所
+- `service`：旅游驿站 / 寄存 / 客服
+- `activity`：活动 / 演艺 / 夜游
+- `lodging`：住宿
+- `emergency`：投诉 / 救援 / 闭环工单
+
+服务型点位可以增加 `serviceProfile`：
+
+```ts
+serviceProfile: {
+  status: "开放中，当前排队约 3 分钟",
+  capacity: "行李寄存剩余 28 格",
+  distanceTip: "靠近古城美食和非遗体验点",
+  actionLabel: "打开一码通",
+  detailItems: ["游客咨询", "行李寄存", "饮水休息", "一键客服"]
+}
+```
+
+## 如何更新顶部服务入口
+
+顶部服务入口在：
+
+```text
+src/data/services.ts
+```
+
+示例：
+
+```ts
+{
+  id: "parking",
+  icon: "P",
+  label: "停车查询",
+  hint: "余位与拥堵",
+  targetTypes: ["parking"]
+}
+```
+
+`targetTypes` 会控制点击服务入口后显示哪些地图点位类型。
+
+## 未来数据库接口预留
+
+当前点位仍来自静态 demo 数据，但已经预留接口层：
+
+```text
+src/api/placesApi.ts
+```
+
+当前函数：
+
+```ts
+fetchPlaces()
+fetchRoutes()
+fetchRealtimeStatus()
+fetchParkingStatus()
+fetchServiceTickets()
+```
+
+现在这些函数返回本地静态数据。后续接数据库时，优先只替换这里的实现，让接口返回的数据保持和 `Place` 类型兼容。这样地图组件、卡片组件、右侧行程面板和路线规划逻辑都不需要重写。
+
+当前美食和店铺地图位置主要用于演示筛选、卡片和路线规划，不代表已经完成真实 POI 校准。后续数据库可以返回真实 `lng`、`lat`、`poiId`、`address`、`source` 和 `dataStatus: "verified"` 来覆盖 demo 数据。
+
+## 如何更新 P 人路线
+
+路线数据在：
+
+```text
+src/data/routes.ts
+```
+
+示例：
+
+```ts
+{
+  id: "classic-culture",
+  name: "文化慢游线",
+  description: "老城园林、名人故居与虞山山水组合。",
+  placeIds: ["fangta", "zengzhao", "weng-tonghe", "yushan", "old-kitchen"]
+}
+```
+
+注意：`placeIds` 必须对应 `src/data/places.ts` 中存在的 `id`。
+
+## 图片素材
+
+当前本地图片已放到：
+
+```text
+public/assets/photo-library/
+```
+
+在点位里这样引用：
+
+```ts
+imageUrl: "/assets/photo-library/spot-yushan-01.jpg"
+```
+
+卡片图片使用固定比例容器和 `cover` 方式显示，展开详情时不会把图片拉伸成长条。
+
+## 常用调试命令
+
+类型和构建检查：
+
+```bash
+npm run build
+```
+
+启动开发服务：
+
+```bash
+npm run dev
+```
+
+访问本地服务：
+
+```powershell
+Invoke-WebRequest -UseBasicParsing http://127.0.0.1:5173/
+```
+
+如果端口被占用，根据 Vite 输出访问实际端口，例如：
+
+```text
+http://127.0.0.1:5174/
+```
+
+## 常见问题
+
+### 1. 地图空白
+
+先看浏览器控制台。常见原因是高德 Key 或安全密钥错误、域名白名单未配置、本地没有网络、瓦片路径错误。
+
+### 2. 高德地图失败
+
+页面会自动回退备用地图。高德失败不影响卡片、路线、拖拽和 P 人路线生成演示。
+
+### 3. 手绘瓦片不显示
+
+检查瓦片路径是否正确：
+
+```text
+public/map-tiles/changshu-full-city-all-zooms/handdrawn/18/218897/106686.png
+```
+
+### 4. 新增点位不显示
+
+检查：
+
+- `type` 是否在 `src/types/place.ts` 中存在。
+- 顶部筛选是否选中了该类型。
+- `position.lng` / `position.lat` 是否正确。
+- `id` 是否唯一。
+
+### 5. P 人路线生成后缺点位
+
+检查 `src/data/routes.ts` 中的 `placeIds` 是否都能在 `src/data/places.ts` 中找到。
+
+### 6. 图片不显示
+
+检查：
+
+- 图片是否在 `public/assets/photo-library/`。
+- `imageUrl` 是否以 `/assets/...` 开头。
+- 文件名大小写是否一致。
+
+### 7. 卡片展开后遮挡
+
+当前设计允许展开卡片覆盖地图内容。它不会撑大页面，详情内容在卡片内部滚动。若需要调整尺寸，修改 `src/styles/global.css` 中：
+
+```css
+.map-card-popover.is-expanded
+.place-card.planner-place-card.is-expanded
+.planner-detail-scroll
+```
+
+## 后端接口字段要求
+
+后续接数据库时，建议后端返回的数据尽量兼容当前前端 `Place` 类型。前端已经预留入口：
+
+```text
+src/api/placesApi.ts
+```
+
+优先替换这些函数，不建议重写地图组件：
+
+```ts
+fetchPlaces()
+fetchRoutes()
+fetchRealtimeStatus()
+fetchParkingStatus()
+fetchServiceTickets()
+```
+
+### 1. 点位列表
+
+接口：
+
+```text
+GET /api/places
+```
+
+返回所有地图点位，包括景点、非遗、美食、店铺、停车、厕所、服务、活动、住宿、救援。美食和店铺的真实坐标也由这个接口返回。
+
+```ts
+type Place = {
+  id: string;
+  type:
+    | "scenic"
+    | "heritage"
+    | "food"
+    | "restaurant"
+    | "parking"
+    | "restroom"
+    | "service"
+    | "activity"
+    | "lodging"
+    | "emergency";
+  name: string;
+  subtitle?: string;
+  summary?: string;
+  tags?: string[];
+  position: {
+    lng: number;
+    lat: number;
+    x?: number;
+    y?: number;
+  };
+  imageUrl?: string;
+  images?: string[];
+  source?: "local" | "database" | "amap" | "manual";
+  dataStatus?: "demo" | "verified";
+  poiId?: string;
+  amapPoiId?: string;
+  address?: string;
+  district?: string;
+  openTime?: string;
+  price?: string;
+  ticket?: string;
+  duration?: string;
+  crowdLevel?: "low" | "medium" | "high" | "very-high";
+  history?: string;
+  detail?: string;
+  notice?: string;
+  suitableFor?: string[];
+  bookingUrl?: string;
+  guideUrl?: string;
+  phone?: string;
+  officialUrl?: string;
+  foodProfile?: FoodProfile;
+  restaurantProfile?: RestaurantProfile;
+  serviceProfile?: ServiceProfile;
+  parkingProfile?: ParkingProfile;
+  restroomProfile?: RestroomProfile;
+  emergencyProfile?: EmergencyProfile;
+  guideProfile?: GuideProfile;
+};
+```
+
+说明：
+
+- `position.lng` 和 `position.lat` 是真实地图必填字段。
+- `x` 和 `y` 只是备用地图或兜底定位字段。
+- `dataStatus: "demo"` 表示演示坐标，前端会提示“示例点位”。
+- `dataStatus: "verified"` 表示后端已经校准坐标，前端可作为真实点位展示。
+
+### 2. 美食和店铺
+
+具体美食 `type = "food"`：
+
+```ts
+type FoodProfile = {
+  flavor?: string;
+  history?: string;
+  recommendedScene?: string;
+  relatedRestaurants?: string[];
+  averagePrice?: string;
+  bestSeason?: string;
+  ingredients?: string[];
+};
+```
+
+美食店铺 `type = "restaurant"`：
+
+```ts
+type RestaurantProfile = {
+  mainFoods?: string[];
+  averageCost?: string;
+  popularity?: "low" | "medium" | "high" | "very-high";
+  reviewSummary?: string;
+  recommendedDishes?: string[];
+  queueTip?: string;
+  businessHours?: string;
+  phone?: string;
+  bookingUrl?: string;
+  menu?: Array<{
+    name: string;
+    price?: string;
+    imageUrl?: string;
+    description?: string;
+  }>;
+};
+```
+
+美食位置要求：
+
+- 后端接入后必须返回真实 `lng` / `lat`。
+- 如果来自高德或数据库，建议同步返回 `poiId` / `amapPoiId`。
+- 已校准点位返回 `dataStatus: "verified"`。
+- 未校准临时点位返回 `dataStatus: "demo"`。
+
+### 3. 停车
+
+停车点 `type = "parking"`：
+
+```ts
+type ParkingProfile = {
+  totalSpaces?: number;
+  availableSpaces?: number;
+  chargingSpaces?: number;
+  disabledSpaces?: number;
+  priceRule?: string;
+  congestionLevel?: "low" | "medium" | "high";
+  distanceTip?: string;
+  navigationUrl?: string;
+  updatedAt?: string;
+};
+```
+
+实时停车接口：
+
+```text
+GET /api/realtime/parking
+```
+
+```ts
+type ParkingStatus = {
+  placeId: string;
+  totalSpaces: number;
+  availableSpaces: number;
+  chargingSpaces?: number;
+  congestionLevel?: "low" | "medium" | "high";
+  updatedAt: string;
+};
+```
+
+### 4. 厕所、服务、救援
+
+厕所点 `type = "restroom"`：
+
+```ts
+type RestroomProfile = {
+  openStatus?: "open" | "closed" | "maintenance";
+  accessible?: boolean;
+  babyCare?: boolean;
+  distanceTip?: string;
+  cleanLevel?: "good" | "normal" | "poor";
+  reportUrl?: string;
+};
+```
+
+服务点 / 驿站 / 寄存 `type = "service"`：
+
+```ts
+type ServiceProfile = {
+  status?: string;
+  capacity?: string;
+  distanceTip?: string;
+  actionLabel?: string;
+  detailItems?: string[];
+  luggageAvailable?: number;
+  water?: boolean;
+  restArea?: boolean;
+  accessible?: boolean;
+  servicePhone?: string;
+};
+```
+
+救援 / 投诉点 `type = "emergency"`：
+
+```ts
+type EmergencyProfile = {
+  serviceStatus?: "online" | "busy" | "offline";
+  avgResponseMinutes?: number;
+  supportTypes?: string[];
+  submitUrl?: string;
+  phone?: string;
+};
+```
+
+### 5. 景区讲解
+
+景点和非遗点位可带讲解字段：
+
+```ts
+type GuideProfile = {
+  title?: string;
+  audioUrl?: string;
+  audioDuration?: string;
+  transcript?: string;
+  routeTips?: string[];
+  performanceReminders?: Array<{
+    title: string;
+    time: string;
+    place?: string;
+    bookingUrl?: string;
+  }>;
+};
+```
+
+### 6. 路线
+
+接口：
+
+```text
+GET /api/routes
+```
+
+```ts
+type RoutePreset = {
+  id: string;
+  name: string;
+  description: string;
+  placeIds: string[];
+  tags?: string[];
+  suitableFor?: string[];
+  estimatedMinutes?: number;
+};
+```
+
+`placeIds` 必须能在 `/api/places` 返回的点位中找到。
+
+### 7. 实时状态
+
+接口：
+
+```text
+GET /api/realtime/status
+```
+
+```ts
+type RealtimeStatus = {
+  placeId: string;
+  crowdLevel?: "low" | "medium" | "high" | "very-high";
+  crowdText?: string;
+  parkingLeft?: number;
+  queueMinutes?: number;
+  comfortText?: string;
+  updatedAt: string;
+};
+```
+
+### 8. 诉求工单
+
+提交工单：
+
+```text
+POST /api/service-tickets
+```
+
+```ts
+type CreateTicketRequest = {
+  placeId?: string;
+  category: "complaint" | "rescue" | "lost" | "repair" | "consult";
+  title: string;
+  content: string;
+  contact?: string;
+  lng?: number;
+  lat?: number;
+  images?: string[];
+};
+```
+
+返回：
+
+```ts
+type ServiceTicket = {
+  id: string;
+  title: string;
+  status: "submitted" | "assigned" | "processing" | "closed";
+  placeId?: string;
+  createdAt: string;
+  updatedAt: string;
+  expectedResponseMinutes?: number;
+};
+```
+
+查询工单：
+
+```text
+GET /api/service-tickets/:id
+```
+
+## 生产部署建议
+
+构建：
+
+```bash
+npm run build
+```
+
+部署 `dist/` 到静态服务器即可。
+
+上线前注意：
+
+- 正式域名要加入高德 Key 白名单。
+- 不要把 `.env.local` 提交到公开仓库。
+- 大体积瓦片包不要直接提交到 git，建议单独分发或放对象存储。
+- 若接入真实数据库，尽量保持 `places.ts` 结构不变，把数据源替换为接口返回。

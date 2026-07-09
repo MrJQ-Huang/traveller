@@ -3,8 +3,10 @@ import {
   ChevronUp,
   Clock3,
   Landmark,
+  MapPin,
   Plus,
   Sparkles,
+  Star,
   Ticket,
   Trash2,
   Users,
@@ -32,6 +34,12 @@ const typeLabels: Record<Place["type"], string> = {
   heritage: "非遗",
   food: "美食",
   restaurant: "店铺",
+  parking: "停车",
+  restroom: "厕所",
+  service: "服务",
+  activity: "活动",
+  lodging: "住宿",
+  emergency: "救援",
 };
 
 const crowdText: Record<CrowdLevel, string> = {
@@ -42,21 +50,35 @@ const crowdText: Record<CrowdLevel, string> = {
 };
 
 const cardImageByType: Record<Place["type"], string | null> = {
-  scenic: "/map-skins/yushan.png",
-  heritage: "/map-skins/guli-ancient-town.png",
-  food: null,
-  restaurant: null,
+  scenic: "/assets/generated-placeholders/scenic.png",
+  heritage: "/assets/generated-placeholders/heritage.png",
+  food: "/assets/generated-placeholders/food.png",
+  restaurant: "/assets/generated-placeholders/restaurant.png",
+  parking: "/assets/generated-placeholders/parking.png",
+  restroom: "/assets/generated-placeholders/restroom.png",
+  service: "/assets/generated-placeholders/service.png",
+  activity: "/assets/generated-placeholders/activity.png",
+  lodging: "/assets/generated-placeholders/lodging.png",
+  emergency: "/assets/generated-placeholders/service.png",
 };
 
 function getCardStyle(place: Place): CSSProperties {
-  const image = cardImageByType[place.type];
-  return image ? ({ "--card-image": `url("${image}")` } as CSSProperties) : {};
+  const image = place.imageUrl ?? place.fallbackImageUrl ?? cardImageByType[place.type];
+  const fallbackImage = place.fallbackImageUrl ?? cardImageByType[place.type] ?? image;
+  return {
+    "--card-image": `url("${image}")`,
+    "--fallback-card-image": `url("${fallbackImage}")`,
+  } as CSSProperties;
 }
 
 function getDetailTitle(place: Place) {
   if (place.type === "restaurant") return "店铺点评";
   if (place.type === "food") return "美食历史简介";
   if (place.type === "heritage") return "非遗历史简介";
+  if (place.type === "parking") return "停车与到达建议";
+  if (place.type === "restroom") return "便民设施信息";
+  if (place.type === "emergency") return "诉求闭环与救援信息";
+  if (place.type === "service") return "旅游服务信息";
   return "景点历史简介";
 }
 
@@ -77,7 +99,10 @@ export function PlaceCard({
   const canAdd = !inItinerary && onAdd;
   const isFood = place.type === "food";
   const isRestaurant = place.type === "restaurant";
+  const isFoodMapDemo = (isFood || isRestaurant) && place.dataStatus === "demo";
+  const isServiceLike = Boolean(place.serviceProfile);
   const detailTitle = getDetailTitle(place);
+  const label = place.categoryLabel ?? typeLabels[place.type];
 
   return (
     <article
@@ -95,7 +120,10 @@ export function PlaceCard({
       </div>
 
       <div className="planner-card-body">
-        <span className={`planner-type-label type-${place.type}`}>{typeLabels[place.type]}</span>
+        <span className={`planner-type-label type-${place.type}`}>
+          {label}
+          {place.tierLevel ? ` · ${place.tierLevel}` : ""}
+        </span>
         <h3>{place.name}</h3>
         <p>{place.summary}</p>
 
@@ -122,6 +150,12 @@ export function PlaceCard({
             <span>
               <Landmark size={13} />
               {place.duration}
+            </span>
+          )}
+          {place.score && (
+            <span>
+              <Star size={13} />
+              {place.score}
             </span>
           )}
         </div>
@@ -189,6 +223,49 @@ export function PlaceCard({
               </section>
             )}
 
+            {(place.address || place.phone || place.score || place.subtypeLabel) && (
+              <section>
+                <h4>实用信息</h4>
+                <p>
+                  {[
+                    place.subtypeLabel ? `类型：${place.subtypeLabel}` : "",
+                    place.address ? `地址：${place.address}` : "",
+                    place.phone ? `电话：${place.phone}` : "",
+                    place.score ? `评分：${place.score}` : "",
+                  ]
+                    .filter(Boolean)
+                    .join("\n")}
+                </p>
+              </section>
+            )}
+
+            {isServiceLike && place.serviceProfile && (
+              <>
+                <section>
+                  <h4>实时状态</h4>
+                  <p>{place.serviceProfile.status}</p>
+                </section>
+                {place.serviceProfile.capacity && (
+                  <section>
+                    <h4>容量 / 余位</h4>
+                    <p>{place.serviceProfile.capacity}</p>
+                  </section>
+                )}
+                {place.serviceProfile.distanceTip && (
+                  <section>
+                    <h4>到达提示</h4>
+                    <p>{place.serviceProfile.distanceTip}</p>
+                  </section>
+                )}
+                {place.serviceProfile.detailItems?.length ? (
+                  <section>
+                    <h4>可用服务</h4>
+                    <p>{place.serviceProfile.detailItems.join("、")}</p>
+                  </section>
+                ) : null}
+              </>
+            )}
+
             {place.suitableFor && (
               <section>
                 <h4>适合人群</h4>
@@ -202,14 +279,21 @@ export function PlaceCard({
                 <p>{place.notice}</p>
               </section>
             )}
+
+            {isFoodMapDemo && (
+              <section className="demo-data-note">
+                <h4>位置数据说明</h4>
+                <p>当前美食点位为 Demo 坐标，用于演示地图筛选、卡片和路线规划。后续接入数据库后会按真实店铺、POI 或人工校准坐标自动替换。</p>
+              </section>
+            )}
           </div>
         </div>
       )}
 
       <div className="planner-card-actions">
         <span className="planner-drag-hint">
-          <Sparkles size={12} />
-          按住卡片拖到右侧路线
+          {place.address ? <MapPin size={12} /> : <Sparkles size={12} />}
+          {place.address ? place.address : "按住卡片拖到右侧路线"}
         </span>
         {canAdd && (
           <button type="button" className="planner-card-action-button" onClick={() => onAdd(place.id)}>

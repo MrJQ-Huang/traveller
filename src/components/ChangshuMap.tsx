@@ -15,6 +15,7 @@ type ChangshuMapProps = {
   mode: PlannerMode;
   drawMode: boolean;
   onSelectPlace: (placeId: string | null) => void;
+  onClosePlaceCard: () => void;
   onAddPlace: (placeId: string) => void;
   onToggleExpand: (placeId: string) => void;
   onDragStart: (placeId: string, event: React.DragEvent<HTMLElement>) => void;

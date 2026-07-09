@@ -1,15 +1,22 @@
-import { useState, type CSSProperties } from "react";
+import { useRef, useState, type CSSProperties } from "react";
 import {
   Bike,
+  CalendarDays,
   Car,
+  ChevronDown,
+  ChevronUp,
   Footprints,
   Layers3,
   List,
   Map,
   PanelRightClose,
+  Plus,
+  Save,
   Shuffle,
   Trash2,
+  X,
 } from "lucide-react";
+import type { DayPlanSummary } from "../types/itinerary";
 import type { Place } from "../types/place";
 import type { RoutePlan, TransportMode } from "../types/route";
 import { formatDistance, formatDuration } from "../utils/itineraryRoute";
@@ -20,9 +27,19 @@ type ItineraryPanelProps = {
   expandedPlaceId: string | null;
   routeName: string | null;
   routeDescription: string | null;
-  fallbackTime: string;
+  estimatedTime: string;
   routePlan: RoutePlan;
   transportMode: TransportMode;
+  dayPlans: DayPlanSummary[];
+  activeDayId: string;
+  activeDayTitle: string;
+  isDayPlannerOpen: boolean;
+  onToggleDayPlanner: () => void;
+  onSelectDay: (dayId: string) => void;
+  onCreateDay: () => void;
+  onDeleteDay: (dayId: string) => void;
+  onReorderDay: (dragDayId: string, targetDayId: string) => void;
+  onSaveCurrentDay: () => void;
   onDropPlace: (placeId: string) => void;
   onDropBefore: (placeId: string, targetId: string) => void;
   onRemove: (placeId: string) => void;
@@ -39,6 +56,12 @@ const typeLabels: Record<Place["type"], string> = {
   heritage: "非遗",
   food: "美食",
   restaurant: "店铺",
+  parking: "停车",
+  restroom: "厕所",
+  service: "服务",
+  activity: "活动",
+  lodging: "住宿",
+  emergency: "救援",
 };
 
 export function ItineraryPanel({
@@ -46,9 +69,19 @@ export function ItineraryPanel({
   expandedPlaceId,
   routeName,
   routeDescription,
-  fallbackTime,
+  estimatedTime,
   routePlan,
   transportMode,
+  dayPlans,
+  activeDayId,
+  activeDayTitle,
+  isDayPlannerOpen,
+  onToggleDayPlanner,
+  onSelectDay,
+  onCreateDay,
+  onDeleteDay,
+  onReorderDay,
+  onSaveCurrentDay,
   onDropPlace,
   onDropBefore,
   onRemove,
@@ -61,13 +94,17 @@ export function ItineraryPanel({
 }: ItineraryPanelProps) {
   const hasPlaces = places.length > 0;
   const [viewMode, setViewMode] = useState<"list" | "deck">("list");
-  const hasRouteMetric = routePlan.segments.length > 0;
-  const panelDistance = hasRouteMetric ? formatDistance(routePlan.totalDistanceMeters) : `${places.length} 站`;
-  const panelDuration = hasRouteMetric ? formatDuration(routePlan.totalDurationSeconds) : fallbackTime;
+  const dragStartXRef = useRef<Record<string, number>>({});
+  const pointerStartXRef = useRef<Record<string, number>>({});
+  const deleteDragThreshold = 96;
 
   function handleDrop(event: React.DragEvent<HTMLElement>) {
     event.preventDefault();
-    const placeId = event.dataTransfer.getData("text/place-id") || event.dataTransfer.getData("text/plain");
+    if (event.dataTransfer.getData("text/day-id")) {
+      return;
+    }
+
+    const placeId = event.dataTransfer.getData("text/place-id");
     if (placeId) {
       onDropPlace(placeId);
     }
@@ -76,10 +113,66 @@ export function ItineraryPanel({
   function handleDropBefore(event: React.DragEvent<HTMLElement>, targetId: string) {
     event.preventDefault();
     event.stopPropagation();
-    const placeId = event.dataTransfer.getData("text/place-id") || event.dataTransfer.getData("text/plain");
+    if (event.dataTransfer.getData("text/day-id")) {
+      return;
+    }
+
+    const placeId = event.dataTransfer.getData("text/place-id");
     if (placeId) {
       onDropBefore(placeId, targetId);
     }
+  }
+
+  function handleDayDragStart(dayId: string, event: React.DragEvent<HTMLElement>) {
+    event.stopPropagation();
+    event.dataTransfer.setData("text/day-id", dayId);
+    event.dataTransfer.effectAllowed = "move";
+  }
+
+  function handleDayDrop(targetDayId: string, event: React.DragEvent<HTMLElement>) {
+    event.preventDefault();
+    event.stopPropagation();
+    const dragDayId = event.dataTransfer.getData("text/day-id");
+    if (dragDayId) {
+      onReorderDay(dragDayId, targetDayId);
+    }
+  }
+
+  function handleItineraryDragStart(placeId: string, event: React.DragEvent<HTMLElement>) {
+    dragStartXRef.current[placeId] = event.clientX;
+    onDragStart(placeId, event);
+  }
+
+  function handleItineraryDragEnd(placeId: string, event: React.DragEvent<HTMLElement>) {
+    const startX = dragStartXRef.current[placeId];
+    delete dragStartXRef.current[placeId];
+
+    if (typeof startX === "number" && event.clientX > 0 && startX - event.clientX > deleteDragThreshold) {
+      onRemove(placeId);
+    }
+  }
+
+  function handlePointerDown(placeId: string, event: React.PointerEvent<HTMLElement>) {
+    if ((event.target as HTMLElement).closest("button")) {
+      return;
+    }
+
+    pointerStartXRef.current[placeId] = event.clientX;
+  }
+
+  function handlePointerUp(placeId: string, event: React.PointerEvent<HTMLElement>) {
+    const startX = pointerStartXRef.current[placeId];
+    delete pointerStartXRef.current[placeId];
+
+    if (typeof startX === "number" && startX - event.clientX > deleteDragThreshold) {
+      onRemove(placeId);
+    }
+  }
+
+  function deletePlace(placeId: string, event: React.MouseEvent<HTMLButtonElement>) {
+    event.preventDefault();
+    event.stopPropagation();
+    onRemove(placeId);
   }
 
   return (
@@ -88,7 +181,7 @@ export function ItineraryPanel({
         <div>
           <span className="eyebrow">行程规划</span>
           <h2>{routeName ?? "手动规划路线"}</h2>
-          <p>{routeDescription ?? "把地图卡片拖到这里，或点击卡片里的加入按钮。"}</p>
+          <p>{routeDescription ?? `正在编辑${activeDayTitle}，把地图卡片拖到这里。`}</p>
         </div>
         <div className="panel-header-actions">
           <button className="ghost-icon-button" type="button" onClick={onClear} aria-label="清空行程">
@@ -103,13 +196,94 @@ export function ItineraryPanel({
       <div className="panel-stats">
         <span>
           <Map size={16} />
-          {panelDistance}
+          {activeDayTitle} · {places.length} 站
         </span>
         <span>
           <Shuffle size={16} />
-          {panelDuration}
+          {estimatedTime}
         </span>
       </div>
+
+      <section className={`day-planner ${isDayPlannerOpen ? "is-open" : "is-collapsed"}`}>
+        <button
+          className="day-planner-header"
+          type="button"
+          onClick={onToggleDayPlanner}
+          aria-expanded={isDayPlannerOpen}
+        >
+          <span>
+            <CalendarDays size={16} />
+            <strong>多日安排</strong>
+          </span>
+          <em>
+            {activeDayTitle} · {places.length}站 · {estimatedTime}
+          </em>
+          {isDayPlannerOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+        </button>
+
+        {isDayPlannerOpen && (
+          <div className="day-planner-body">
+            <div className="day-chip-list" aria-label="多日行程列表">
+              {dayPlans.map((day) => {
+                const isActive = day.id === activeDayId;
+                const isEmpty = day.count === 0;
+                const routeText =
+                  day.firstPlaceName && day.lastPlaceName && day.firstPlaceName !== day.lastPlaceName
+                    ? `${day.firstPlaceName} → ${day.lastPlaceName}`
+                    : day.firstPlaceName ?? day.routeName ?? "待规划";
+
+                return (
+                  <article
+                    key={day.id}
+                    className={`day-chip ${isActive ? "is-active" : ""} ${isEmpty ? "is-empty" : ""}`}
+                    draggable
+                    onClick={() => onSelectDay(day.id)}
+                    onDragStart={(event) => handleDayDragStart(day.id, event)}
+                    onDragOver={(event) => event.preventDefault()}
+                    onDrop={(event) => handleDayDrop(day.id, event)}
+                    title="点击编辑该日，可拖拽调整天数顺序"
+                  >
+                    <div>
+                      <strong>{day.title}</strong>
+                      <span>{isActive ? "编辑中" : isEmpty ? "待规划" : `${day.count}站`}</span>
+                    </div>
+                    <p>{routeText}</p>
+                    <small>{day.count}站 · {day.estimatedTime}</small>
+                    <button
+                      className="day-chip-delete"
+                      type="button"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        onDeleteDay(day.id);
+                      }}
+                      aria-label={`删除${day.title}`}
+                    >
+                      <X size={14} />
+                    </button>
+                  </article>
+                );
+              })}
+            </div>
+
+            <div className="day-planner-actions">
+              <button
+                className="day-save-button"
+                type="button"
+                onClick={onSaveCurrentDay}
+                disabled={!hasPlaces}
+              >
+                <Save size={15} />
+                保存当前日
+              </button>
+              <button className="day-add-button" type="button" onClick={onCreateDay}>
+                <Plus size={15} />
+                添加一天
+              </button>
+            </div>
+          </div>
+        )}
+      </section>
 
       <div className="panel-transport" aria-label="交通方式">
         <button
@@ -190,11 +364,22 @@ export function ItineraryPanel({
               draggable
               onClick={() => onFocusPlace(place.id)}
               onDoubleClick={() => onToggleExpand(place.id)}
-              onDragStart={(event) => onDragStart(place.id, event)}
+              onDragStart={(event) => handleItineraryDragStart(place.id, event)}
+              onDragEnd={(event) => handleItineraryDragEnd(place.id, event)}
+              onPointerDown={(event) => handlePointerDown(place.id, event)}
+              onPointerUp={(event) => handlePointerUp(place.id, event)}
               onDragOver={(event) => event.preventDefault()}
               onDrop={(event) => handleDropBefore(event, place.id)}
-              title="点击定位，双击展开详情，可拖拽调整顺序"
+              title="点击定位，双击展开详情，可拖拽调整顺序，向左拖动删除"
             >
+              <button
+                className="itinerary-item-delete"
+                type="button"
+                onClick={(event) => deletePlace(place.id, event)}
+                aria-label={`删除 ${place.name}`}
+              >
+                <X size={16} />
+              </button>
               <span className="deck-card-index">#{index + 1}</span>
               <span className={`deck-card-type type-${place.type}`}>{typeLabels[place.type]}</span>
               <strong>{place.name}</strong>
@@ -207,9 +392,20 @@ export function ItineraryPanel({
             <div
               className="itinerary-drop-row"
               key={place.id}
+              onPointerDown={(event) => handlePointerDown(place.id, event)}
+              onPointerUp={(event) => handlePointerUp(place.id, event)}
               onDragOver={(event) => event.preventDefault()}
+              onDragEnd={(event) => handleItineraryDragEnd(place.id, event)}
               onDrop={(event) => handleDropBefore(event, place.id)}
             >
+              <button
+                className="itinerary-item-delete"
+                type="button"
+                onClick={(event) => deletePlace(place.id, event)}
+                aria-label={`删除 ${place.name}`}
+              >
+                <X size={16} />
+              </button>
               <PlaceCard
                 place={place}
                 index={index}
@@ -219,7 +415,7 @@ export function ItineraryPanel({
                 onRemove={onRemove}
                 onFocus={onFocusPlace}
                 onToggleExpand={onToggleExpand}
-                onDragStart={onDragStart}
+                onDragStart={handleItineraryDragStart}
               />
             </div>
           ))}

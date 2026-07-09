@@ -6,6 +6,7 @@ import { getAmapStyle, loadAmap, type AmapConfig } from "../map/amapLoader";
 import type { Place, PlannerMode } from "../types/place";
 import type { RoutePlan } from "../types/route";
 import { placeTypeShortLabels } from "../types/place";
+import { filterPlacesByZoom } from "../utils/tierVisibility";
 import { PlaceCard } from "./PlaceCard";
 
 type AmapChangshuMapProps = {
@@ -19,6 +20,7 @@ type AmapChangshuMapProps = {
   mode: PlannerMode;
   drawMode: boolean;
   onSelectPlace: (placeId: string | null) => void;
+  onClosePlaceCard: () => void;
   onAddPlace: (placeId: string) => void;
   onToggleExpand: (placeId: string) => void;
   onDragStart: (placeId: string, event: React.DragEvent<HTMLElement>) => void;
@@ -29,6 +31,18 @@ type AmapChangshuMapProps = {
 const changshuCenter: [number, number] = [120.755, 31.62];
 const transparentTile =
   "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
+
+function getPopoverPlacement(position: { x: number; y: number } | null, expanded: boolean) {
+  if (expanded || !position || typeof window === "undefined") {
+    return "center";
+  }
+
+  if (position.y < 230) return "below";
+  if (position.y > window.innerHeight - 380) return "above";
+  if (position.x < 300) return "right";
+  if (position.x > window.innerWidth - 500) return "left";
+  return "above";
+}
 
 export function AmapChangshuMap({
   amapConfig,
@@ -41,6 +55,7 @@ export function AmapChangshuMap({
   mode,
   drawMode,
   onSelectPlace,
+  onClosePlaceCard,
   onAddPlace,
   onToggleExpand,
   onDragStart,
@@ -60,11 +75,16 @@ export function AmapChangshuMap({
   const hasInitialFitRef = useRef(false);
   const [mapReady, setMapReady] = useState(false);
   const [isMapToolsOpen, setIsMapToolsOpen] = useState(false);
+  const [mapZoom, setMapZoom] = useState(11);
   const [selectedCardPosition, setSelectedCardPosition] = useState<{ x: number; y: number } | null>(null);
 
   const selectedPlace = useMemo(
     () => places.find((place) => place.id === selectedPlaceId) ?? null,
     [places, selectedPlaceId],
+  );
+  const popoverPlacement = getPopoverPlacement(
+    selectedCardPosition,
+    expandedPlaceId === selectedPlace?.id,
   );
 
   const itineraryOrder = useMemo(() => {
@@ -77,6 +97,11 @@ export function AmapChangshuMap({
   const visiblePlaceIds = useMemo(() => {
     return new Set(visiblePlaces.map((place) => place.id));
   }, [visiblePlaces]);
+
+  const tieredVisiblePlaces = useMemo(
+    () => filterPlacesByZoom(visiblePlaces, mapZoom, 10, 18),
+    [mapZoom, visiblePlaces],
+  );
 
   useEffect(() => {
     let disposed = false;
@@ -155,16 +180,17 @@ export function AmapChangshuMap({
     markerLayerRef.current.forEach((marker) => marker.setMap(null));
     markerLayerRef.current = [];
 
-    visiblePlaces.forEach((place) => {
+    tieredVisiblePlaces.forEach((place) => {
       const order = itineraryOrder[place.id];
       const isSelected = place.id === selectedPlaceId;
+      const tierClass = place.tierLevel ? `tier-${place.tierLevel.toLowerCase()}` : "tier-local";
       const marker = new AMap.Marker({
         position: [place.position.lng, place.position.lat],
         anchor: "center",
         title: place.name,
         zIndex: order || isSelected ? 150 : 120,
         content: `
-          <button class="map-marker type-${place.type} ${isSelected ? "is-selected" : ""} ${
+          <button class="map-marker type-${place.type} ${tierClass} ${isSelected ? "is-selected" : ""} ${
             order ? "is-planned" : ""
           }" type="button">
             <span>${order ?? placeTypeShortLabels[place.type]}</span>
@@ -182,7 +208,25 @@ export function AmapChangshuMap({
       marker.setMap(map);
       markerLayerRef.current.push(marker);
     });
-  }, [expandedPlaceId, itineraryOrder, onSelectPlace, onToggleExpand, selectedPlaceId, visiblePlaces]);
+  }, [expandedPlaceId, itineraryOrder, onSelectPlace, onToggleExpand, selectedPlaceId, tieredVisiblePlaces]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !mapReady) {
+      return;
+    }
+
+    function updateZoom() {
+      setMapZoom(map.getZoom());
+    }
+
+    updateZoom();
+    map.on("zoomchange", updateZoom);
+
+    return () => {
+      map.off("zoomchange", updateZoom);
+    };
+  }, [mapReady]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -556,7 +600,9 @@ export function AmapChangshuMap({
 
         {selectedPlace && selectedCardPosition && (
           <div
-            className={`map-card-popover ${expandedPlaceId === selectedPlace.id ? "is-expanded" : ""}`}
+            className={`map-card-popover placement-${popoverPlacement} ${
+              expandedPlaceId === selectedPlace.id ? "is-expanded" : ""
+            }`}
             style={
               expandedPlaceId === selectedPlace.id
                 ? {
@@ -574,7 +620,7 @@ export function AmapChangshuMap({
               type="button"
               className="close-popover"
               aria-label="关闭卡片"
-              onClick={() => onSelectPlace(null)}
+              onClick={onClosePlaceCard}
             >
               <X size={18} />
             </button>
