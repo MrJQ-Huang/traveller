@@ -28,7 +28,8 @@ import { planAmapRoutePlan } from "./map/amapRouteService";
 import type { DayPlan } from "./types/itinerary";
 import type { Place, PlaceType, PlannerMode } from "./types/place";
 import type { RoutePlan, TransportMode } from "./types/route";
-import { type MapSkinId } from "./types/mapSkin";
+import { mapSkinOptions, type MapSkinId } from "./types/mapSkin";
+import type { RouteSharePayload } from "./types/shareRoute";
 import { buildPreviewRoutePlan } from "./utils/itineraryRoute";
 import { buildRandomRoute, estimateTotalMinutes, formatEstimatedTime, getRoutePreset } from "./utils/routePlanner";
 
@@ -265,6 +266,31 @@ function loadInitialActiveDayId(dayPlans: DayPlan[]) {
   } catch {
     return dayPlans[0]?.id ?? "day-1";
   }
+}
+
+function isSharePlace(value: unknown): value is Place {
+  if (!value || typeof value !== "object") {
+    return false;
+  }
+
+  const record = value as Partial<Place>;
+  return (
+    typeof record.id === "string" &&
+    record.id.length > 0 &&
+    typeof record.name === "string" &&
+    record.name.trim().length > 0 &&
+    typeof record.type === "string" &&
+    typeof record.position?.lng === "number" &&
+    typeof record.position?.lat === "number"
+  );
+}
+
+function isTransportMode(value: unknown): value is TransportMode {
+  return value === "walking" || value === "riding" || value === "driving";
+}
+
+function isMapSkinId(value: unknown): value is MapSkinId {
+  return typeof value === "string" && mapSkinOptions.some((skin) => skin.id === value);
 }
 
 export default function App() {
@@ -703,6 +729,74 @@ export default function App() {
       routeDescription: null,
     }));
     setItineraryExpandedPlaceId(null);
+  }
+
+  function importRouteShare(payload: RouteSharePayload) {
+    if (
+      payload.schema !== "changshu-route-share" ||
+      payload.version !== 1 ||
+      !Array.isArray(payload.placeIds)
+    ) {
+      return;
+    }
+
+    const currentPlacesById = new Map(allPlaces.map((place) => [place.id, place]));
+    let nextRuntimeUserPlaces = runtimeUserPlaces;
+
+    (Array.isArray(payload.places) ? payload.places : [])
+      .filter(isSharePlace)
+      .forEach((place) => {
+        if (currentPlacesById.has(place.id)) {
+          return;
+        }
+
+        nextRuntimeUserPlaces = addUserPlace(place);
+        currentPlacesById.set(place.id, place);
+      });
+
+    if (nextRuntimeUserPlaces !== runtimeUserPlaces) {
+      setRuntimeUserPlaces(nextRuntimeUserPlaces);
+    }
+
+    const availablePlaces = new Map([...places, ...nextRuntimeUserPlaces].map((place) => [place.id, place]));
+    const importedPlaceIds = payload.placeIds.filter((id) => availablePlaces.has(id));
+
+    if (importedPlaceIds.length === 0) {
+      return;
+    }
+
+    updateActiveDay((day) => ({
+      ...day,
+      placeIds: importedPlaceIds,
+      routeName: payload.title || day.routeName,
+      routeDescription: payload.description || day.routeDescription,
+    }));
+
+    const importedTypes = importedPlaceIds
+      .map((id) => availablePlaces.get(id)?.type)
+      .filter((type): type is PlaceType => Boolean(type));
+    if (importedTypes.length > 0) {
+      setActiveTypes((current) => Array.from(new Set([...current, ...importedTypes])));
+    }
+
+    const nextTransportMode = isTransportMode(payload.transportMode)
+      ? payload.transportMode
+      : isTransportMode(payload.routePlan?.mode)
+        ? payload.routePlan.mode
+        : transportMode;
+    setTransportMode(nextTransportMode);
+
+    if (isMapSkinId(payload.mapSkinId)) {
+      setActiveMapSkinId(payload.mapSkinId);
+    }
+
+    setRoutePlan(payload.routePlan ?? buildPreviewRoutePlan(importedPlaceIds, [...places, ...nextRuntimeUserPlaces], nextTransportMode));
+    setSelectedPlaceId(null);
+    setMapExpandedPlaceId(null);
+    setItineraryExpandedPlaceId(null);
+    setIsItineraryOpen(true);
+    setIsDayPlannerOpen(true);
+    setFocusRouteRequest({ placeIds: importedPlaceIds, nonce: Date.now() });
   }
 
   function dropBefore(placeId: string, targetId: string) {
@@ -1343,7 +1437,9 @@ export default function App() {
           routeDescription={routeCardDescription}
           places={itineraryPlaces}
           routePlan={routePlan}
+          transportMode={transportMode}
           activeMapSkinId={activeMapSkinId}
+          onImportRouteShare={importRouteShare}
           onClose={() => setIsShareStudioOpen(false)}
         />
       </main>

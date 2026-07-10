@@ -1,4 +1,10 @@
 import { toPng } from "html-to-image";
+import { addPngTextMetadataToDataUrl } from "./pngMetadata";
+
+type PngMetadata = {
+  keyword: string;
+  value: string;
+};
 
 const pngOptions: NonNullable<Parameters<typeof toPng>[1]> = {
   cacheBust: true,
@@ -15,18 +21,19 @@ const pngOptions: NonNullable<Parameters<typeof toPng>[1]> = {
   },
 };
 
-export async function createElementPngDataUrl(element: HTMLElement) {
+export async function createElementPngDataUrl(element: HTMLElement, metadata?: PngMetadata) {
   await waitForExportAssets(element);
-  return toPng(element, pngOptions);
+  const dataUrl = await toPng(element, pngOptions);
+  return metadata ? addPngTextMetadataToDataUrl(dataUrl, metadata.keyword, metadata.value) : dataUrl;
 }
 
-export async function saveElementAsPng(element: HTMLElement, fileName: string) {
-  const dataUrl = await createElementPngDataUrl(element);
+export async function saveElementAsPng(element: HTMLElement, fileName: string, metadata?: PngMetadata) {
+  const dataUrl = await createElementPngDataUrl(element, metadata);
   downloadDataUrl(dataUrl, fileName);
 }
 
-export async function createElementPngFile(element: HTMLElement, fileName: string) {
-  const dataUrl = await createElementPngDataUrl(element);
+export async function createElementPngFile(element: HTMLElement, fileName: string, metadata?: PngMetadata) {
+  const dataUrl = await createElementPngDataUrl(element, metadata);
   const blob = await dataUrlToBlob(dataUrl);
   return new File([blob], fileName, { type: "image/png" });
 }

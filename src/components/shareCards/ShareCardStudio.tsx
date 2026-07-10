@@ -7,13 +7,17 @@ import {
   RefreshCw,
   Send,
   Share2,
+  Upload,
   X,
 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import type { Place } from "../../types/place";
-import type { RoutePlan } from "../../types/route";
+import type { RoutePlan, TransportMode } from "../../types/route";
 import { type MapSkinId } from "../../types/mapSkin";
+import type { RouteSharePayload } from "../../types/shareRoute";
+import { routeShareMetadataKeyword } from "../../types/shareRoute";
 import { createElementPngFile, saveElementAsPng } from "../../utils/cardExport";
+import { readPngTextMetadataFromFile } from "../../utils/pngMetadata";
 import { RouteShareCard } from "./RouteShareCard";
 import { TextShareCard, type TextCardDraft, type TextCardStylePresetId } from "./TextShareCard";
 
@@ -23,7 +27,9 @@ type ShareCardStudioProps = {
   routeDescription: string;
   places: Place[];
   routePlan: RoutePlan;
+  transportMode: TransportMode;
   activeMapSkinId: MapSkinId;
+  onImportRouteShare: (payload: RouteSharePayload) => void;
   onClose: () => void;
 };
 
@@ -273,7 +279,9 @@ export function ShareCardStudio({
   routeDescription,
   places,
   routePlan,
+  transportMode,
   activeMapSkinId,
+  onImportRouteShare,
   onClose,
 }: ShareCardStudioProps) {
   const [mode, setMode] = useState<ShareMode>("text");
@@ -281,6 +289,7 @@ export function ShareCardStudio({
   const [isGenerating, setIsGenerating] = useState(false);
   const [shareStatus, setShareStatus] = useState<ShareStatus | null>(null);
   const cardRef = useRef<HTMLDivElement | null>(null);
+  const importInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -292,6 +301,32 @@ export function ShareCardStudio({
 
   const fileName = mode === "text" ? "changshu-note-card.png" : "changshu-route-card.png";
   const shareTitle = mode === "text" ? textDraft.title : routeTitle || "我的常熟路线";
+
+  function buildRouteSharePayload(): RouteSharePayload {
+    return {
+      schema: "changshu-route-share",
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      title: routeTitle,
+      description: routeDescription,
+      placeIds: places.map((place) => place.id),
+      places,
+      routePlan,
+      transportMode,
+      mapSkinId: activeMapSkinId,
+    };
+  }
+
+  function getRouteShareMetadata() {
+    if (mode !== "route") {
+      return undefined;
+    }
+
+    return {
+      keyword: routeShareMetadataKeyword,
+      value: JSON.stringify(buildRouteSharePayload()),
+    };
+  }
 
   function cycleTitle() {
     setTextDraft((draft) => {
@@ -329,7 +364,7 @@ export function ShareCardStudio({
 
   async function handleSave() {
     await withCardGeneration(async (element) => {
-      await saveElementAsPng(element, fileName);
+      await saveElementAsPng(element, fileName, getRouteShareMetadata());
       setShareStatus({
         tone: "success",
         message: "图片已保存",
@@ -355,7 +390,7 @@ export function ShareCardStudio({
   async function handlePlatformShare(platform: Platform) {
     await withCardGeneration(async (element) => {
       const meta = platformMeta[platform];
-      const file = await createElementPngFile(element, fileName);
+      const file = await createElementPngFile(element, fileName, getRouteShareMetadata());
 
       if (canShareFile(file)) {
         try {
@@ -393,6 +428,48 @@ export function ShareCardStudio({
         showSaveShortcut: true,
       });
     });
+  }
+
+  async function handleImportRouteImage(event: ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+
+    if (!file) {
+      return;
+    }
+
+    try {
+      const metadata = await readPngTextMetadataFromFile(file, routeShareMetadataKeyword);
+      if (!metadata) {
+        setShareStatus({
+          tone: "error",
+          message: "这张图片里没有可导入的路线方案",
+        });
+        return;
+      }
+
+      const payload = JSON.parse(metadata) as RouteSharePayload;
+      if (
+        payload.schema !== "changshu-route-share" ||
+        payload.version !== 1 ||
+        !Array.isArray(payload.placeIds)
+      ) {
+        throw new Error("Invalid route share payload");
+      }
+
+      onImportRouteShare(payload);
+      setMode("route");
+      setShareStatus({
+        tone: "success",
+        message: "已导入路线方案，右侧行程和地图已更新",
+      });
+    } catch (error) {
+      console.error("Route image import failed", error);
+      setShareStatus({
+        tone: "error",
+        message: "导入失败，请选择由本 Demo 生成的路线卡片原图",
+      });
+    }
   }
 
   return (
@@ -489,6 +566,13 @@ export function ShareCardStudio({
               )}
 
               <div className="share-actions">
+                <input
+                  ref={importInputRef}
+                  className="share-import-input"
+                  type="file"
+                  accept="image/png"
+                  onChange={handleImportRouteImage}
+                />
                 <button
                   className="share-action-button share-action-primary"
                   type="button"
@@ -501,6 +585,15 @@ export function ShareCardStudio({
                 <button className="share-action-button" type="button" onClick={handleCopyLink} disabled={isGenerating}>
                   <Link2 size={17} />
                   复制链接
+                </button>
+                <button
+                  className="share-action-button"
+                  type="button"
+                  onClick={() => importInputRef.current?.click()}
+                  disabled={isGenerating}
+                >
+                  <Upload size={17} />
+                  导入路线图
                 </button>
                 <div className="share-platforms" aria-label="分享平台">
                   <button type="button" onClick={() => handlePlatformShare("qq")} disabled={isGenerating}>

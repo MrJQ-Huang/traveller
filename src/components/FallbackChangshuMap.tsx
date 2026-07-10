@@ -673,7 +673,6 @@ export function FallbackChangshuMap({
             className={`map-tool-button ${drawMode ? "is-active" : ""}`}
             type="button"
             onClick={onToggleDrawMode}
-            disabled={mode !== "j"}
           >
             <PencilLine size={17} />
             手绘

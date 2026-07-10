@@ -369,6 +369,21 @@ export function AmapChangshuMap({
 
   useEffect(() => {
     const map = mapRef.current;
+    if (!map) {
+      return;
+    }
+
+    map.setStatus({
+      dragEnable: !drawMode,
+      scrollWheel: !drawMode,
+      doubleClickZoom: !drawMode,
+      keyboardEnable: !drawMode,
+      touchZoom: !drawMode,
+    });
+  }, [drawMode]);
+
+  useEffect(() => {
+    const map = mapRef.current;
     const AMap = window.AMap;
 
     if (!map || !AMap || !mapReady) {
@@ -942,7 +957,6 @@ export function AmapChangshuMap({
             className={`map-tool-button ${drawMode ? "is-active" : ""}`}
             type="button"
             onClick={onToggleDrawMode}
-            disabled={mode !== "j"}
           >
             <PencilLine size={17} />
             手绘
