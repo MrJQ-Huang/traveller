@@ -322,7 +322,18 @@ export function ItineraryPanel({
       )}
 
       {viewMode === "deck" && hasPlaces ? (
-        <div className="itinerary-deck" style={{ "--deck-count": places.length } as CSSProperties}>
+        <div
+          className="itinerary-deck"
+          style={{ "--deck-count": places.length } as CSSProperties}
+          onDragOver={(event) => event.preventDefault()}
+          onWheel={(event) => {
+            const deck = event.currentTarget;
+            if (deck.scrollHeight > deck.clientHeight) {
+              event.preventDefault();
+              deck.scrollTop += event.deltaY;
+            }
+          }}
+        >
           {places.map((place, index) => (
             <article
               className={`itinerary-deck-card type-${place.type}`}
@@ -339,7 +350,20 @@ export function ItineraryPanel({
               onDragStart={(event) => handleItineraryDragStart(place.id, event)}
               onDragOver={(event) => event.preventDefault()}
               onDrop={(event) => handleDropBefore(event, place.id)}
-              title="点击定位，双击展开详情，可拖拽调整顺序"
+              onDragEnd={(event) => {
+                const deck = event.currentTarget.parentElement;
+                if (!deck) return;
+                const rect = deck.getBoundingClientRect();
+                const isOutOfBounds =
+                  event.clientX < rect.left - 40 ||
+                  event.clientX > rect.right + 40 ||
+                  event.clientY < rect.top - 40 ||
+                  event.clientY > rect.bottom + 40;
+                if (isOutOfBounds) {
+                  onRemove(place.id);
+                }
+              }}
+              title="点击定位，双击展开详情，拖出卡片区域可删除"
             >
               <button
                 className="itinerary-item-delete"
@@ -363,6 +387,18 @@ export function ItineraryPanel({
               key={place.id}
               onDragOver={(event) => event.preventDefault()}
               onDrop={(event) => handleDropBefore(event, place.id)}
+              onDragEnd={(event) => {
+                const row = event.currentTarget;
+                const rect = row.getBoundingClientRect();
+                const isOutOfBounds =
+                  event.clientX < rect.left - 40 ||
+                  event.clientX > rect.right + 40 ||
+                  event.clientY < rect.top - 40 ||
+                  event.clientY > rect.bottom + 40;
+                if (isOutOfBounds) {
+                  onRemove(place.id);
+                }
+              }}
             >
               <button
                 className="itinerary-item-delete"

@@ -12,6 +12,7 @@ import {
 import { useEffect, useRef, useState } from "react";
 import type { Place } from "../../types/place";
 import type { RoutePlan } from "../../types/route";
+import { type MapSkinId } from "../../types/mapSkin";
 import { createElementPngFile, saveElementAsPng } from "../../utils/cardExport";
 import { RouteShareCard } from "./RouteShareCard";
 import { TextShareCard, type TextCardDraft, type TextCardStylePresetId } from "./TextShareCard";
@@ -22,6 +23,7 @@ type ShareCardStudioProps = {
   routeDescription: string;
   places: Place[];
   routePlan: RoutePlan;
+  activeMapSkinId: MapSkinId;
   onClose: () => void;
 };
 
@@ -271,6 +273,7 @@ export function ShareCardStudio({
   routeDescription,
   places,
   routePlan,
+  activeMapSkinId,
   onClose,
 }: ShareCardStudioProps) {
   const [mode, setMode] = useState<ShareMode>("text");
@@ -543,6 +546,7 @@ export function ShareCardStudio({
                       description={routeDescription}
                       places={places}
                       routePlan={routePlan}
+                      mapSkinId={activeMapSkinId}
                     />
                   )}
                 </div>

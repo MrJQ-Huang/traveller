@@ -148,6 +148,17 @@ export type AgentToolCall =
       args: {
         placeId: string;
       };
+    }
+  | {
+      name: "generate_place_card";
+      args: {
+        amapName: string;
+        amapAddress: string;
+        amapType: string;
+        amapLng: number;
+        amapLat: number;
+        amapPhone?: string;
+      };
     };
 
 export type AgentRequest = {

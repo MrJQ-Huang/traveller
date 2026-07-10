@@ -2,14 +2,17 @@ import { Check, Layers, LocateFixed, Palette, PencilLine, RotateCcw, SlidersHori
 import { useEffect, useMemo, useRef, useState } from "react";
 import { hasFullCityHanddrawnTile } from "../data/fullCityHanddrawnTileRanges";
 import { mapSkinOverlays, type MapSkinOverlay } from "../data/mapSkins";
-import { getAmapStyle, loadAmap, type AmapConfig } from "../map/amapLoader";
+import { loadAmap, type AmapConfig } from "../map/amapLoader";
 import type { Place, PlannerMode } from "../types/place";
 import type { RoutePlan } from "../types/route";
 import { placeTypeShortLabels } from "../types/place";
+import { mapSkinOptions, type MapSkinId } from "../types/mapSkin";
 import { filterPlacesByZoom } from "../utils/tierVisibility";
 import { PlaceCard } from "./PlaceCard";
 
-type AmapChangshuMapProps = {
+export type { MapSkinId } from "../types/mapSkin";
+
+export type AmapChangshuMapProps = {
   amapConfig: AmapConfig;
   places: Place[];
   visiblePlaces: Place[];
@@ -31,83 +34,29 @@ type AmapChangshuMapProps = {
     placeIds: string[];
     nonce: number;
   } | null;
+  focusCoordsRequest: {
+    lng: number;
+    lat: number;
+    nonce: number;
+    name?: string;
+  } | null;
   expandedPlaceId: string | null;
   mode: PlannerMode;
   drawMode: boolean;
+  activeMapSkinId: MapSkinId;
   onSelectPlace: (placeId: string | null) => void;
   onClosePlaceCard: () => void;
   onAddPlace: (placeId: string) => void;
   onToggleExpand: (placeId: string) => void;
   onDragStart: (placeId: string, event: React.DragEvent<HTMLElement>) => void;
   onToggleDrawMode: () => void;
+  onSkinChange: (skinId: MapSkinId) => void;
   onError: () => void;
 };
 
 const changshuCenter: [number, number] = [120.755, 31.62];
 const transparentTile =
   "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
-
-type MapSkinId = "handdrawn" | "normal" | "fresh" | "grey" | "light" | "dark" | "macaron";
-
-type MapSkinOption = {
-  id: MapSkinId;
-  name: string;
-  description: string;
-  amapStyle: string;
-  handdrawn: boolean;
-};
-
-const mapSkinOptions: MapSkinOption[] = [
-  {
-    id: "handdrawn",
-    name: "手绘文旅",
-    description: "当前风格化瓦片",
-    amapStyle: getAmapStyle(),
-    handdrawn: true,
-  },
-  {
-    id: "normal",
-    name: "高德默认",
-    description: "原生标准配色",
-    amapStyle: "amap://styles/normal",
-    handdrawn: false,
-  },
-  {
-    id: "fresh",
-    name: "清新",
-    description: "浅绿低饱和",
-    amapStyle: "amap://styles/fresh",
-    handdrawn: false,
-  },
-  {
-    id: "grey",
-    name: "雅灰",
-    description: "弱化背景信息",
-    amapStyle: "amap://styles/grey",
-    handdrawn: false,
-  },
-  {
-    id: "light",
-    name: "月光银",
-    description: "明亮简洁",
-    amapStyle: "amap://styles/light",
-    handdrawn: false,
-  },
-  {
-    id: "dark",
-    name: "幻影黑",
-    description: "夜间暗色",
-    amapStyle: "amap://styles/dark",
-    handdrawn: false,
-  },
-  {
-    id: "macaron",
-    name: "马卡龙",
-    description: "柔和明快",
-    amapStyle: "amap://styles/macaron",
-    handdrawn: false,
-  },
-];
 
 function getPopoverPlacement(position: { x: number; y: number } | null, expanded: boolean) {
   if (expanded || !position || typeof window === "undefined") {
@@ -162,15 +111,18 @@ export function AmapChangshuMap({
   selectedPlaceId,
   focusPlaceRequest,
   focusRouteRequest,
+  focusCoordsRequest,
   expandedPlaceId,
   mode,
   drawMode,
+  activeMapSkinId,
   onSelectPlace,
   onClosePlaceCard,
   onAddPlace,
   onToggleExpand,
   onDragStart,
   onToggleDrawMode,
+  onSkinChange,
   onError,
 }: AmapChangshuMapProps) {
   const mapNodeRef = useRef<HTMLDivElement | null>(null);
@@ -180,6 +132,7 @@ export function AmapChangshuMap({
   const routeLayerRef = useRef<any[]>([]);
   const boundaryLayerRef = useRef<any[]>([]);
   const skinLayerRef = useRef<any[]>([]);
+  const poiMarkerRef = useRef<any | null>(null);
   const stylizedTileLayerRef = useRef<any>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
@@ -188,7 +141,6 @@ export function AmapChangshuMap({
   const [mapReady, setMapReady] = useState(false);
   const [isMapToolsOpen, setIsMapToolsOpen] = useState(false);
   const [isSkinPickerOpen, setIsSkinPickerOpen] = useState(false);
-  const [activeMapSkinId, setActiveMapSkinId] = useState<MapSkinId>("handdrawn");
   const [showRegionalSkins, setShowRegionalSkins] = useState(true);
   const [mapZoom, setMapZoom] = useState(11);
   const [mapViewportRevision, setMapViewportRevision] = useState(0);
@@ -689,6 +641,12 @@ export function AmapChangshuMap({
       return;
     }
 
+    // 选择正式点位时清除 POI 临时标记
+    if (poiMarkerRef.current) {
+      poiMarkerRef.current.setMap(null);
+      poiMarkerRef.current = null;
+    }
+
     map.setZoomAndCenter(Math.max(map.getZoom(), 14), [
       targetPlace.position.lng,
       targetPlace.position.lat,
@@ -706,6 +664,68 @@ export function AmapChangshuMap({
 
     fitVisiblePlaces(routePlaces);
   }, [focusRouteRequest, places]);
+
+  // 统一处理 POI 临时标记
+  useEffect(() => {
+    const map = mapRef.current;
+    const AMap = window.AMap;
+    if (!map || !AMap) return;
+
+    const prev = poiMarkerRef.current;
+    if (!focusCoordsRequest) {
+      if (prev) {
+        prev.setMap(null);
+        poiMarkerRef.current = null;
+      }
+      return;
+    }
+
+    map.setZoomAndCenter(Math.max(map.getZoom(), 14), [focusCoordsRequest.lng, focusCoordsRequest.lat]);
+
+    const label = focusCoordsRequest.name
+      ? '<div class="poi-search-marker"><span>' + focusCoordsRequest.name + '</span></div>'
+      : '<div class="poi-search-marker"><span>位置</span></div>';
+
+    if (prev) {
+      prev.setMap(null);
+    }
+
+    const marker = new AMap.Marker({
+      position: [focusCoordsRequest.lng, focusCoordsRequest.lat],
+      anchor: "bottom-center",
+      offset: [0, 0],
+      content: label,
+      zIndex: 300,
+    });
+    marker.setMap(map);
+    poiMarkerRef.current = marker;
+  }, [focusCoordsRequest]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    const AMap = window.AMap;
+    if (!map || !AMap || !focusCoordsRequest) return;
+
+    map.setZoomAndCenter(Math.max(map.getZoom(), 14), [focusCoordsRequest.lng, focusCoordsRequest.lat]);
+
+    const label = focusCoordsRequest.name
+      ? `<div class="poi-search-marker"><span>${focusCoordsRequest.name}</span></div>`
+      : `<div class="poi-search-marker"><span>位置</span></div>`;
+
+    const marker = new AMap.Marker({
+      position: [focusCoordsRequest.lng, focusCoordsRequest.lat],
+      anchor: "bottom-center",
+      offset: [0, 0],
+      content: label,
+      zIndex: 300,
+    });
+    marker.setMap(map);
+
+    if (poiMarkerRef.current) {
+      poiMarkerRef.current.setMap(null);
+    }
+    poiMarkerRef.current = marker;
+  }, [focusCoordsRequest]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -903,7 +923,7 @@ export function AmapChangshuMap({
                     aria-checked={skin.id === activeMapSkinId}
                     key={skin.id}
                     onClick={() => {
-                      setActiveMapSkinId(skin.id);
+                      onSkinChange(skin.id);
                       setIsSkinPickerOpen(false);
                     }}
                   >

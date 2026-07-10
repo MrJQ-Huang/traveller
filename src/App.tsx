@@ -21,11 +21,14 @@ import { SideControlPanel } from "./components/SideControlPanel";
 import { TopBar, type TopBarLocation, type TopBarWeather } from "./components/TopBar";
 import { places } from "./data/places";
 import { routePresets } from "./data/routes";
+import { loadUserPlaces, addUserPlace } from "./data/userPlaces";
+import { generatePlaceCardFromAmap, type AmapPoiInput } from "./agent/placeCardGenerator";
 import { getAmapConfig, loadAmap } from "./map/amapLoader";
 import { planAmapRoutePlan } from "./map/amapRouteService";
 import type { DayPlan } from "./types/itinerary";
-import type { PlaceType, PlannerMode } from "./types/place";
+import type { Place, PlaceType, PlannerMode } from "./types/place";
 import type { RoutePlan, TransportMode } from "./types/route";
+import { type MapSkinId } from "./types/mapSkin";
 import { buildPreviewRoutePlan } from "./utils/itineraryRoute";
 import { buildRandomRoute, estimateTotalMinutes, formatEstimatedTime, getRoutePreset } from "./utils/routePlanner";
 
@@ -138,7 +141,7 @@ function getInitialShareFabPosition(): ShareFabPosition {
   }
 
   return clampShareFabPosition({
-    x: window.innerWidth / 2 + 470,
+    x: window.innerWidth / 2 + 540,
     y: 26,
   });
 }
@@ -209,7 +212,7 @@ function sanitizeDayPlans(raw: unknown): DayPlan[] {
     return [createDefaultDayPlan()];
   }
 
-  const placeIds = new Set(places.map((place) => place.id));
+  const placeIds = new Set([...places, ...loadUserPlaces()].map((place) => place.id));
   const sanitized = raw
     .map((item, index): DayPlan | null => {
       if (!item || typeof item !== "object") {
@@ -266,6 +269,7 @@ function loadInitialActiveDayId(dayPlans: DayPlan[]) {
 
 export default function App() {
   const [initialDayPlans] = useState(loadInitialDayPlans);
+  const [runtimeUserPlaces, setRuntimeUserPlaces] = useState<Place[]>(loadUserPlaces);
   const [mode, setMode] = useState<PlannerMode>("p");
   const [activeTypes, setActiveTypes] = useState<PlaceType[]>(defaultVisiblePlaceTypes);
   const [selectedPlaceId, setSelectedPlaceId] = useState<string | null>(null);
@@ -278,6 +282,7 @@ export default function App() {
   const [isItineraryOpen, setIsItineraryOpen] = useState(false);
   const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
   const [isShareStudioOpen, setIsShareStudioOpen] = useState(false);
+  const [activeMapSkinId, setActiveMapSkinId] = useState<MapSkinId>("handdrawn");
   const [isShareFabDragging, setIsShareFabDragging] = useState(false);
   const [shareFabPosition, setShareFabPosition] = useState<ShareFabPosition>(getInitialShareFabPosition);
   const [isDayPlannerOpen, setIsDayPlannerOpen] = useState(true);
@@ -306,6 +311,7 @@ export default function App() {
   const [focusUserLocationRequest, setFocusUserLocationRequest] = useState(0);
   const [focusPlaceRequest, setFocusPlaceRequest] = useState<{ placeId: string; nonce: number } | null>(null);
   const [focusRouteRequest, setFocusRouteRequest] = useState<{ placeIds: string[]; nonce: number } | null>(null);
+  const [focusCoordsRequest, setFocusCoordsRequest] = useState<{ lng: number; lat: number; nonce: number; name?: string } | null>(null);
   const hasAutoFocusedUserLocationRef = useRef(false);
   const shareFabDragRef = useRef<ShareFabDragState | null>(null);
   const suppressShareClickRef = useRef(false);
@@ -316,27 +322,29 @@ export default function App() {
   );
   const itineraryIds = activeDayPlan.placeIds;
 
+  const allPlaces = useMemo(() => [...places, ...runtimeUserPlaces], [runtimeUserPlaces]);
+
   const previewRoutePlan = useMemo(
-    () => buildPreviewRoutePlan(itineraryIds, places, transportMode),
-    [itineraryIds, transportMode],
+    () => buildPreviewRoutePlan(itineraryIds, allPlaces, transportMode),
+    [allPlaces, itineraryIds, transportMode],
   );
   const [routePlan, setRoutePlan] = useState<RoutePlan>(previewRoutePlan);
 
   const visiblePlaces = useMemo(
-    () => places.filter((place) => activeTypes.includes(place.type)),
-    [activeTypes],
+    () => allPlaces.filter((place) => activeTypes.includes(place.type)),
+    [activeTypes, allPlaces],
   );
 
   const agentPlaces = useMemo(() => {
-    const candidates = new Map<string, (typeof places)[number]>();
+    const candidates = new Map<string, Place>();
     itineraryIds.forEach((id) => {
-      const place = places.find((item) => item.id === id);
+      const place = allPlaces.find((item) => item.id === id);
       if (place) {
         candidates.set(place.id, place);
       }
     });
 
-    const selectedPlace = selectedPlaceId ? places.find((place) => place.id === selectedPlaceId) : null;
+    const selectedPlace = selectedPlaceId ? allPlaces.find((place) => place.id === selectedPlaceId) : null;
     if (selectedPlace) {
       candidates.set(selectedPlace.id, selectedPlace);
     }
@@ -350,14 +358,14 @@ export default function App() {
       .forEach((place) => candidates.set(place.id, place));
 
     return [...candidates.values()];
-  }, [itineraryIds, selectedPlaceId, visiblePlaces]);
+  }, [allPlaces, itineraryIds, selectedPlaceId, visiblePlaces]);
 
   const itineraryPlaces = useMemo(
     () =>
       itineraryIds
-        .map((id) => places.find((place) => place.id === id))
-        .filter((place): place is (typeof places)[number] => Boolean(place)),
-    [itineraryIds],
+        .map((id) => allPlaces.find((place) => place.id === id))
+        .filter((place): place is Place => Boolean(place)),
+    [allPlaces, itineraryIds],
   );
 
   const estimatedTime = useMemo(
@@ -374,8 +382,8 @@ export default function App() {
     () =>
       dayPlans.map((day) => {
         const dayPlaces = day.placeIds
-          .map((id) => places.find((place) => place.id === id))
-          .filter((place): place is (typeof places)[number] => Boolean(place));
+          .map((id) => allPlaces.find((place) => place.id === id))
+          .filter((place): place is Place => Boolean(place));
 
         return {
           id: day.id,
@@ -387,7 +395,7 @@ export default function App() {
           lastPlaceName: dayPlaces[dayPlaces.length - 1]?.name,
         };
       }),
-    [dayPlans],
+    [allPlaces, dayPlans],
   );
 
   useEffect(() => {
@@ -563,6 +571,28 @@ export default function App() {
     refreshLiveContext();
   }, [refreshLiveContext, userLocation]);
 
+  const handleSaveAmapPlace = useCallback(async (poi: AmapPoiInput) => {
+    try {
+      const generatedPlace = await generatePlaceCardFromAmap(poi);
+      if (!generatedPlace) {
+        console.warn("Failed to generate valid place from POI:", poi);
+        return null;
+      }
+      setRuntimeUserPlaces(addUserPlace(generatedPlace));
+      setActiveTypes((current) =>
+        current.includes(generatedPlace.type) ? current : [...current, generatedPlace.type],
+      );
+      setSelectedPlaceId(generatedPlace.id);
+      setMapExpandedPlaceId(generatedPlace.id);
+      setFocusPlaceRequest({ placeId: generatedPlace.id, nonce: Date.now() });
+      setFocusCoordsRequest(null);
+      return generatedPlace;
+    } catch (err) {
+      console.error("Failed to save POI as place:", err);
+      return null;
+    }
+  }, []);
+
   useEffect(() => {
     let cancelled = false;
     const amapConfig = getAmapConfig();
@@ -584,7 +614,7 @@ export default function App() {
     });
 
     const timer = window.setTimeout(() => {
-      planAmapRoutePlan(itineraryIds, places, transportMode, amapConfig)
+      planAmapRoutePlan(itineraryIds, allPlaces, transportMode, amapConfig)
         .then((plannedRoute) => {
           if (!cancelled) {
             setRoutePlan(plannedRoute);
@@ -605,7 +635,7 @@ export default function App() {
       cancelled = true;
       window.clearTimeout(timer);
     };
-  }, [itineraryIds, previewRoutePlan, transportMode]);
+  }, [allPlaces, itineraryIds, previewRoutePlan, transportMode]);
 
   function updateActiveDay(updater: (day: DayPlan) => DayPlan) {
     setDayPlans((currentDays) =>
@@ -639,7 +669,7 @@ export default function App() {
     }
 
     const itineraryTypes = targetDay.placeIds
-      .map((id) => places.find((place) => place.id === id)?.type)
+      .map((id) => allPlaces.find((place) => place.id === id)?.type)
       .filter((type): type is PlaceType => Boolean(type));
 
     if (itineraryTypes.length === 0) {
@@ -650,7 +680,7 @@ export default function App() {
   }
 
   function addPlace(placeId: string) {
-    if (!places.some((place) => place.id === placeId)) {
+    if (!allPlaces.some((place) => place.id === placeId)) {
       return;
     }
 
@@ -676,7 +706,7 @@ export default function App() {
   }
 
   function dropBefore(placeId: string, targetId: string) {
-    if (!places.some((place) => place.id === placeId) || placeId === targetId) {
+    if (!allPlaces.some((place) => place.id === placeId) || placeId === targetId) {
       return;
     }
 
@@ -853,7 +883,7 @@ export default function App() {
   }
 
   function validPlaceIds(placeIds: string[]) {
-    const availableIds = new Set(places.map((place) => place.id));
+    const availableIds = new Set(allPlaces.map((place) => place.id));
     return Array.isArray(placeIds) ? placeIds.filter((id) => availableIds.has(id)) : [];
   }
 
@@ -937,13 +967,13 @@ export default function App() {
     }
 
     if (toolCall.name === "focus_place") {
-      if (places.some((place) => place.id === toolCall.args.placeId)) {
+      if (allPlaces.some((place) => place.id === toolCall.args.placeId)) {
         selectMapPlace(toolCall.args.placeId);
       }
       return;
     }
 
-    if (toolCall.name === "open_place_card" && places.some((place) => place.id === toolCall.args.placeId)) {
+    if (toolCall.name === "open_place_card" && allPlaces.some((place) => place.id === toolCall.args.placeId)) {
       setSelectedPlaceId(toolCall.args.placeId);
       setMapExpandedPlaceId(toolCall.args.placeId);
     }
@@ -1140,7 +1170,7 @@ export default function App() {
     <div className="app">
       <main className="workspace">
         <ChangshuMap
-          places={places}
+          places={allPlaces}
           visiblePlaces={visiblePlaces}
           userLocation={userLocation}
           focusUserLocationRequest={focusUserLocationRequest}
@@ -1149,15 +1179,18 @@ export default function App() {
           selectedPlaceId={selectedPlaceId}
           focusPlaceRequest={focusPlaceRequest}
           focusRouteRequest={focusRouteRequest}
+          focusCoordsRequest={focusCoordsRequest}
           expandedPlaceId={mapExpandedPlaceId}
           mode={mode}
           drawMode={drawMode}
+          activeMapSkinId={activeMapSkinId}
           onSelectPlace={selectMapPlace}
           onClosePlaceCard={closeMapPlaceCard}
           onAddPlace={addPlace}
           onToggleExpand={toggleMapExpand}
           onDragStart={handleDragStart}
           onToggleDrawMode={() => setDrawMode((current) => !current)}
+          onSkinChange={setActiveMapSkinId}
         />
 
         <TopBar
@@ -1167,7 +1200,7 @@ export default function App() {
               <AgentIsland
                 active={agentIslandActive}
                 messages={agentMessages}
-                places={places}
+                places={allPlaces}
                 latestRouteSuggestion={latestAgentRoute}
                 routeSuggestions={agentRouteSuggestions}
                 answerCards={agentAnswerCards}
@@ -1189,9 +1222,16 @@ export default function App() {
           weather={topBarWeather}
           location={topBarLocation}
           isItineraryOpen={isItineraryOpen}
+          places={allPlaces}
           onToggleItinerary={() => setIsItineraryOpen((current) => !current)}
           onShowAvoidPeak={() => setActiveTypes(["scenic"])}
           onRefreshLocation={handleLocationStatusClick}
+          onPlaceSearch={(placeId) => selectMapPlace(placeId)}
+          onPlaceFocusByCoords={(lng, lat, name) => {
+            setFocusCoordsRequest({ lng, lat, nonce: Date.now(), name });
+          }}
+          onClearFocus={() => setFocusCoordsRequest(null)}
+          onSaveAmapPlace={handleSaveAmapPlace}
         />
 
         <SideControlPanel
@@ -1248,7 +1288,7 @@ export default function App() {
           aria-label="生成分享卡片"
         >
           <Share2 size={19} />
-          <span>卡片</span>
+          <span>分享</span>
         </button>
 
         <div className={`itinerary-drawer ${isItineraryOpen ? "is-open" : ""}`}>
@@ -1303,6 +1343,7 @@ export default function App() {
           routeDescription={routeCardDescription}
           places={itineraryPlaces}
           routePlan={routePlan}
+          activeMapSkinId={activeMapSkinId}
           onClose={() => setIsShareStudioOpen(false)}
         />
       </main>

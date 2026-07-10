@@ -1,5 +1,6 @@
 import type { AgentProvider, AgentRequest, AgentResponse } from "./agentTypes";
 import { sendMockAgentMessage } from "./mockAgentClient";
+import type { Place } from "../types/place";
 import type { TransportMode } from "../types/route";
 
 const provider = (import.meta.env.VITE_AGENT_PROVIDER ?? "ccswitch") as AgentProvider;
@@ -249,5 +250,216 @@ export async function sendAgentMessage(request: AgentRequest): Promise<AgentResp
         parsedTimeBudget: fallback.timeBudget ?? undefined,
       },
     };
+  }
+}
+
+// ─── Place Card Generation from AMap POI ───────────────────────────────────────
+
+const PLACE_CARD_SYSTEM_PROMPT = `## 任务：为常熟文旅助手的景点卡片生成完整内容
+
+你是一个常熟本地文旅专家。现在用户通过高德地图搜索到了一个地点，需要你根据以下 POI 元数据，生成符合 Place 类型规范的全部字段。
+
+### POI 元数据（由用户提供）
+- name：高德返回的名称
+- address：高德返回的地址
+- type：高德 POI 分类字符串
+- lng, lat：经纬度坐标
+
+### Place 类型所有字段规范
+
+字段含义与填写规则：
+
+- id：格式为 "user-{拼音首字母}{4位数字}"，如 "user-ysgz1234"，取 name 拼音首字母缩写，去掉空格和标点
+- type：PlaceType，scenic | heritage | food | restaurant | parking | restroom | lodging | hospital | police，根据 POI type 关键词推断，优先级：heritage > scenic > food/restaurant > parking > restroom > lodging > hospital > police
+- name：景点/地点名称
+- subtitle：格式 "子类型 · 地址简写"，如 "5A · 虞山街道"，无子类型则 "地址简写"
+- summary：一句话描述，60字以内，体现特色和适合人群，有文旅调性
+- tags：3-6个标签，格式 ["特色词1","特色词2","类型词"]
+- fallbackImageUrl：统一填 /assets/generated-placeholders/{type}.png
+- source：固定填 "amap"
+- address：完整地址字符串
+- categoryLabel：如 "景点"、"美食"
+- subtypeLabel：子类型，如 "5A"、"古镇"，无则省略此字段
+- score、phone：有则填，无则省略字段
+- position：{ lng, lat, x: 0, y: 0 }，直接用传入的经纬度
+- crowdLevel：low | medium | high，根据景点人气推断，保守填 medium
+- duration：建议停留时间，格式 "X 小时"，景点120-300填3-5小时，美食30-90填0.5-1.5小时
+- history：scenic/heritage 必须有，80-120字，不虚构具体年份人物，其他类型省略此字段
+- detail：格式"开放/服务时间：xxx\n建议停留：xxx"，无则省略
+- suitableFor：适合人群数组 ["亲子","情侣","老人"]，2-4项
+- notice：游览提示，1-2条实用信息，无则省略
+- routeMeta：景点类必须有，{ canRoute: true, recommendedStayMinutes: 数字, routeWeight: 30-80 }
+- dataStatus：固定填 "verified"
+
+### 历史/来历生成规则（仅 scenic/heritage）
+如果景点知名，写出历史来历；如果不了解具体历史，格式为："[景点名称]位于[大致区域]，以[主要特色]为核心，是常熟具代表性的[类型]之一。"80-120字，不要虚构具体年份和人物。
+
+### 输出要求
+只输出纯 JSON，不要任何解释文字、注释或 markdown 格式。JSON 必须完整包含 Place 对象所有有值的字段，缺失字段直接省略不写。`;
+
+export type AmapPoiInput = {
+  name: string;
+  address: string;
+  type: string;
+  lng: number;
+  lat: number;
+  phone?: string;
+};
+
+function pinyinInitials(str: string): string {
+  const PINYIN_MAP: Record<string, string> = {
+    虞: "y", 山: "s", 尚: "sh", 湖: "h", 沙: "sh", 家: "j", 浜: "b",
+    方: "f", 塔: "t", 园: "y", 燕: "y", 兴: "x", 福: "f", 古: "g", 镇: "z",
+    老: "l", 街: "j", 文: "w", 化: "h", 博: "b", 物: "w",
+    常: "c", 熟: "sh", 江: "j", 南: "n", 美: "m", 食: "s", 停: "t",
+    车: "c", 厕: "c", 所: "s", 医: "y", 院: "y", 公: "g", 安: "a",
+    酒: "j", 店: "d", 宾: "b", 民: "m", 宿: "s",
+  };
+  return str
+    .split("")
+    .map((c) => PINYIN_MAP[c] ?? c)
+    .join("")
+    .replace(/[^a-z]/gi, "");
+}
+
+function generateFallbackPlace(poi: AmapPoiInput): Place | null {
+  if (!poi.name?.trim()) return null;
+  const initials = pinyinInitials(poi.name).slice(0, 6);
+  const rand = Math.floor(1000 + Math.random() * 9000);
+  const id = `user-${initials || "place"}-${rand}`;
+
+  const isScenic = /景|山|湖|湿地|公园|岛|河/.test(poi.type);
+  const isHeritage = /文化|遗址|古|纪念|寺庙|非遗/.test(poi.type);
+  const isFood = /餐饮|餐厅|小吃|茶馆|农家乐/.test(poi.type);
+  const type: Place["type"] = isHeritage ? "heritage" : isScenic ? "scenic" : isFood ? "food" : "scenic";
+
+  return {
+    id,
+    type,
+    name: poi.name,
+    subtitle: `景点 · ${poi.address?.slice(0, 8) ?? ""}`,
+    summary: `${poi.name}是常熟的一个特色地点，适合慢游和探索。`,
+    tags: ["景点", poi.type?.split(";")[0] ?? "地点"],
+    fallbackImageUrl: `/assets/generated-placeholders/${type}.png`,
+    source: "amap",
+    address: poi.address ?? "",
+    categoryLabel: poi.type?.split(";")[0] ?? "地点",
+    position: { lng: poi.lng, lat: poi.lat, x: 0, y: 0 },
+    dataStatus: "verified",
+    history: `${poi.name}位于常熟，以其独特风貌著称，是常熟具代表性的地点之一。`,
+    routeMeta: { canRoute: true, recommendedStayMinutes: 120, routeWeight: 40 },
+  };
+}
+
+export async function generatePlaceCardFromAmap(poi: AmapPoiInput): Promise<Place | null> {
+  if (provider === "mock") {
+    return generateFallbackPlace(poi);
+  }
+
+  const baseUrl =
+    provider === "ccswitch"
+      ? import.meta.env.VITE_CCSWITCH_BASE_URL || defaultCcswitchAdapterUrl
+      : import.meta.env.VITE_AGENT_BACKEND_BASE_URL;
+
+  if (!baseUrl) {
+    return generateFallbackPlace(poi);
+  }
+
+  const endpoint =
+    provider === "ccswitch"
+      ? import.meta.env.VITE_CCSWITCH_AGENT_PATH || "/agent/chat"
+      : import.meta.env.VITE_AGENT_BACKEND_PATH || "/api/agent/chat";
+
+  const userMessage = `请根据以下高德 POI 信息，生成完整的景点卡片 JSON（只输出 JSON，不要任何解释）：
+
+- 名称：${poi.name}
+- 地址：${poi.address}
+- POI类型：${poi.type}
+- 经纬度：${poi.lng}, ${poi.lat}
+${poi.phone ? `- 电话：${poi.phone}` : ""}`;
+
+  const requestBody = {
+    userMessage,
+    systemPrompt: PLACE_CARD_SYSTEM_PROMPT,
+    conversation: [
+      { id: "sys-1", role: "system" as const, content: PLACE_CARD_SYSTEM_PROMPT, createdAt: Date.now() },
+      { id: "user-1", role: "user" as const, content: userMessage, createdAt: Date.now() },
+    ],
+    temperature: 0.3,
+    // Ask for JSON-only response by setting maxTokens small enough to discourage explanation
+    maxTokens: 2000,
+  };
+
+  try {
+    const response = await fetch(`${baseUrl}${endpoint}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(requestBody),
+    });
+
+    if (!response.ok) {
+      console.warn(`generatePlaceCardFromAmap failed: ${response.status}, using fallback`);
+      return generateFallbackPlace(poi);
+    }
+
+    const data = await response.json() as { reply?: string };
+
+    if (!data.reply) {
+      return generateFallbackPlace(poi);
+    }
+
+    // Try to extract JSON from the reply
+    const jsonMatch = data.reply.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      console.warn("generatePlaceCardFromAmap: no JSON found in reply, using fallback");
+      return generateFallbackPlace(poi);
+    }
+
+    const parsed = JSON.parse(jsonMatch[0]) as Partial<Place>;
+
+    // Validate required fields
+    if (!parsed.id || !parsed.type || !parsed.name || !parsed.position) {
+      console.warn("generatePlaceCardFromAmap: invalid Place JSON, using fallback", parsed);
+      return generateFallbackPlace(poi);
+    }
+
+    // Ensure position has x:0, y:0
+    const place: Place = {
+      id: parsed.id,
+      type: parsed.type,
+      name: parsed.name,
+      subtitle: parsed.subtitle ?? `景点 · ${poi.address.slice(0, 8)}`,
+      summary: parsed.summary ?? `${poi.name}是常熟的一个特色地点。`,
+      tags: parsed.tags ?? ["景点"],
+      fallbackImageUrl: parsed.fallbackImageUrl ?? `/assets/generated-placeholders/${parsed.type}.png`,
+      source: "amap",
+      poiId: parsed.poiId,
+      address: parsed.address ?? poi.address,
+      categoryLabel: parsed.categoryLabel ?? poi.type.split(";")[0],
+      subtypeLabel: parsed.subtypeLabel,
+      score: parsed.score,
+      phone: parsed.phone ?? poi.phone,
+      position: {
+        lng: parsed.position.lng ?? poi.lng,
+        lat: parsed.position.lat ?? poi.lat,
+        x: parsed.position.x ?? 0,
+        y: parsed.position.y ?? 0,
+      },
+      openTime: parsed.openTime,
+      price: parsed.price,
+      crowdLevel: parsed.crowdLevel,
+      duration: parsed.duration,
+      history: parsed.history,
+      detail: parsed.detail,
+      suitableFor: parsed.suitableFor,
+      notice: parsed.notice,
+      routeMeta: parsed.routeMeta ?? { canRoute: true, recommendedStayMinutes: 120, routeWeight: 40 },
+      dataStatus: "verified",
+    };
+
+    return place;
+  } catch (err) {
+    console.warn("generatePlaceCardFromAmap error, using fallback:", err);
+    return generateFallbackPlace(poi);
   }
 }

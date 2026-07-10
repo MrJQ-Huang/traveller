@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Place, PlannerMode } from "../types/place";
 import type { RoutePlan } from "../types/route";
 import { placeTypeShortLabels } from "../types/place";
+import { type MapSkinId } from "../types/mapSkin";
 import { filterPlacesByZoom } from "../utils/tierVisibility";
 import { PlaceCard } from "./PlaceCard";
 
@@ -28,15 +29,23 @@ type FallbackChangshuMapProps = {
     placeIds: string[];
     nonce: number;
   } | null;
+  focusCoordsRequest: {
+    lng: number;
+    lat: number;
+    nonce: number;
+    name?: string;
+  } | null;
   expandedPlaceId: string | null;
   mode: PlannerMode;
   drawMode: boolean;
+  activeMapSkinId: MapSkinId;
   onSelectPlace: (placeId: string | null) => void;
   onClosePlaceCard: () => void;
   onAddPlace: (placeId: string) => void;
   onToggleExpand: (placeId: string) => void;
   onDragStart: (placeId: string, event: React.DragEvent<HTMLElement>) => void;
   onToggleDrawMode: () => void;
+  onSkinChange: (skinId: MapSkinId) => void;
 };
 
 const changshuCenter: L.LatLngExpression = [31.62, 120.755];
@@ -162,15 +171,18 @@ export function FallbackChangshuMap({
   selectedPlaceId,
   focusPlaceRequest,
   focusRouteRequest,
+  focusCoordsRequest,
   expandedPlaceId,
   mode,
   drawMode,
+  activeMapSkinId,
   onSelectPlace,
   onClosePlaceCard,
   onAddPlace,
   onToggleExpand,
   onDragStart,
   onToggleDrawMode,
+  onSkinChange,
 }: FallbackChangshuMapProps) {
   const mapNodeRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<L.Map | null>(null);
@@ -180,6 +192,7 @@ export function FallbackChangshuMap({
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const isDrawingRef = useRef(false);
   const [mapReady, setMapReady] = useState(false);
+  const poiMarkerRef = useRef<L.Marker | null>(null);
   const [isMapToolsOpen, setIsMapToolsOpen] = useState(false);
   const [mapZoom, setMapZoom] = useState(11);
   const [selectedCardPosition, setSelectedCardPosition] = useState<{ x: number; y: number } | null>(null);
@@ -414,6 +427,12 @@ export function FallbackChangshuMap({
       return;
     }
 
+    // 选择正式点位时清除 POI 临时标记
+    if (poiMarkerRef.current) {
+      map.removeLayer(poiMarkerRef.current);
+      poiMarkerRef.current = null;
+    }
+
     map.flyTo([targetPlace.position.lat, targetPlace.position.lng], Math.max(map.getZoom(), 14), {
       animate: true,
       duration: 0.3,
@@ -438,6 +457,40 @@ export function FallbackChangshuMap({
       maxZoom: 13,
     });
   }, [focusRouteRequest, places]);
+
+  // 清除标记：当 focusCoordsRequest 变为 null 时
+  useEffect(() => {
+    if (focusCoordsRequest !== null) return;
+    if (poiMarkerRef.current && mapRef.current) {
+      mapRef.current.removeLayer(poiMarkerRef.current);
+      poiMarkerRef.current = null;
+    }
+  }, [focusCoordsRequest]);
+
+  // 添加/更新标记：当 focusCoordsRequest 有新值时
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !focusCoordsRequest) return;
+
+    map.flyTo([focusCoordsRequest.lat, focusCoordsRequest.lng], Math.max(map.getZoom(), 14), {
+      animate: true,
+      duration: 0.3,
+    });
+
+    const icon = L.divIcon({
+      className: "",
+      html: `<div class="leaflet-poi-marker"><span>${focusCoordsRequest.name ?? "位置"}</span></div>`,
+      iconSize: [0, 0],
+      iconAnchor: [0, 0],
+    });
+    const marker = L.marker([focusCoordsRequest.lat, focusCoordsRequest.lng], { icon });
+
+    if (poiMarkerRef.current) {
+      map.removeLayer(poiMarkerRef.current);
+    }
+    marker.addTo(map);
+    poiMarkerRef.current = marker;
+  }, [focusCoordsRequest]);
 
   useEffect(() => {
     const map = mapRef.current;

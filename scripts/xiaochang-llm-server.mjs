@@ -697,6 +697,71 @@ async function callAnthropicCompatible(request) {
   }
 }
 
+async function callRawJsonLlm(request) {
+  const fallback = ensureConfigured();
+  if (fallback) {
+    throw new Error(fallback.reply || "LLM upstream is not configured.");
+  }
+
+  const system = String(request.systemPrompt || "Return strict JSON only.");
+  const userMessage = String(request.userMessage || JSON.stringify(request.poi ?? {}));
+  const maxTokens = Number(request.maxTokens ?? process.env.LLM_MAX_TOKENS ?? 1800);
+  const requestTemperature = Number(request.temperature ?? temperature);
+
+  if (providerMode === "anthropic-compatible") {
+    const response = await fetch(anthropicUrl("/messages"), {
+      method: "POST",
+      headers: buildAnthropicHeaders(),
+      body: JSON.stringify({
+        model,
+        max_tokens: maxTokens,
+        temperature: requestTemperature,
+        system,
+        messages: [{ role: "user", content: userMessage }],
+      }),
+      signal: AbortSignal.timeout(requestTimeoutMs),
+    });
+
+    if (!response.ok) {
+      throw new Error(`LLM request failed: HTTP ${response.status} ${await response.text()}`);
+    }
+
+    const data = await response.json();
+    const content = data.content?.map?.((item) => item.text ?? "").join("") ?? "";
+    if (!content) {
+      throw new Error("LLM returned empty content.");
+    }
+    return JSON.parse(extractJsonContent(content));
+  }
+
+  const response = await fetch(openAiUrl("/chat/completions"), {
+    method: "POST",
+    headers: buildOpenAiHeaders(),
+    body: JSON.stringify({
+      model,
+      temperature: requestTemperature,
+      max_tokens: maxTokens,
+      response_format: { type: "json_object" },
+      messages: [
+        { role: "system", content: system },
+        { role: "user", content: userMessage },
+      ],
+    }),
+    signal: AbortSignal.timeout(requestTimeoutMs),
+  });
+
+  if (!response.ok) {
+    throw new Error(`LLM request failed: HTTP ${response.status} ${await response.text()}`);
+  }
+
+  const data = await response.json();
+  const content = data.choices?.[0]?.message?.content;
+  if (!content) {
+    throw new Error("LLM returned empty content.");
+  }
+  return JSON.parse(extractJsonContent(content));
+}
+
 async function callConfiguredLlm(request) {
   return providerMode === "anthropic-compatible"
     ? callAnthropicCompatible(request)
@@ -727,7 +792,7 @@ const server = http.createServer(async (request, response) => {
       hasApiKey: Boolean(apiKey),
       allowMissingApiKey,
       configSource,
-      endpoints: ["/agent/chat", "/api/agent/chat", "/agent/test", "/agent/sync", "/health"],
+      endpoints: ["/agent/chat", "/api/agent/chat", "/agent/place-card", "/api/agent/place-card", "/agent/test", "/agent/sync", "/health"],
     });
     return;
   }
@@ -766,6 +831,21 @@ const server = http.createServer(async (request, response) => {
     return;
   }
 
+  if (request.method === "POST" && ["/api/agent/place-card", "/agent/place-card"].includes(request.url ?? "")) {
+    try {
+      refreshAllConfig();
+      const body = await readJsonBody(request);
+      const place = await callRawJsonLlm(body);
+      jsonResponse(response, 200, { ok: true, place });
+    } catch (error) {
+      jsonResponse(response, 502, {
+        ok: false,
+        error: error instanceof Error ? error.message : "Place card generation failed",
+      });
+    }
+    return;
+  }
+
   if (request.method !== "POST" || !["/api/agent/chat", "/agent/chat"].includes(request.url ?? "")) {
     jsonResponse(response, 404, { error: "Not found" });
     return;
@@ -792,5 +872,5 @@ server.listen(port, host, () => {
   console.log(`[xiaochang-llm] connectedToCcswitch=${hasConfiguredUpstream}`);
   console.log(`[xiaochang-llm] hasApiKey=${Boolean(apiKey)}`);
   console.log(`[xiaochang-llm] allowMissingApiKey=${allowMissingApiKey}`);
-  console.log("[xiaochang-llm] endpoints=/agent/chat,/api/agent/chat,/agent/test,/agent/sync,/health");
+  console.log("[xiaochang-llm] endpoints=/agent/chat,/api/agent/chat,/agent/place-card,/api/agent/place-card,/agent/test,/agent/sync,/health");
 });

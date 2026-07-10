@@ -5,9 +5,13 @@ import {
   MapPinned,
   PanelRightClose,
   PanelRightOpen,
-  TrendingDown,
+  Plus,
+  Search,
+  X,
+  Loader2,
 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { searchAmapPlaces, type AmapPoi } from "../utils/amapPlaceSearch";
 
 export type TopBarWeatherForecast = {
   date: string;
@@ -41,9 +45,14 @@ type TopBarProps = {
   activeDayTitle: string;
   totalDays: number;
   isItineraryOpen: boolean;
+  places: Array<{ id: string; name: string; type: string; address?: string }>;
   onToggleItinerary: () => void;
   onShowAvoidPeak?: () => void;
   onRefreshLocation?: () => void;
+  onPlaceSearch?: (placeId: string) => void;
+  onPlaceFocusByCoords?: (lng: number, lat: number, name?: string) => void;
+  onClearFocus?: () => void;
+  onSaveAmapPlace?: (poi: { name: string; address: string; type: string; lng: number; lat: number; phone?: string }) => Promise<unknown>;
 };
 
 const weekdayLabels = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
@@ -121,13 +130,67 @@ export function TopBar({
   activeDayTitle,
   totalDays,
   isItineraryOpen,
+  places,
   onToggleItinerary,
   onShowAvoidPeak,
   onRefreshLocation,
+  onPlaceSearch,
+  onPlaceFocusByCoords,
+  onClearFocus,
+  onSaveAmapPlace,
 }: TopBarProps) {
   const topbarRef = useRef<HTMLElement | null>(null);
   const [openPanel, setOpenPanel] = useState<OpenStatusPanel>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchFocused, setSearchFocused] = useState(false);
+  const [amapSearchResults, setAmapSearchResults] = useState<AmapPoi[]>([]);
+  const [isAmapSearching, setIsAmapSearching] = useState(false);
+  const [savingPoiIndex, setSavingPoiIndex] = useState<number | null>(null);
   const today = useMemo(() => new Date(), []);
+
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    const q = searchQuery.toLowerCase();
+    return places
+      .filter((p) => p.name.toLowerCase().includes(q) || (p.address ?? "").toLowerCase().includes(q))
+      .slice(0, 6);
+  }, [searchQuery, places]);
+
+  // 当本地结果少于3条时，补充搜索高德POI
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      setAmapSearchResults([]);
+      return;
+    }
+    const q = searchQuery.toLowerCase();
+    const localCount = places.filter(
+      (p) => p.name.toLowerCase().includes(q) || (p.address ?? "").toLowerCase().includes(q),
+    ).length;
+    if (localCount >= 3) {
+      setAmapSearchResults([]);
+      return;
+    }
+
+    let cancelled = false;
+    setIsAmapSearching(true);
+    searchAmapPlaces(searchQuery)
+      .then((results) => {
+        if (!cancelled) {
+          setAmapSearchResults(results);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setAmapSearchResults([]);
+      })
+      .finally(() => {
+        if (!cancelled) setIsAmapSearching(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [searchQuery, places]);
+
   const todayLabel = useMemo(() => getWeekLabel(today), [today]);
   const fallbackForecastItems = useMemo(
     () =>
@@ -221,6 +284,49 @@ export function TopBar({
     setOpenPanel((current) => (current === "date" ? null : "date"));
   }
 
+  function handleLocalPlaceSearch(placeId: string) {
+    setSearchQuery("");
+    setSearchFocused(false);
+    setAmapSearchResults([]);
+    onPlaceSearch?.(placeId);
+  }
+
+  function handleAmapPlaceFocus(lng: number, lat: number, name: string) {
+    // 显示 POI 名称在搜索框，关闭下拉，地图飞过去并显示临时标记
+    setSearchQuery(name);
+    setSearchFocused(false);
+    setAmapSearchResults([]);
+    onPlaceFocusByCoords?.(lng, lat, name);
+  }
+
+  async function handleSavePoi(poi: AmapPoi, index: number) {
+    if (!onSaveAmapPlace) return;
+    setSavingPoiIndex(index);
+    try {
+      const savedPlace = await onSaveAmapPlace({
+        name: poi.name,
+        address: poi.address,
+        type: poi.type,
+        lng: poi.lng,
+        lat: poi.lat,
+        phone: poi.phone,
+      });
+      if (savedPlace) {
+        setSearchQuery(poi.name);
+        setSearchFocused(false);
+        setAmapSearchResults([]);
+      }
+    } finally {
+      setSavingPoiIndex((i) => (i === index ? null : i));
+    }
+  }
+
+  function clearSearch() {
+    setSearchQuery("");
+    setAmapSearchResults([]);
+    onClearFocus?.();
+  }
+
   return (
     <header ref={topbarRef} className={`topbar smart-status-topbar ${agentActive ? "is-agent-active" : ""}`} aria-label="常熟文旅实时状态栏">
       {agentSlot ?? (
@@ -268,11 +374,92 @@ export function TopBar({
           )}
         </div>
 
-        <button className="status-pill status-pill-priority" type="button" onClick={onShowAvoidPeak}>
-          <TrendingDown size={16} />
-          <span>避峰</span>
-          <strong>尚湖优先</strong>
-        </button>
+        <div className="topbar-place-search" role="search">
+          <div className="place-search-input-shell">
+            <Search size={15} className="place-search-icon" aria-hidden="true" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                // 搜索内容变化时清除临时标记
+                onClearFocus?.();
+              }}
+              onFocus={() => setSearchFocused(true)}
+              onBlur={() => {
+                window.setTimeout(() => setSearchFocused(false), 150);
+              }}
+              placeholder="搜索景点/美食/服务"
+              aria-label="搜索地点"
+            />
+            {searchQuery && (
+              <button type="button" className="place-search-clear" onClick={clearSearch} aria-label="清除搜索">
+                <X size={13} />
+              </button>
+            )}
+          </div>
+          {searchFocused && (searchResults.length > 0 || amapSearchResults.length > 0 || isAmapSearching) && (
+            <ul className="place-search-results" role="listbox">
+              {searchResults.map((place) => (
+                <li key={place.id}>
+                  <button
+                    type="button"
+                    role="option"
+                    onMouseDown={() => handleLocalPlaceSearch(place.id)}
+                  >
+                    <span className={`place-type-badge type-${place.type}`}>{place.type}</span>
+                    <span>
+                      <strong>{place.name}</strong>
+                      {place.address && <em>{place.address}</em>}
+                    </span>
+                  </button>
+                </li>
+              ))}
+              {amapSearchResults.length > 0 && (
+                <>
+                  <li className="place-search-divider" aria-hidden="true" />
+                  <li className="place-search-section-label">高德搜索</li>
+                  {amapSearchResults.map((poi, i) => (
+                    <li key={`amap-${i}`} className="amap-poi-result-item">
+                      <button
+                        type="button"
+                        role="option"
+                        className="amap-poi-main"
+                        onMouseDown={() => handleAmapPlaceFocus(poi.lng, poi.lat, poi.name)}
+                      >
+                        <span className="place-type-badge type-amap">POI</span>
+                        <span>
+                          <strong>{poi.name}</strong>
+                          {poi.address && <em>{poi.address}</em>}
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        className="amap-poi-save"
+                        disabled={savingPoiIndex === i}
+                        onMouseDown={(event) => {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          void handleSavePoi(poi, i);
+                        }}
+                        title="保存到数据库"
+                        aria-label="保存到我的地点"
+                      >
+                        {savingPoiIndex === i ? <Loader2 size={13} className="spin" /> : <Plus size={13} />}
+                      </button>
+                    </li>
+                  ))}
+                </>
+              )}
+              {isAmapSearching && searchResults.length === 0 && (
+                <li className="place-search-loading">搜索中...</li>
+              )}
+            </ul>
+          )}
+          {searchFocused && searchQuery && searchResults.length === 0 && !isAmapSearching && amapSearchResults.length === 0 && (
+            <div className="place-search-empty">未找到匹配地点</div>
+          )}
+        </div>
         <button className="status-pill status-pill-location" type="button" onClick={onRefreshLocation} title={location.detail}>
           <LocateFixed size={16} />
           <span>{location.loading ? "定位中" : "当前片区"}</span>
