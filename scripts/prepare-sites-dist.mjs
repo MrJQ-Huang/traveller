@@ -1,10 +1,17 @@
-import { cp, mkdir, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, rename, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const root = process.cwd();
 const distDir = resolve(root, "dist");
+const clientDir = resolve(distDir, "client");
 const serverDir = resolve(distDir, "server");
 const metadataDir = resolve(distDir, ".openai");
+
+await mkdir(clientDir, { recursive: true });
+for (const entry of await readdir(distDir)) {
+  if (entry === "client") continue;
+  await rename(resolve(distDir, entry), resolve(clientDir, entry));
+}
 
 await mkdir(serverDir, { recursive: true });
 await mkdir(metadataDir, { recursive: true });
