@@ -308,7 +308,7 @@ export default function App() {
   const [isItineraryOpen, setIsItineraryOpen] = useState(false);
   const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
   const [isShareStudioOpen, setIsShareStudioOpen] = useState(false);
-  const [activeMapSkinId, setActiveMapSkinId] = useState<MapSkinId>("handdrawn");
+  const [activeMapSkinId, setActiveMapSkinId] = useState<MapSkinId>("normal");
   const [isShareFabDragging, setIsShareFabDragging] = useState(false);
   const [shareFabPosition, setShareFabPosition] = useState<ShareFabPosition>(getInitialShareFabPosition);
   const [isDayPlannerOpen, setIsDayPlannerOpen] = useState(true);

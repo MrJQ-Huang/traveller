@@ -10,13 +10,6 @@ export type MapSkinOption = {
 
 export const mapSkinOptions: MapSkinOption[] = [
   {
-    id: "handdrawn",
-    name: "手绘文旅",
-    description: "当前风格化瓦片",
-    amapStyle: "amap://styles/whitesmoke",
-    handdrawn: true,
-  },
-  {
     id: "normal",
     name: "高德默认",
     description: "原生标准配色",
