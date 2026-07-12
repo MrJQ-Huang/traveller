@@ -4102,6 +4102,23 @@ button:disabled {
   line-height: 1.6;
 }
 
+.side-playbook-list {
+  display: grid;
+  gap: 6px;
+}
+
+.side-playbook-list span {
+  display: block;
+  padding: 7px 9px;
+  color: #31546b;
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(0, 116, 217, 0.12);
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
 .side-manual-copy {
   display: grid;
   gap: 8px;

@@ -88,6 +88,11 @@ export function SideControlPanel({
             <strong>路书提示</strong>
           </div>
           <p>先选想去的点，再让路线自己跑起来。好的路线不是塞满每一分钟，而是让下一站刚好值得出发。</p>
+          <div className="side-playbook-list">
+            <span>点亮分类：先把地图变成你想看的样子。</span>
+            <span>收进右侧：喜欢的点别犹豫，先上车再排顺。</span>
+            <span>双击日程：一眼看全局，路线才有节奏感。</span>
+          </div>
         </section>
 
         <section className="side-panel-section side-route-section">
