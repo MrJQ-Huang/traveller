@@ -1009,18 +1009,8 @@
   margin: 48px 48px 0;
   border: 8px solid rgba(255, 255, 255, 0.72);
   border-radius: 8px;
-  background:
-    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.42), transparent 28%),
-    linear-gradient(135deg, #efe1c8 0%, #d8d2bc 52%, #e8d7bd 100%);
+  background: #e6e0d2;
   box-shadow: 0 20px 48px rgba(40, 32, 24, 0.22);
-}
-
-.route-card-fallback-map {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.95;
 }
 
 .route-card-tile {
