@@ -486,15 +486,18 @@ export default function App() {
     try {
       const AMap = await loadAmap(amapConfig);
 
-      await Promise.allSettled([
-        new Promise<void>((resolve) => {
+      function refreshWeather(targetCity?: string) {
+        return new Promise<void>((resolve) => {
           if (!AMap.Weather) {
+            setTopBarWeather((current) => ({ ...current, loading: false }));
             resolve();
             return;
           }
 
+          const weatherCity = targetCity?.trim() || "常熟市";
           const weatherService = new AMap.Weather();
-          weatherService.getLive("路线市", (statusOrError: unknown, result: unknown) => {
+
+          weatherService.getLive(weatherCity, (statusOrError: unknown, result: unknown) => {
             const liveResult = readAmapCallbackResult<any>(statusOrError, result);
             const liveWeather = liveResult.ok && liveResult.data
               ? {
@@ -503,7 +506,7 @@ export default function App() {
                 }
               : null;
 
-            weatherService.getForecast("路线市", (forecastStatusOrError: unknown, forecastResult: unknown) => {
+            weatherService.getForecast(weatherCity, (forecastStatusOrError: unknown, forecastResult: unknown) => {
               const forecastCallbackResult = readAmapCallbackResult<any>(forecastStatusOrError, forecastResult);
               const forecasts = forecastCallbackResult.ok
                 ? readAmapForecastItems(forecastCallbackResult.data)
@@ -518,79 +521,86 @@ export default function App() {
               resolve();
             });
           });
-        }),
-        new Promise<void>((resolve) => {
-          if (!AMap.Geolocation) {
-            setTopBarLocation((current) => ({ ...current, loading: false }));
-            resolve();
+        });
+      }
+
+      if (!AMap.Geolocation) {
+        setTopBarLocation((current) => ({ ...current, loading: false }));
+        await refreshWeather();
+        return;
+      }
+
+      const weatherTarget = await new Promise<string | undefined>((resolve) => {
+        const geolocation = new AMap.Geolocation({
+          enableHighAccuracy: true,
+          timeout: 8000,
+          convert: true,
+          showButton: false,
+          showMarker: false,
+          showCircle: false,
+        });
+
+        geolocation.getCurrentPosition((status: string, result: any) => {
+          if (status !== "complete" || !result?.position) {
+            setTopBarLocation((current) => ({
+              ...current,
+              loading: false,
+              detail: "定位暂不可用，保留默认路线片区",
+            }));
+            resolve(undefined);
             return;
           }
 
-          const geolocation = new AMap.Geolocation({
-            enableHighAccuracy: true,
-            timeout: 8000,
-            convert: true,
-            showButton: false,
-            showMarker: false,
-            showCircle: false,
-          });
+          const lng = typeof result.position.lng === "number" ? result.position.lng : result.position.getLng?.();
+          const lat = typeof result.position.lat === "number" ? result.position.lat : result.position.getLat?.();
 
-          geolocation.getCurrentPosition((status: string, result: any) => {
-            if (status !== "complete" || !result?.position) {
-              setTopBarLocation((current) => ({
-                ...current,
-                loading: false,
-                detail: "定位暂不可用，保留默认路线片区",
-              }));
-              resolve();
-              return;
-            }
-
-            const lng = typeof result.position.lng === "number" ? result.position.lng : result.position.getLng?.();
-            const lat = typeof result.position.lat === "number" ? result.position.lat : result.position.getLat?.();
-
-            if (!AMap.Geocoder || typeof lng !== "number" || typeof lat !== "number") {
-              setUserLocation({ lng, lat });
-              setTopBarLocation({
-                area: "当前位置",
-                detail: "已获取定位，暂未解析片区",
-                loading: false,
-              });
-              resolve();
-              return;
-            }
-
-            const geocoder = new AMap.Geocoder();
-
-            geocoder.getAddress([lng, lat], (geoStatus: string, geoResult: any) => {
-              const component = geoResult?.regeocode?.addressComponent;
-              const area = geoStatus === "complete" ? getReadableArea(component) : "当前位置";
-              const boundary = geoStatus === "complete" ? getLocationBoundary(component) : null;
-              const formattedAddress =
-                typeof geoResult?.regeocode?.formattedAddress === "string"
-                  ? geoResult.regeocode.formattedAddress
-                  : `经度 ${lng.toFixed(4)}，纬度 ${lat.toFixed(4)}`;
-
-              setTopBarLocation({
-                area,
-                detail: formattedAddress,
-                loading: false,
-              });
-              setUserLocation({
-                lng,
-                lat,
-                accuracy: typeof result.accuracy === "number" ? result.accuracy : undefined,
-                address: formattedAddress,
-                city: boundary?.city,
-                district: boundary?.district,
-                boundaryName: boundary?.boundaryName,
-                boundaryLevel: boundary?.boundaryLevel,
-              });
-              resolve();
+          if (!AMap.Geocoder || typeof lng !== "number" || typeof lat !== "number") {
+            setUserLocation({ lng, lat });
+            setTopBarLocation({
+              area: "当前位置",
+              detail: "已获取定位，暂未解析片区",
+              loading: false,
             });
+            resolve(undefined);
+            return;
+          }
+
+          const geocoder = new AMap.Geocoder();
+
+          geocoder.getAddress([lng, lat], (geoStatus: string, geoResult: any) => {
+            const component = geoResult?.regeocode?.addressComponent;
+            const area = geoStatus === "complete" ? getReadableArea(component) : "当前位置";
+            const boundary = geoStatus === "complete" ? getLocationBoundary(component) : null;
+            const formattedAddress =
+              typeof geoResult?.regeocode?.formattedAddress === "string"
+                ? geoResult.regeocode.formattedAddress
+                : `经度 ${lng.toFixed(4)}，纬度 ${lat.toFixed(4)}`;
+            const adcode = typeof component?.adcode === "string" ? component.adcode : "";
+            const district = typeof component?.district === "string" ? component.district : "";
+            const city = typeof component?.city === "string" ? component.city : "";
+            const province = typeof component?.province === "string" ? component.province : "";
+
+            setTopBarLocation({
+              area,
+              detail: formattedAddress,
+              loading: false,
+            });
+            setUserLocation({
+              lng,
+              lat,
+              accuracy: typeof result.accuracy === "number" ? result.accuracy : undefined,
+              address: formattedAddress,
+              city: boundary?.city,
+              district: boundary?.district,
+              boundaryName: boundary?.boundaryName,
+              boundaryLevel: boundary?.boundaryLevel,
+            });
+            resolve(adcode || district || city || province || undefined);
           });
-        }),
-      ]);
+        });
+      });
+
+      await refreshWeather(weatherTarget);
     } catch {
       setTopBarWeather((current) => ({ ...current, loading: false }));
       setTopBarLocation((current) => ({
