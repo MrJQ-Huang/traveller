@@ -240,7 +240,7 @@ export function RouteShareCard({ title, description, places, routePlan, mapSkinI
   const polyline = routeScreenPoints.map((point) => `${point.sx},${point.sy}`).join(" ");
 
   return (
-    <article className="share-card route-share-card" style={{ background: skinStyle.mapBg }}>
+    <article className={`share-card route-share-card route-card-skin-${mapSkinId}`} style={{ background: skinStyle.mapBg }}>
       <div className="route-card-map">
         {visibleTiles(frame.originX, frame.originY, frame.zoom).map((tile) => (
           <img
