@@ -74,21 +74,21 @@ export function TextShareCard({ draft }: TextShareCardProps) {
       <div className="ink-cloud cloud-b" />
 
       <header className="text-card-header">
-        <span>{draft.location || "常熟旅行"}</span>
-        <h1>{draft.title || "写下你的常熟灵感"}</h1>
+        <span>{draft.location || "路线灵感"}</span>
+        <h1>{draft.title || "写下你的路线灵感"}</h1>
       </header>
 
       <p className="text-card-body">
-        {draft.body || "把一段旅途文案放进这里，自动生成一张适合分享的文旅手绘风卡片。"}
+        {draft.body || "把一段旅途文案放进这里，自动生成一张适合分享的出发手绘风卡片。"}
       </p>
 
       <footer className="text-card-footer">
         <div className="text-card-tags">
-          {(tags.length ? tags : ["常熟", "文旅", "路线灵感"]).map((tag) => (
+          {(tags.length ? tags : ["路线", "出发", "路线灵感"]).map((tag) => (
             <span key={tag}>#{tag}</span>
           ))}
         </div>
-        <strong>{draft.author || "Changshu Travel"}</strong>
+        <strong>{draft.author || "Route Playbook"}</strong>
       </footer>
     </article>
   );

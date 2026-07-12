@@ -55,27 +55,27 @@ type StylePreset = {
 const assetBase = "/card-backgrounds/text-cards";
 
 const titlePool = [
-  "常熟一日慢游灵感",
-  "把江南晨光装进常熟",
-  "常熟松弛感小旅行",
-  "沿着虞山尚湖慢慢走",
-  "今天只想在常熟发呆",
-  "去常熟收集一点温柔",
+  "今日路线灵感",
+  "把晨光装进路线",
+  "松弛感小旅行",
+  "沿着城市慢慢走",
+  "今天只想慢慢发呆",
+  "去路上收集一点温柔",
   "半日山水半日烟火",
-  "常熟小城手账路线",
+  "城市手账路线",
   "从老街走到湖风里",
-  "写给常熟的慢慢喜欢",
+  "写给旅途的慢慢喜欢",
 ];
 
 const bodyPool = [
-  "从湖风、古城和一碗热汤面开始，把常熟的山水和烟火气收进一天。",
-  "在虞山的树影里放慢脚步，再去尚湖边等一阵风，常熟很适合慢慢喜欢。",
+  "从晨光、街角和一顿热饭开始，把城市的风景和烟火气收进一天。",
+  "在树影里放慢脚步，再去水边等一阵风，一座城市很适合慢慢喜欢。",
   "把园林、老街和茶香串成一条轻路线，走到哪里都像翻开一页江南手账。",
-  "不用赶路，也不急着打卡，跟着水巷和檐角转弯，就能遇见常熟的温柔。",
+  "不用赶路，也不急着打卡，跟着街巷和转角前进，就能遇见旅途的温柔。",
   "白天看山水，傍晚尝烟火，夜里把今天的好心情写进一张旅行卡片。",
   "从一条石板路走进小城日常，让茶香、桥影和晚霞替你写下旅途注脚。",
   "把行程排得松一点，留时间给风、给树影，也给突然想停下来的自己。",
-  "常熟的好不吵闹，藏在一面湖光、一段城墙和一口热乎的本地味道里。",
+  "旅途的好不吵闹，藏在一段风景、一条街巷和一口热乎的本地味道里。",
   "适合和朋友慢慢走，也适合一个人慢慢看，把今天过成一页温柔便签。",
   "让路线不只是打卡清单，而是从山水到烟火、从白天到夜色的一段小故事。",
 ];
@@ -210,9 +210,9 @@ function buildTextDraft(titleIndex: number, bodyIndex: number, styleIndex: numbe
   return {
     title: titlePool[titleIndex],
     body: bodyPool[bodyIndex],
-    tags: "常熟 文旅 手绘地图 周末路线",
-    location: "江苏常熟",
-    author: "Changshu Travel",
+    tags: "路线 灵感 地图 周末出发",
+    location: "我的路线",
+    author: "Route Playbook",
     titleIndex,
     bodyIndex,
     styleIndex,
@@ -300,7 +300,7 @@ export function ShareCardStudio({
   if (!open) return null;
 
   const fileName = mode === "text" ? "changshu-note-card.png" : "changshu-route-card.png";
-  const shareTitle = mode === "text" ? textDraft.title : routeTitle || "我的常熟路线";
+  const shareTitle = mode === "text" ? textDraft.title : routeTitle || "我的路线";
 
   function buildRouteSharePayload(): RouteSharePayload {
     return {
@@ -396,7 +396,7 @@ export function ShareCardStudio({
         try {
           await navigator.share({
             title: shareTitle,
-            text: `${shareTitle}｜常熟旅行卡片`,
+            text: `${shareTitle}｜路线分享卡片`,
             files: [file],
           });
           setShareStatus({
@@ -411,7 +411,7 @@ export function ShareCardStudio({
 
       if (platform === "weibo") {
         const url = new URL("https://service.weibo.com/share/share.php");
-        url.searchParams.set("title", `${shareTitle}｜常熟旅行卡片`);
+        url.searchParams.set("title", `${shareTitle}｜路线分享卡片`);
         url.searchParams.set("url", window.location.href);
         window.open(url.toString(), "_blank", "noopener,noreferrer");
         setShareStatus({

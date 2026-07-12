@@ -92,7 +92,7 @@ const defaultTopBarWeather: TopBarWeather = {
 
 const defaultTopBarLocation: TopBarLocation = {
   area: "虞山-尚湖",
-  detail: "默认常熟核心文旅片区",
+  detail: "默认路线核心出发片区",
 };
 
 type AmapCallbackResult<T> = {
@@ -106,7 +106,7 @@ function getReadableArea(addressComponent: Record<string, unknown> | null | unde
   const city = typeof addressComponent?.city === "string" ? addressComponent.city : "";
   const province = typeof addressComponent?.province === "string" ? addressComponent.province : "";
 
-  return township || district || city || province || "常熟市";
+  return township || district || city || province || "路线市";
 }
 
 function getLocationBoundary(addressComponent: Record<string, unknown> | null | undefined) {
@@ -136,7 +136,7 @@ function getLocationBoundary(addressComponent: Record<string, unknown> | null | 
   return {
     city: district || province,
     district,
-    boundaryName: district || province || "常熟市",
+    boundaryName: district || province || "路线市",
     boundaryLevel: "district" as const,
   };
 }
@@ -434,7 +434,7 @@ export default function App() {
     [itineraryIds],
   );
 
-  const routeCardTitle = activeDayPlan.routeName ?? `${activeDayPlan.title}常熟路线`;
+  const routeCardTitle = activeDayPlan.routeName ?? `${activeDayPlan.title}路线`;
   const routeCardDescription =
     activeDayPlan.routeDescription ??
     `${activeDayPlan.title} 已选 ${itineraryPlaces.length} 站，预计 ${estimatedTime}`;
@@ -494,7 +494,7 @@ export default function App() {
           }
 
           const weatherService = new AMap.Weather();
-          weatherService.getLive("常熟市", (statusOrError: unknown, result: unknown) => {
+          weatherService.getLive("路线市", (statusOrError: unknown, result: unknown) => {
             const liveResult = readAmapCallbackResult<any>(statusOrError, result);
             const liveWeather = liveResult.ok && liveResult.data
               ? {
@@ -503,7 +503,7 @@ export default function App() {
                 }
               : null;
 
-            weatherService.getForecast("常熟市", (forecastStatusOrError: unknown, forecastResult: unknown) => {
+            weatherService.getForecast("路线市", (forecastStatusOrError: unknown, forecastResult: unknown) => {
               const forecastCallbackResult = readAmapCallbackResult<any>(forecastStatusOrError, forecastResult);
               const forecasts = forecastCallbackResult.ok
                 ? readAmapForecastItems(forecastCallbackResult.data)
@@ -540,7 +540,7 @@ export default function App() {
               setTopBarLocation((current) => ({
                 ...current,
                 loading: false,
-                detail: "定位暂不可用，保留默认常熟片区",
+                detail: "定位暂不可用，保留默认路线片区",
               }));
               resolve();
               return;
@@ -596,7 +596,7 @@ export default function App() {
       setTopBarLocation((current) => ({
         ...current,
         loading: false,
-        detail: "高德实时信息暂不可用，保留默认常熟片区",
+        detail: "高德实时信息暂不可用，保留默认路线片区",
       }));
     }
   }, []);
@@ -620,7 +620,7 @@ export default function App() {
     }
 
     const boundaryName = userLocation.boundaryName || userLocation.city || userLocation.district || "当前位置";
-    if (boundaryName.includes("常熟")) {
+    if (boundaryName.includes("路线")) {
       return;
     }
 

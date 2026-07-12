@@ -148,7 +148,7 @@ function makeMapFrame(points: MapPoint[]) {
     : [
         {
           id: "fallback",
-          name: "常熟",
+          name: "路线",
           lng: fallbackCenter.lng,
           lat: fallbackCenter.lat,
         },
@@ -320,8 +320,8 @@ export function RouteShareCard({ title, description, places, routePlan, mapSkinI
       </div>
 
       <section className="route-card-content">
-        <span className="route-card-kicker">常熟路线卡</span>
-        <h1>{title || "我的常熟路线"}</h1>
+        <span className="route-card-kicker">路书路线卡</span>
+        <h1>{title || "我的路线"}</h1>
         <p>{description || "把选中的点位连成一张适合分享的路线卡片。"}</p>
 
         <div className="route-card-stats">
