@@ -1,26 +1,117 @@
-# 常熟全域文旅智能出行助手
+# 路径自主规划 Demo
 
-这是一个以地图为核心的一页式 Web 原型，当前已经从原来的静态滚动页面升级为 `master` 分支的 React/Vite 地图架构，并在此基础上融合了本地页面的卡片风格、图片素材、服务入口和文旅内容。
+一个地图优先的轻量旅行 / 骑行 / Citywalk 路书工具。它不是传统的“先看一堆攻略，再手动复制地址”的路线规划器，而是把地图、地点卡片、天气、城市边界、路线和分享卡片揉在一起：打开就定位到你所在的城市，然后从附近的景点、美食、厕所、医院、公安等真实地点开始搭一条可以马上走的路线。
 
-当前版本的产品重点是：
+线上体验：
 
-- 打开页面即进入常熟地图工作台。
-- 保留 `master` 的地图、点位筛选、J/P 模式、路线生成、随机路线、右侧行程面板、拖拽规划、地图工具、手绘层、路线连线和高德路线规划能力。
-- 把原滚动页面中的 AI 行程、实时地图、停车客流、景区讲解、诉求闭环等能力迁移到顶部“服务”菜单、地图点位、小卡片、展开详情和右侧路线面板中。
-- 使用本地常熟景点、美食和非遗图片素材，避免卡片展开后图片拉伸。
+```text
+https://traveller-mr-jq.vercel.app
+```
+
+备用地址：
+
+```text
+https://traveller-eight-dun.vercel.app
+```
+
+## 项目背景
+
+我们一开始做的是常熟文旅场景：景点、美食、公共服务点、手绘地图皮肤、路线规划和分享卡片都围绕常熟展开。后来发现一个更有意思的问题：
+
+> 如果这个工具只能服务常熟，那它像一个漂亮的本地 demo；如果它能跟着用户定位自动换城市，它才更像一个能被普通人带走的旅行小工具。
+
+所以现在项目的目标变成了：用高德地图的实时 POI、定位、天气和路线能力，把“本地数据库式的精致卡片体验”泛化到用户所在城市。你在杭州，它就围绕杭州；朋友在南京，它就围绕南京；比赛现场谁扫码，谁就能从自己当下的位置开始规划。
+
+## 它解决什么痛点
+
+- **攻略太散**：想去哪里、怎么走、旁边有什么吃的、有没有厕所或医院，往往分散在不同 App 里。
+- **路线不成形**：收藏了一堆点，但最后还是要自己在地图上来回拼。
+- **分享不可复用**：别人发来的路线截图很好看，但你还得手动搜地点、重建路线。
+- **城市迁移困难**：很多文旅 demo 做得很精致，但一离开本地数据库就失效。
+
+这个项目试图把这些事情变成一个动作：点地点、收卡片、排路线、生成分享卡片，需要时再导入复用。
+
+## 核心玩法
+
+1. 打开网页，允许浏览器定位。
+2. 地图会移动到你当前所在城市，并高亮城市范围。
+3. 左侧可以筛选地点类型，默认先看景点，避免一上来满屏都是点。
+4. 点地图上的地点，打开卡片详情。
+5. 把喜欢的地点加入右侧多日行程。
+6. 切换步行、骑行或驾车，让高德生成路线。
+7. 用分享悬浮窗生成路线卡片，快速给别人复用。
+
+更口语一点说：它像一个“路线积木台”。你不需要先写完整攻略，先把想去的点丢进来，路线会慢慢长出来。
+
+## 功能亮点
+
+### 1. 自动定位到用户所在城市
+
+页面启动后会调用高德定位和逆地理编码，拿到用户当前城市、区县、地址和行政区划信息。地图会自动聚焦当前位置，并尝试框选用户所在城市范围。
+
+天气也跟随定位刷新，不再写死常熟。比如你在杭州，天气弹窗会显示杭州相关天气；朋友在别的城市打开，也会跟着切到对方所在地。
+
+### 2. 高德 POI 接入卡片系统
+
+项目保留了本地卡片的精致展示，同时接入高德 POI 搜索和城市地点补全。非本地数据库的数据可以进入统一的卡片流程，继续参与：
+
+- 地图标记
+- 详情卡片
+- 行程收录
+- 路线规划
+- 分享卡片
+
+这样 demo 不再只能靠一份固定的常熟数据硬撑，而是可以跟着不同城市动态补点。
+
+### 3. 路线规划不是一条线，是一个可编辑路书
+
+用户可以把多个地点加入右侧行程，按天整理、拖拽排序、删除或重新规划。开始规划后，已选择地点和高德路线会更突出，未选择地点会弱化，减少地图噪声。
+
+支持的交通方式：
+
+- 步行
+- 骑行
+- 驾车
+
+### 4. J 人 / P 人两种状态
+
+默认是 P 人模式：先看地图，边走边选，路线可以随机、松弛、随手改。
+
+J 人模式更偏“给我一点确定感”，目前以路书提示和鼓励文案为主，不强行塞固定路线。毕竟有些人旅游是执行计划，有些人旅游是和计划保持礼貌距离。
+
+### 5. 分享卡片可以复用
+
+分享卡片不是单纯截图，它的设计目标是“方案卡片化”：让一条路线可以被保存、传播、再导入，变成别人也能快速使用的路线方案。
+
+Demo 阶段主要展示生成和复用思路。实际落地时，建议使用二维码、短链或后端方案 ID 承载路线数据；不要只依赖 PNG/JPG 图片元数据，因为经过微信等平台转发后，图片可能会被压缩或转码，隐藏信息容易丢失。
+
+### 6. 地图皮肤和城市范围强调
+
+项目支持高德默认地图风格和自定义风格切换。早期常熟手绘瓦片作为视觉实验保留过，但当前线上部署优先使用高德地图，方便跨城市泛化，也避免大体积瓦片影响加载。
+
+城市边界高亮可以开关，用来让用户一眼知道“我现在规划的是哪片城市空间”。
+
+## 背后的巧思
+
+- **地图是主界面，不是插图**：用户打开后直接进入可操作地图，不先看宣传页。
+- **卡片是数据中台**：本地数据、高德 POI、搜索结果、用户新增点，最后都尽量变成同一种卡片。
+- **先少后多**：初始只显示关键点位，避免地图被图标淹没；需要时再打开更多类型。
+- **路线高亮，噪声降权**：规划时突出已选点和路线，其他点弱化，降低认知负担。
+- **城市可迁移**：能用高德拿到的城市、天气、POI、路线，就尽量不写死在本地数据里。
+- **分享不是炫图，是复用入口**：卡片好看只是表层，真正想做的是路线方案的轻量流通。
 
 ## 技术栈
 
 - Vite
 - React
 - TypeScript
-- Leaflet
 - 高德 JavaScript API
-- lucide-react
-- 原生 HTML Drag and Drop
-- 本地静态 TypeScript 数据
+- Leaflet 备用地图
+- lucide-react 图标
+- html-to-image 分享图生成
+- 本地 TypeScript 数据 + 高德实时 POI
 
-## 快速启动
+## 本地启动
 
 安装依赖：
 
@@ -28,83 +119,13 @@
 npm install
 ```
 
-启动开发服务：
+创建本地环境变量文件：
 
 ```bash
-npm run dev
+cp .env.example .env.local
 ```
 
-默认会启动在：
-
-```text
-http://localhost:5173/
-```
-
-如果 `5173` 被占用，Vite 会自动切换到下一个端口。例如本次本地启动地址为：
-
-```text
-http://127.0.0.1:5174/
-```
-
-构建生产版本：
-
-```bash
-npm run build
-```
-
-预览生产构建：
-
-```bash
-npm run preview
-```
-
-## 当前目录结构
-
-```text
-.
-├── index.html
-├── package.json
-├── vite.config.ts
-├── tsconfig.json
-├── public/
-│   ├── assets/                         # 当前页面使用的本地图片素材
-│   │   └── photo-library/
-│   ├── map-skins/                      # master 原有区域贴图
-│   └── map-tiles/                      # 本地瓦片包解压位置，默认被 gitignore
-├── src/
-│   ├── App.tsx                         # 全局状态、J/P 模式、路线生成、行程面板
-│   ├── main.tsx
-│   ├── components/
-│   │   ├── AmapChangshuMap.tsx         # 高德地图实现
-│   │   ├── ChangshuMap.tsx             # 高德 / 备用地图切换
-│   │   ├── FallbackChangshuMap.tsx     # Leaflet 备用地图
-│   │   ├── ItineraryPanel.tsx          # 右侧行程规划面板
-│   │   ├── PlaceCard.tsx               # 地图小卡片和详情卡片
-│   │   └── TopBar.tsx                  # 紧凑顶部工具条、服务菜单、筛选和路线工具
-│   ├── api/
-│   │   └── placesApi.ts                # 未来数据库 / 实时接口预留入口
-│   ├── data/
-│   │   ├── places.ts                   # 地图点位、卡片详情和服务点位
-│   │   ├── routes.ts                   # P 人预设路线
-│   │   ├── services.ts                 # 顶部“服务”菜单配置
-│   │   ├── mapSkins.ts                 # 地图区域贴图
-│   │   └── fullCityHanddrawnTileRanges.ts
-│   ├── map/
-│   │   ├── amapLoader.ts               # 高德脚本加载和配置读取
-│   │   └── amapRouteService.ts         # 高德步行/骑行/驾车路线规划
-│   ├── styles/
-│   │   └── global.css
-│   ├── types/
-│   │   ├── place.ts
-│   │   └── route.ts
-│   └── utils/
-│       ├── itineraryRoute.ts
-│       └── routePlanner.ts
-```
-
-## 高德地图配置
-
-高德配置通过环境变量读取。当前本地开发使用 `.env.local`：
+在 `.env.local` 中填入高德配置：
 
 ```text
 VITE_AMAP_KEY=你的高德 Web 端 Key
@@ -112,647 +133,137 @@ VITE_AMAP_SECURITY_CODE=你的高德安全密钥
 VITE_AMAP_STYLE=amap://styles/fresh
 ```
 
-`.env.local` 已经在 `.gitignore` 中，不会被提交。
-
-如果其他人拉代码后地图没有加载，需要自己创建 `.env.local`，或者复制 `.env.example` 后补充真实 Key。
-
-排查高德问题时重点检查：
-
-- Key 是否是 JavaScript API 的 Web 端 Key。
-- 安全密钥是否与 Key 匹配。
-- 高德控制台域名白名单是否包含 `localhost`、`127.0.0.1` 和正式部署域名。
-- 浏览器控制台是否有鉴权失败、脚本加载失败或插件加载失败。
-- 网络是否可以访问 `https://webapi.amap.com/maps`。
-
-如果高德加载失败，页面会回退到 `FallbackChangshuMap`，仍然可以演示点位、卡片、拖拽规划和路线预览。
-
-## 风格化瓦片包
-
-如果需要启用 master 的常熟手绘风格瓦片，把 `changshu-full-city-all-zooms-handdrawn.zip` 解压到：
-
-```text
-public/map-tiles/
-```
-
-正确目录应为：
-
-```text
-public/map-tiles/changshu-full-city-all-zooms/handdrawn/
-```
-
-正确验证文件示例：
-
-```text
-public/map-tiles/changshu-full-city-all-zooms/handdrawn/18/218897/106686.png
-```
-
-不要解压成：
-
-```text
-public/map-tiles/changshu-full-city-all-zooms-handdrawn/changshu-full-city-all-zooms/...
-public/map-tiles/changshu-full-city-all-zooms.zip/...
-```
-
-`public/map-tiles/` 默认被 `.gitignore` 忽略，避免把大体积瓦片提交进仓库。
-
-## 当前保留的 master 功能
-
-本次改造以 `master` 为底座，以下功能仍然保留：
-
-- 高德地图优先加载。
-- 高德失败后回退 Leaflet 备用地图。
-- 手绘风格瓦片叠加。
-- 区域贴图覆盖。
-- 点位筛选。
-- J 人 / P 人模式。
-- 主题路线选择。
-- 生成预设路线。
-- 随机路线。
-- 右侧行程面板。
-- 右侧行程面板默认可收起。
-- 点击地图点位打开卡片。
-- 双击或点击按钮展开详情。
-- 卡片加入行程。
-- 卡片拖拽到右侧行程面板。
-- 行程面板内拖拽排序。
-- 删除单个点位。
-- 清空路线。
-- 路线点数和预计时长。
-- 步行 / 骑行 / 驾车切换。
-- 列表 / 卡牌视图切换。
-- 地图路线连线。
-- 高德道路级路线规划。
-- 地图手绘层和清除手绘。
-- 地图工具收起 / 展开。
-
-## 本次新增和融合的能力
-
-在保留 master 功能的基础上，当前版本新增：
-
-- 顶部紧凑工具条：品牌、点位筛选、J/P 模式、路线主题、生成、随机、行程统计和清空保留在一行内。
-- 顶部“服务”菜单：行程规划、智能讲解、景区舒适度、停车查询、实时路况、门票预约、找厕所、行李寄存、旅游驿站、美食推荐、投诉求助、一键客服默认收起，点击后展开。
-- 更多地图点位类型：停车、厕所、服务、活动、住宿、救援。
-- 点位卡片接入本地图片素材。
-- 展开卡片可覆盖地图内容，但不撑大页面。
-- 卡片根据点位位置自动选择上方、下方、左侧、右侧或居中展开。
-- 详情内容在卡片内部滚动。
-- 停车、厕所、驿站、活动、住宿、救援点位支持服务型详情字段。
-- 地图服务菜单可以直接切换对应图层，默认不再横向铺开大服务卡片。
-
-## 如何更新点位
-
-点位数据在：
-
-```text
-src/data/places.ts
-```
-
-一个点位的基本结构：
-
-```ts
-{
-  id: "yushan",
-  type: "scenic",
-  name: "虞山国家森林公园",
-  subtitle: "北门大街 21 号的国家级森林公园",
-  summary: "适合轻徒步和老城慢游。",
-  tags: ["山水", "历史", "Citywalk"],
-  imageUrl: "/assets/photo-library/spot-yushan-01.jpg",
-  source: "local",
-  poiId: "amap-or-db-poi-id",
-  address: "常熟市虞山片区",
-  district: "常熟市",
-  position: { x: 42, y: 36, lng: 120.709847, lat: 31.665592 },
-  openTime: "约 08:00-17:00",
-  price: "部分区域免费，部分项目另收费",
-  crowdLevel: "high",
-  duration: "2-3 小时",
-  history: "历史文化简介",
-  detail: "展开详情中的规划建议",
-  suitableFor: ["历史文化爱好者", "轻徒步用户"],
-  notice: "开放信息以景区公告为准。",
-  dataStatus: "demo"
-}
-```
-
-字段说明：
-
-- `source`：数据来源，可选 `local`、`database`、`amap`、`manual`。
-- `poiId`：后续接入高德 POI 或数据库时使用的真实标识。
-- `address` / `district`：后续数据库字段预留。
-- `dataStatus`：`demo` 表示演示数据，`verified` 表示已经校准。当前美食和店铺坐标多为 demo，后续接数据库后再校准。
-
-常用 `type`：
-
-- `scenic`：景点
-- `heritage`：非遗
-- `food`：具体美食
-- `restaurant`：美食店铺
-- `parking`：停车场
-- `restroom`：厕所
-- `service`：旅游驿站 / 寄存 / 客服
-- `activity`：活动 / 演艺 / 夜游
-- `lodging`：住宿
-- `emergency`：投诉 / 救援 / 闭环工单
-
-服务型点位可以增加 `serviceProfile`：
-
-```ts
-serviceProfile: {
-  status: "开放中，当前排队约 3 分钟",
-  capacity: "行李寄存剩余 28 格",
-  distanceTip: "靠近古城美食和非遗体验点",
-  actionLabel: "打开一码通",
-  detailItems: ["游客咨询", "行李寄存", "饮水休息", "一键客服"]
-}
-```
-
-## 如何更新顶部服务入口
-
-顶部服务入口在：
-
-```text
-src/data/services.ts
-```
-
-示例：
-
-```ts
-{
-  id: "parking",
-  icon: "P",
-  label: "停车查询",
-  hint: "余位与拥堵",
-  targetTypes: ["parking"]
-}
-```
-
-`targetTypes` 会控制点击服务入口后显示哪些地图点位类型。
-
-## 未来数据库接口预留
-
-当前点位仍来自静态 demo 数据，但已经预留接口层：
-
-```text
-src/api/placesApi.ts
-```
-
-当前函数：
-
-```ts
-fetchPlaces()
-fetchRoutes()
-fetchRealtimeStatus()
-fetchParkingStatus()
-fetchServiceTickets()
-```
-
-现在这些函数返回本地静态数据。后续接数据库时，优先只替换这里的实现，让接口返回的数据保持和 `Place` 类型兼容。这样地图组件、卡片组件、右侧行程面板和路线规划逻辑都不需要重写。
-
-当前美食和店铺地图位置主要用于演示筛选、卡片和路线规划，不代表已经完成真实 POI 校准。后续数据库可以返回真实 `lng`、`lat`、`poiId`、`address`、`source` 和 `dataStatus: "verified"` 来覆盖 demo 数据。
-
-## 如何更新 P 人路线
-
-路线数据在：
-
-```text
-src/data/routes.ts
-```
-
-示例：
-
-```ts
-{
-  id: "classic-culture",
-  name: "文化慢游线",
-  description: "老城园林、名人故居与虞山山水组合。",
-  placeIds: ["fangta", "zengzhao", "weng-tonghe", "yushan", "old-kitchen"]
-}
-```
-
-注意：`placeIds` 必须对应 `src/data/places.ts` 中存在的 `id`。
-
-## 图片素材
-
-当前本地图片已放到：
-
-```text
-public/assets/photo-library/
-```
-
-在点位里这样引用：
-
-```ts
-imageUrl: "/assets/photo-library/spot-yushan-01.jpg"
-```
-
-卡片图片使用固定比例容器和 `cover` 方式显示，展开详情时不会把图片拉伸成长条。
-
-## 常用调试命令
-
-类型和构建检查：
-
-```bash
-npm run build
-```
-
 启动开发服务：
 
 ```bash
 npm run dev
 ```
 
-访问本地服务：
-
-```powershell
-Invoke-WebRequest -UseBasicParsing http://127.0.0.1:5173/
-```
-
-如果端口被占用，根据 Vite 输出访问实际端口，例如：
+默认访问：
 
 ```text
-http://127.0.0.1:5174/
+http://localhost:5173/
 ```
 
-## 常见问题
+如果端口被占用，Vite 会自动切换到下一个端口，请以终端输出为准。
 
-### 1. 地图空白
+## 构建
 
-先看浏览器控制台。常见原因是高德 Key 或安全密钥错误、域名白名单未配置、本地没有网络、瓦片路径错误。
-
-### 2. 高德地图失败
-
-页面会自动回退备用地图。高德失败不影响卡片、路线、拖拽和 P 人路线生成演示。
-
-### 3. 手绘瓦片不显示
-
-检查瓦片路径是否正确：
-
-```text
-public/map-tiles/changshu-full-city-all-zooms/handdrawn/18/218897/106686.png
-```
-
-### 4. 新增点位不显示
-
-检查：
-
-- `type` 是否在 `src/types/place.ts` 中存在。
-- 顶部筛选是否选中了该类型。
-- `position.lng` / `position.lat` 是否正确。
-- `id` 是否唯一。
-
-### 5. P 人路线生成后缺点位
-
-检查 `src/data/routes.ts` 中的 `placeIds` 是否都能在 `src/data/places.ts` 中找到。
-
-### 6. 图片不显示
-
-检查：
-
-- 图片是否在 `public/assets/photo-library/`。
-- `imageUrl` 是否以 `/assets/...` 开头。
-- 文件名大小写是否一致。
-
-### 7. 卡片展开后遮挡
-
-当前设计允许展开卡片覆盖地图内容。它不会撑大页面，详情内容在卡片内部滚动。若需要调整尺寸，修改 `src/styles/global.css` 中：
-
-```css
-.map-card-popover.is-expanded
-.place-card.planner-place-card.is-expanded
-.planner-detail-scroll
-```
-
-## 后端接口字段要求
-
-后续接数据库时，建议后端返回的数据尽量兼容当前前端 `Place` 类型。前端已经预留入口：
-
-```text
-src/api/placesApi.ts
-```
-
-优先替换这些函数，不建议重写地图组件：
-
-```ts
-fetchPlaces()
-fetchRoutes()
-fetchRealtimeStatus()
-fetchParkingStatus()
-fetchServiceTickets()
-```
-
-### 1. 点位列表
-
-接口：
-
-```text
-GET /api/places
-```
-
-返回所有地图点位，包括景点、非遗、美食、店铺、停车、厕所、服务、活动、住宿、救援。美食和店铺的真实坐标也由这个接口返回。
-
-```ts
-type Place = {
-  id: string;
-  type:
-    | "scenic"
-    | "heritage"
-    | "food"
-    | "restaurant"
-    | "parking"
-    | "restroom"
-    | "service"
-    | "activity"
-    | "lodging"
-    | "emergency";
-  name: string;
-  subtitle?: string;
-  summary?: string;
-  tags?: string[];
-  position: {
-    lng: number;
-    lat: number;
-    x?: number;
-    y?: number;
-  };
-  imageUrl?: string;
-  images?: string[];
-  source?: "local" | "database" | "amap" | "manual";
-  dataStatus?: "demo" | "verified";
-  poiId?: string;
-  amapPoiId?: string;
-  address?: string;
-  district?: string;
-  openTime?: string;
-  price?: string;
-  ticket?: string;
-  duration?: string;
-  crowdLevel?: "low" | "medium" | "high" | "very-high";
-  history?: string;
-  detail?: string;
-  notice?: string;
-  suitableFor?: string[];
-  bookingUrl?: string;
-  guideUrl?: string;
-  phone?: string;
-  officialUrl?: string;
-  foodProfile?: FoodProfile;
-  restaurantProfile?: RestaurantProfile;
-  serviceProfile?: ServiceProfile;
-  parkingProfile?: ParkingProfile;
-  restroomProfile?: RestroomProfile;
-  emergencyProfile?: EmergencyProfile;
-  guideProfile?: GuideProfile;
-};
-```
-
-说明：
-
-- `position.lng` 和 `position.lat` 是真实地图必填字段。
-- `x` 和 `y` 只是备用地图或兜底定位字段。
-- `dataStatus: "demo"` 表示演示坐标，前端会提示“示例点位”。
-- `dataStatus: "verified"` 表示后端已经校准坐标，前端可作为真实点位展示。
-
-### 2. 美食和店铺
-
-具体美食 `type = "food"`：
-
-```ts
-type FoodProfile = {
-  flavor?: string;
-  history?: string;
-  recommendedScene?: string;
-  relatedRestaurants?: string[];
-  averagePrice?: string;
-  bestSeason?: string;
-  ingredients?: string[];
-};
-```
-
-美食店铺 `type = "restaurant"`：
-
-```ts
-type RestaurantProfile = {
-  mainFoods?: string[];
-  averageCost?: string;
-  popularity?: "low" | "medium" | "high" | "very-high";
-  reviewSummary?: string;
-  recommendedDishes?: string[];
-  queueTip?: string;
-  businessHours?: string;
-  phone?: string;
-  bookingUrl?: string;
-  menu?: Array<{
-    name: string;
-    price?: string;
-    imageUrl?: string;
-    description?: string;
-  }>;
-};
-```
-
-美食位置要求：
-
-- 后端接入后必须返回真实 `lng` / `lat`。
-- 如果来自高德或数据库，建议同步返回 `poiId` / `amapPoiId`。
-- 已校准点位返回 `dataStatus: "verified"`。
-- 未校准临时点位返回 `dataStatus: "demo"`。
-
-### 3. 停车
-
-停车点 `type = "parking"`：
-
-```ts
-type ParkingProfile = {
-  totalSpaces?: number;
-  availableSpaces?: number;
-  chargingSpaces?: number;
-  disabledSpaces?: number;
-  priceRule?: string;
-  congestionLevel?: "low" | "medium" | "high";
-  distanceTip?: string;
-  navigationUrl?: string;
-  updatedAt?: string;
-};
-```
-
-实时停车接口：
-
-```text
-GET /api/realtime/parking
-```
-
-```ts
-type ParkingStatus = {
-  placeId: string;
-  totalSpaces: number;
-  availableSpaces: number;
-  chargingSpaces?: number;
-  congestionLevel?: "low" | "medium" | "high";
-  updatedAt: string;
-};
-```
-
-### 4. 厕所、服务、救援
-
-厕所点 `type = "restroom"`：
-
-```ts
-type RestroomProfile = {
-  openStatus?: "open" | "closed" | "maintenance";
-  accessible?: boolean;
-  babyCare?: boolean;
-  distanceTip?: string;
-  cleanLevel?: "good" | "normal" | "poor";
-  reportUrl?: string;
-};
-```
-
-服务点 / 驿站 / 寄存 `type = "service"`：
-
-```ts
-type ServiceProfile = {
-  status?: string;
-  capacity?: string;
-  distanceTip?: string;
-  actionLabel?: string;
-  detailItems?: string[];
-  luggageAvailable?: number;
-  water?: boolean;
-  restArea?: boolean;
-  accessible?: boolean;
-  servicePhone?: string;
-};
-```
-
-救援 / 投诉点 `type = "emergency"`：
-
-```ts
-type EmergencyProfile = {
-  serviceStatus?: "online" | "busy" | "offline";
-  avgResponseMinutes?: number;
-  supportTypes?: string[];
-  submitUrl?: string;
-  phone?: string;
-};
-```
-
-### 5. 景区讲解
-
-景点和非遗点位可带讲解字段：
-
-```ts
-type GuideProfile = {
-  title?: string;
-  audioUrl?: string;
-  audioDuration?: string;
-  transcript?: string;
-  routeTips?: string[];
-  performanceReminders?: Array<{
-    title: string;
-    time: string;
-    place?: string;
-    bookingUrl?: string;
-  }>;
-};
-```
-
-### 6. 路线
-
-接口：
-
-```text
-GET /api/routes
-```
-
-```ts
-type RoutePreset = {
-  id: string;
-  name: string;
-  description: string;
-  placeIds: string[];
-  tags?: string[];
-  suitableFor?: string[];
-  estimatedMinutes?: number;
-};
-```
-
-`placeIds` 必须能在 `/api/places` 返回的点位中找到。
-
-### 7. 实时状态
-
-接口：
-
-```text
-GET /api/realtime/status
-```
-
-```ts
-type RealtimeStatus = {
-  placeId: string;
-  crowdLevel?: "low" | "medium" | "high" | "very-high";
-  crowdText?: string;
-  parkingLeft?: number;
-  queueMinutes?: number;
-  comfortText?: string;
-  updatedAt: string;
-};
-```
-
-### 8. 诉求工单
-
-提交工单：
-
-```text
-POST /api/service-tickets
-```
-
-```ts
-type CreateTicketRequest = {
-  placeId?: string;
-  category: "complaint" | "rescue" | "lost" | "repair" | "consult";
-  title: string;
-  content: string;
-  contact?: string;
-  lng?: number;
-  lat?: number;
-  images?: string[];
-};
-```
-
-返回：
-
-```ts
-type ServiceTicket = {
-  id: string;
-  title: string;
-  status: "submitted" | "assigned" | "processing" | "closed";
-  placeId?: string;
-  createdAt: string;
-  updatedAt: string;
-  expectedResponseMinutes?: number;
-};
-```
-
-查询工单：
-
-```text
-GET /api/service-tickets/:id
-```
-
-## 生产部署建议
-
-构建：
+普通生产构建：
 
 ```bash
 npm run build
 ```
 
-部署 `dist/` 到静态服务器即可。
+注意：仓库里的 `npm run build` 会在 Vite 构建后执行 `scripts/prepare-sites-dist.mjs`，用于适配 OpenAI Sites 风格的部署结构。
 
-上线前注意：
+Vercel 部署使用 `vercel.json` 中的专用命令：
 
-- 正式域名要加入高德 Key 白名单。
-- 不要把 `.env.local` 提交到公开仓库。
-- 大体积瓦片包不要直接提交到 git，建议单独分发或放对象存储。
-- 若接入真实数据库，尽量保持 `places.ts` 结构不变，把数据源替换为接口返回。
+```bash
+npm run data:convert && tsc --noEmit && vite build
+```
+
+这样 Vercel 的 `dist/` 根目录会保留 `index.html`，不会被转换成 `client/server` 结构。
+
+## 部署
+
+当前项目已连接 GitHub + Vercel：
+
+```text
+GitHub: MrJQ-Huang/traveller
+Vercel: traveller
+```
+
+推送到 GitHub `main` 后，Vercel 会自动部署生产版本。
+
+当前生产入口：
+
+```text
+https://traveller-mr-jq.vercel.app
+```
+
+如果要让高德地图在线上正常工作，需要把 Vercel 域名加入高德 Key 的 Web 端域名白名单。
+
+## 高德配置排查
+
+如果地图空白或定位失败，优先检查：
+
+- Key 是否是高德 Web 端 JavaScript API Key。
+- 安全密钥是否和 Key 匹配。
+- 域名白名单是否包含 `localhost`、`127.0.0.1` 和线上域名。
+- 浏览器是否允许定位权限。
+- 控制台是否有高德鉴权失败、插件加载失败或网络错误。
+- 网络是否能访问 `https://webapi.amap.com/maps`。
+
+如果高德加载失败，项目会尽量回退到备用地图，保证卡片、行程和基本演示还能继续。
+
+## 目录速览
+
+```text
+src/
+  App.tsx                         # 全局状态、定位、天气、路线、分享入口
+  components/
+    AmapChangshuMap.tsx           # 高德地图主实现
+    ChangshuMap.tsx               # 高德 / 备用地图切换
+    FallbackChangshuMap.tsx       # Leaflet 备用地图
+    ItineraryPanel.tsx            # 右侧行程面板
+    PlaceCard.tsx                 # 地点卡片
+    SideControlPanel.tsx          # 左侧筛选和玩法提示
+    TopBar.tsx                    # 顶部灵动岛、搜索、天气、日期
+    shareCards/                   # 分享卡片生成
+  data/
+    places.ts                     # 手工维护的核心地点
+    generatedPlaces.ts            # 由数据转换脚本生成的地点
+    generatedDatasetMeta.ts       # 数据生成元信息
+    routes.ts                     # 路线预设
+  map/
+    amapLoader.ts                 # 高德脚本加载和配置
+    amapRouteService.ts           # 高德路线规划
+  utils/
+    amapCityBootstrap.ts          # 根据用户城市拉取高德 POI
+    amapPlaceSearch.ts            # 搜索高德地点
+    itineraryRoute.ts             # 行程路线辅助
+    routePlanner.ts               # 路线估算和预设逻辑
+scripts/
+  convert-csv-to-places.mjs       # 数据转换
+  prepare-sites-dist.mjs          # OpenAI Sites 构建结构适配
+public/
+  map-skins/                      # 地图皮肤和景点图片资源
+  card-backgrounds/               # 分享卡片背景
+```
+
+## 数据说明
+
+项目里同时存在三类数据：
+
+- **本地精选数据**：早期为常熟场景整理的景点、美食和服务点，适合展示精致卡片。
+- **生成数据**：从 CSV 或结构化来源转换来的 POI，用于扩充地图点位。
+- **高德实时数据**：用户搜索或定位城市后动态获取，适合跨城市泛化。
+
+理想状态是：不管数据来自哪里，进入前端后都尽量变成统一的 `Place` 结构。这样地图、卡片、路线和分享功能不用关心“这个点到底是本地写的，还是高德搜来的”。
+
+## 常见问题
+
+### 国内访问 Vercel 会不会卡？
+
+有可能。Vercel 很适合 GitHub 自动部署和快速 demo，但中国大陆访问 `.vercel.app` 域名不一定稳定。比赛展示建议准备一个国内静态托管备用链接，比如 EdgeOne Pages、腾讯云 COS、阿里云 OSS 等。
+
+### 为什么不用服务器？
+
+这个项目目前是前端静态站，不需要传统后端服务器。只要有静态托管服务，上传 `dist/` 就能跑。后续如果要做用户账号、路线云存储、分享短链和数据入库，再加后端也不迟。
+
+### 为什么不用纯本地数据库？
+
+纯本地数据库可以做得很精致，但迁移到其他城市成本高。接入高德 POI 后，项目可以保留“卡片化体验”，同时让不同城市都能生成可用地点。
+
+### 为什么分享图里不直接塞所有路线数据？
+
+PNG 元数据在某些场景可行，但经过微信等平台转发后，图片可能变成 JPG，隐藏数据会丢。更稳的方案是：图片负责好看，二维码或短链负责携带路线 ID。
+
+### 手绘瓦片还需要吗？
+
+不作为线上默认依赖。手绘瓦片很有视觉记忆点，但体积大、城市泛化弱。当前 Demo 优先使用高德地图，保证跨城市和移动端访问更稳定。
+
+## 一句话介绍
+
+这是一个把“地图找点、路线规划、地点卡片、天气定位、方案分享”合成一张可操作路书的 Web Demo。它看起来像旅行工具，骨子里更像一个可以把城市经验卡片化、路线化、再分享出去的小型方案引擎。
