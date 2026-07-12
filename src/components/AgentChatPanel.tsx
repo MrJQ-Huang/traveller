@@ -109,16 +109,16 @@ export function AgentChatPanel({
   }
 
   return (
-    <section className="agent-panel" aria-label="小常聊天助手">
+    <section className="agent-panel" aria-label="路书搭子聊天助手">
       <header className="agent-panel-header">
         <div>
           <span>
             <Bot size={15} />
-            小常
+            路书
           </span>
-          <strong>常熟陪游助手</strong>
+          <strong>路径自主规划</strong>
         </div>
-        <button className="ghost-icon-button" type="button" onClick={onClose} aria-label="收起小常">
+        <button className="ghost-icon-button" type="button" onClick={onClose} aria-label="收起路书">
           <X size={17} />
         </button>
       </header>
@@ -227,7 +227,7 @@ export function AgentChatPanel({
           <div className="agent-message is-assistant">
             <p className="agent-thinking">
               <Loader2 size={15} />
-              小常正在琢磨路线...
+              路书搭子正在琢磨路线...
             </p>
           </div>
         )}
@@ -253,10 +253,10 @@ export function AgentChatPanel({
         <input
           value={draft}
           onChange={(event) => setDraft(event.target.value)}
-          placeholder="跟小常说说你想怎么玩"
+          placeholder="说说你想怎么走"
           disabled={thinking}
         />
-        <button type="submit" disabled={thinking || !draft.trim()} aria-label="发送给小常">
+        <button type="submit" disabled={thinking || !draft.trim()} aria-label="发送给路书搭子">
           <Send size={17} />
         </button>
       </form>

@@ -219,11 +219,11 @@ export function AgentCompanion({
             moved: false,
           };
         }}
-        aria-label="打开小常"
+        aria-label="打开路书搭子"
       >
         <span className="agent-avatar-face">
           <Sparkles size={22} />
-          <strong>小常</strong>
+          <strong>路书</strong>
         </span>
         <span className="agent-avatar-status">
           <MessageCircle size={14} />

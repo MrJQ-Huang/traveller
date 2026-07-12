@@ -61,11 +61,8 @@ type ShareFabDragState = {
 
 const allPlaceTypes: PlaceType[] = [
   "scenic",
-  "heritage",
   "food",
-  "parking",
   "restroom",
-  "lodging",
   "hospital",
   "police",
 ];
@@ -351,7 +348,7 @@ export default function App() {
   const [isDayPlannerOpen, setIsDayPlannerOpen] = useState(true);
   const [transportMode, setTransportMode] = useState<TransportMode>("walking");
   const [agentMessages, setAgentMessages] = useState<AgentChatMessage[]>([
-    createAgentMessage("assistant", "我是小常。你可以跟我说想怎么玩，我会结合当前地图点位帮你选点、排顺，并把路线放进当前天的行程栏。"),
+    createAgentMessage("assistant", "我是路书搭子。你可以跟我说想怎么玩，我会结合当前地图点位帮你选点、排顺，并把路线放进当前天的行程栏。"),
   ]);
   const [agentThinking, setAgentThinking] = useState(false);
   const [agentQuickReplies, setAgentQuickReplies] = useState<string[]>([
@@ -801,7 +798,7 @@ export default function App() {
 
     const itineraryTypes = targetDay.placeIds
       .map((id) => allPlaces.find((place) => place.id === id)?.type)
-      .filter((type): type is PlaceType => Boolean(type));
+      .filter((type): type is PlaceType => type !== undefined && allPlaceTypes.includes(type));
 
     if (itineraryTypes.length === 0) {
       return;
@@ -1100,8 +1097,8 @@ export default function App() {
       updateActiveDay((day) => ({
         ...day,
         placeIds: nextIds,
-        routeName: toolCall.args.routeName ?? "小常规划路线",
-        routeDescription: toolCall.args.routeDescription ?? "由小常根据当前点位生成，真实道路由高德地图计算。",
+        routeName: toolCall.args.routeName ?? "路书搭子规划路线",
+        routeDescription: toolCall.args.routeDescription ?? "由路书搭子根据当前点位生成，真实道路由高德地图计算。",
       }));
 
       if (toolCall.args.transportMode) {
@@ -1150,8 +1147,8 @@ export default function App() {
       updateActiveDay((day) => ({
         ...day,
         placeIds: nextIds,
-        routeName: toolCall.args.routeName ?? "小常排顺路线",
-        routeDescription: toolCall.args.routeDescription ?? "小常已根据当前点位顺路关系调整顺序。",
+        routeName: toolCall.args.routeName ?? "路书搭子排顺路线",
+        routeDescription: toolCall.args.routeDescription ?? "路书搭子已根据当前点位顺路关系调整顺序。",
       }));
       setIsItineraryOpen(true);
       return;
@@ -1179,7 +1176,7 @@ export default function App() {
   }
 
   function applyAgentResponse(response: AgentResponse) {
-    setAgentMessages((current) => [...current, createAgentMessage("assistant", response.reply || "小常收到啦，我先不改动当前行程。")]);
+    setAgentMessages((current) => [...current, createAgentMessage("assistant", response.reply || "路书搭子收到啦，我先不改动当前行程。")]);
     setAgentQuickReplies(response.quickReplies ?? []);
     setAgentDebug(response.debug ?? null);
     setAgentExecutionNotes(response.executionNotes ?? []);
@@ -1250,51 +1247,6 @@ export default function App() {
       ...current,
       createAgentMessage("assistant", `好，我已经把「${route.title}」放进 ${activeDayPlan.title} 的行程栏。地图会继续用高德生成真实道路。`),
     ]);
-  }
-
-  function activateService(types?: PlaceType[], serviceId?: string) {
-    if (types?.length) {
-      setActiveTypes(types);
-    }
-
-    if (serviceId === "ai") {
-      setMode("p");
-      setDrawMode(false);
-      setIsItineraryOpen(true);
-    }
-
-    if (serviceId === "food") {
-      setRoutePresetId("food-walk");
-    }
-  }
-
-  function handleAiQuery(query: string) {
-    const normalizedQuery = query.toLowerCase();
-
-    if (query.includes("停车") || normalizedQuery.includes("parking")) {
-      setActiveTypes(["parking"]);
-      return;
-    }
-
-    if (query.includes("医院") || query.includes("医疗") || query.includes("急救")) {
-      setActiveTypes(["hospital"]);
-      return;
-    }
-
-    if (query.includes("公安") || query.includes("警务") || query.includes("报警")) {
-      setActiveTypes(["police"]);
-      return;
-    }
-
-    if (query.includes("美食") || query.includes("本帮菜") || query.includes("饭店")) {
-      setActiveTypes(["food"]);
-      setRoutePresetId("food-walk");
-      return;
-    }
-
-    setMode("p");
-    setDrawMode(false);
-    setIsItineraryOpen(true);
   }
 
   function handleShareFabPointerDown(event: ReactPointerEvent<HTMLButtonElement>) {
@@ -1447,8 +1399,6 @@ export default function App() {
           onGenerateRoute={generatePresetRoute}
           onRandomRoute={generateRandomRoute}
           onClear={clearRoute}
-          onActivateService={activateService}
-          onSubmitAiQuery={handleAiQuery}
         />
 
         <button

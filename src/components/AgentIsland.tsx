@@ -1,10 +1,9 @@
 import {
-  Bot,
   Check,
   Loader2,
   RefreshCw,
+  Route,
   Send,
-  Sparkles,
 } from "lucide-react";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type FormEvent, type MouseEvent } from "react";
 import { createPortal } from "react-dom";
@@ -205,10 +204,10 @@ export function AgentIsland({
 
   const portalChatPanel = active && typeof document !== "undefined"
     ? createPortal(
-        <div className={`agent-chat-portal ${chatPanelFrame ? "is-positioned" : ""}`} ref={panelRef} style={portalStyle} aria-label="小常对话内容">
+        <div className={`agent-chat-portal ${chatPanelFrame ? "is-positioned" : ""}`} ref={panelRef} style={portalStyle} aria-label="路书搭子内容">
           <div className="agent-chat-portal-title">
-            <strong>小常对话</strong>
-            <span>{thinking ? "小常思考中" : connectionLabel}</span>
+            <strong>路书搭子</strong>
+            <span>{thinking ? "路线规划中" : connectionLabel}</span>
           </div>
 
           <div className="agent-island-message-list">
@@ -220,7 +219,7 @@ export function AgentIsland({
 
             {!thinking && recentMessages.length === 0 && !hasStructuredOutput && (
               <div className="agent-island-message is-assistant">
-                <p>小常已经醒着了，直接告诉我你想怎么玩。</p>
+                <p>路书搭子已经就位，直接告诉我你想怎么玩。</p>
               </div>
             )}
 
@@ -228,7 +227,7 @@ export function AgentIsland({
               <div className="agent-island-message is-assistant">
                 <p className="agent-island-thinking">
                   <Loader2 size={14} />
-                  小常正在想路线...
+                  路书搭子正在想路线...
                 </p>
               </div>
             )}
@@ -298,26 +297,23 @@ export function AgentIsland({
 
   return (
     <>
-    <section ref={islandRef} className={`agent-island ${active ? "is-active" : "is-idle"} ${thinking ? "is-thinking" : ""}`} aria-label="小常智能陪游助手">
+    <section ref={islandRef} className={`agent-island ${active ? "is-active" : "is-idle"} ${thinking ? "is-thinking" : ""}`} aria-label="路书搭子">
       <button
         className="agent-island-avatar"
         type="button"
         onClick={() => onActiveChange(!active)}
-        aria-label={active ? "收起小常输入栏" : "唤醒小常"}
+        aria-label={active ? "收起路书搭子输入栏" : "唤醒路书搭子"}
       >
-        <span className="agent-avatar-orbit" aria-hidden="true">
-          <Sparkles size={13} />
-        </span>
         <span className="agent-avatar-core">
-          {thinking ? <Loader2 size={20} /> : <Bot size={20} />}
+          {thinking ? <Loader2 size={20} /> : <Route size={20} />}
         </span>
-        <strong>小常</strong>
+        <strong>路书</strong>
       </button>
 
       {!active && (
         <button className="agent-island-idle-copy" type="button" onClick={() => onActiveChange(true)}>
-          <span>{thinking ? "小常正在规划" : "常熟全域文旅助手"}</span>
-          <em>{thinking ? "可收起等待，不会中断大脑进程" : "点击唤醒陪游 Agent"}</em>
+          <span>{thinking ? "路书搭子正在规划" : "路径自主规划"}</span>
+          <em>{thinking ? "可收起等待，不会中断大脑进程" : "点击唤醒路线助手"}</em>
         </button>
       )}
 
@@ -326,7 +322,7 @@ export function AgentIsland({
         <div className="agent-island-workspace">
           <div className="agent-island-status-row">
             <span className={`agent-brain-pill ${isConnected ? "is-connected" : "is-local"}`}>
-              <Bot size={14} />
+              <Route size={14} />
               {connectionLabel}
             </span>
             <button type="button" className="agent-status-button" onClick={runConnectionAction} disabled={connectionBusy}>
@@ -339,17 +335,17 @@ export function AgentIsland({
             <input
               value={draft}
               onChange={(event) => setDraft(event.target.value)}
-              placeholder={thinking ? "小常正在思考，也可以先收起等待" : "跟小常说说你想怎么玩"}
+              placeholder={thinking ? "路书搭子正在思考，也可以先收起等待" : "说说你想怎么走"}
               disabled={thinking}
             />
-            <button type="submit" disabled={thinking || !draft.trim()} aria-label="发送给小常">
+            <button type="submit" disabled={thinking || !draft.trim()} aria-label="发送给路书搭子">
               {thinking ? <Loader2 size={16} /> : <Send size={16} />}
             </button>
           </form>
 
         </div>
 
-          <div className="agent-island-chat-panel" aria-label="小常对话内容">
+          <div className="agent-island-chat-panel" aria-label="路书搭子内容">
             <div className="agent-island-message-list">
               {recentMessages.map((message) => (
                 <div className={`agent-island-message is-${message.role}`} key={message.id}>
@@ -359,7 +355,7 @@ export function AgentIsland({
 
               {!thinking && recentMessages.length === 0 && !hasStructuredOutput && (
                 <div className="agent-island-message is-assistant">
-                  <p>小常已经醒着了，直接告诉我你想怎么玩。</p>
+                  <p>路书搭子已经就位，直接告诉我你想怎么玩。</p>
                 </div>
               )}
 
@@ -367,7 +363,7 @@ export function AgentIsland({
                 <div className="agent-island-message is-assistant">
                   <p className="agent-island-thinking">
                     <Loader2 size={14} />
-                    小常正在想路线...
+                    路书搭子正在想路线...
                   </p>
                 </div>
               )}

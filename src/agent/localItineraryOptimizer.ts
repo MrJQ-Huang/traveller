@@ -133,27 +133,27 @@ function fitTimeBudget(ordered: Place[], options: OptimizeOptions) {
 function variantText(variant?: OptimizeOptions["variant"]) {
   if (variant === "relaxed") {
     return {
-      title: "小常轻松路线",
+      title: "路书轻松路线",
       summary: "减少点位数量和折返，优先让路线更稳一点。",
     };
   }
 
   if (variant === "food") {
     return {
-      title: "小常美食路线",
+      title: "路书美食路线",
       summary: "把吃饭和小吃体验放进路线里，适合边逛边吃。",
     };
   }
 
   if (variant === "heritage") {
     return {
-      title: "小常非遗路线",
+      title: "路书文化路线",
       summary: "优先串起文化和非遗体验点，适合慢慢看内容。",
     };
   }
 
   return {
-    title: "小常均衡路线",
+    title: "路书均衡路线",
     summary: "兼顾景点、文化和餐饮，先给你一条不太折返的演示路线。",
   };
 }

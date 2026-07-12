@@ -171,11 +171,11 @@ button:disabled {
   align-items: center;
   gap: 8px;
   min-height: 48px;
-  color: var(--accent-strong);
+  color: #075a8a;
 }
 
 .agent-island.is-idle {
-  min-width: 258px;
+  min-width: 246px;
 }
 
 .agent-island.is-active {
@@ -188,18 +188,18 @@ button:disabled {
   display: grid;
   grid-template-columns: auto auto;
   place-items: center;
-  gap: 7px;
-  min-width: 68px;
+  gap: 8px;
+  min-width: 74px;
   height: 54px;
-  padding: 0 12px 0 8px;
+  padding: 0 13px 0 9px;
   color: white;
   background:
-    radial-gradient(circle at 26% 22%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 34%),
-    linear-gradient(145deg, #30b58f, #0f6d57 68%, #0b4f43);
-  border: 1px solid rgba(255, 255, 255, 0.62);
+    radial-gradient(circle at 24% 20%, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0) 32%),
+    linear-gradient(145deg, #1fb6ff 0%, #0074d9 56%, #023e8a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 999px;
   box-shadow:
-    0 12px 26px rgba(15, 95, 76, 0.24),
+    0 14px 28px rgba(0, 116, 217, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.42);
   transition:
     transform 180ms ease,
@@ -213,28 +213,27 @@ button:disabled {
   place-items: center;
   width: 34px;
   height: 34px;
-  color: #0f5f4c;
+  color: #005bbb;
   background:
-    radial-gradient(circle at 34% 22%, #ffffff, rgba(255, 255, 255, 0.74)),
-    linear-gradient(145deg, #e9fff7, #bce9d9);
+    radial-gradient(circle at 34% 22%, #ffffff, rgba(255, 255, 255, 0.78)),
+    linear-gradient(145deg, #f8fbff, #c9edff);
   border: 1px solid rgba(255, 255, 255, 0.74);
   border-radius: 50%;
-  box-shadow: 0 8px 18px rgba(4, 47, 40, 0.2);
+  box-shadow:
+    0 8px 18px rgba(0, 49, 112, 0.22),
+    inset 0 -3px 0 rgba(0, 116, 217, 0.12);
 }
 
-.agent-avatar-orbit {
+.agent-avatar-core::after {
+  content: "";
   position: absolute;
-  top: 4px;
-  right: 6px;
-  display: grid;
-  place-items: center;
-  width: 21px;
-  height: 21px;
-  color: #0f5f4c;
-  background: rgba(255, 255, 255, 0.88);
+  right: 4px;
+  bottom: 4px;
+  width: 7px;
+  height: 7px;
+  background: #ffe45e;
+  border: 2px solid white;
   border-radius: 50%;
-  box-shadow: 0 6px 14px rgba(4, 47, 40, 0.14);
-  transform: rotate(-8deg);
 }
 
 .agent-island-avatar strong {
@@ -288,7 +287,7 @@ button:disabled {
 
 .agent-island-avatar:hover {
   transform: translateY(-1px);
-  box-shadow: 0 16px 32px rgba(15, 95, 76, 0.28);
+  box-shadow: 0 18px 34px rgba(0, 116, 217, 0.34);
 }
 
 .agent-island-idle-copy {
@@ -296,7 +295,7 @@ button:disabled {
   gap: 2px;
   min-width: 0;
   padding: 0;
-  color: var(--accent-strong);
+  color: #075a8a;
   background: transparent;
   text-align: left;
 }
@@ -309,7 +308,7 @@ button:disabled {
 }
 
 .agent-island-idle-copy em {
-  color: rgba(15, 95, 76, 0.68);
+  color: rgba(7, 90, 138, 0.72);
   font-size: 11px;
   font-style: normal;
   font-weight: 800;
@@ -351,9 +350,9 @@ button:disabled {
 }
 
 .agent-brain-pill.is-connected {
-  color: #0f5f4c;
-  background: rgba(223, 243, 236, 0.92);
-  border: 1px solid rgba(22, 122, 98, 0.18);
+  color: #075a8a;
+  background: rgba(230, 246, 255, 0.94);
+  border: 1px solid rgba(0, 116, 217, 0.18);
 }
 
 .agent-brain-pill.is-local {
@@ -363,9 +362,9 @@ button:disabled {
 }
 
 .agent-status-button {
-  color: var(--accent-strong);
+  color: #075a8a;
   background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(22, 122, 98, 0.16);
+  border: 1px solid rgba(0, 116, 217, 0.16);
 }
 
 .weather-pill-shell,
@@ -511,8 +510,8 @@ button:disabled {
 }
 
 .agent-island-input-row input:focus {
-  border-color: rgba(22, 122, 98, 0.46);
-  box-shadow: 0 0 0 3px rgba(22, 122, 98, 0.11);
+  border-color: rgba(0, 116, 217, 0.46);
+  box-shadow: 0 0 0 3px rgba(0, 116, 217, 0.12);
 }
 
 .agent-island-input-row button {
@@ -520,7 +519,7 @@ button:disabled {
   place-items: center;
   height: 38px;
   color: white;
-  background: linear-gradient(145deg, #199a78, #0f6d57);
+  background: linear-gradient(145deg, #1fb6ff, #0074d9 72%, #023e8a);
   border-radius: 999px;
 }
 
@@ -3812,10 +3811,10 @@ button:disabled {
   position: absolute;
   top: 94px;
   left: 18px;
-  bottom: 18px;
   z-index: 760;
-  width: 356px;
+  width: 348px;
   max-width: calc(100vw - 36px);
+  max-height: calc(100vh - 112px);
   pointer-events: none;
   transition:
     width 220ms ease,
@@ -3823,8 +3822,8 @@ button:disabled {
 }
 
 .side-panel-inner {
-  height: 100%;
-  padding: 14px;
+  max-height: inherit;
+  padding: 12px;
   overflow-y: auto;
   overscroll-behavior: contain;
   pointer-events: auto;
@@ -3901,12 +3900,16 @@ button:disabled {
 
 .side-panel-section {
   display: grid;
-  gap: 10px;
-  margin-top: 13px;
-  padding: 12px;
+  gap: 9px;
+  margin-top: 10px;
+  padding: 11px;
   background: rgba(247, 250, 248, 0.86);
   border: 1px solid rgba(220, 228, 223, 0.82);
-  border-radius: 16px;
+  border-radius: 14px;
+}
+
+.side-panel-section:first-child {
+  margin-top: 0;
 }
 
 .side-section-title {
@@ -3923,19 +3926,19 @@ button:disabled {
 .side-filter-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
+  gap: 7px;
 }
 
 .side-filter-chip {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  min-height: 38px;
-  padding: 0 10px;
+  min-height: 36px;
+  padding: 0 9px;
   color: #42544e;
   background: white;
   border: 1px solid rgba(220, 228, 223, 0.94);
-  border-radius: 12px;
+  border-radius: 11px;
   font-size: 13px;
   font-weight: 850;
   transition:
@@ -3946,14 +3949,14 @@ button:disabled {
 
 .side-filter-chip:hover {
   transform: translateY(-1px);
-  border-color: rgba(22, 122, 98, 0.25);
+  border-color: rgba(0, 116, 217, 0.25);
 }
 
 .side-filter-chip span {
   display: grid;
   place-items: center;
-  width: 24px;
-  height: 24px;
+  width: 23px;
+  height: 23px;
   flex: 0 0 auto;
   color: white;
   border-radius: 8px;
@@ -3975,9 +3978,9 @@ button:disabled {
 .side-filter-chip.type-police span { background: #315fb4; }
 
 .side-filter-chip.is-active {
-  color: var(--accent-strong);
-  background: #e9f7f2;
-  border-color: rgba(22, 122, 98, 0.24);
+  color: #075a8a;
+  background: #e7f5ff;
+  border-color: rgba(0, 116, 217, 0.24);
 }
 
 .side-service-grid {
@@ -4040,7 +4043,7 @@ button:disabled {
   grid-template-columns: 1fr 1fr;
   gap: 6px;
   padding: 5px;
-  background: #eef5f1;
+  background: #eef7fd;
   border: 1px solid rgba(220, 228, 223, 0.92);
   border-radius: 14px;
 }
@@ -4065,15 +4068,15 @@ button:disabled {
 }
 
 .side-mode-switch button.is-active {
-  color: var(--accent-strong);
+  color: #075a8a;
   background: white;
-  border-color: rgba(22, 122, 98, 0.14);
+  border-color: rgba(0, 116, 217, 0.14);
   box-shadow: 0 6px 14px rgba(24, 35, 31, 0.08);
 }
 
 .side-route-select {
   width: 100%;
-  min-height: 40px;
+  min-height: 38px;
   padding: 0 12px;
   color: #30443d;
   background: white;
@@ -4081,23 +4084,41 @@ button:disabled {
   border-radius: 12px;
 }
 
+.side-route-note {
+  color: #183d59;
+  background:
+    linear-gradient(135deg, rgba(230, 246, 255, 0.96), rgba(255, 250, 222, 0.9));
+  border-color: rgba(0, 116, 217, 0.16);
+}
+
+.side-route-note .side-section-title {
+  color: #075a8a;
+}
+
+.side-route-note p {
+  margin: 0;
+  color: #496173;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 .side-manual-copy {
   display: grid;
   gap: 8px;
-  padding: 13px 14px;
-  color: #365149;
+  padding: 12px;
+  color: #32495c;
   background:
-    linear-gradient(135deg, rgba(223, 243, 236, 0.92), rgba(255, 250, 239, 0.92));
-  border: 1px solid rgba(22, 122, 98, 0.14);
+    linear-gradient(135deg, rgba(230, 246, 255, 0.94), rgba(255, 250, 232, 0.9));
+  border: 1px solid rgba(0, 116, 217, 0.16);
   border-radius: 14px;
 }
 
 .side-manual-copy svg {
-  color: var(--accent-strong);
+  color: #0074d9;
 }
 
 .side-manual-copy strong {
-  color: var(--accent-strong);
+  color: #075a8a;
   font-size: 14px;
 }
 
@@ -4116,8 +4137,8 @@ button:disabled {
 
 .side-primary-button {
   color: white;
-  background: linear-gradient(135deg, #198c72, #10735e);
-  border: 1px solid rgba(22, 122, 98, 0.2);
+  background: linear-gradient(135deg, #1fb6ff, #0074d9 72%, #023e8a);
+  border: 1px solid rgba(0, 116, 217, 0.22);
 }
 
 .side-ghost-button,
@@ -4234,8 +4255,8 @@ button:disabled {
   .side-control-panel {
     top: 78px;
     left: 10px;
-    bottom: 76px;
     width: min(340px, calc(100vw - 20px));
+    max-height: calc(100vh - 154px);
   }
 
   .side-control-panel.is-collapsed {

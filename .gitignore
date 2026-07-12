@@ -38,3 +38,9 @@ tile-packages/*.zip
 
 # Local reference exports
 zgx开发内容/
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.tef_dist/*
+  

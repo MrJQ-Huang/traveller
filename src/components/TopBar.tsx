@@ -331,10 +331,10 @@ export function TopBar({
     <header ref={topbarRef} className={`topbar smart-status-topbar ${agentActive ? "is-agent-active" : ""}`} aria-label="常熟文旅实时状态栏">
       {agentSlot ?? (
         <div className="topbar-brand">
-          <span className="brand-mark">游</span>
+          <span className="brand-mark">路</span>
           <span>
-            <strong>常熟全域文旅助手</strong>
-            <em>Changshu Smart Travel</em>
+            <strong>路径自主规划</strong>
+            <em>Route Autopilot</em>
           </span>
         </div>
       )}

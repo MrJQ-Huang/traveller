@@ -4,14 +4,13 @@ import {
   Compass,
   Dice5,
   Eraser,
-  Grid3X3,
   HeartHandshake,
+  MapPinned,
   Route,
   Search,
   Sparkles,
 } from "lucide-react";
 import { routePresets } from "../data/routes";
-import { serviceShortcuts } from "../data/services";
 import type { PlaceType, PlannerMode } from "../types/place";
 import { placeTypeLabels, placeTypeShortLabels } from "../types/place";
 
@@ -27,17 +26,12 @@ type SideControlPanelProps = {
   onGenerateRoute: () => void;
   onRandomRoute: () => void;
   onClear: () => void;
-  onActivateService: (types?: PlaceType[], serviceId?: string) => void;
-  onSubmitAiQuery?: (query: string) => void;
 };
 
 const filterOrder: PlaceType[] = [
   "scenic",
-  "heritage",
   "food",
-  "parking",
   "restroom",
-  "lodging",
   "hospital",
   "police",
 ];
@@ -54,7 +48,6 @@ export function SideControlPanel({
   onGenerateRoute,
   onRandomRoute,
   onClear,
-  onActivateService,
 }: SideControlPanelProps) {
   return (
     <aside className={`side-control-panel ${isOpen ? "is-open" : "is-collapsed"}`} aria-label="地图规划控制台">
@@ -87,6 +80,14 @@ export function SideControlPanel({
               </button>
             ))}
           </div>
+        </section>
+
+        <section className="side-panel-section side-route-note">
+          <div className="side-section-title">
+            <MapPinned size={16} />
+            <strong>路书提示</strong>
+          </div>
+          <p>先选想去的点，再让路线自己跑起来。好的路线不是塞满每一分钟，而是让下一站刚好值得出发。</p>
         </section>
 
         <section className="side-panel-section side-route-section">
@@ -145,27 +146,6 @@ export function SideControlPanel({
           </button>
         </section>
 
-        <section className="side-panel-section">
-          <div className="side-section-title">
-            <Grid3X3 size={16} />
-            <strong>游客服务</strong>
-          </div>
-          <div className="side-service-grid">
-            {serviceShortcuts.map((service) => (
-              <button
-                key={service.id}
-                className="side-service-button"
-                type="button"
-                onClick={() => onActivateService(service.targetTypes, service.id)}
-                title={service.hint}
-              >
-                <span>{service.icon}</span>
-                <b>{service.label}</b>
-                <em>{service.hint}</em>
-              </button>
-            ))}
-          </div>
-        </section>
       </div>
     </aside>
   );

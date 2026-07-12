@@ -1,4 +1,4 @@
-import { getAmapConfig, loadAmap } from "../map/amapLoader";
+﻿import { getAmapConfig, loadAmap } from "../map/amapLoader";
 import type { Place, PlaceType } from "../types/place";
 
 type CityBootstrapRequest = {
@@ -58,15 +58,6 @@ const cityPoiTasks: CityPoiTask[] = [
     limit: 12,
     stayMinutes: 75,
     routeWeight: 48,
-  },
-  {
-    type: "lodging",
-    label: "住宿",
-    keywords: ["酒店", "民宿", "宾馆"],
-    typeFilter: "100000",
-    limit: 8,
-    stayMinutes: 30,
-    routeWeight: 34,
   },
   {
     type: "restroom",
@@ -194,7 +185,7 @@ function buildPlaceFromPoi(poi: RawAmapPoi, task: CityPoiTask, request: CityBoot
     duration: task.stayMinutes >= 60 ? `${Math.round(task.stayMinutes / 60)} 小时` : "0.5 小时",
     notice: "来自高德实时 POI，营业状态、电话和地址以现场或平台为准。",
     serviceProfile:
-      task.type === "restroom" || task.type === "hospital" || task.type === "police" || task.type === "lodging"
+      task.type === "restroom" || task.type === "hospital" || task.type === "police"
         ? {
             status: "高德实时地点",
             distanceTip: "可直接加入地图路线",
@@ -285,3 +276,4 @@ export async function bootstrapAmapCityPlaces(request: CityBootstrapRequest): Pr
 
   return [...new Set(deduped.values())];
 }
+

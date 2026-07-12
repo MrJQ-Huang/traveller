@@ -212,7 +212,7 @@ function buildAnswerCard(message: string, request: AgentRequest) {
     sections: [
       { heading: "简介", content: place.summary || "当前演示数据里暂未补充完整简介，后续会接常熟本地数据库。" },
       { heading: "开放/消费", content: [place.openTime, place.price].filter(Boolean).join("；") || "后续接入数据库后提供实时信息。" },
-      { heading: "小常建议", content: place.notice || "适合作为路线中的一个停留点，具体停留时长会根据你的总时间预算调整。" },
+      { heading: "路书建议", content: place.notice || "适合作为路线中的一个停留点，具体停留时长会根据你的总时间预算调整。" },
     ],
     relatedPlaceIds: [place.id],
   };

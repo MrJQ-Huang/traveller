@@ -25,8 +25,8 @@ export class AgentErrorBoundary extends Component<AgentErrorBoundaryProps, Agent
     if (this.state.failed) {
       return (
         <div className="agent-crash-fallback">
-          <strong>小常暂时收起了</strong>
-          <span>刚才的大脑返回格式不太稳定，地图和行程功能仍可继续使用。刷新页面后可重新打开小常。</span>
+          <strong>路书搭子暂时收起了</strong>
+          <span>刚才的大脑返回格式不太稳定，地图和行程功能仍可继续使用。刷新页面后可重新打开路书搭子。</span>
         </div>
       );
     }

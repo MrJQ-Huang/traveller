@@ -146,6 +146,7 @@ export function AmapChangshuMap({
   const [isMapToolsOpen, setIsMapToolsOpen] = useState(false);
   const [isSkinPickerOpen, setIsSkinPickerOpen] = useState(false);
   const [showRegionalSkins, setShowRegionalSkins] = useState(true);
+  const [showBoundaryHighlight, setShowBoundaryHighlight] = useState(true);
   const [mapZoom, setMapZoom] = useState(11);
   const [mapViewportRevision, setMapViewportRevision] = useState(0);
   const [selectedCardPosition, setSelectedCardPosition] = useState<{ x: number; y: number } | null>(null);
@@ -416,20 +417,31 @@ export function AmapChangshuMap({
         return;
       }
 
-      boundaryLayerRef.current = boundaries.map((boundary: any) => {
+      boundaryLayerRef.current = boundaries.flatMap((boundary: any) => {
+        const halo = new AMap.Polygon({
+          path: boundary,
+          strokeColor: "#f08a24",
+          strokeOpacity: showBoundaryHighlight ? 0.88 : 0,
+          strokeWeight: showBoundaryHighlight ? 8 : 0,
+          strokeStyle: "solid",
+          fillOpacity: 0,
+          bubble: true,
+          zIndex: 18,
+        });
         const polygon = new AMap.Polygon({
           path: boundary,
-          strokeColor: "#0f5f4c",
-          strokeOpacity: 0.72,
-          strokeWeight: 2,
-          strokeStyle: "dashed",
-          fillColor: "#dff3ec",
-          fillOpacity: 0.08,
+          strokeColor: showBoundaryHighlight ? "#0f5f4c" : "#0f5f4c",
+          strokeOpacity: showBoundaryHighlight ? 0.94 : 0.72,
+          strokeWeight: showBoundaryHighlight ? 3 : 2,
+          strokeStyle: showBoundaryHighlight ? "solid" : "dashed",
+          fillColor: showBoundaryHighlight ? "#f8d36f" : "#dff3ec",
+          fillOpacity: showBoundaryHighlight ? 0.18 : 0.08,
           bubble: true,
-          zIndex: 20,
+          zIndex: 19,
         });
+        halo.setMap(map);
         polygon.setMap(map);
-        return polygon;
+        return [halo, polygon];
       });
 
       if (boundaryLayerRef.current.length > 0) {
@@ -442,7 +454,7 @@ export function AmapChangshuMap({
       boundaryLayerRef.current.forEach((layer) => layer.setMap(null));
       boundaryLayerRef.current = [];
     };
-  }, [boundaryLevel, boundaryName, mapReady]);
+  }, [boundaryLevel, boundaryName, mapReady, showBoundaryHighlight]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -925,6 +937,15 @@ export function AmapChangshuMap({
           >
             <Layers size={17} />
             大图
+          </button>
+          <button
+            className={`map-tool-button ${showBoundaryHighlight ? "is-active" : ""}`}
+            type="button"
+            onClick={() => setShowBoundaryHighlight((current) => !current)}
+            aria-pressed={showBoundaryHighlight}
+          >
+            <LocateFixed size={17} />
+            范围
           </button>
           <div className="map-skin-picker">
             <button

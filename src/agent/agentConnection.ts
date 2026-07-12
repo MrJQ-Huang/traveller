@@ -69,7 +69,7 @@ export async function testLlmConnection(): Promise<AgentConnectionResult> {
   } catch (error) {
     return {
       ok: false,
-      message: "小常适配桥未启动，已回退到本地规则脑",
+      message: "路线助手适配桥未启动，已回退到本地规则脑",
       provider,
       connectedToCcswitch: false,
       error: error instanceof Error ? error.message : "unknown error",

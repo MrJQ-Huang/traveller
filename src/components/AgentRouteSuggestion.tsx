@@ -42,7 +42,7 @@ export function AgentRouteSuggestion({ route, places, onApply, badge }: AgentRou
       <div className="agent-route-card-header">
         <span>
           <Sparkles size={15} />
-          {badge ?? "小常建议"}
+          {badge ?? "路书建议"}
         </span>
         <strong>{route.title}</strong>
         <p>{route.summary}</p>

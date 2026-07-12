@@ -39,8 +39,8 @@ function normalizeRoute(route: unknown, fallbackMode: TransportMode): AgentRespo
 
   return {
     id: typeof value.id === "string" ? value.id : undefined,
-    title: stringOrFallback(value.title, "小常推荐路线"),
-    summary: stringOrFallback(value.summary, "小常根据你的需求生成了一条路线。"),
+    title: stringOrFallback(value.title, "路书搭子推荐路线"),
+    summary: stringOrFallback(value.summary, "路书搭子根据你的需求生成了一条路线。"),
     reason: stringOrFallback(value.reason, "根据当前演示点位和你的偏好生成。"),
     placeIds,
     transportMode,
@@ -70,7 +70,7 @@ function normalizeAnswerCards(value: unknown): AgentResponse["answerCards"] {
   return value
     .filter((card): card is Record<string, unknown> => Boolean(card) && typeof card === "object")
     .map((card) => ({
-      title: stringOrFallback(card.title, "小常补充信息"),
+      title: stringOrFallback(card.title, "路书搭子补充信息"),
       placeId: typeof card.placeId === "string" ? card.placeId : undefined,
       sections: Array.isArray(card.sections)
         ? card.sections
@@ -185,7 +185,7 @@ async function sendToReservedProvider(request: AgentRequest): Promise<AgentRespo
     const fallback = await sendMockAgentMessage(request);
     return {
       ...fallback,
-      reply: "小常的外部大脑地址还没有配置。我先用本地演示脑接住这一轮；配置环境变量后就可以切到 LLM。",
+      reply: "路书搭子的外部大脑地址还没有配置。我先用本地演示脑接住这一轮；配置环境变量后就可以切到 LLM。",
       debug: {
         provider,
         intent: "missing_provider_url",
