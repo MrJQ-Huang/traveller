@@ -5,7 +5,7 @@
 线上体验：
 
 ```text
-https://traveller-mr-jq.vercel.app
+http://114.55.54.104/
 ```
 
 备用地址：
