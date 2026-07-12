@@ -30,6 +30,7 @@ import type { Place, PlaceType, PlannerMode } from "./types/place";
 import type { RoutePlan, TransportMode } from "./types/route";
 import { mapSkinOptions, type MapSkinId } from "./types/mapSkin";
 import type { RouteSharePayload } from "./types/shareRoute";
+import { bootstrapAmapCityPlaces, isAmapCityBootstrapPlace } from "./utils/amapCityBootstrap";
 import { buildPreviewRoutePlan } from "./utils/itineraryRoute";
 import { buildRandomRoute, estimateTotalMinutes, formatEstimatedTime, getRoutePreset } from "./utils/routePlanner";
 
@@ -38,6 +39,10 @@ type UserLocation = {
   lat: number;
   accuracy?: number;
   address?: string;
+  city?: string;
+  district?: string;
+  boundaryName?: string;
+  boundaryLevel?: "city" | "district";
 };
 
 type ShareFabPosition = {
@@ -105,6 +110,38 @@ function getReadableArea(addressComponent: Record<string, unknown> | null | unde
   const province = typeof addressComponent?.province === "string" ? addressComponent.province : "";
 
   return township || district || city || province || "常熟市";
+}
+
+function getLocationBoundary(addressComponent: Record<string, unknown> | null | undefined) {
+  const rawCity = addressComponent?.city;
+  const city = typeof rawCity === "string" ? rawCity : "";
+  const district = typeof addressComponent?.district === "string" ? addressComponent.district : "";
+  const province = typeof addressComponent?.province === "string" ? addressComponent.province : "";
+
+  if (district.endsWith("市")) {
+    return {
+      city: city || district,
+      district,
+      boundaryName: district,
+      boundaryLevel: "district" as const,
+    };
+  }
+
+  if (city) {
+    return {
+      city,
+      district,
+      boundaryName: city,
+      boundaryLevel: "city" as const,
+    };
+  }
+
+  return {
+    city: district || province,
+    district,
+    boundaryName: district || province || "常熟市",
+    boundaryLevel: "district" as const,
+  };
 }
 
 function readAmapCallbackResult<T>(first: unknown, second: unknown): AmapCallbackResult<T> {
@@ -339,6 +376,7 @@ export default function App() {
   const [focusRouteRequest, setFocusRouteRequest] = useState<{ placeIds: string[]; nonce: number } | null>(null);
   const [focusCoordsRequest, setFocusCoordsRequest] = useState<{ lng: number; lat: number; nonce: number; name?: string } | null>(null);
   const hasAutoFocusedUserLocationRef = useRef(false);
+  const cityBootstrapKeyRef = useRef<string | null>(null);
   const shareFabDragRef = useRef<ShareFabDragState | null>(null);
   const suppressShareClickRef = useRef(false);
 
@@ -525,13 +563,12 @@ export default function App() {
               return;
             }
 
-            const geocoder = new AMap.Geocoder({
-              city: "常熟市",
-            });
+            const geocoder = new AMap.Geocoder();
 
             geocoder.getAddress([lng, lat], (geoStatus: string, geoResult: any) => {
               const component = geoResult?.regeocode?.addressComponent;
               const area = geoStatus === "complete" ? getReadableArea(component) : "当前位置";
+              const boundary = geoStatus === "complete" ? getLocationBoundary(component) : null;
               const formattedAddress =
                 typeof geoResult?.regeocode?.formattedAddress === "string"
                   ? geoResult.regeocode.formattedAddress
@@ -547,6 +584,10 @@ export default function App() {
                 lat,
                 accuracy: typeof result.accuracy === "number" ? result.accuracy : undefined,
                 address: formattedAddress,
+                city: boundary?.city,
+                district: boundary?.district,
+                boundaryName: boundary?.boundaryName,
+                boundaryLevel: boundary?.boundaryLevel,
               });
               resolve();
             });
@@ -574,6 +615,70 @@ export default function App() {
 
     hasAutoFocusedUserLocationRef.current = true;
     setFocusUserLocationRequest((current) => current + 1);
+  }, [userLocation]);
+
+  useEffect(() => {
+    if (!userLocation?.lng || !userLocation?.lat) {
+      return;
+    }
+
+    const boundaryName = userLocation.boundaryName || userLocation.city || userLocation.district || "当前位置";
+    if (boundaryName.includes("常熟")) {
+      return;
+    }
+
+    const bootstrapKey = `${boundaryName}:${userLocation.lng.toFixed(3)}:${userLocation.lat.toFixed(3)}`;
+    if (cityBootstrapKeyRef.current === bootstrapKey) {
+      return;
+    }
+
+    cityBootstrapKeyRef.current = bootstrapKey;
+    let cancelled = false;
+
+    bootstrapAmapCityPlaces({
+      lng: userLocation.lng,
+      lat: userLocation.lat,
+      city: userLocation.city,
+      district: userLocation.district,
+      boundaryName,
+    })
+      .then((bootstrappedPlaces) => {
+        if (cancelled || bootstrappedPlaces.length === 0) {
+          return;
+        }
+
+        setRuntimeUserPlaces((current) => {
+          const retained = current.filter((place) => !isAmapCityBootstrapPlace(place));
+          const existingIds = new Set([...places, ...retained].map((place) => place.id));
+          const existingPlaceKeys = new Set(
+            [...places, ...retained].map(
+              (place) => `${place.type}-${place.name}-${place.position.lng.toFixed(5)}-${place.position.lat.toFixed(5)}`,
+            ),
+          );
+          const nextDynamicPlaces = bootstrappedPlaces.filter((place) => {
+            const key = `${place.type}-${place.name}-${place.position.lng.toFixed(5)}-${place.position.lat.toFixed(5)}`;
+            if (existingIds.has(place.id) || existingPlaceKeys.has(key)) {
+              return false;
+            }
+
+            existingIds.add(place.id);
+            existingPlaceKeys.add(key);
+            return true;
+          });
+
+          return [...retained, ...nextDynamicPlaces];
+        });
+        setActiveTypes((current) =>
+          Array.from(new Set([...current, ...bootstrappedPlaces.map((place) => place.type)])),
+        );
+      })
+      .catch((error) => {
+        console.warn("Failed to bootstrap AMap city places:", error);
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, [userLocation]);
 
   useEffect(() => {
@@ -1267,6 +1372,8 @@ export default function App() {
           places={allPlaces}
           visiblePlaces={visiblePlaces}
           userLocation={userLocation}
+          boundaryName={userLocation?.boundaryName}
+          boundaryLevel={userLocation?.boundaryLevel}
           focusUserLocationRequest={focusUserLocationRequest}
           itineraryIds={itineraryIds}
           routePlan={routePlan}

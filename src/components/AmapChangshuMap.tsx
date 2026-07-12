@@ -22,6 +22,8 @@ export type AmapChangshuMapProps = {
     accuracy?: number;
     address?: string;
   } | null;
+  boundaryName?: string;
+  boundaryLevel?: "city" | "district";
   focusUserLocationRequest: number;
   itineraryIds: string[];
   routePlan: RoutePlan;
@@ -105,6 +107,8 @@ export function AmapChangshuMap({
   places,
   visiblePlaces,
   userLocation,
+  boundaryName,
+  boundaryLevel,
   focusUserLocationRequest,
   itineraryIds,
   routePlan,
@@ -395,13 +399,14 @@ export function AmapChangshuMap({
     boundaryLayerRef.current.forEach((layer) => layer.setMap(null));
     boundaryLayerRef.current = [];
 
+    const targetBoundaryName = boundaryName || "常熟市";
     const districtSearch = new AMap.DistrictSearch({
-      level: "district",
+      level: boundaryLevel || "district",
       subdistrict: 0,
       extensions: "all",
     });
 
-    districtSearch.search("常熟市", (status: string, result: any) => {
+    districtSearch.search(targetBoundaryName, (status: string, result: any) => {
       if (disposed || status !== "complete") {
         return;
       }
@@ -426,6 +431,10 @@ export function AmapChangshuMap({
         polygon.setMap(map);
         return polygon;
       });
+
+      if (boundaryLayerRef.current.length > 0) {
+        map.setFitView(boundaryLayerRef.current, false, [96, 48, 64, 48]);
+      }
     });
 
     return () => {
@@ -433,7 +442,7 @@ export function AmapChangshuMap({
       boundaryLayerRef.current.forEach((layer) => layer.setMap(null));
       boundaryLayerRef.current = [];
     };
-  }, [mapReady]);
+  }, [boundaryLevel, boundaryName, mapReady]);
 
   useEffect(() => {
     const map = mapRef.current;

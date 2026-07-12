@@ -15,6 +15,8 @@ type ChangshuMapProps = {
     accuracy?: number;
     address?: string;
   } | null;
+  boundaryName?: string;
+  boundaryLevel?: "city" | "district";
   focusUserLocationRequest: number;
   itineraryIds: string[];
   routePlan: RoutePlan;
