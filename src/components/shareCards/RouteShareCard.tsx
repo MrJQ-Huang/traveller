@@ -192,6 +192,13 @@ function visibleTiles(originX: number, originY: number, zoom: number, tilePackag
   return tiles;
 }
 
+function fallbackMapOffset(frame: ReturnType<typeof makeMapFrame>) {
+  return {
+    x: -((Math.round(frame.originX) % mapWidth) + mapWidth) % mapWidth,
+    y: -((Math.round(frame.originY) % mapHeight) + mapHeight) % mapHeight,
+  };
+}
+
 function flattenRoutePath(routePlan: RoutePlan): MapPoint[] {
   const points: MapPoint[] = [];
 
@@ -238,6 +245,7 @@ export function RouteShareCard({ title, description, places, routePlan, mapSkinI
   const markers = placePoints(places);
   const fallbackRoutePoints = routePoints.length ? routePoints : markers;
   const frame = makeMapFrame([...fallbackRoutePoints, ...markers]);
+  const baseMapOffset = fallbackMapOffset(frame);
   const routeScreenPoints = fallbackRoutePoints.map((point) => toScreenPoint(point, frame));
   const markerScreenPoints = markers.map((point) => toScreenPoint(point, frame));
   const polyline = routeScreenPoints.map((point) => `${point.sx},${point.sy}`).join(" ");
@@ -245,6 +253,74 @@ export function RouteShareCard({ title, description, places, routePlan, mapSkinI
   return (
     <article className="share-card route-share-card" style={{ background: skinStyle.mapBg }}>
       <div className="route-card-map">
+        <svg className="route-card-fallback-map" viewBox={`0 0 ${mapWidth} ${mapHeight}`} aria-hidden="true">
+          <defs>
+            <pattern id="route-card-paper-grid" width="72" height="72" patternUnits="userSpaceOnUse">
+              <path d="M 72 0 L 0 0 0 72" fill="none" stroke="rgba(84, 111, 101, 0.11)" strokeWidth="2" />
+            </pattern>
+          </defs>
+          <rect width={mapWidth} height={mapHeight} fill="url(#route-card-paper-grid)" opacity="0.75" />
+          <g transform={`translate(${baseMapOffset.x} ${baseMapOffset.y})`}>
+            {[-mapWidth, 0, mapWidth].map((dx) => (
+              <g key={dx} transform={`translate(${dx} 0)`}>
+                <path
+                  d="M -80 170 C 120 108 260 118 415 184 S 725 260 1040 142"
+                  fill="none"
+                  stroke="rgba(92, 151, 166, 0.42)"
+                  strokeWidth="46"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M -60 488 C 160 392 332 448 494 500 S 764 586 1040 454"
+                  fill="none"
+                  stroke="rgba(92, 151, 166, 0.3)"
+                  strokeWidth="30"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M 40 82 C 220 154 360 138 540 98 S 810 68 1040 126"
+                  fill="none"
+                  stroke="rgba(205, 145, 64, 0.45)"
+                  strokeWidth="18"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M -90 344 C 118 318 230 268 420 320 S 760 384 1040 310"
+                  fill="none"
+                  stroke="rgba(205, 145, 64, 0.36)"
+                  strokeWidth="15"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M 130 -40 C 198 164 248 294 318 690"
+                  fill="none"
+                  stroke="rgba(82, 119, 116, 0.32)"
+                  strokeWidth="13"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M 708 -50 C 660 140 682 312 768 700"
+                  fill="none"
+                  stroke="rgba(82, 119, 116, 0.26)"
+                  strokeWidth="12"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M 545 40 L 616 92 L 584 164 L 484 188 L 426 118 Z"
+                  fill="rgba(117, 157, 105, 0.18)"
+                  stroke="rgba(67, 111, 82, 0.18)"
+                  strokeWidth="3"
+                />
+                <path
+                  d="M 182 430 L 300 402 L 372 482 L 330 580 L 202 564 Z"
+                  fill="rgba(117, 157, 105, 0.14)"
+                  stroke="rgba(67, 111, 82, 0.16)"
+                  strokeWidth="3"
+                />
+              </g>
+            ))}
+          </g>
+        </svg>
         {visibleTiles(frame.originX, frame.originY, frame.zoom, tilePackageUrl).map((tile) => (
           <img
             alt=""
