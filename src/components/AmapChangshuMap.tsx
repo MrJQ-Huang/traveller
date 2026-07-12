@@ -417,35 +417,42 @@ export function AmapChangshuMap({
         return;
       }
 
-      boundaryLayerRef.current = boundaries.flatMap((boundary: any) => {
-        const halo = new AMap.Polygon({
-          path: boundary,
-          strokeColor: "#f08a24",
-          strokeOpacity: showBoundaryHighlight ? 0.88 : 0,
-          strokeWeight: showBoundaryHighlight ? 8 : 0,
-          strokeStyle: "solid",
-          fillOpacity: 0,
-          bubble: true,
-          zIndex: 18,
-        });
+      const outerMaskRing = [
+        [-180, 85],
+        [180, 85],
+        [180, -85],
+        [-180, -85],
+      ];
+      const mask = showBoundaryHighlight
+        ? new AMap.Polygon({
+            path: [outerMaskRing, ...boundaries],
+            strokeOpacity: 0,
+            strokeWeight: 0,
+            fillColor: "#101820",
+            fillOpacity: 0.32,
+            bubble: true,
+            zIndex: 17,
+          })
+        : null;
+      const outlines = boundaries.map((boundary: any) => {
         const polygon = new AMap.Polygon({
           path: boundary,
-          strokeColor: showBoundaryHighlight ? "#0f5f4c" : "#0f5f4c",
-          strokeOpacity: showBoundaryHighlight ? 0.94 : 0.72,
-          strokeWeight: showBoundaryHighlight ? 3 : 2,
+          strokeColor: showBoundaryHighlight ? "#0f766e" : "#0f5f4c",
+          strokeOpacity: showBoundaryHighlight ? 0.88 : 0.62,
+          strokeWeight: showBoundaryHighlight ? 2.5 : 2,
           strokeStyle: showBoundaryHighlight ? "solid" : "dashed",
-          fillColor: showBoundaryHighlight ? "#f8d36f" : "#dff3ec",
-          fillOpacity: showBoundaryHighlight ? 0.18 : 0.08,
+          fillOpacity: 0,
           bubble: true,
           zIndex: 19,
         });
-        halo.setMap(map);
         polygon.setMap(map);
-        return [halo, polygon];
+        return polygon;
       });
+      mask?.setMap(map);
+      boundaryLayerRef.current = mask ? [mask, ...outlines] : outlines;
 
-      if (boundaryLayerRef.current.length > 0) {
-        map.setFitView(boundaryLayerRef.current, false, [96, 48, 64, 48]);
+      if (outlines.length > 0) {
+        map.setFitView(outlines, false, [96, 48, 64, 48]);
       }
     });
 
