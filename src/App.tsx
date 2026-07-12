@@ -86,8 +86,9 @@ const defaultAgentPreference: AgentUserPreference = {
 };
 
 const defaultTopBarWeather: TopBarWeather = {
-  temperature: "29",
-  weather: "多云",
+  temperature: "",
+  weather: "待定位",
+  cityName: "当前城市",
 };
 
 const defaultTopBarLocation: TopBarLocation = {
@@ -100,20 +101,39 @@ type AmapCallbackResult<T> = {
   data: T | null;
 };
 
+function getAddressTextPart(value: unknown) {
+  if (typeof value === "string") {
+    return value;
+  }
+
+  if (Array.isArray(value)) {
+    return value.find((item): item is string => typeof item === "string") ?? "";
+  }
+
+  return "";
+}
+
 function getReadableArea(addressComponent: Record<string, unknown> | null | undefined) {
-  const township = typeof addressComponent?.township === "string" ? addressComponent.township : "";
-  const district = typeof addressComponent?.district === "string" ? addressComponent.district : "";
-  const city = typeof addressComponent?.city === "string" ? addressComponent.city : "";
-  const province = typeof addressComponent?.province === "string" ? addressComponent.province : "";
+  const township = getAddressTextPart(addressComponent?.township);
+  const district = getAddressTextPart(addressComponent?.district);
+  const city = getAddressTextPart(addressComponent?.city);
+  const province = getAddressTextPart(addressComponent?.province);
 
   return township || district || city || province || "路线市";
 }
 
+function getWeatherCityName(addressComponent: Record<string, unknown> | null | undefined) {
+  const city = getAddressTextPart(addressComponent?.city);
+  const district = getAddressTextPart(addressComponent?.district);
+  const province = getAddressTextPart(addressComponent?.province);
+
+  return city || province || district || "当前城市";
+}
+
 function getLocationBoundary(addressComponent: Record<string, unknown> | null | undefined) {
-  const rawCity = addressComponent?.city;
-  const city = typeof rawCity === "string" ? rawCity : "";
-  const district = typeof addressComponent?.district === "string" ? addressComponent.district : "";
-  const province = typeof addressComponent?.province === "string" ? addressComponent.province : "";
+  const city = getAddressTextPart(addressComponent?.city);
+  const district = getAddressTextPart(addressComponent?.district);
+  const province = getAddressTextPart(addressComponent?.province);
 
   if (district.endsWith("市")) {
     return {
@@ -486,7 +506,7 @@ export default function App() {
     try {
       const AMap = await loadAmap(amapConfig);
 
-      function refreshWeather(targetCity?: string) {
+      function refreshWeather(target?: { query?: string; cityName?: string }) {
         return new Promise<void>((resolve) => {
           if (!AMap.Weather) {
             setTopBarWeather((current) => ({ ...current, loading: false }));
@@ -494,7 +514,19 @@ export default function App() {
             return;
           }
 
-          const weatherCity = targetCity?.trim() || "常熟市";
+          const weatherCity = target?.query?.trim();
+          const weatherCityName = target?.cityName?.trim() || weatherCity || "当前城市";
+
+          if (!weatherCity) {
+            setTopBarWeather((current) => ({
+              ...current,
+              cityName: weatherCityName,
+              loading: false,
+            }));
+            resolve();
+            return;
+          }
+
           const weatherService = new AMap.Weather();
 
           weatherService.getLive(weatherCity, (statusOrError: unknown, result: unknown) => {
@@ -515,6 +547,7 @@ export default function App() {
               setTopBarWeather((current) => ({
                 temperature: liveWeather?.temperature ?? current.temperature,
                 weather: liveWeather?.weather ?? current.weather,
+                cityName: weatherCityName,
                 forecasts: forecasts?.length ? forecasts : current.forecasts,
                 loading: false,
               }));
@@ -530,7 +563,7 @@ export default function App() {
         return;
       }
 
-      const weatherTarget = await new Promise<string | undefined>((resolve) => {
+      const weatherTarget = await new Promise<{ query?: string; cityName?: string } | undefined>((resolve) => {
         const geolocation = new AMap.Geolocation({
           enableHighAccuracy: true,
           timeout: 8000,
@@ -575,10 +608,11 @@ export default function App() {
               typeof geoResult?.regeocode?.formattedAddress === "string"
                 ? geoResult.regeocode.formattedAddress
                 : `经度 ${lng.toFixed(4)}，纬度 ${lat.toFixed(4)}`;
-            const adcode = typeof component?.adcode === "string" ? component.adcode : "";
-            const district = typeof component?.district === "string" ? component.district : "";
-            const city = typeof component?.city === "string" ? component.city : "";
-            const province = typeof component?.province === "string" ? component.province : "";
+            const adcode = getAddressTextPart(component?.adcode);
+            const district = getAddressTextPart(component?.district);
+            const city = getAddressTextPart(component?.city);
+            const province = getAddressTextPart(component?.province);
+            const weatherCityName = geoStatus === "complete" ? getWeatherCityName(component) : "当前城市";
 
             setTopBarLocation({
               area,
@@ -595,7 +629,10 @@ export default function App() {
               boundaryName: boundary?.boundaryName,
               boundaryLevel: boundary?.boundaryLevel,
             });
-            resolve(adcode || district || city || province || undefined);
+            resolve({
+              query: adcode || district || city || province || undefined,
+              cityName: weatherCityName,
+            });
           });
         });
       });

@@ -25,6 +25,7 @@ export type TopBarWeatherForecast = {
 export type TopBarWeather = {
   temperature: string;
   weather: string;
+  cityName?: string;
   loading?: boolean;
   forecasts?: TopBarWeatherForecast[];
 };
@@ -211,6 +212,9 @@ export function TopBar({
     [today, weather.temperature, weather.weather],
   );
   const forecastItems = weather.forecasts?.length ? weather.forecasts : fallbackForecastItems;
+  const weatherCityName = weather.cityName?.trim() || location.area || "当前城市";
+  const weatherTemperatureLabel = weather.loading ? "--" : weather.temperature ? `${weather.temperature}°C` : "--";
+  const weatherTextLabel = weather.loading ? "更新中" : weather.weather || "待定位";
   const dateInsightItems = useMemo(
     () => {
       const tomorrow = addDays(today, 1);
@@ -328,7 +332,7 @@ export function TopBar({
   }
 
   return (
-    <header ref={topbarRef} className={`topbar smart-status-topbar ${agentActive ? "is-agent-active" : ""}`} aria-label="常熟文旅实时状态栏">
+    <header ref={topbarRef} className={`topbar smart-status-topbar ${agentActive ? "is-agent-active" : ""}`} aria-label="实时状态栏">
       {agentSlot ?? (
         <div className="topbar-brand">
           <span className="brand-mark">路</span>
@@ -350,14 +354,14 @@ export function TopBar({
             aria-controls="topbar-weather-popover"
           >
             <CloudSun size={16} />
-            <strong>{weather.loading ? "--" : `${weather.temperature}°C`}</strong>
+            <strong>{weatherTemperatureLabel}</strong>
             <span>{todayLabel}</span>
-            {weather.loading ? "更新中" : weather.weather}
+            {weatherTextLabel}
           </button>
           {openPanel === "weather" && (
-            <div className="weather-popover" id="topbar-weather-popover" role="dialog" aria-label="常熟天气预报">
+            <div className="weather-popover" id="topbar-weather-popover" role="dialog" aria-label={`${weatherCityName}天气预报`}>
               <div className="weather-popover-head">
-                <strong>常熟天气</strong>
+                <strong>{weatherCityName}天气</strong>
                 <span>{weather.loading ? "更新中" : `最近 ${forecastItems.slice(0, 4).length} 天`}</span>
               </div>
               <div className="weather-forecast-list">
