@@ -43,4 +43,5 @@ zgx开发内容/
 .env
 .edgeone/*
 .tef_dist/*
-  
+
+.vercel
